@@ -1,0 +1,1815 @@
+{
+	"TutorialInventory": {
+		"EventCategory": "TUTORIAL",
+		"EventPrerequisiteFlags": [
+			"GameStart_Done"
+		],
+		"EventCompletionFlags": [
+			"TutorialInventory_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+			"Name": "Tutorial",
+			"Text": [
+				{
+					"Character": "Tutorial",
+					"Line": "Press the 'X' button on the Left Hand Controller to view your inventory.",
+					"Time": 4.8
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Press 'X' again to hide it.",
+					"Time": 2.4
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "To grab an object in the inventory, reach out to it and hold your hand controller’s grip button. ",
+					"Time": 6.6
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Release the grip button to let go. ",
+					"Time": 2.43
+				}
+			]
+		},
+		"EventLocations": [
+			"Mansion Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/tutorials/VO_tutor_Inventory.ogg"
+	},
+	"ActionPickUpJournal": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionPickUpJournal_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [
+			"Mansion Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"TutorialJournalQuestLog": {
+		"EventCategory": "TUTORIAL",
+		"EventPrerequisiteFlags": [
+			"ActionPickUpJournal_Done"
+		],
+		"EventCompletionFlags": [
+			"TutorialJournalQuestLog_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+			"Name": "Tutorial",
+			"Text": [
+				{
+					"Character": "Tutorial",
+					"Line": "This is your Journal.",
+					"Time": 1.85
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "The Task List on the Journal’s first page lists down the tasks you need to accomplish.",
+					"Time": 6.6
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "To flip the pages of the Journal, put your hand controller on the edge of the page,",
+					"Time": 5.75
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "then hold the grip button and swipe from right-to-left or left-to-right.",
+					"Time": 5.3
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Letting go of the Journal returns it to its inventory slot.",
+					"Time": 4.2
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Make sure to check your Journal often to track your progress!",
+					"Time": 4.13
+				}
+			]
+		},
+		"EventLocations": [
+			"Mansion Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/tutorials/VO_tutor_Journal.ogg"
+	},
+	"ActionPickUpFlashlight": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionPickUpFlashlight_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [
+			"Mansion Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"TutorialFlashlightRadio": {
+		"EventCategory": "TUTORIAL",
+		"EventPrerequisiteFlags": [
+			"ActionPickUpFlashlight_Done"
+		],
+		"EventCompletionFlags": [
+			"TutorialFlashlightRadio_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+			"Name": "Tutorial",
+			"Text": [
+				{
+					"Character": "Tutorial",
+					"Line": "This is the Flashlight Radio, useful for navigating dark areas.",
+					"Time": 5.4
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Operate the flashlight’s crank by holding the grip button on your other hand controller.",
+					"Time": 6.1
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Letting go of the flashlight puts it in a slot near your waist and keeps the light facing forward.",
+					"Time": 7.2
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "If you rotate the flashlight’s crank 3 times, the built-in radio will ‘broadcast’ a hint! Give it a go!",
+					"Time": 7.19
+				}
+			]
+		},
+		"EventLocations": [
+			"Mansion Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/tutorials/VO_tutor_Flashlight.ogg"
+	},
+	"TutorialTeleport": {
+		"EventCategory": "TUTORIAL",
+		"EventPrerequisiteFlags": [
+			"RadioTutorialBroadcast_Done"
+		],
+		"EventCompletionFlags": [
+			"TutorialTeleport_Done",
+			"TeleportSofasActivate"
+		],
+		"Oneshot": true,
+		"EventText": {
+			"Name": "Tutorial",
+			"Text": [
+				{
+					"Character": "Tutorial",
+					"Line": "The circles on the ground are movement points.",
+					"Time": 3.5
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Pointing at them and pressing the trigger button will move you to that area.",
+					"Time": 6.0
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "White Circles are movement points you can access at your current location.",
+					"Time": 5.3
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Blue Circles are movement points that are not yet accessible.",
+					"Time": 4.7
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Either you’re too far away, or you can’t go there yet.",
+					"Time": 3.68
+				}
+			]
+		},
+		"EventLocations": [
+			"Mansion Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/tutorials/VO_tutor_Teleport.ogg"
+	},
+	"ActionTeleportToSofas": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialTeleport_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionTeleportToSofas_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"RadioTutorialBroadcast": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionPickUpFlashlight_Done",
+			"TutorialFlashlightRadio_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioTutorialBroadcast_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Host 1",
+					"Line": "Another breakthrough for democracy the following year: Martial Law was finally lifted!",
+					"Time": 4.8
+				},
+				{
+					"Character": "Host 2",
+					"Line": "Yes, democracy was restored. The government had to create a blueprint for a democratic Philippines!",
+					"Time": 8.55
+				}
+			]
+		},
+		"EventLocations": [
+			"Mansion Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_hosts_TUTORIAL_AnotherBreakthrough_wMX.ogg"
+	},
+	"KeyItemDaiVoltZ": {
+		"EventCategory": "KEYITEM",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"KeyItemDaiVoltZ_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Key Item",
+			"Text": [
+				{
+					"Character": "DaiVoltz Cassette Tape",
+					"Line": "Several popular Japanese animated series became an unexpected symbols of resistance when the government banned their airing in 1979.",
+					"Time": 10.0
+				},
+				{
+					"Character": "DaiVoltz Cassette Tape",
+					"Line": "Officially censored due to their violence and alleged harmful effects on children, these anime portrayed heroic individuals or groups fighting against powerful, tyrannical enemies.",
+					"Time": 11.5
+				},
+				{
+					"Character": "DaiVoltz Cassette Tape",
+					"Line": "The Marcos regime used and regulated media, including television, to shape public opinion.",
+					"Time": 6.5
+				},
+				{
+					"Character": "DaiVoltz Cassette Tape",
+					"Line": "It tightly controlled freedom of speech, using censorship to stifle critical voices and suppress dissent.",
+					"Time": 6.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/key-items/VO_nar_7KO_01_v2_SevPopJap_CasetteVer.ogg"
+	},
+	"TutorialKeyItems": {
+		"EventCategory": "TUTORIAL",
+		"EventPrerequisiteFlags": [
+			"ActionTeleportToSofas_Done"
+		],
+		"EventCompletionFlags": [
+			"TutorialKeyItems_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+			"Name": "Tutorial",
+			"Text": [
+				{
+					"Character": "Tutorial",
+					"Line": "In your Journal, you will find newspaper headlines relating to real world events.",
+					"Time": 6.4
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "You will find ‘key objects’ related to these headlines. The picture on the living room table is one such object.",
+					"Time": 9.4
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Near these key objects are cassette tapes. These tapes will give you information about the objects.",
+					"Time": 7.9
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "To play a tape, put them in a cassette player, then point at the cassette player and press your trigger button.",
+					"Time": 8.07
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/tutorials/VO_tutor_KeyItems.ogg"
+	},
+	"ActionBowlAddWheatFlour": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionBowlAddWheatFlour_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlAddYeast": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlAddWheatFlour_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlAddYeast_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlAddSugar": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlAddYeast_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlAddSugar_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlAddWater": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlMix1_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlAddWater_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlAddOil": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlMix2_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlAddOil_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlAddMilk": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlMix3_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlAddMilk_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlAddSalt": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlAddMilk_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlAddSalt_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlMix1": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlAddSugar_Done",
+			"ActionBowlAddWheatFlour_Done",
+			"ActionBowlAddYeast_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlMix1_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlMix2": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlAddWater_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlMix2_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlMix3": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlAddOil_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlMix3_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionBowlMix4": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlAddSalt_Done",
+			"ActionBowlAddMilk_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionBowlMix4_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionStartCookingQuest": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialInventory_Done",
+			"ActionTeleportToKitchenEntrance_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionStartCookingQuest_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionKneadDough": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionBowlMix4_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionKneadDough_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionOvenNutribun": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionPlaceDoughOnTray_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionOvenNutribun_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"KeyItemMalakasMaganda": {
+		"EventCategory": "KEYITEM",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"KeyItemMalakasMaganda_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Key Item",
+			"Text": [
+				{
+					"Character": "Malakas at Maganda Tape",
+					"Line": "Appropriating Filipino mythical figures such as Malakas at Maganda,",
+					"Time": 4.5
+				},
+				{
+					"Character": "Malakas at Maganda Tape",
+					"Line": "the Marcoses projected an image of harmony, prosperity, and order,",
+					"Time": 5.5
+				},
+				{
+					"Character": "Malakas at Maganda Tape",
+					"Line": "remaking Filipino beliefs and values towards a New Society.",
+					"Time": 4.5
+				},
+				{
+					"Character": "Malakas at Maganda Tape",
+					"Line": "Through propaganda, they portrayed themselves as the ultimate embodiment of strength and beauty.",
+					"Time": 6.5
+				},
+				{
+					"Character": "Malakas at Maganda Tape",
+					"Line": "Manipulating cultural heritage became a key feature of the dictatorship,",
+					"Time": 5.0
+				},
+				{
+					"Character": "Malakas at Maganda Tape",
+					"Line": "using art, media, and public imagery to maintain power and legitimacy.",
+					"Time": 5.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/key-items/VO_nar_7KO_02_AppropFil_CasetteVer.ogg"
+	},
+	"KeyItemNutribun": {
+		"EventCategory": "KEYITEM",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"KeyItemNutribun_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Key Item",
+			"Text": [
+				{
+					"Character": "Nutribun Tape",
+					"Line": "The Nutribun, funded by USAID, was touted by the Marcos regime as a solution to malnutrition to address hunger and food security.",
+					"Time": 9.5
+				},
+				{
+					"Character": "Nutribun Tape",
+					"Line": "It became a propaganda tool, with the Marcoses claiming credit for its success.",
+					"Time": 5.5
+				},
+				{
+					"Character": "Nutribun Tape",
+					"Line": "However, it lacked the nutritional value needed for the growing Filipino children.",
+					"Time": 5.0
+				},
+				{
+					"Character": "Nutribun Tape",
+					"Line": "The Nutribun masked the government’s failures and used foreign aid to project an image of competence",
+					"Time": 7.0
+				},
+				{
+					"Character": "Nutribun Tape",
+					"Line": "while ignoring deeper issues of hunger and inequality.",
+					"Time": 4.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/key-items/VO_nar_7KO_04_TheNutribun_CasetteVer.ogg"
+	},
+	"KeyItemRolexWatch": {
+		"EventCategory": "KEYITEM",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"KeyItemRolexWatch_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Key Item",
+			"Text": [
+				{
+					"Character": "Rolex Watch Tape",
+					"Line": "The Rolex watch symbolized the regime's corruption and cronyism.",
+					"Time": 4.5
+				},
+				{
+					"Character": "Rolex Watch Tape",
+					"Line": "This luxury watch became a token to twelve high-ranking military officials and civilian advisers who planned and implemented Martial Law.",
+					"Time": 10.0
+				},
+				{
+					"Character": "Rolex Watch Tape",
+					"Line": "It highlighted how Marcos rewarded loyal allies with luxury.",
+					"Time": 5.0
+				},
+				{
+					"Character": "Rolex Watch Tape",
+					"Line": "while using power to control dissent by committing various atrocities",
+					"Time": 5.0
+				},
+				{
+					"Character": "Rolex Watch Tape",
+					"Line": "such as torture, killings, seizures of property, displacement from homes, ",
+					"Time": 7.0
+				},
+				{
+					"Character": "Rolex Watch Tape",
+					"Line": "warrantless arrests, forced disappearances, and detention without due process.",
+					"Time": 7.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/key-items/VO_nar_7KO_07_RolexWatch_CasetteVer.ogg"
+	},
+	"KeyItemGiraffe": {
+		"EventCategory": "KEYITEM",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"KeyItemGiraffe_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Key Item",
+			"Text": [
+				{
+					"Character": "Calauit Safari Park Tape",
+					"Line": "The Calauit Safari Park, established in 1976 and funded by state resources, housed exotic animals imported from Africa. ",
+					"Time": 9.0
+				},
+				{
+					"Character": "Calauit Safari Park Tape",
+					"Line": "After forcibly evicting and displacing residents such as Tagbanwa families,",
+					"Time": 6.0
+				},
+				{
+					"Character": "Calauit Safari Park Tape",
+					"Line": "the regime transformed the island into a sanctuary for African animals, once called by media as ‘Bongbong’s Safari Park’",
+					"Time": 8.0
+				},
+				{
+					"Character": "Calauit Safari Park Tape",
+					"Line": "a reference to the presidential son's trips to this island.",
+					"Time": 4.0
+				},
+				{
+					"Character": "Calauit Safari Park Tape",
+					"Line": "With only a few animals left on the island, this neglected reserve remains a symbol of misplaced priorities by those in power.",
+					"Time": 9.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/key-items/VO_nar_7KO_03_CalauitSafPark_CasetteVer.ogg"
+	},
+	"KeyItemButbutCloth": {
+		"EventCategory": "KEYITEM",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"KeyItemButbutCloth_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Key Item",
+			"Text": [
+				{
+					"Character": "Butbut Tribe Tape",
+					"Line": "Macli-ing Dulag, a leader of the Butbut tribe in the Cordilleras, became a symbol of resistance against the Marcos regime.",
+					"Time": 7.5
+				},
+				{
+					"Character": "Butbut Tribe Tape",
+					"Line": "He fought against the construction of the Chico River Dam – a project that threatened to displace indigenous communities from their ancestral land.",
+					"Time": 8.5
+				},
+				{
+					"Character": "Butbut Tribe Tape",
+					"Line": "His activism and assassination highlighted the Marcos regime’s disregard for indigenous peoples’ rights",
+					"Time": 8.0
+				},
+				{
+					"Character": "Butbut Tribe Tape",
+					"Line": "as the government prioritized development projects for profit over the protection of minority groups.",
+					"Time": 7.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/key-items/VO_nar_7KO_05_MacliingDulag_CasetteVer.ogg"
+	},
+	"KeyItemManilaFilmCenter": {
+		"EventCategory": "KEYITEM",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"KeyItemManilaFilmCenter_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Key Item",
+			"Text": [
+				{
+					"Character": "Manila Film Center Tape",
+					"Line": "The Manila Film Center, completed in 1982 during the Marcos dictatorship, symbolized the regime's 'edifice complex'",
+					"Time": 8.0
+				},
+				{
+					"Character": "Manila Film Center Tape",
+					"Line": "an obsession with grandiose, high-cost projects meant to showcase power and legitimacy.",
+					"Time": 7.0
+				},
+				{
+					"Character": "Manila Film Center Tape",
+					"Line": "Its rushed completion to meet its deadline for the inauguration of the Manila International Film Festival",
+					"Time": 6.0
+				},
+				{
+					"Character": "Manila Film Center Tape",
+					"Line": "involved the tragic deaths of construction workers who were reportedly trapped and buried under quick-drying wet cement.",
+					"Time": 8.0
+				},
+				{
+					"Character": "Manila Film Center Tape",
+					"Line": "While the country faced economic decline, this pursuit of opulence epitomized the regime's incompetence and disregard for human rights.",
+					"Time": 10.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/key-items/VO_nar_7KO_06_ManilaFilmCenter_CasetteVer.ogg"
+	},
+	"ActionPackageNutribun": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionOvenNutribun_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionPackageNutribun_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionPlaceDoughOnTray": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionDoughDivide_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionPlaceDoughOnTray_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"RadioNutribunStart": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionStartCookingQuest_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioNutribunStart_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Presenter",
+					"Line": "Good Morning Manila! We have our special guest, Chef Bunjamin, here to teach us how to make you own homemade pandesal.",
+					"Time": 9.0
+				},
+				{
+					"Character": "Presenter",
+					"Line": "So, Chef Bunjamin, how do we start?",
+					"Time": 3.0
+				},
+				{
+					"Character": "Chef Bunjamin",
+					"Line": "You will need the following ingredients: wheat flour, sugar, vegetable oil, salt, and yeast.",
+					"Time": 9.0
+				},
+				{
+					"Character": "Chef Bunjamin",
+					"Line": "All these ingredients can be found around your house, be sure to collect everything that you need first so that it will be easy for you to work with.",
+					"Time": 11.0
+				},
+				{
+					"Character": "Presenter",
+					"Line": "Wow, I think I DO have all these ingredients at home.",
+					"Time": 3.0
+				}
+			]
+		},
+		"EventLocations": [
+			"Near Lampshade",
+			"Dining Room Entrance",
+			"Dining Room Inside",
+			"Dining Room Inside 2",
+			"Dining Room Inside 3",
+			"Dining Room Inside 4",
+			"Dining Room Inside 5",
+			"Path To Kitchen",
+			"Kitchen Area Entrance",
+			"Kitchen Further Entrance",
+			"Kitchen Cabinets",
+			"Kitchen Outside Counter",
+			"Kitchen Outside Counter 3",
+			"Kitchen Outside Counter 4",
+			"Kitchen Part 1",
+			"Kitchen Stove",
+			"Storage Room Inside",
+			"Storage Room Inside2",
+			"Storage Room Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_chefbun_HINT_NeededIng_GoodMorningManila_wMX.ogg"
+	},
+	"ActionDoughDivide": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionKneadDough_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionDoughDivide_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionTeleportToKitchenEntrance": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialTeleport_Done",
+			"ActionOpenDeskDrawer_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionTeleportToKitchenEntrance_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionOpenSafe": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionOpenSafe_Done",
+			"Safe_Open"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionOpenBriefcase": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionOpenBriefcase_Done",
+			"Briefcase_Open"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionTeleportToBedroom": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialTeleport_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionTeleportToBedroom_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"RadioNutribunIngredients": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionBowlMix4_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioNutribunIngredients_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Chef Bunjamin",
+					"Line": "Of course, if you’re trying to save money, you can use cheaper ingredients.",
+					"Time": 6.0
+				},
+				{
+					"Character": "Presenter",
+					"Line": "Wow, so, I can start doing this when I get home?!",
+					"Time": 2.8
+				},
+				{
+					"Character": "Chef Bunjamin",
+					"Line": "Yes! After that, you can start kneading the dough.",
+					"Time": 5.8
+				}
+			]
+		},
+		"EventLocations": [
+			"Near Lampshade",
+			"Dining Room Entrance",
+			"Dining Room Inside",
+			"Dining Room Inside 2",
+			"Dining Room Inside 3",
+			"Dining Room Inside 4",
+			"Dining Room Inside 5",
+			"Path To Kitchen",
+			"Kitchen Area Entrance",
+			"Kitchen Further Entrance",
+			"Kitchen Cabinets",
+			"Kitchen Outside Counter",
+			"Kitchen Outside Counter 3",
+			"Kitchen Outside Counter 4",
+			"Kitchen Part 1",
+			"Kitchen Stove",
+			"Storage Room Inside",
+			"Storage Room Inside2",
+			"Storage Room Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_chefbun_HINT_MissingIng_OfCourseIf_wMX.ogg"
+	},
+	"RadioNutribunSeal": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionOvenNutribun_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioNutribunSeal_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Presenter",
+					"Line": "I hope everyone followed Chef Bunjamin's recipe for delicious pandesal. Any tips for storing them?",
+					"Time": 6.0
+				},
+				{
+					"Character": "Chef Bunjamin",
+					"Line": "Store them in sealed bags and keep them in a cool, dry place for maximum freshness.",
+					"Time": 7.0
+				}
+			]
+		},
+		"EventLocations": [
+			"Near Lampshade",
+			"Dining Room Entrance",
+			"Dining Room Inside",
+			"Dining Room Inside 2",
+			"Dining Room Inside 3",
+			"Dining Room Inside 4",
+			"Dining Room Inside 5",
+			"Path To Kitchen",
+			"Kitchen Area Entrance",
+			"Kitchen Further Entrance",
+			"Kitchen Cabinets",
+			"Kitchen Outside Counter",
+			"Kitchen Outside Counter 3",
+			"Kitchen Outside Counter 4",
+			"Kitchen Part 1",
+			"Kitchen Stove",
+			"Storage Room Inside",
+			"Storage Room Inside2",
+			"Storage Room Entrance"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_chefbun_HINT_PackBuns_IHopeEveryone_wMX.ogg"
+	},
+	"AddNutribunsToBox": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionOvenNutribun_Done"
+		],
+		"EventCompletionFlags": [
+			"AddNutribunsToBox_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionAssembleDocument": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionAssembleDocument_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"TutorialAttachAction": {
+		"EventCategory": "TUTORIAL",
+		"EventPrerequisiteFlags": [
+			"ActionTeleportToStudy_Done",
+			"ActionTeleportToStudyDesk_Done",
+			"ActionGrabDocumentPiece_Done"
+		],
+		"EventCompletionFlags": [
+			"TutorialAttachAction_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+			"Name": "Tutorial",
+			"Text": [
+				{
+					"Character": "Tutorial",
+					"Line": "You can attach certain objects to each other!",
+					"Time": 3.3
+				},
+				{
+					"Character": "Tutorial",
+					"Line": "Simply hold these objects close to each other, then press the trigger button on both controllers simultaneously.",
+					"Time": 8.5
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/tutorials/VO_tutor_AttachAction.ogg"
+	},
+	"ActionTeleportToStudy": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialTeleport_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionTeleportToStudy_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionTeleportToStudyDesk": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialTeleport_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionTeleportToStudyDesk_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionSprayPainting": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"QuestFindTheCodeToTheDesk_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionSprayPainting_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionWipePainting": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionSprayPainting_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionWipePainting_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionOpenDeskDrawer": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionOpenDeskDrawer_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionUnlockGate": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionUnlockGate_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionRemovePlanks": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionRemovePlanks_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionTeleportToPlanks": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialTeleport_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionTeleportToPlanks_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionPickUpCrowbar": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionPickUpCrowbar_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionTeleportToGate": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"TutorialTeleport_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionTeleportToGate_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"GameStart": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"GameStart_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionAddGreenButton": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionAddGreenButton_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionAddPaperRoll": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionAddPaperRoll_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionFinishPrintingItem": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionFinishPrintingItem_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionFinishPrintingItem_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"ActionLeaveMansion": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [],
+		"EventCompletionFlags": [
+			"ActionLeaveMansion_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	},
+	"RadioPieceDocument": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"TutorialAttachAction_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioPieceDocument_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "DJ",
+					"Line": "This is DJ Avery, and you’re listening to 185.03 Escape FM. ",
+					"Time": 7.7
+				},
+				{
+					"Character": "DJ",
+					"Line": "Here’s something for those whose love letters have been torn apart.",
+					"Time": 4.8
+				},
+				{
+					"Character": "DJ",
+					"Line": "In this season of love, give yourself one more chance, to put the broken pieces of your heart back together again.",
+					"Time": 9.3
+				},
+				{
+					"Character": "Missing Pieces Song",
+					"Line": "You tore my le-tters into pie-ces",
+					"Time": 7.3
+				},
+				{
+					"Character": "Missing Pieces Song",
+					"Line": "And I felt my heart was torn, in two...",
+					"Time": 10.7
+				},
+				{
+					"Character": "Missing Pieces Song",
+					"Line": "How will I- Ever put it all ba-ck Together now?",
+					"Time": 12.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_dj_HINT_PcDoc_ThisIsDJ_wMX.ogg"
+	},
+	"RadioCleanPainting": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionAssembleDocument_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioCleanPainting_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Ad Presenter",
+					"Line": "Misis, nahihirapan ka ba sa dumi at amag?",
+					"Time": 4.0
+				},
+				{
+					"Character": "Misis",
+					"Line": "Oo, kahit anong punas ko, di pa din nawawala!",
+					"Time": 4.0
+				},
+				{
+					"Character": "Ad Presenter",
+					"Line": "Try mo ang Stain-Away Spray! Ang pinaka-malakas na cleaning spray",
+					"Time": 4.5
+				},
+				{
+					"Character": "Misis",
+					"Line": "Paano po ito gamitin?",
+					"Time": 2.1
+				},
+				{
+					"Character": "Ad Presenter",
+					"Line": "Isang spray lang, at mawawala na ang lahat ng dumi at amag, pag-punas mo!",
+					"Time": 5.4
+				},
+				{
+					"Character": "Misis",
+					"Line": "Wow! Ang Galing, ang puti na ng mga tile ko! Salamat Stain-Away Spray!",
+					"Time": 7.0
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_ads_HINT_CleanPainting_MrsNahihirapan_wMX.ogg"
+	},
+	"RadioDeskCode": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"QuestCleanThePainting_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioDeskCode_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Weather Reporter",
+					"Line": "And now for the weather! A colorful forecast today:",
+					"Time": 4.4
+				},
+				{
+					"Character": "Weather Reporter",
+					"Line": "Keep an eye on the details. Sometimes information is painted right in front of you. ",
+					"Time": 5.8
+				},
+				{
+					"Character": "Weather Reporter",
+					"Line": "Don’t brush past them, or you might get locked out of clear skies!",
+					"Time": 4.7
+				}
+			]
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_repweather_HINT_LockStudy_AndNowFor_wMX.ogg"
+	},
+	"RadioBreakthrough": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionPickUpCrowbar_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioBreakthrough_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Host 1",
+					"Line": "You are listening to Radyo Aenigma. It's only 1980 and the Philippines has seen so many political breakthroughs...",
+					"Time": 7.8
+				},
+				{
+					"Character": "Host 2",
+					"Line": "...all of which have set a blueprint for progress and growth for the next decade.",
+					"Time": 5.5
+				},
+				{
+					"Character": "Host 1",
+					"Line": "What are some of these breakthroughs?",
+					"Time": 2.5
+				},
+				{
+					"Character": "Host 2",
+					"Line": "In 1980, one political breakthrough was Ninoy Aquino was allowed to travel to the US to seek medical treatment.",
+					"Time": 9.0
+				},
+				{
+					"Character": "Host 1",
+					"Line": "Another breakthrough for democracy the following year: Martial Law was finally lifted!",
+					"Time": 5.6
+				},
+				{
+					"Character": "Host 2",
+					"Line": "Yes, democracy was restored. The government had to create a blueprint for a democratic Philippines!",
+					"Time": 6.9
+				},
+				{
+					"Character": "Host 2",
+					"Line": "No doubt, compañera.  We’ll talk about more of these breakthroughs right after the break.",
+					"Time": 7.0
+				}
+			]
+		},
+		"EventLocations": [
+			"Hallway",
+			"Hallway 2",
+			"Study Room Planks Area",
+			"Study Room Entrance",
+			"Study Room",
+			"Study Room Near Planks",
+			"Study Room Desk",
+			"Study Room Near Desk",
+			"Study Room Printing Press",
+			"Bedroom Center",
+			"Bedroom Broken Wall",
+			"Bedroom Study Table",
+			"Bedroom Safe",
+			"Blueprint Wall 1",
+			"Blueprint Wall 2",
+			"Blueprint Wall 3",
+			"Blueprint Wall 4",
+			"Bed Right Picture",
+			"Bed Left Picture",
+			"Window Right Picture"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_hosts_HINT_BreakSecretDoor_YouAreListening_wMX.ogg"
+	},
+	"RadioBlueprints": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionTeleportToBedroom_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioBlueprints_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "Preacher",
+					"Line": "The plans contained everything David had in mind, for the courts of the house of the LORD,",
+					"Time": 7.9
+				},
+				{
+					"Character": "Preacher",
+					"Line": "for all the surrounding rooms, for the treasuries of the house of God and of the dedicated things",
+					"Time": 9.12
+				},
+				{
+					"Character": "Preacher",
+					"Line": " 1 Chronicles 28, verse 12",
+					"Time": 5.6
+				},
+				{
+					"Character": "Preacher",
+					"Line": "What we see here… is divine providence.",
+					"Time": 5.5
+				},
+				{
+					"Character": "Preacher",
+					"Line": "Know that the LORD will MATCH your struggles with his plans, His BLUEPRINTS, for your life.",
+					"Time": 9.9
+				},
+				{
+					"Character": "Preacher",
+					"Line": "Let us celebrate His divine providence with a response.",
+					"Time": 5.8
+				},
+				{
+					"Character": "Preacher",
+					"Line": "Oh Lord, SHAPE our lives according to thy blueprints!",
+					"Time": 5.75
+				},
+				{
+					"Character": "Congregation",
+					"Line": "Oh Lord, SHAPE our lives according to thy blueprints!",
+					"Time": 5.7
+				}
+			]
+		},
+		"EventLocations": [
+			"Hallway",
+			"Hallway 2",
+			"Study Room Planks Area",
+			"Study Room Entrance",
+			"Study Room",
+			"Study Room Near Planks",
+			"Study Room Desk",
+			"Study Room Near Desk",
+			"Study Room Printing Press",
+			"Bedroom Center",
+			"Bedroom Broken Wall",
+			"Bedroom Study Table",
+			"Bedroom Safe",
+			"Blueprint Wall 1",
+			"Blueprint Wall 2",
+			"Blueprint Wall 3",
+			"Blueprint Wall 4",
+			"Bed Right Picture",
+			"Bed Left Picture",
+			"Window Right Picture"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_preacher_HINT_MatchImageBluprnt_ThePlans_wMX.ogg"
+	},
+	"RadioContract": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"ActionOpenSafe_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioContract_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "News Reporter",
+					"Line": "An update on the terrible tragedy that befallen the construction site of the Manila Film Center earlier last week.",
+					"Time": 7.0
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "only seven people have died in the accident so far, but this has been hard to verify due to the delayed rescue operations.",
+					"Time": 8.8
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "Historically, increased scrutiny was given to other building projects of the Cultural Center of the Philippines,",
+					"Time": 6.7
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "such as the Theater of Performing Arts near Manila Bay, Folk Arts Theatre, Philippine International Conference Center, and the Coconut Palace.",
+					"Time": 9.9
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "First Lady Imelda Marcos is giving multiple assurances- *crackle* ",
+					"Time": 4.2
+				},
+				{
+					"Character": "News Reporter",
+					"Line": " -Film Festival is still scheduled to take place early next year, in January.",
+					"Time": 4.9
+				}
+			]
+		},
+		"EventLocations": [
+			"Hallway",
+			"Hallway 2",
+			"Study Room Planks Area",
+			"Study Room Entrance",
+			"Study Room",
+			"Study Room Near Planks",
+			"Study Room Desk",
+			"Study Room Near Desk",
+			"Study Room Printing Press",
+			"Bedroom Center",
+			"Bedroom Broken Wall",
+			"Bedroom Study Table",
+			"Bedroom Safe",
+			"Blueprint Wall 1",
+			"Blueprint Wall 2",
+			"Blueprint Wall 3",
+			"Blueprint Wall 4",
+			"Bed Right Picture",
+			"Bed Left Picture",
+			"Window Right Picture"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_repmale_HINT_FindApprvdCntrct_AnUpdateOn.ogg"
+	},
+	"RadioFinalHint": {
+		"EventCategory": "RADIO",
+		"EventPrerequisiteFlags": [
+			"QuestFinishBedroom_Done",
+			"QuestContinueMakeNutribun_Done",
+			"QuestFindTheCodeToTheDesk_Done"
+		],
+		"EventCompletionFlags": [
+			"RadioFinalHint_Done"
+		],
+		"Oneshot": false,
+		"EventText": {
+			"Name": "Radio",
+			"Text": [
+				{
+					"Character": "News Reporter",
+					"Line": "September 1983, top of the headlines: ",
+					"Time": 5.2
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "A newspaper publisher had its properties SEIZED this morning by local officials, on suspicion of distributing illegal media.",
+					"Time": 7.7
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "This comes after the newspaper,  *radio crackle* published a story implicating several government officials with the assassination of former senator Benigno Aquino last month.",
+					"Time": 8.9
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "Among the properties seized were several PRINTING PRESS machines, paper reams, and other printing paraphernalia.",
+					"Time": 7.2
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "A representative of the newspaper declared that these printing presses were not used to PRINT any illegal documents.",
+					"Time": 7.0
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "They decry the seizure as an attack on press freedom.",
+					"Time": 3.5
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "Administration officials have responded that the seizure was unrelated, ",
+					"Time": 4.3
+				},
+				{
+					"Character": "News Reporter",
+					"Line": "pointing out that the RIGHT TO PUBLISH had been restored in early 1981 and that ANY INDIVIDUAL CAN PRINT without obtaining any prior license.",
+					"Time": 9.5
+				}
+			]
+		},
+		"EventLocations": [
+			"Hallway",
+			"Hallway 2",
+			"Study Room Planks Area",
+			"Study Room Entrance",
+			"Study Room",
+			"Study Room Near Planks",
+			"Study Room Desk",
+			"Study Room Near Desk",
+			"Study Room Printing Press",
+			"Bedroom Center",
+			"Bedroom Broken Wall",
+			"Bedroom Study Table",
+			"Bedroom Safe",
+			"Blueprint Wall 1",
+			"Blueprint Wall 2",
+			"Blueprint Wall 3",
+			"Blueprint Wall 4",
+			"Bed Right Picture",
+			"Bed Left Picture",
+			"Window Right Picture"
+		],
+		"DialogueClickable": false,
+		"AudioSourceFile": "res://src/Assets/audio/radio-broadcasts/VO_repmale_FINALTASK_Sep1983.ogg"
+	},
+	"ActionGrabDocumentPiece": {
+		"EventCategory": "ACTION",
+		"EventPrerequisiteFlags": [
+			"ActionTeleportToStudyDesk_Done"
+		],
+		"EventCompletionFlags": [
+			"ActionGrabDocumentPiece_Done"
+		],
+		"Oneshot": true,
+		"EventText": {
+
+		},
+		"EventLocations": [],
+		"DialogueClickable": false,
+		"AudioSourceFile": ""
+	}
+}

@@ -1,0 +1,253 @@
+{
+	"QuestNavigateHouse": {
+		"QuestDescription": {
+			"Name": "Navigate the House",
+			"Description": "The house of the crony is dark and messy. Find a way to navigate this place."
+		},
+		"QuestCompletionTracker": {
+			"Find Light": [
+				"ActionPickUpFlashlight_Done"
+			],
+			"Walk Around": [
+				"ActionTeleportToSofas_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestNavigateHouse_Done"
+		]
+	},
+	"QuestMakeNutribun": {
+		"QuestDescription": {
+			"Name": "Make a Nutribun",
+			"Description": "It seems that you need to make one of these Nutribuns. Maybe there's something you can find out if you do."
+		},
+		"QuestCompletionTracker": {
+			"Add Wheat Flour": [
+				"ActionBowlAddWheatFlour_Done"
+			],
+			"Add Yeast": [
+				"ActionBowlAddYeast_Done"
+			],
+			"Add Sugar": [
+				"ActionBowlAddSugar_Done"
+			],
+			"Mix the 3 ingredients": [
+				"ActionBowlMix1_Done"
+			],
+			"Add water": [
+				"ActionBowlAddWater_Done"
+			],
+			"Mix again": [
+				"ActionBowlMix2_Done"
+			],
+			"Add vegetable oil": [
+				"ActionBowlAddOil_Done"
+			],
+			"Mix one more time": [
+				"ActionBowlMix3_Done"
+			],
+			"Add powdered milk": [
+				"ActionBowlAddMilk_Done"
+			],
+			"Add iodized salt": [
+				"ActionBowlAddSalt_Done"
+			],
+			"Mix for the last time": [
+				"ActionBowlMix4_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestMakeNutribun_Done"
+		]
+	},
+	"QuestContinueMakeNutribun": {
+		"QuestDescription": {
+			"Name": "Continue the baking process",
+			"Description": "You're almost done with the baking process. Keep going!"
+		},
+		"QuestCompletionTracker": {
+			"Knead the Dough": [
+				"ActionKneadDough_Done"
+			],
+			"Divide the Dough into 4 parts": [
+				"ActionDoughDivide_Done"
+			],
+			"Put pieces of dough in tray": [
+				"ActionPlaceDoughOnTray_Done"
+			],
+			"Bake the dough": [
+				"ActionOvenNutribun_Done"
+			],
+			"Put nutribun in packaging": [
+				"ActionPackageNutribun_Done"
+			],
+			"Place sealed nutribuns in box": [
+				"AddNutribunsToBox_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestContinueMakeNutribun_Done"
+		]
+	},
+	"QuestFinishBedroom": {
+		"QuestDescription": {
+			"Name": "Finish the Bedroom Task",
+			"Description": "Go to the bedroom and finish all the tasks there."
+		},
+		"QuestCompletionTracker": {
+			"Open the Safe by finding the code": [
+				"ActionOpenSafe_Done"
+			],
+			"Open the Briefcase by finding the contract": [
+				"ActionOpenBriefcase_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestFinishBedroom_Done"
+		]
+	},
+	"QuestFindTheCodeToTheDesk": {
+		"QuestDescription": {
+			"Name": "Find the Code to the Desk",
+			"Description": "The desk has a 3-digit code, it must be somewhere."
+		},
+		"QuestCompletionTracker": {
+			"Fix the torn Document": [
+				"ActionAssembleDocument_Done"
+			],
+			"Unlock the Desk Drawer": [
+				"ActionOpenDeskDrawer_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestFindTheCodeToTheDesk_Done"
+		]
+	},
+	"QuestCleanThePainting": {
+		"QuestDescription": {
+			"Name": "Find the Code by Cleaning The Painting",
+			"Description": "The document says something about cleaning a painting, find the painting somewhere around the house and clean it."
+		},
+		"QuestCompletionTracker": {
+			"Clean The Painting": [
+				"ActionWipePainting_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestCleanThePainting_Done"
+		]
+	},
+	"QuestPrintArticle": {
+		"QuestDescription": {
+			"Name": "Print an Article on the Truth about Martial Law",
+			"Description": "Find evidence throughout the mansion and print an article about your findings."
+		},
+		"QuestCompletionTracker": {
+			"Find a way to Print": [
+				"ActionTeleportToGate_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestPrintArticle_Done"
+		]
+	},
+	"QuestOpenTheGate": {
+		"QuestDescription": {
+			"Name": "Open the Cell to the Printing Machine",
+			"Description": "The printing machine is locked behind a cell, find a way to open it."
+		},
+		"QuestCompletionTracker": {
+			"Find the Key to the Cell": [
+				"ActionOpenDeskDrawer_Done"
+			],
+			"Open the Cell with the Key": [
+				"ActionUnlockGate_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestOpenTheGate_Done"
+		]
+	},
+	"QuestEnterBedroom": {
+		"QuestDescription": {
+			"Name": "Find a way into the Bedroom",
+			"Description": "The Bedroom Door is Locked, find another way into it."
+		},
+		"QuestCompletionTracker": {
+			"Find another way in": [
+				"ActionTeleportToPlanks_Done"
+			],
+			"Enter the room": [
+				"ActionTeleportToBedroom_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestEnterBedroom_Done"
+		]
+	},
+	"QuestDestroyThePlanks": {
+		"QuestDescription": {
+			"Name": "Remove the Wooden Planks",
+			"Description": "Wooden Planks are blocking your way into the Bedroom, find a way to remove them."
+		},
+		"QuestCompletionTracker": {
+			"Find a tool to remove planks": [
+				"ActionPickUpCrowbar_Done"
+			],
+			"Break through the planks": [
+				"ActionRemovePlanks_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestDestroyThePlanks_Done"
+		]
+	},
+	"QuestGoToKitchen": {
+		"QuestDescription": {
+			"Name": "Go to the Kitchen",
+			"Description": "The Kitchen might have some more information about the Nutribun."
+		},
+		"QuestCompletionTracker": {
+			"Enter the Kitchen": [
+				"ActionTeleportToKitchenEntrance_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestGoToKitchen_Done"
+		]
+	},
+	"QuestCompletePrintingMachine": {
+		"QuestDescription": {
+			"Name": "Fix and use the printing machine",
+			"Description": "The printing press seems to be missing some parts. It must also be used after."
+		},
+		"QuestCompletionTracker": {
+			"Add green button": [
+				"ActionAddGreenButton_Done"
+			],
+			"Add paper roll": [
+				"ActionAddPaperRoll_Done"
+			],
+			"Use the printing press": [
+				"ActionFinishPrintingItem_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestCompletePrintingMachine_Done"
+		]
+	},
+	"QuestLeaveTheMansion": {
+		"QuestDescription": {
+			"Name": "Leave the Mansion",
+			"Description": "You have already discovered the truth. It's time to leave the mansion."
+		},
+		"QuestCompletionTracker": {
+			"Exit through the front door": [
+				"ActionLeaveMansion_Done"
+			]
+		},
+		"QuestCompletionFlags": [
+			"QuestLeaveTheMansion_Done"
+		]
+	}
+}
