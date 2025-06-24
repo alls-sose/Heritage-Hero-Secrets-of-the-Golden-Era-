@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c470359d74ada2ac0b22b30998a257ff538126f0c6f0866ec1e7eb0759b41d9a
-size 883
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bfaey4d562sbo"
+path.s3tc="res://.godot/imported/Edited-Artwork-2 Abstract.png-7ac73e89514e9bdd1a32e57543a82774.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/artwork-assets/Edited-Artwork-2 Abstract.png"
+dest_files=["res://.godot/imported/Edited-Artwork-2 Abstract.png-7ac73e89514e9bdd1a32e57543a82774.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

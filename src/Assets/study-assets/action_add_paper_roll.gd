@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5410d4da7c6aaf4eb324f59911fb67b25978d3d5491407083fef2e4eb16396a4
-size 142
+extends Event
+
+func _on_printing_press_paper_added() -> void:
+	close_event()
+	emit_signal("event_ended")
+	QuestControl.update_active_quests()

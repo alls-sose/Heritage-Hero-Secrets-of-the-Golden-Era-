@@ -1,3 +1,251 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:78ccf032d5efc22bfbeec62286aebfd945ce2c4ac40042eae6bbf444dc581935
-size 12372
+[gd_scene load_steps=26 format=3 uid="uid://co0p5112hl1b4"]
+
+[ext_resource type="PackedScene" uid="uid://dtykay6lg8ao" path="res://src/Level/house_main.tscn" id="1_1r7tk"]
+[ext_resource type="Texture2D" uid="uid://febxpfbrlrie" path="res://src/assets/00-general-3d-assets/Flare00.PNG" id="2_athbl"]
+[ext_resource type="PackedScene" uid="uid://0ssulj5t3857" path="res://src/assets/01-pickable-assets/daivoltz-0-a4.tscn" id="3_s4mk4"]
+[ext_resource type="PackedScene" uid="uid://cd0bby50vvdro" path="res://src/ois-objects/general/ois_cassette_player.tscn" id="4_igx15"]
+[ext_resource type="PackedScene" uid="uid://dswqagqi1ryk3" path="res://src/ois-objects/general/ois_cassette_tape.tscn" id="5_35ur1"]
+[ext_resource type="PackedScene" uid="uid://uru0e7lcxqnu" path="res://src/assets/kitchen-assets/yeast.tscn" id="6_bmqj7"]
+[ext_resource type="PackedScene" uid="uid://bgu2qc17itoa1" path="res://src/assets/kitchen-assets/salt.tscn" id="7_0kqxo"]
+[ext_resource type="PackedScene" uid="uid://b3742ykvuhrtg" path="res://src/assets/kitchen-assets/cooking oil.tscn" id="8_70nif"]
+[ext_resource type="PackedScene" uid="uid://d08y20uc3cu6" path="res://src/assets/kitchen-assets/oven.tscn" id="9_bnovj"]
+[ext_resource type="PackedScene" uid="uid://cu7eesycn0q3r" path="res://src/assets/kitchen-assets/bowl-main.tscn" id="10_sppqv"]
+[ext_resource type="PackedScene" uid="uid://u210n6rkghmi" path="res://src/assets/kitchen-assets/baking spatula.tscn" id="11_p7l1f"]
+[ext_resource type="PackedScene" uid="uid://dacwg537ywn6j" path="res://src/assets/kitchen-assets/sugar.tscn" id="12_xwds6"]
+[ext_resource type="PackedScene" uid="uid://cnks0g5naghb7" path="res://src/assets/kitchen-assets/water.tscn" id="13_f05ul"]
+[ext_resource type="PackedScene" uid="uid://d01nl60hxle6i" path="res://src/assets/kitchen-assets/non fat powdered milk.tscn" id="14_p5tl5"]
+[ext_resource type="PackedScene" path="res://src/Assets/kitchen-assets/wheat flour.tscn" id="16_m2qyl"]
+[ext_resource type="PackedScene" uid="uid://cmtgbjolbfhbu" path="res://src/assets/00-general-3d-assets/TRAY_NEW.tscn" id="17_ekjgs"]
+[ext_resource type="PackedScene" uid="uid://w8f45h0g5ahk" path="res://src/assets/kitchen-assets/nutribunplasticpackaging.tscn" id="20_athbl"]
+
+[sub_resource type="Curve" id="Curve_sjfh2"]
+_data = [Vector2(0, 0.0021441), 0.0, 0.0, 0, 0, Vector2(0.5, 0.754717), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7i26j"]
+curve = SubResource("Curve_sjfh2")
+
+[sub_resource type="Gradient" id="Gradient_kvgra"]
+colors = PackedColorArray(0.703607, 0.543447, 0.489575, 1, 0.98539, 0.469295, 1.92523e-07, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wc5yb"]
+gradient = SubResource("Gradient_kvgra")
+
+[sub_resource type="CurveTexture" id="CurveTexture_ssy8p"]
+curve = SubResource("Curve_sjfh2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j0kxd"]
+lifetime_randomness = 1.0
+emission_shape_scale = Vector3(1, 1, 2.5)
+emission_shape = 1
+emission_sphere_radius = 1.5
+angle_min = 45.0
+angle_max = 45.0
+gravity = Vector3(0, -0.1, 0)
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_wc5yb")
+alpha_curve = SubResource("CurveTexture_7i26j")
+emission_curve = SubResource("CurveTexture_ssy8p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmnmg"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_athbl")
+uv1_scale = Vector3(1.015, 1.01, 13.465)
+
+[sub_resource type="QuadMesh" id="QuadMesh_vysgm"]
+material = SubResource("StandardMaterial3D_lmnmg")
+size = Vector2(0.53, 2.69)
+
+[node name="Level" type="Node3D"]
+
+[node name="House" parent="." instance=ExtResource("1_1r7tk")]
+
+[node name="Floor" parent="House/Offset Node/Main Mansion/House Architecture Nodes" index="1"]
+surface_material_override/0 = null
+
+[node name="EnvironmentLight" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(0.886696, -2.93845e-09, 0.462352, -0.462352, -3.33259e-08, 0.886696, 1.28028e-08, -1, -3.09086e-08, 18.271, 3.54941, -2.46197)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 11.535
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(-4.37114e-08, 1, 1.3027e-15, -0.461749, -2.01837e-08, 0.887011, 0.887011, 3.87725e-08, 0.461749, 9.49846, 3.54941, 5.69752)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 5.237
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(-4.37114e-08, 1, 1.3027e-15, -0.461749, -2.01837e-08, 0.887011, 0.887011, 3.87725e-08, 0.461749, -1.6062, 3.54941, 5.69752)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 5.237
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(0.886696, -2.93845e-09, 0.462352, -0.462352, -3.33259e-08, 0.886696, 1.28028e-08, -1, -3.09086e-08, 18.271, 3.54941, -10.6836)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 11.535
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="EnvironmentLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1332, 3.61528, -32.3083)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 3.34
+omni_range = 14.3015
+
+[node name="Lights" type="Node3D" parent="."]
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35487, 2.89208, -16.1912)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.04612, 2.89208, -1.29979)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.982, 4.1063, -27.7266)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 21.9061
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52375, 8.76515, -0.650649)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52375, 3.25586, -0.650649)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 13.9708
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6027, 2.94091, -4.92511)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="SFX" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53976, 0, 0)
+
+[node name="WindowGodRay" type="GPUParticles3D" parent="SFX"]
+transform = Transform3D(0.436425, 0.899741, 0, -0.899741, 0.436425, 0, 0, 0, 1, 11.2474, 2.81458, -11.4522)
+amount = 100
+lifetime = 5.0
+preprocess = 1.0
+randomness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_j0kxd")
+draw_pass_1 = SubResource("QuadMesh_vysgm")
+
+[node name="WindowGodRay2" type="GPUParticles3D" parent="SFX"]
+transform = Transform3D(0.436425, 0.899741, 0, -0.899741, 0.436425, 0, 0, 0, 1, 11.2474, 2.53361, -2.20848)
+amount = 100
+lifetime = 5.0
+preprocess = 1.0
+randomness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_j0kxd")
+draw_pass_1 = SubResource("QuadMesh_vysgm")
+
+[node name="Collisions" type="Node3D" parent="."]
+
+[node name="LivingRoom" type="Node3D" parent="."]
+
+[node name="daivoltz" parent="LivingRoom" instance=ExtResource("3_s4mk4")]
+transform = Transform3D(0.121743, 0.992137, -0.0290224, -0.0196832, 0.0316471, 0.999305, 0.992366, -0.121088, 0.0233814, 8.14801, 1.04113, -5.24195)
+collision_mask = 131079
+
+[node name="OISCassettePlayer" parent="LivingRoom" instance=ExtResource("4_igx15")]
+transform = Transform3D(0.943246, 0, 0.332095, 0, 1, 0, -0.332095, 0, 0.943246, 7.9559, 0.975727, -5.60396)
+
+[node name="OISCassetteTape" parent="LivingRoom" instance=ExtResource("5_35ur1")]
+transform = Transform3D(0.337013, 0, -0.9415, 0, 1, 0, 0.9415, 0, 0.337013, 7.96768, 1.12418, -4.8409)
+collision_mask = 131079
+
+[node name="Kitchen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7778, 0, -34.7578)
+
+[node name="Yeast" parent="Kitchen" instance=ExtResource("6_bmqj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492723, 1.37577, -3.60802)
+collision_mask = 131079
+
+[node name="Salt" parent="Kitchen" instance=ExtResource("7_0kqxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14388, 1.23949, 3.36414)
+collision_mask = 131079
+
+[node name="Cooking Oil" parent="Kitchen" instance=ExtResource("8_70nif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.30409, 2.18472, 2.84193)
+collision_mask = 131079
+
+[node name="Oven" parent="Kitchen" instance=ExtResource("9_bnovj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.95212, 0.0134982, 0.927097)
+
+[node name="Bowl-Main" parent="Kitchen" instance=ExtResource("10_sppqv")]
+transform = Transform3D(-0.0123566, 0, 0.999924, 0, 1, 0, -0.999924, 0, -0.0123566, 1.3656, 1.2239, 2.56295)
+
+[node name="Sugar" parent="Kitchen" instance=ExtResource("12_xwds6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58771, 1.47646, -3.74716)
+collision_mask = 131079
+
+[node name="Water lol" parent="Kitchen" instance=ExtResource("13_f05ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14885, 2.67998, 8.18013)
+collision_mask = 131079
+
+[node name="Nonfat Powdered Milk" parent="Kitchen" instance=ExtResource("14_p5tl5")]
+transform = Transform3D(0.293306, 0, -0.956019, 0, 1, 0, 0.956019, 0, 0.293306, 5.02122, 1.3174, 5.89241)
+collision_mask = 131079
+
+[node name="Wheat Flour" parent="Kitchen" instance=ExtResource("16_m2qyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81188, 2.86104, -3.71474)
+collision_mask = 131079
+
+[node name="Tray" parent="Kitchen" instance=ExtResource("17_ekjgs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15343, 1.30187, 1.26938)
+
+[node name="Nutribun-PlasticPackaging" parent="Kitchen" instance=ExtResource("20_athbl")]
+transform = Transform3D(0.997446, 0.018295, -0.0690447, 0.0667396, 0.105709, 0.992155, 0.0254501, -0.994229, 0.104218, 1.40672, 1.36076, 0.727993)
+collision_mask = 131079
+
+[node name="Nutribun-PlasticPackaging2" parent="Kitchen" instance=ExtResource("20_athbl")]
+transform = Transform3D(0.997446, 0.018295, -0.0690447, 0.0667396, 0.105709, 0.992155, 0.0254501, -0.994229, 0.104218, 1.18823, 1.36076, 0.727993)
+collision_mask = 131079
+
+[node name="Nutribun-PlasticPackaging3" parent="Kitchen" instance=ExtResource("20_athbl")]
+transform = Transform3D(0.997446, 0.018295, -0.0690447, 0.0667396, 0.105709, 0.992155, 0.0254501, -0.994229, 0.104218, 0.930216, 1.36076, 0.783829)
+collision_mask = 131079
+
+[node name="Nutribun-PlasticPackaging4" parent="Kitchen" instance=ExtResource("20_athbl")]
+transform = Transform3D(0.997446, 0.018295, -0.0690447, 0.0667396, 0.105709, 0.992155, 0.0254501, -0.994229, 0.104218, 0.672619, 1.36076, 0.783829)
+collision_mask = 131079
+
+[node name="Baking Spatula" parent="Kitchen" instance=ExtResource("11_p7l1f")]
+transform = Transform3D(1, 0, 0, 0, 0.114088, -0.993471, 0, 0.993471, 0.114088, 1.10822, 1.58968, 1.95016)
+collision_mask = 131079
+
+[editable path="House"]
+[editable path="House/Offset Node/Main Mansion/House Architecture Nodes/Table Lamps/TableLamp4"]
+[editable path="House/Offset Node/Main Mansion/House Architecture Nodes/Chandeliers/chandelier4"]
+[editable path="House/Offset Node/Main Mansion/Study Room/Printing Press"]
+[editable path="House/Offset Node/Main Mansion/Kitchen/Kitchen Island4"]
+[editable path="House/Offset Node/Main Mansion/Kitchen/Kitchen Island5"]
+[editable path="House/Offset Node/Main Mansion/Bedroom/TableLamp"]
+[editable path="House/Offset Node/Main Mansion/Bedroom/TableLamp2"]
+[editable path="House/Offset Node/Main Mansion/Bedroom/TableLamp3"]

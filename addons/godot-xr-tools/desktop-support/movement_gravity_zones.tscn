@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31f53b04e7970a0ca983569a8bcf9ec9cd4e29502b993a988064713d3c5d69bf
-size 251
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/movement_gravity_zones.gd" id="1"]
+
+[node name="MovementGravityZones" type="Node" groups=["movement_providers"]]
+script = ExtResource("1")

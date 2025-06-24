@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be34e70291fb8ee30bfabc0e4f3d9978c940dc3e71efe77ff9ce0d481f052aa0
-size 1080
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://vv7yfdklhrm7"
+path.s3tc="res://.godot/imported/mansion draft2_stove_1002_metallicRoughness.jpg-a6603edcd2240284f23b6c87d4426a02.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "cf8e52a8ba18b519116df83e015c69ea"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_stove_1002_metallicRoughness.jpg"
+dest_files=["res://.godot/imported/mansion draft2_stove_1002_metallicRoughness.jpg-a6603edcd2240284f23b6c87d4426a02.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://src/Assets/00General3DAssets/mansion draft2_stove_1002_normal.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

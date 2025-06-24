@@ -1,3 +1,99 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:985a6a83fc98917063b916b53cd2a849005f69f0374e4901ca8eff2f5e5a8fbf
-size 4731
+[gd_scene load_steps=16 format=3 uid="uid://befjlyt15k6js"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_cdn48"]
+[ext_resource type="Script" uid="uid://b6hhyoqp6f64a" path="res://src/Assets/study-assets/printed_item_new.gd" id="2_b21p6"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_8mxu0"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_b21p6"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="5_cdn48"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="5_njog0"]
+[ext_resource type="PackedScene" uid="uid://h0ir7ocxt75a" path="res://src/Assets/artwork-assets/newspaper-clippings/printed_things.tscn" id="7_njog0"]
+[ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="8_b21p6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mxu0"]
+cull_mode = 2
+albedo_color = Color(0.826968, 0.782659, 0.653254, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b21p6"]
+material = SubResource("StandardMaterial3D_8mxu0")
+size = Vector2(0.99, 0.7)
+
+[sub_resource type="QuadMesh" id="QuadMesh_njog0"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b21p6"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b21p6"]
+transparency = 1
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_b21p6")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kvvpg"]
+resource_local_to_scene = true
+size = Vector3(3, 2, 0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dsq25"]
+size = Vector3(0.766699, 0.0494971, 0.544495)
+
+[node name="PrintedItem" instance=ExtResource("1_cdn48")]
+collision_mask = 131079
+script = ExtResource("2_b21p6")
+
+[node name="Document" type="Node3D" parent="." index="0"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Document" index="0"]
+transform = Transform3D(0.788078, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = SubResource("PlaneMesh_b21p6")
+skeleton = NodePath("../..")
+
+[node name="Viewport2Din3D" parent="Document" index="1" instance=ExtResource("5_cdn48")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0.00702384, 0)
+collision_layer = 0
+viewport_size = Vector2(1600, 900)
+
+[node name="Viewport" parent="Document/Viewport2Din3D" index="0"]
+size = Vector2i(1600, 900)
+
+[node name="PrintedThings" parent="Document/Viewport2Din3D/Viewport" index="0" instance=ExtResource("7_njog0")]
+
+[node name="Screen" parent="Document/Viewport2Din3D" index="1"]
+mesh = SubResource("QuadMesh_njog0")
+surface_material_override/0 = SubResource("StandardMaterial3D_b21p6")
+
+[node name="StaticBody3D" parent="Document/Viewport2Din3D" index="2"]
+collision_layer = 0
+viewport_size = Vector2(1600, 900)
+
+[node name="CollisionShape3D" parent="Document/Viewport2Din3D/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_kvvpg")
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00532228, 0.00277588, -0.00259399)
+shape = SubResource("BoxShape3D_dsq25")
+
+[node name="GrabPointHandLeft2" parent="." index="2" instance=ExtResource("3_8mxu0")]
+transform = Transform3D(1, 0, 0, 0, 0.694382, 0.719606, 0, -0.719606, 0.694382, -0.39167, -0.042226, 0)
+visible = true
+
+[node name="GrabPointHandRight2" parent="." index="3" instance=ExtResource("4_b21p6")]
+transform = Transform3D(1, 0, 0, 0, 0.694382, 0.719606, 0, -0.719606, 0.694382, 0.393636, -0.0420471, 0)
+visible = true
+
+[node name="InventoryItem" type="Node3D" parent="." index="4" node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("5_njog0")
+defined_mesh = NodePath("../Document")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 0.4
+object_rotation_adjustment = Vector3(90, 0, 0)
+exclude_additional_mesh_transform = true
+metadata/_custom_type_script = "uid://dq86gvhe6d20d"
+
+[node name="GrabParticle" parent="." index="5" instance=ExtResource("8_b21p6")]
+
+[connection signal="grabbed" from="." to="GrabParticle" method="_on_first_grab"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+
+[editable path="Document/Viewport2Din3D"]
+[editable path="Document/Viewport2Din3D/Viewport/PrintedThings"]

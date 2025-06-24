@@ -1,3 +1,325 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b453391ca5c15e7f57be12358afb148de38a595da086624c492de9f67849c3e
-size 13913
+[gd_scene load_steps=27 format=3 uid="uid://dr50sgl1uc65c"]
+
+[ext_resource type="PackedScene" uid="uid://cgppg60vknss6" path="res://src/Assets/study-assets/malakas-at-maganda-doc/MalakasAtMagandaDoc.glb" id="1_y5mjv"]
+[ext_resource type="Script" uid="uid://cjj0rbx3v6qo3" path="res://src/Assets/study-assets/malakas-at-maganda-doc/malakas_at_maganda_doc.gd" id="2_7vm5j"]
+[ext_resource type="Texture2D" uid="uid://wmtle8d3hd8q" path="res://src/Assets/study-assets/malakas-at-maganda-doc/MalakasAtMagandaDoc_Untitled.png" id="2_rrpvl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vm5j"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("2_rrpvl")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n8khl"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 1.06145, 1e-05, 0.593653),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 27, 245, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 253, 222, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wwgfs"]
+resource_name = "MalakasAtMagandaDoc_Plane_001"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 1.06145, 1e-05, 0.593653),
+"attribute_data": PackedByteArray(0, 0, 193, 72, 220, 135, 0, 0, 88, 118, 252, 75, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_7vm5j"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 27, 245, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 253, 222, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n8khl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5obak"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1n2rd"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("2_rrpvl")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ooxse"]
+_surfaces = [{
+"aabb": AABB(-0.0754107, 0, -1, 1.07541, 1e-05, 0.758538),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(148, 32, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 89, 200, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lsrwx"]
+resource_name = "MalakasAtMagandaDoc_Plane_002"
+_surfaces = [{
+"aabb": AABB(-0.0754107, 0, -1, 1.07541, 1e-05, 0.758538),
+"attribute_data": PackedByteArray(220, 135, 0, 0, 255, 255, 23, 97, 88, 118, 252, 75, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_1n2rd"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(148, 32, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 89, 200, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ooxse")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvaxc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6tc7p"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.431595, 0.924589, 1e-05, 0.612158),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 143, 10, 0, 0, 189, 223, 0, 0, 230, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ipsmr"]
+resource_name = "MalakasAtMagandaDoc_Plane_003"
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.431595, 0.924589, 1e-05, 0.612158),
+"attribute_data": PackedByteArray(0, 0, 28, 151, 88, 118, 252, 75, 110, 103, 172, 140, 0, 0, 193, 72),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_1n2rd"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 143, 10, 255, 191, 189, 223, 0, 0, 230, 221, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6tc7p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjokt"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_odrfc"]
+_surfaces = [{
+"aabb": AABB(-0.191917, 0, -0.406347, 1.19192, 1e-05, 0.505376),
+"format": 34896613377,
+"index_count": 9,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 1, 0, 3, 0, 4, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 5,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 181, 180, 0, 0, 5, 25, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 133, 83, 0, 0, 24, 68, 0, 0, 248, 235, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ujvsl"]
+resource_name = "MalakasAtMagandaDoc_Plane_004"
+_surfaces = [{
+"aabb": AABB(-0.191917, 0, -0.406347, 1.19192, 1e-05, 0.505376),
+"attribute_data": PackedByteArray(255, 255, 166, 121, 88, 118, 252, 75, 255, 255, 23, 97, 4, 144, 156, 135, 110, 103, 172, 140),
+"format": 34896613399,
+"index_count": 9,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 1, 0, 3, 0, 4, 0),
+"material": SubResource("StandardMaterial3D_1n2rd"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 5,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 181, 180, 255, 191, 5, 25, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 133, 83, 255, 191, 24, 68, 0, 0, 248, 235, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_odrfc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08muo"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bajnj"]
+_surfaces = [{
+"aabb": AABB(-1, 0, 0.0990294, 0.808083, 1e-05, 0.900971),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 50, 190, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 42, 23, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hwtmp"]
+resource_name = "MalakasAtMagandaDoc_Plane_005"
+_surfaces = [{
+"aabb": AABB(-1, 0, 0.0990294, 0.808083, 1e-05, 0.900971),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 110, 103, 172, 140, 216, 76, 255, 255, 0, 0, 28, 151),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_1n2rd"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 50, 190, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 42, 23, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bajnj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tx4un"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pfl80"]
+_surfaces = [{
+"aabb": AABB(-0.399621, 0, 0.0594931, 1.33156, 1e-05, 0.940507),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 0, 0, 238, 39, 0, 0, 194, 10, 0, 0, 227, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hpe7i"]
+resource_name = "MalakasAtMagandaDoc_Plane_006"
+_surfaces = [{
+"aabb": AABB(-0.399621, 0, 0.0594931, 1.33156, 1e-05, 0.940507),
+"attribute_data": PackedByteArray(72, 247, 255, 255, 110, 103, 172, 140, 4, 144, 156, 135, 216, 76, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_1n2rd"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 255, 191, 238, 39, 0, 0, 194, 10, 255, 191, 227, 100, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pfl80")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhk51"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uqgim"]
+_surfaces = [{
+"aabb": AABB(0.125145, 0, -0.0495976, 0.874855, 1e-05, 1.0496),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 0, 0, 0, 0, 20, 236, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 155, 26, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rbp5x"]
+resource_name = "MalakasAtMagandaDoc_Plane_007"
+_surfaces = [{
+"aabb": AABB(0.125145, 0, -0.0495976, 0.874855, 1e-05, 1.0496),
+"attribute_data": PackedByteArray(255, 255, 166, 121, 72, 247, 255, 255, 4, 144, 156, 135, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_1n2rd"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 0, 0, 255, 191, 20, 236, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 155, 26, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uqgim")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vwi4t"]
+
+[node name="MalakasAtMagandaDoc" instance=ExtResource("1_y5mjv")]
+script = ExtResource("2_7vm5j")
+
+[node name="Plane" parent="." index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+visible = false
+
+[node name="Plane_001" parent="." index="1"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+
+[node name="Plane_008" type="MeshInstance3D" parent="Plane_001" index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, 0, -0.001, 0)
+mesh = SubResource("ArrayMesh_wwgfs")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_5obak")
+
+[node name="Plane_002" parent="." index="2"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+
+[node name="Plane_008" type="MeshInstance3D" parent="Plane_002" index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, 0, -0.001, 0)
+mesh = SubResource("ArrayMesh_lsrwx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvaxc")
+
+[node name="Plane_003" parent="." index="3"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+
+[node name="Plane_008" type="MeshInstance3D" parent="Plane_003" index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, 0, -0.001, 0)
+mesh = SubResource("ArrayMesh_ipsmr")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjokt")
+
+[node name="Plane_004" parent="." index="4"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+
+[node name="Plane_008" type="MeshInstance3D" parent="Plane_004" index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, 0, -0.001, 0)
+mesh = SubResource("ArrayMesh_ujvsl")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_08muo")
+
+[node name="Plane_005" parent="." index="5"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+
+[node name="Plane_008" type="MeshInstance3D" parent="Plane_005" index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, 0, -0.001, 0)
+mesh = SubResource("ArrayMesh_hwtmp")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_tx4un")
+
+[node name="Plane_006" parent="." index="6"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+
+[node name="Plane_008" type="MeshInstance3D" parent="Plane_006" index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, 0, -0.001, 0)
+mesh = SubResource("ArrayMesh_hpe7i")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_fhk51")
+
+[node name="Plane_007" parent="." index="7"]
+transform = Transform3D(0.15, 0, 0, 0, 0.215, 0, 0, 0, 0.212, 0, 0, 0)
+
+[node name="Plane_008" type="MeshInstance3D" parent="Plane_007" index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, 0, -0.001, 0)
+mesh = SubResource("ArrayMesh_rbp5x")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_vwi4t")

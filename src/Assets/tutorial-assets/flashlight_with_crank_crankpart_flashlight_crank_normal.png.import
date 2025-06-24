@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aed978002606eb94f7b4aec02de03b80e0d575b80dd1628fe34974276147294b
-size 1132
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://m7782mwaubdr"
+path.s3tc="res://.godot/imported/flashlight_with_crank_crankpart_flashlight_crank_normal.png-7bd271e644fa21fdf8b278a09d03c0ea.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "67b818e1327e82e59d300cc802acac39"
+}
+
+[deps]
+
+source_file="res://src/Assets/tutorial-assets/flashlight_with_crank_crankpart_flashlight_crank_normal.png"
+dest_files=["res://.godot/imported/flashlight_with_crank_crankpart_flashlight_crank_normal.png-7bd271e644fa21fdf8b278a09d03c0ea.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/assets/tutorial-assets/flashlight_with_crank_crankpart_flashlight_crank_normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

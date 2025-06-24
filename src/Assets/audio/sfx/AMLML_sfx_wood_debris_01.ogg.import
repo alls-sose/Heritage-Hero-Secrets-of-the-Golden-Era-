@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b05afdf412d5d7f59836bb69ec58c3ebd489f5bf95269b3dbdb52307c8927f6b
-size 449
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d4ljmrq3tgfdl"
+path="res://.godot/imported/AMLML_sfx_wood_debris_01.ogg-afb8343231d2bbf9de1a3783a49b4a8d.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_wood_debris_01.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_wood_debris_01.ogg-afb8343231d2bbf9de1a3783a49b4a8d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

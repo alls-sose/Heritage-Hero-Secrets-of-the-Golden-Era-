@@ -1,3 +1,72 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b4258935df887d62864b25c242fc5c66143c05aba4478171f571961fb6c81cdb
-size 3627
+[gd_scene load_steps=16 format=3 uid="uid://bkcy3cmupg5xj"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_8vaj4"]
+[ext_resource type="Texture2D" uid="uid://bu8dnk500xcyy" path="res://src/Assets/contract-images/SafeClue.png" id="2_phepg"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_vaw7m"]
+[ext_resource type="Animation" uid="uid://dhjb0e334tfwl" path="res://addons/godot-xr-tools/hands/animations/left/Pinch Flat.res" id="4_txy6f"]
+[ext_resource type="Script" uid="uid://bmclcwctwu3gd" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_kwxse"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="6_1tgjv"]
+[ext_resource type="Animation" uid="uid://dg4v7rqiaje2h" path="res://addons/godot-xr-tools/hands/animations/right/Pinch Flat.res" id="7_gdh0t"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="8_asnn7"]
+[ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="9_np60r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_phepg"]
+size = Vector3(0.85, 1.1, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vaw7m"]
+albedo_texture = ExtResource("2_phepg")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bt0py"]
+material = SubResource("StandardMaterial3D_vaw7m")
+size = Vector2(0.85, 1.1)
+orientation = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ktqjv"]
+flip_faces = true
+size = Vector2(0.85, 1.1)
+orientation = 2
+
+[sub_resource type="Resource" id="Resource_xkula"]
+script = ExtResource("5_kwxse")
+closed_pose = ExtResource("4_txy6f")
+metadata/_custom_type_script = "uid://bmclcwctwu3gd"
+
+[sub_resource type="Resource" id="Resource_kkebd"]
+script = ExtResource("5_kwxse")
+closed_pose = ExtResource("7_gdh0t")
+metadata/_custom_type_script = "uid://bmclcwctwu3gd"
+
+[node name="SafeClue" instance=ExtResource("1_8vaj4")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+shape = SubResource("BoxShape3D_phepg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+mesh = SubResource("PlaneMesh_bt0py")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" index="0"]
+mesh = SubResource("PlaneMesh_ktqjv")
+
+[node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("3_vaw7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.061)
+visible = true
+hand_pose = SubResource("Resource_xkula")
+
+[node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("6_1tgjv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.061)
+visible = true
+hand_pose = SubResource("Resource_kkebd")
+
+[node name="InventoryItem" type="Node3D" parent="." index="4" node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("8_asnn7")
+unique = true
+defined_mesh = NodePath("../MeshInstance3D")
+defined_collision_shape = NodePath("../CollisionShape3D")
+exclude_additional_mesh_transform = true
+metadata/_custom_type_script = "uid://dq86gvhe6d20d"
+
+[node name="GrabParticle" parent="." index="5" instance=ExtResource("9_np60r")]
+
+[connection signal="grabbed" from="." to="GrabParticle" method="_on_first_grab"]

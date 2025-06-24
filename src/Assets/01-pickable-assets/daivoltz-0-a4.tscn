@@ -1,3 +1,121 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9570c50b639e0f520a5a1d21f60ffc4e3f214fb9b1dc1aa5eb7cd816e86aec39
-size 7212
+[gd_scene load_steps=16 format=4 uid="uid://0ssulj5t3857"]
+
+[ext_resource type="Script" uid="uid://ckj2r4ysot3b5" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_l8pp7"]
+[ext_resource type="Texture2D" uid="uid://bwm6v4uy4dh0t" path="res://src/assets/artwork-assets/DaiVoltZ 0 Poster.jpg" id="2_phhbu"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_h80fo"]
+[ext_resource type="Animation" uid="uid://dhjb0e334tfwl" path="res://addons/godot-xr-tools/hands/animations/left/Pinch Flat.res" id="4_kpiyn"]
+[ext_resource type="Script" uid="uid://bmclcwctwu3gd" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_1gimd"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="6_kkxnd"]
+[ext_resource type="Animation" uid="uid://dg4v7rqiaje2h" path="res://addons/godot-xr-tools/hands/animations/right/Pinch Flat.res" id="7_vm0x2"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="8_nj87a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nop6y"]
+size = Vector3(0.3, 0.43, 0.025)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27kwx"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("2_phhbu")
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftw04"]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_color = Color(0.903292, 0.633664, 0.476904, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_do1tq"]
+_surfaces = [{
+"aabb": AABB(-0.899888, 0.0451757, -0.899888, 1.79978, 1e-05, 1.79978),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-1, 0, -1, 2, 0.0972288, 2),
+"format": 34359742465,
+"index_count": 78,
+"index_data": PackedByteArray("AAADAAIAAAABAAMABQAPAAcABQANAA8AAwAIAAIAAwALAAgAAAAKAAEAAAAJAAoAAQALAAMAAQAKAAsAAgAJAAAAAgAIAAkABAAIAAYABAAJAAgABQAJAAQABQAKAAkABwAKAAUABwALAAoABgALAAcABgAIAAsABgAMAAQABgAOAAwABwAOAAYABwAPAA4ABAANAAUABAAMAA0A"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC/AACAPwAAAAAAAIC/F19mv+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mv+Efxz0XX2a/F19mP+Efxz0XX2a/AACAv+Efxz0AAIC/AACAv+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIC/F19mvxsKOT0XX2Y/F19mPxsKOT0XX2Y/F19mvxsKOT0XX2a/F19mPxsKOT0XX2a/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q21xh"]
+resource_name = "mansion draft2x_Plane_017"
+_surfaces = [{
+"aabb": AABB(-0.899888, 0.0451757, -0.899888, 1.79978, 1e-05, 1.79978),
+"attribute_data": PackedByteArray("0Awu8y7zLvPQDNAMLvPQDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"material": SubResource("StandardMaterial3D_27kwx"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///7///wAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-1, 0, -1, 2, 0.0972288, 2),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAARwdNPYwvcz9HB009jC9zP0cHTT2ML3M/iy9zP4wvcz+LL3M/jC9zP4svcz+ML3M/RwdNPVAHTT1HB009UAdNPUcHTT1QB009jS9zPzAHTT2NL3M/MAdNPY0vcz8wB009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAAAARwdNPYwvcz9HB009jC9zP4svcz+ML3M/iy9zP4wvcz9HB009UAdNPUcHTT1QB009jS9zPzAHTT2NL3M/MAdNPQ=="),
+"format": 34359742487,
+"index_count": 78,
+"index_data": PackedByteArray("AQAKAAcAAQAEAAoAEQArABcAEQAnACsACQAYAAYACQAhABgAAAAeAAMAAAAbAB4ABQAjAAsABQAgACMACAAdAAIACAAaAB0ADQAZABMADQAcABkAEAAcAA0AEAAfABwAFgAfABAAFgAiAB8AEwAiABYAEwAZACIAFAAlAA4AFAApACUAFQAoABIAFQAqACgADAAmAA8ADAAkACYA"),
+"material": SubResource("StandardMaterial3D_ftw04"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAvwAAAAAAAIA/AACAvwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC/AACAvwAAAAAAAIC/AACAvwAAAAAAAIC/AACAPwAAAAAAAIC/AACAPwAAAAAAAIC/AACAPwAAAAAAAIC/F19mv+Efxz0XX2Y/F19mv+Efxz0XX2Y/F19mv+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mv+Efxz0XX2a/F19mv+Efxz0XX2a/F19mv+Efxz0XX2a/F19mP+Efxz0XX2a/F19mP+Efxz0XX2a/F19mP+Efxz0XX2a/AACAv+Efxz0AAIC/AACAv+Efxz0AAIC/AACAv+Efxz0AAIC/AACAv+Efxz0AAIA/AACAv+Efxz0AAIA/AACAv+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIC/AACAP+Efxz0AAIC/AACAP+Efxz0AAIC/F19mvxsKOT0XX2Y/F19mvxsKOT0XX2Y/F19mPxsKOT0XX2Y/F19mPxsKOT0XX2Y/F19mvxsKOT0XX2a/F19mvxsKOT0XX2a/F19mPxsKOT0XX2a/F19mPxsKOT0XX2a//3//f////z//fwAA////PwAA/3////+//3//f////z//fwAA////P////3////+//////////7//fwAA////PwAA/3////+//////////7//fwAA////P////3////+//////////7//f///////v////3////+//////////7//f////v//vwAA/3////+//3//f////z//f///////v////3////+//3//f////z//f///////vwAA/3////+//////////7//f///////vwAA/3////+//3//f////z//f///////vwAA/3////+//3//f////z//f////v//v////3////+//////////7//f///////v////3////+//////////7////9/////v/////////+/AAD/f////7//f/9/////P////3////+//3//f////z8AAP9/////vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_do1tq")
+
+[sub_resource type="Resource" id="Resource_mv4es"]
+script = ExtResource("5_1gimd")
+open_pose = ExtResource("4_kpiyn")
+closed_pose = ExtResource("4_kpiyn")
+
+[sub_resource type="Resource" id="Resource_qnege"]
+script = ExtResource("5_1gimd")
+open_pose = ExtResource("7_vm0x2")
+closed_pose = ExtResource("7_vm0x2")
+
+[node name="daivoltz" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 196615
+freeze_mode = 1
+script = ExtResource("1_l8pp7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00267029, 0.000732422, 0.0107405)
+shape = SubResource("BoxShape3D_nop6y")
+
+[node name="Painting" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, -9.44166e-09, -0.214, 0, 0.216, -9.35424e-09, 0, 0, 0)
+mesh = SubResource("ArrayMesh_q21xh")
+skeleton = NodePath("")
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("3_h80fo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.148807, 0, -0.0611855)
+visible = true
+hand_pose = SubResource("Resource_mv4es")
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("6_kkxnd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158211, 0, -0.0485834)
+visible = true
+hand_pose = SubResource("Resource_qnege")
+
+[node name="InventoryItem" type="Node3D" parent="." node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("8_nj87a")
+unique = true
+defined_mesh = NodePath("../Painting")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 0.4

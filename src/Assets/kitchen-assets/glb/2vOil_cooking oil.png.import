@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b7ec5929542bb12358a08f5af6d67c2a540e35a9d4d327d258cfa227a7d7058
-size 863
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d18slh8xvt8d6"
+path.s3tc="res://.godot/imported/2vOil_cooking oil.png-5fbdd123380221555217c09639ce4082.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/glb/2vOil_cooking oil.png"
+dest_files=["res://.godot/imported/2vOil_cooking oil.png-5fbdd123380221555217c09639ce4082.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

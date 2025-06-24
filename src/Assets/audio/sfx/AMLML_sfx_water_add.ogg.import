@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c127e14c7bbe3c83ea36c28fe3467ce6939859359daee4e75c5ffd3329b4e60e
-size 434
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b2amlm35h0bhv"
+path="res://.godot/imported/AMLML_sfx_water_add.ogg-2d35485be197e7ddc1983d1ab09845c8.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_water_add.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_water_add.ogg-2d35485be197e7ddc1983d1ab09845c8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

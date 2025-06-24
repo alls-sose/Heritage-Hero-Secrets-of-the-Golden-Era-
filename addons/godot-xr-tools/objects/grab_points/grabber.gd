@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:43ce1c2220f5a28f2908f64d82178f18d4ec10c9d0ce43d8f905c373abe5d491
-size 794
+class_name Grabber
+
+
+## Grabber Class
+##
+## This class contains relevant information for a grabber including any
+## assocated pickup, controller, and hand nodes.
+
+
+## Grabber node
+var by : Node3D
+
+## Pickup associated with the grabber
+var pickup : XRToolsFunctionPickup
+
+## Controller associated with the grabber
+var controller : XRController3D
+
+## Hand associated with the grabber
+var hand : XRToolsHand
+
+## Collision hand associated with the grabber
+var collision_hand : XRToolsCollisionHand
+
+## Initialize the grabber
+func _init(p_by : Node3D) -> void:
+	by = p_by
+	pickup = p_by as XRToolsFunctionPickup
+	controller = pickup.get_controller() if pickup else null
+	if controller:
+		hand = XRToolsHand.find_instance(controller)
+		collision_hand = XRToolsCollisionHand.find_instance(controller)

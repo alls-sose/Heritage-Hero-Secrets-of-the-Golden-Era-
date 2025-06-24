@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18bcc634a1542ef95bd0bab04885525d9fd60c0538932b7fbc17745f41ebb5eb
-size 997
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://7ltmuqbiavvt"
+path.s3tc="res://.godot/imported/chair_134_Vienna straw texture-seamless.png-ad5c5faaad8513cc4a0659153ff6d888.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "e97bc415da90338b221390032109dd8a"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/chair_134_Vienna straw texture-seamless.png"
+dest_files=["res://.godot/imported/chair_134_Vienna straw texture-seamless.png-ad5c5faaad8513cc4a0659153ff6d888.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

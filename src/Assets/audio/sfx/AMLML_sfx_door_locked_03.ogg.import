@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cdde12b935e2cfb77a1cceb152209bd65eecaa65974fb3f18f374f17ddb17718
-size 449
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bg2202m61e7s3"
+path="res://.godot/imported/AMLML_sfx_door_locked_03.ogg-6a01a4462432df2dfb5678febcbcbf89.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_door_locked_03.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_door_locked_03.ogg-6a01a4462432df2dfb5678febcbcbf89.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a9d21ea0d9a0c0a3a4454e3d2014863ff1f78e9fb70b09b452a9305d2cb5dda
-size 776
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://w53g1r8a72gn"
+path="res://.godot/imported/PTSerif-BoldItalic.ttf-df6490315d1c5dc0035c399f58c3beb7.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/PT_Serif/PTSerif-BoldItalic.ttf"
+dest_files=["res://.godot/imported/PTSerif-BoldItalic.ttf-df6490315d1c5dc0035c399f58c3beb7.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

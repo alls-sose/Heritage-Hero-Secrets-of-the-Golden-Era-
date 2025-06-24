@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09a0b6df14fde9e06fc4896303cf2f5a2b77196a5b18a2d07208914e59bfe957
-size 810
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://ctji74yd8n0q6"
+path="res://.godot/imported/Montserrat-ExtraBoldItalic.ttf-71f823b402a16d26470d010c28eb4a8b.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/Montserrat/static/Montserrat-ExtraBoldItalic.ttf"
+dest_files=["res://.godot/imported/Montserrat-ExtraBoldItalic.ttf-71f823b402a16d26470d010c28eb4a8b.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

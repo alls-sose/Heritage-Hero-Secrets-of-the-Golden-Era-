@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f7ce246faba4c34685695f13b5b0d73f792fce7fe32ffa3dd3283032fa0f32a
-size 434
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dnow2jtbhe7cl"
+path="res://.godot/imported/AMLML_sfx_flight_01.ogg-c508ff3c21ab8e85c3b1d82cf1bdf857.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_flight_01.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_flight_01.ogg-c508ff3c21ab8e85c3b1d82cf1bdf857.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

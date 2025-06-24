@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af2f045fb6ca2638294b2463b22662edbe8731b5b29b8aff3fd464fc1b8da349
-size 431
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3xbvg4s14wuo"
+path="res://.godot/imported/DaiVoltZ-V2-AlvaroVersion.mp3-19c82cd130d7da5fb9e01e9cd747395a.mp3str"
+
+[deps]
+
+source_file="res://src/Assets/audio/key-items/DaiVoltZ-V2-AlvaroVersion.mp3"
+dest_files=["res://.godot/imported/DaiVoltZ-V2-AlvaroVersion.mp3-19c82cd130d7da5fb9e01e9cd747395a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

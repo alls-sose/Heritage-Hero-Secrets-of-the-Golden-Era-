@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e21cf816d2682c6cb8e20f2cc930b5256b4981c72e05bfaa9e6f82de2eb4ef5
-size 947
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b2fnqe4celiom"
+path.s3tc="res://.godot/imported/rolex_watch_watch_face.png-407fa6801174744c24f32b9f38aaede2.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "5b655a96ed06c3391f9200b457916016"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/rolex_watch_watch_face.png"
+dest_files=["res://.godot/imported/rolex_watch_watch_face.png-407fa6801174744c24f32b9f38aaede2.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eef5a2cdf78bfbf3f1b77cead2553eb40b61fd01961430c0ab0d4d3500b4c6eb
-size 945
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bl3376tqfhvbc"
+path.s3tc="res://.godot/imported/nutribun_Bread_Diffuse.png-35d5b6d65c9ed7c34c5000a529b204ca.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d90fc6eae5ca1ca03ed417fb916fc23e"
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/glb/nutribun_Bread_Diffuse.png"
+dest_files=["res://.godot/imported/nutribun_Bread_Diffuse.png-35d5b6d65c9ed7c34c5000a529b204ca.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

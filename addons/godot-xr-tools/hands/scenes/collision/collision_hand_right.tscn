@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b37d94db4a19248f1cecfae8b883156db1ddd09f0c75c0d41d7cd447872fd462
-size 634
+[gd_scene load_steps=3 format=3 uid="uid://c3uoohvnshach"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/hands/collision_hand.gd" id="1_so3hf"]
+[ext_resource type="Shape3D" uid="uid://uc7owi5j7ib0" path="res://addons/godot-xr-tools/hands/scenes/collision/hand_palm.shape" id="2_vvxfo"]
+
+[node name="CollisionHandRight" type="AnimatableBody3D"]
+collision_layer = 131072
+collision_mask = 262175
+sync_to_physics = false
+script = ExtResource("1_so3hf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, -0.05, 0.11)
+shape = ExtResource("2_vvxfo")

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4eb2c94c18e582a63ed546329a91ef5311817c74b217f15781ab652c6a7ea00e
-size 565
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c847hqgdr58xr"
+path="res://.godot/imported/06 - Jingle - Cleaning Theme.wav-fc1c18d2f01d026979ea9cbf429794ff.sample"
+
+[deps]
+
+source_file="res://src/Assets/audio/music/06 - Jingle - Cleaning Theme.wav"
+dest_files=["res://.godot/imported/06 - Jingle - Cleaning Theme.wav-fc1c18d2f01d026979ea9cbf429794ff.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

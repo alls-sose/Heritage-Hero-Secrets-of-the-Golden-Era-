@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e7edde6d44397de9b870dadc9c9ed65f6e43d3d095882ceb70703684a2d94ada
-size 367
+[gd_scene format=3 uid="uid://brl4x4qqbiryy"]
+
+[node name="Label" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "JAPANESE ANIME"

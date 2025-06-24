@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e9b35aa0fd1d39c23aa843cfb45388a9163a61574f33a1e4bca24d7592ccad0
-size 830
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bmpjo4w721uee"
+path="res://.godot/imported/Montserrat-Italic-VariableFont_wght.ttf-afb1eb223e6c2d5ea73d9a86bd39df77.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/Montserrat-Italic-VariableFont_wght.ttf-afb1eb223e6c2d5ea73d9a86bd39df77.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

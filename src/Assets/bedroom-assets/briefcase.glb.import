@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d5c7f0b6fb5f097332af24d4d92f2a6c2edac48a16d9486b6e96d4ace7f8c95d
-size 933
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://rj6ptm3r27f5"
+path="res://.godot/imported/briefcase.glb-bc37b0e47709187bcf8d681a76a83275.scn"
+
+[deps]
+
+source_file="res://src/Assets/bedroom-assets/briefcase.glb"
+dest_files=["res://.godot/imported/briefcase.glb-bc37b0e47709187bcf8d681a76a83275.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

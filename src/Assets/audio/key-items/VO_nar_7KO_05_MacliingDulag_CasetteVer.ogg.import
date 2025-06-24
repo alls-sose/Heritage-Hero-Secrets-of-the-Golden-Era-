@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aeccb9dd187b643ed75de4f57d471eee3d8363d190b6dd7b69bf3b3078ed381e
-size 497
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cu2tyrrraa2n5"
+path="res://.godot/imported/VO_nar_7KO_05_MacliingDulag_CasetteVer.ogg-4bafef43312db3151cf72ae12e93128c.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/key-items/VO_nar_7KO_05_MacliingDulag_CasetteVer.ogg"
+dest_files=["res://.godot/imported/VO_nar_7KO_05_MacliingDulag_CasetteVer.ogg-4bafef43312db3151cf72ae12e93128c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

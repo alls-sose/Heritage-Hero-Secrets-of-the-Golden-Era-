@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:493faccd098c2026224a4edb7fc20b4318754c21788fb9d0460025759e6630f9
-size 299
+extends Event
+@onready var powder_add_player: AudioStreamPlayer3D = $"../../PowderAddPlayer"
+func _on_ois_milk_receiver_action_completed(requirement: Variant, total_progress: Variant) -> void:
+	close_event()
+	powder_add_player.play()
+	emit_signal("event_ended")
+	QuestControl.update_active_quests()

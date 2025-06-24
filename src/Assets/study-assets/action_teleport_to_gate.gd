@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f755cf114e118e683012f621e28e4e717b2db562e90540cc4e5db4bd4bf5a7fe
-size 451
+extends Event
+
+@onready var teleporter_manager: TeleporterManager = $"../../TeleporterManager"
+
+func _on_event_started() -> void:
+	teleporter_manager.location_changed.connect(_on_teleporter_manager_location_changed)
+
+func _on_teleporter_manager_location_changed(location_name: Variant) -> void:
+	if location_name == "Study Room Near Planks":
+		QuestControl.add_active_quest("QuestOpenTheGate")
+		
+		close_event()
+		QuestControl.update_active_quests()

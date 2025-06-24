@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cf4ee0ea450f06f3ddcdb629f861cd3ac95c37f62b170d5979ecae7e654eb6b
-size 387
+extends Event
+
+@onready var bedroom_teleporter = get_tree().get_root().get_node("Main/TeleporterManager/Bedroom Broken Wall")
+
+func _on_wooden_planks_planks_cleared() -> void:
+	print(bedroom_teleporter)
+	bedroom_teleporter.teleporter_active = true
+	bedroom_teleporter.get_parent()._set_teleporter_states() 
+	emit_signal("event_ended")
+	close_event()
+	QuestControl.update_active_quests()

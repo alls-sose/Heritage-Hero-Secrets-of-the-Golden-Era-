@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:514d9391bea8052e29eb39e77bb90fe1ad32152402af3613fe744615331fcf02
-size 937
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cvecweuwsw3cb"
+path="res://.godot/imported/mansion draft2_rusty_metal_specular.jpg-139b0e1aff311349a7cb215117ab9dd7.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "4b8a139d44b543339fd0436e0b1d1a5a"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_rusty_metal_specular.jpg"
+dest_files=["res://.godot/imported/mansion draft2_rusty_metal_specular.jpg-139b0e1aff311349a7cb215117ab9dd7.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

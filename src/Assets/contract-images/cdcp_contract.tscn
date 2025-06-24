@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7feee2b024dd185d94eca1f818a2be4581426f660a8c70a5fc11977534b0ca6
-size 873
+[gd_scene load_steps=6 format=3 uid="uid://cb75fy6rp5q5e"]
+
+[ext_resource type="Texture2D" uid="uid://c0jjd6hubyf5u" path="res://src/assets/contract-images/CDCPDocument.png" id="1_1qmae"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehryh"]
+albedo_texture = ExtResource("1_1qmae")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tfm87"]
+material = SubResource("StandardMaterial3D_ehryh")
+size = Vector2(0.85, 1.1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jl4l"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lxfak"]
+material = SubResource("StandardMaterial3D_8jl4l")
+flip_faces = true
+size = Vector2(0.85, 1.1)
+orientation = 2
+
+[node name="CDCPContract" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_tfm87")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_lxfak")

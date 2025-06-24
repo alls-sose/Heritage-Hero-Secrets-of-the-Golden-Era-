@@ -1,3 +1,85 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:00310b9373235d65c1d68ada03f3683256a8f8fe1dfba42825917f791a4ed457
-size 4568
+[gd_scene load_steps=14 format=3 uid="uid://dtmkqjv78vvy3"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_2iiak"]
+[ext_resource type="PackedScene" uid="uid://dr50sgl1uc65c" path="res://src/Assets/study-assets/malakas-at-maganda-doc/malakas_at_maganda_doc.tscn" id="2_2iiak"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="3_hdb5b"]
+[ext_resource type="Script" uid="uid://cgettxdui2mmi" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_one_hand_tool_asm.gd" id="4_egreo"]
+[ext_resource type="Script" uid="uid://b4ao0gdf7khuq" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_area3d.gd" id="5_a63ke"]
+[ext_resource type="Script" uid="uid://eh2ojse0jyoe" path="res://src/Assets/study-assets/malakas-at-maganda-doc/custom_attach_component.gd" id="6_x1vkx"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="7_a63ke"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="8_x1vkx"]
+[ext_resource type="Script" uid="uid://bqrsf1q3yq50n" path="res://src/Assets/study-assets/malakas-at-maganda-doc/malakas_maganda_control.gd" id="9_x1vkx"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="10_aaoxw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2iiak"]
+size = Vector3(0.2, 0.1, 0.3)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_aaoxw"]
+radius = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jncrr"]
+radius = 0.1
+
+[node name="MalakasAtMagandaDocPickable" instance=ExtResource("1_2iiak")]
+collision_mask = 131079
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_2iiak")
+
+[node name="MalakasAtMagandaDoc" parent="." index="1" instance=ExtResource("2_2iiak")]
+
+[node name="OISActorComponent" type="Node3D" parent="." index="2"]
+script = ExtResource("3_hdb5b")
+receiver_group = "torn_document"
+trigger_action = true
+metadata/_custom_type_script = "uid://cg1lorgur84yy"
+
+[node name="OISOneHandToolASM" type="Node3D" parent="OISActorComponent" index="0"]
+script = ExtResource("4_egreo")
+metadata/_custom_type_script = "uid://cgettxdui2mmi"
+
+[node name="OISColliderArea3D" type="Node3D" parent="OISActorComponent" index="1"]
+script = ExtResource("5_a63ke")
+metadata/_custom_type_script = "uid://b4ao0gdf7khuq"
+
+[node name="Area3D" type="Area3D" parent="OISActorComponent/OISColliderArea3D" index="0"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OISActorComponent/OISColliderArea3D/Area3D" index="0"]
+shape = SubResource("SphereShape3D_aaoxw")
+
+[node name="OISReceiverComponent" type="Node3D" parent="." index="3"]
+script = ExtResource("6_x1vkx")
+buffer = 0.5
+replacement_object_path = "res://src/Assets/study-assets/malakas-at-maganda-doc/malakas_at_maganda_doc_pickable.tscn"
+group = "torn_document"
+requirement = 1.0
+metadata/_custom_type_script = "uid://pxna7qrxpkq3"
+
+[node name="Area3D" type="Area3D" parent="OISReceiverComponent" index="0"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OISReceiverComponent/Area3D" index="0"]
+shape = SubResource("SphereShape3D_jncrr")
+
+[node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("7_a63ke")]
+transform = Transform3D(1, 0, 0, 0, 0.487875, 0.872914, 0, -0.872914, 0.487875, 0.162975, -0.0657393, 0)
+visible = true
+
+[node name="GrabPointHandLeft" parent="." index="5" instance=ExtResource("8_x1vkx")]
+transform = Transform3D(1, 0, 0, 0, 0.487875, 0.872914, 0, -0.872914, 0.487875, -0.163, -0.066, 0)
+visible = true
+
+[node name="MalakasMagandaControl" type="Node" parent="." index="6"]
+script = ExtResource("9_x1vkx")
+
+[node name="InventoryItem" type="Node3D" parent="." index="7" node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("10_aaoxw")
+defined_mesh = NodePath("../MalakasAtMagandaDoc")
+defined_collision_shape = NodePath("../CollisionShape3D")
+object_rotation_adjustment = Vector3(90, 0, 0)
+metadata/_custom_type_script = "uid://dq86gvhe6d20d"
+
+[editable path="MalakasAtMagandaDoc"]

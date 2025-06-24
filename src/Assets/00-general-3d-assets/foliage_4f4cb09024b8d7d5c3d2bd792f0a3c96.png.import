@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:205be9d09e412a9c438c0525957176c3b092e9e3ace5bd2f06f4ebfaf9ef3357
-size 1001
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c2ahlw08myrdf"
+path.s3tc="res://.godot/imported/foliage_4f4cb09024b8d7d5c3d2bd792f0a3c96.png-5426a5aeb55cb204f8a3097fdbd7746f.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "8bdb2648ca3151e985ee96abf0ea7e3a"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/foliage_4f4cb09024b8d7d5c3d2bd792f0a3c96.png"
+dest_files=["res://.godot/imported/foliage_4f4cb09024b8d7d5c3d2bd792f0a3c96.png-5426a5aeb55cb204f8a3097fdbd7746f.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

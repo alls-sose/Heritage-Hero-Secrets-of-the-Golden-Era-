@@ -1,3 +1,111 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d6719219eccb94315f1a0c9e9ef17b2e970414b478b6159ae88008ba6444825
-size 6008
+[gd_scene load_steps=21 format=3 uid="uid://w8f45h0g5ahk"]
+
+[ext_resource type="Script" uid="uid://37p8nwccd87" path="res://src/Assets/kitchen-assets/nutribunplasticpackaging.gd" id="1_34y0b"]
+[ext_resource type="Texture2D" uid="uid://knxr4r8nwcfb" path="res://src/Assets/kitchen-assets/nutribunplastic.png" id="4_jyiet"]
+[ext_resource type="Texture2D" uid="uid://fj1hxygak8k7" path="res://src/Assets/00-general-3d-assets/textures/Wood061_2K_Normal.jpg" id="5_rs6py"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="5_rwibe"]
+[ext_resource type="Script" uid="uid://bmclcwctwu3gd" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="7_34wbe"]
+[ext_resource type="Animation" uid="uid://di384xtde8ydf" path="res://addons/godot-xr-tools/hands/animations/left/Grip 2.res" id="7_jyiet"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="8_dg1cn"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="10_es7wy"]
+[ext_resource type="Animation" uid="uid://r8hleealhrqt" path="res://addons/godot-xr-tools/hands/animations/right/Grip 2.res" id="10_rs6py"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="11_uchua"]
+[ext_resource type="Script" uid="uid://cgettxdui2mmi" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_one_hand_tool_asm.gd" id="12_h0rbl"]
+[ext_resource type="Script" uid="uid://b4ao0gdf7khuq" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_area3d.gd" id="13_yv3m4"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4crxj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwibe"]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("4_jyiet")
+normal_enabled = true
+normal_texture = ExtResource("5_rs6py")
+uv1_scale = Vector3(0.765, 0.765, 0.765)
+uv1_offset = Vector3(0.12, 0.13, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5c3l7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34wbe"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0.254)
+normal_texture = ExtResource("5_rs6py")
+
+[sub_resource type="Resource" id="Resource_mv4es"]
+script = ExtResource("7_34wbe")
+open_pose = ExtResource("7_jyiet")
+closed_pose = ExtResource("7_jyiet")
+
+[sub_resource type="Resource" id="Resource_qnege"]
+script = ExtResource("7_34wbe")
+open_pose = ExtResource("10_rs6py")
+closed_pose = ExtResource("10_rs6py")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tmd41"]
+radius = 0.0822032
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_34y0b"]
+
+[node name="Nutribun-PlasticPackaging" type="RigidBody3D"]
+transform = Transform3D(0.999599, 0.026605, 0.00970599, -0.0265433, 0.999627, -0.00642898, -0.00987342, 0.00616877, 0.999932, 0, 0, 0)
+collision_layer = 4
+collision_mask = 196615
+freeze_mode = 1
+script = ExtResource("1_34y0b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.095, 0, 0, 0, -4.15258e-09, -0.095, 0, 0.095, -4.15258e-09, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4crxj")
+surface_material_override/0 = SubResource("StandardMaterial3D_rwibe")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 6.51198e-10, 9.31323e-10, 1, 0, 6.51198e-10, 0, 1, 0.000390008, -0.0394981, 0.000243673)
+mesh = SubResource("PlaneMesh_5c3l7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_34wbe")
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("5_rwibe")]
+transform = Transform3D(1, 0, 3.25963e-09, -2.32831e-10, 0.788011, -0.615662, 0, 0.615662, 0.788011, -0.0752233, 0.0355479, -0.0430725)
+visible = true
+hand_pose = SubResource("Resource_mv4es")
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("8_dg1cn")]
+transform = Transform3D(1, 0, 3.25963e-09, -2.32831e-10, 0.788011, -0.615662, 0, 0.615662, 0.788011, 0.0837197, 0.0362869, -0.0420678)
+visible = true
+hand_pose = SubResource("Resource_qnege")
+
+[node name="InventoryItem" type="Node3D" parent="." node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("10_es7wy")
+defined_mesh = NodePath("../MeshInstance3D")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 0.7
+object_transform_adjustment = Vector3(0.01, 0, 0)
+
+[node name="OISActorComponent" type="Node3D" parent="."]
+script = ExtResource("11_uchua")
+receiver_group = "plasticpackage"
+metadata/_custom_type_script = "uid://cg1lorgur84yy"
+
+[node name="OISOneHandToolASM" type="Node3D" parent="OISActorComponent"]
+script = ExtResource("12_h0rbl")
+metadata/_custom_type_script = "uid://cgettxdui2mmi"
+
+[node name="OISColliderArea3D" type="Node3D" parent="OISActorComponent"]
+script = ExtResource("13_yv3m4")
+metadata/_custom_type_script = "uid://b4ao0gdf7khuq"
+
+[node name="Area3D" type="Area3D" parent="OISActorComponent/OISColliderArea3D"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OISActorComponent/OISColliderArea3D/Area3D"]
+transform = Transform3D(1, -1.51485e-08, -1.49012e-08, -2.32831e-10, 1, -2.32831e-09, 0, 2.79397e-09, 1, 0.00357122, 0.00711697, -8.6478e-06)
+shape = SubResource("SphereShape3D_tmd41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.189, 5.02914e-11, -5.70919e-19, -4.95056e-11, 0.192, -7.08271e-09, -8.091e-18, 4.53293e-08, 0.03, 0.000991792, -0.00170898, -0.00163383)
+shape = SubResource("BoxShape3D_34y0b")
+
+[connection signal="grabbed" from="." to="." method="_on_grabbed"]
+[connection signal="released" from="." to="." method="_on_released"]

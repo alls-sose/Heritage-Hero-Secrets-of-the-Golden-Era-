@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c92bdfac6b8b8475639a44047003142df674ca64b154faeabf30eac84501157
-size 291
+[gd_scene load_steps=2 format=3 uid="uid://d2iqcc25yvk61"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_crouch.gd" id="1_4rbnc"]
+
+[node name="MovementDesktopCrouch" type="Node" groups=["movement_providers"]]
+script = ExtResource("1_4rbnc")

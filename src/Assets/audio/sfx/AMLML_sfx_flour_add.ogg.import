@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:db6926827e63c98bdb75e5b073ff61c38745c05f85389ec35004c89484b47eba
-size 434
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bo634knc4hcpk"
+path="res://.godot/imported/AMLML_sfx_flour_add.ogg-67dc63227c4fd96e2b0dc25a762f4ea7.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_flour_add.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_flour_add.ogg-67dc63227c4fd96e2b0dc25a762f4ea7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ea99bcf5a9aef6cb537f6b17965801f66b806b3f6f6a9f2af1fb6d20d31417f5
-size 1050
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://t3u3eoi7ks1k"
+path.s3tc="res://.godot/imported/yeast_paper_0007_normal_opengl_1k.png-51cb58d36a782a53023888d56d5aee8e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "07d4fa70774127cc26a7ccf01a8f9ad9"
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/glb/yeast_paper_0007_normal_opengl_1k.png"
+dest_files=["res://.godot/imported/yeast_paper_0007_normal_opengl_1k.png-51cb58d36a782a53023888d56d5aee8e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/kitchen-assets/glb/yeast_paper_0007_normal_opengl_1k.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:342c2ff3230b8d1d46941625fb186f9e43d90e718b72854c17bb6866e9098b41
-size 920
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d4fnimhtiib8c"
+path.s3tc="res://.godot/imported/foliage_Image.png-d09edb8bd3716d97c993f2e62c95533c.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "8597d4e7e65352a302b63e07bc01a7da"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/foliage_Image.png"
+dest_files=["res://.godot/imported/foliage_Image.png-d09edb8bd3716d97c993f2e62c95533c.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

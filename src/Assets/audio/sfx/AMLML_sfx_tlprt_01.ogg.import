@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a3e7eda3d0faf4113a862fdb925b10e9850a3cb3969b146a6c12e2b1d89f8a6
-size 431
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clhg0ok3oryuk"
+path="res://.godot/imported/AMLML_sfx_tlprt_01.ogg-a03c62a55a5c3b596726efd0bfa962ba.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_tlprt_01.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_tlprt_01.ogg-a03c62a55a5c3b596726efd0bfa962ba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

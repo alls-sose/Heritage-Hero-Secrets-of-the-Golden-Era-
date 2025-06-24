@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:75ce2e1ba7eb6fe07355eb5c23e4962e828d26f2f5e7c7170fa3339b584d0c63
-size 342
+@tool
+extends XRToolsPickable
+@onready var spray_particle: GPUParticles3D = $SprayParticle
+@onready var spray_audio: AudioStreamPlayer3D = $SprayAudio
+
+var pickup_bool : bool
+
+func _ready() -> void:
+	super()
+
+
+func _on_action_pressed(pickable: Variant) -> void:
+	spray_particle.emitting = true
+	spray_audio.play()
+	await spray_audio.finished

@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e03d267a87ccb16b51a82f54ab9be62cc99193f1782b1a1fb8b6a5eade3ff6bf
-size 1014
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://brnjlb650m3nt"
+path.s3tc="res://.godot/imported/mansion draft2x_Chair_Metallic-Chair_Roughness.png-77252baefe2d799df433587e0cccfcc7.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "e30ba1a76c34ed3bae35dc2669faf343"
+}
+
+[deps]
+
+source_file="res://src/Assets/0x-house-assets/mansion draft2x_Chair_Metallic-Chair_Roughness.png"
+dest_files=["res://.godot/imported/mansion draft2x_Chair_Metallic-Chair_Roughness.png-77252baefe2d799df433587e0cccfcc7.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

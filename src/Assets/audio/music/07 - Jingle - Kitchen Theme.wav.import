@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1b3667e7ce2f63412e300ee031a6ae24024fdf1cd7da09eaf31ac1d1fdcf4fd
-size 562
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6d8qka1y6jw6"
+path="res://.godot/imported/07 - Jingle - Kitchen Theme.wav-5881d831e990d5dd7476fa0112205f8d.sample"
+
+[deps]
+
+source_file="res://src/Assets/audio/music/07 - Jingle - Kitchen Theme.wav"
+dest_files=["res://.godot/imported/07 - Jingle - Kitchen Theme.wav-5881d831e990d5dd7476fa0112205f8d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

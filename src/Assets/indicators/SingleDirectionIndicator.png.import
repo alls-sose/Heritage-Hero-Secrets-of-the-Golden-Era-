@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2953eea36916cadbdc0c23ad2eac3fdc04b37e60265eb1033f7100b985d27dae
-size 828
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ccat1ek6j15xx"
+path="res://.godot/imported/SingleDirectionIndicator.png-e0362751e5ff9cbfc4f391bf6c2911fb.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/indicators/SingleDirectionIndicator.png"
+dest_files=["res://.godot/imported/SingleDirectionIndicator.png-e0362751e5ff9cbfc4f391bf6c2911fb.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

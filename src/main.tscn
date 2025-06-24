@@ -1,3 +1,2045 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:960aafb13c1a0ccf4d1f99555fc90635b97e7162115fa27c4eef80e4206c9e65
-size 110817
+[gd_scene load_steps=125 format=3 uid="uid://op3je87derpn"]
+
+[ext_resource type="Script" uid="uid://bqnd6rij2obrt" path="res://src/main.gd" id="1_nlhso"]
+[ext_resource type="PackedScene" uid="uid://fojfc7mjcxig" path="res://src/dialogue-system/dialogue_desktop_ui.tscn" id="2_16cua"]
+[ext_resource type="PackedScene" uid="uid://njx823gyk04n" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_hand.tscn" id="2_nnhyx"]
+[ext_resource type="Script" uid="uid://d4jlolcuiyeqk" path="res://src/dialogue-system/xr_camera_desktop_script.gd" id="2_wjd0w"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_16cua"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_cy3es"]
+[ext_resource type="Script" uid="uid://ek4xpaefjlux" path="res://addons/ateneo-virtual-reality-escape/teleportation-system/teleporter.gd" id="5_5y1lq"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="5_2466g"]
+[ext_resource type="PackedScene" uid="uid://bq5vkafh6ugil" path="res://src/ois-objects/tutorial/ois_flashlight_radio.tscn" id="6_3bm4k"]
+[ext_resource type="Script" uid="uid://cji1tdhhvihrj" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_single_controller_asm.gd" id="6_amgju"]
+[ext_resource type="Script" uid="uid://b4ao0gdf7khuq" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_area3d.gd" id="7_swqba"]
+[ext_resource type="PackedScene" uid="uid://raeeicvvindd" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_hand.tscn" id="8_wjd0w"]
+[ext_resource type="AudioStream" uid="uid://bltk3kr770ecv" path="res://src/Assets/audio/sfx/AMLML_sfx_invntry_01.ogg" id="9_d7bab"]
+[ext_resource type="Script" uid="uid://du4lpoac66rw" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_system.gd" id="9_vx6pd"]
+[ext_resource type="AudioStream" uid="uid://5bwyoa4eol1e" path="res://src/Assets/audio/sfx/AMLML_sfx_invntry_02.ogg" id="10_ib8ht"]
+[ext_resource type="Script" uid="uid://d2j64x8gnsuue" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_slot.gd" id="10_vty50"]
+[ext_resource type="AudioStream" uid="uid://fjvxpy60gfsc" path="res://src/Assets/audio/sfx/AMLML_sfx_invntry_03.ogg" id="11_43aqp"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="11_gns45"]
+[ext_resource type="Material" uid="uid://dy43ogh4jhnpk" path="res://addons/ateneo-virtual-reality-escape/inventory-system/misc-resources/inventory_slot_shader_a.tres" id="12_1o0r6"]
+[ext_resource type="AudioStream" uid="uid://c8i8ufns4taui" path="res://src/Assets/audio/sfx/AMLML_sfx_invntry_04.ogg" id="12_ocmcv"]
+[ext_resource type="AudioStream" uid="uid://clhg0ok3oryuk" path="res://src/Assets/audio/sfx/AMLML_sfx_tlprt_01.ogg" id="13_43aqp"]
+[ext_resource type="Script" uid="uid://us0ag23goci7" path="res://src/dialogue-system/dialogue_system.gd" id="13_k5s8g"]
+[ext_resource type="Script" uid="uid://c7stwc7ey8w81" path="res://src/Assets/bedroom-assets/events/temp_action_teleport_to_bedroom.gd" id="13_wjd0w"]
+[ext_resource type="Script" path="res://src/Assets/event_scripts/action_teleport_to_study.gd" id="14_imvhg"]
+[ext_resource type="AudioStream" uid="uid://crhnomjdxoo4c" path="res://src/Assets/audio/sfx/AMLML_sfx_tlprt_02.ogg" id="14_ocmcv"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="14_tapid"]
+[ext_resource type="AudioStream" uid="uid://bvpr6ng0eb47c" path="res://src/Assets/audio/sfx/AMLML_sfx_ui_pstv_01.ogg" id="15_43aqp"]
+[ext_resource type="Script" path="res://src/Assets/event_scripts/action_teleport_to_study_desk.gd" id="15_m07h4"]
+[ext_resource type="PackedScene" uid="uid://bpvb7ckslsj3l" path="res://src/dialogue-system/dialogue_ui.tscn" id="15_p3sfu"]
+[ext_resource type="Material" uid="uid://ca8mu8kt7e14f" path="res://src/dialogue-system/draw_on_top_material.tres" id="16_sbu0l"]
+[ext_resource type="PackedScene" uid="uid://43js2irdvt88" path="res://src/ois-objects/tutorial/ois_journal_new.tscn" id="16_tb146"]
+[ext_resource type="Script" uid="uid://c6nosdftusa3i" path="res://src/Assets/study-assets/action_teleport_to_planks.gd" id="16_ui33j"]
+[ext_resource type="Script" uid="uid://cd0g6s055xrp7" path="res://src/Assets/study-assets/action_teleport_to_gate.gd" id="17_k5x6j"]
+[ext_resource type="Script" uid="uid://ceq0lfgo678rd" path="res://src/ois-objects/event-scripts/action_teleport_to_sofas.gd" id="17_ocmcv"]
+[ext_resource type="Script" uid="uid://p7vbsnbdp2wx" path="res://src/ois-objects/event-scripts/tutorial_event.gd" id="17_sxg64"]
+[ext_resource type="Script" uid="uid://dxmrxeoth3fpu" path="res://src/Assets/kitchen-assets/action_teleport_to_kitchen_entrance.gd" id="18_jitvu"]
+[ext_resource type="Script" uid="uid://cadhej5jr7mc" path="res://src/modified_teleporter_manager.gd" id="18_prqr5"]
+[ext_resource type="Script" uid="uid://dwavayr4auhii" path="res://src/final_teleporter.gd" id="19_prqr5"]
+[ext_resource type="Script" uid="uid://c3s60xn3miq6v" path="res://src/hip_slot.gd" id="22_8ndpt"]
+[ext_resource type="PackedScene" uid="uid://hcoiibruo1s6" path="res://src/dialogue-system/loading_screen.tscn" id="22_adv81"]
+[ext_resource type="PackedScene" uid="uid://bulvimx6dcl6l" path="res://src/dialogue-system/main_menu.tscn" id="26_jitvu"]
+[ext_resource type="Shader" uid="uid://bed3ycvrt01ge" path="res://addons/godot-xr-tools/effects/fade.gdshader" id="26_lovvn"]
+[ext_resource type="PackedScene" uid="uid://dnytkr7jkm34f" path="res://src/dialogue-system/loading_screen_desktop.tscn" id="35_cy3es"]
+[ext_resource type="Script" uid="uid://dcvcfofc3nh0k" path="res://src/dialogue-system/loading_screen_desktop.gd" id="36_2466g"]
+[ext_resource type="Script" uid="uid://8hwneg4o3qhy" path="res://src/dialogue-system/view_split_controller.gd" id="37_amgju"]
+[ext_resource type="PackedScene" uid="uid://bc726m12kbjrk" path="res://src/quest_indicator.tscn" id="37_hxm6p"]
+[ext_resource type="PackedScene" uid="uid://dk1f8a8g0yblt" path="res://src/Assets/kitchen-assets/mansion_exterior.tscn" id="41_qfneb"]
+[ext_resource type="Script" uid="uid://d3kn6ga8jvxpj" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.gd" id="42_q6ill"]
+[ext_resource type="Script" uid="uid://dupgo6p3ia02s" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d_body.gd" id="44_mmgx3"]
+[ext_resource type="Script" uid="uid://b2et3uy8w6uwr" path="res://src/music_handler.gd" id="46_dqleq"]
+[ext_resource type="AudioStream" uid="uid://di7im6fee1sal" path="res://src/Assets/audio/music/01 - Title Theme.wav" id="46_jqey7"]
+[ext_resource type="AudioStream" uid="uid://cvt344b6ocvng" path="res://src/Assets/audio/tutorials/VO_tutor_Inventory.ogg" id="48_bu6xm"]
+[ext_resource type="Script" uid="uid://bv7wsu8aovpi0" path="res://src/game_start.gd" id="49_l175r"]
+[ext_resource type="PackedScene" uid="uid://gnxomqil88lu" path="res://src/Assets/credits.tscn" id="51_7b4p7"]
+[ext_resource type="AudioStream" uid="uid://b0qahwv2y1ewi" path="res://src/Assets/audio/sfx/AMLML_sfx_outdoor_amb_01_modified.ogg" id="53_lj71n"]
+[ext_resource type="Script" uid="uid://cxsgcwhgvkmeo" path="res://src/Assets/action_leave_mansion.gd" id="54_mmgx3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m07h4"]
+radius = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c31u1"]
+radius = 0.1
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nv63v"]
+sky_top_color = Color(0.681742, 0.304428, 0.0844628, 1)
+sky_horizon_color = Color(0.408218, 0.207104, 0.381513, 1)
+sky_cover_modulate = Color(0.40358, 0.445261, 0.446208, 1)
+ground_bottom_color = Color(0.080669, 0.104145, 0.00873393, 1)
+sun_angle_max = 22.44
+sun_curve = 0.212132
+
+[sub_resource type="Sky" id="Sky_u4drl"]
+sky_material = SubResource("ProceduralSkyMaterial_nv63v")
+
+[sub_resource type="Environment" id="Environment_og8uf"]
+background_mode = 2
+background_energy_multiplier = 0.2
+sky = SubResource("Sky_u4drl")
+ambient_light_source = 3
+ambient_light_color = Color(0.902958, 0.562238, 0.447894, 1)
+ambient_light_sky_contribution = 0.4
+ambient_light_energy = 0.1
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.7
+fog_sky_affect = 0.0
+fog_depth_curve = 0.0708829
+fog_depth_begin = 0.0
+fog_depth_end = 60.0
+volumetric_fog_albedo = Color(0, 0, 0, 1)
+volumetric_fog_length = 39.02
+adjustment_enabled = true
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_d7bab"]
+streams_count = 2
+stream_0/stream = ExtResource("13_43aqp")
+stream_1/stream = ExtResource("14_ocmcv")
+
+[sub_resource type="SphereMesh" id="SphereMesh_qfneb"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_imvhg"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_m07h4"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfneb"]
+transparency = 1
+albedo_color = Color(3.46541e-06, 0.718389, 0.733068, 0.235294)
+emission_enabled = true
+emission = Color(0.661418, 0.82862, 0.593207, 1)
+emission_energy_multiplier = 0.13
+
+[sub_resource type="SphereMesh" id="SphereMesh_ui33j"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_k5x6j"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_jqey7"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_8ndpt"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_adv81"]
+streams_count = 4
+stream_0/stream = ExtResource("9_d7bab")
+stream_1/stream = ExtResource("10_ib8ht")
+stream_2/stream = ExtResource("11_43aqp")
+stream_3/stream = ExtResource("12_ocmcv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lovvn"]
+render_priority = 60
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+
+[sub_resource type="QuadMesh" id="QuadMesh_jitvu"]
+resource_local_to_scene = true
+size = Vector2(1600, 900)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lj71n"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lj71n"]
+render_priority = 60
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_lj71n")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tovjm"]
+resource_local_to_scene = true
+size = Vector3(1600, 900, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_n36qx"]
+resource_local_to_scene = true
+size = Vector2(1600, 900)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ye406"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ruk5h"]
+render_priority = 60
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_ye406")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cy3es"]
+resource_local_to_scene = true
+size = Vector3(1600, 900, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_qbv60"]
+resource_local_to_scene = true
+size = Vector2(1600, 900)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qbv60"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ye406"]
+render_priority = 60
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_qbv60")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2t2d"]
+resource_local_to_scene = true
+size = Vector3(1600, 900, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_tb146"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_s8ip4"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lvuux"]
+transparency = 1
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_s8ip4")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sta5p"]
+resource_local_to_scene = true
+size = Vector3(3, 2, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_sif16"]
+resource_local_to_scene = true
+size = Vector2(1600, 900)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kjvtq"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkk56"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_kjvtq")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43aqp"]
+resource_local_to_scene = true
+size = Vector3(1600, 900, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hxsd3"]
+custom_aabb = AABB(-5000, -5000, -5000, 10000, 10000, 10000)
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n36qx"]
+render_priority = 50
+shader = ExtResource("26_lovvn")
+shader_parameter/albedo = Color(0, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ljw12"]
+resource_local_to_scene = true
+size = Vector2(16, 9)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1kgfr"]
+viewport_path = NodePath("Credits/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbv60"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_1kgfr")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxm6p"]
+resource_local_to_scene = true
+size = Vector3(16, 9, 0.02)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qfneb"]
+viewport_path = NodePath("XRPlayer/XRViewport/XROrigin3D/XRCamera3D/XRDesktopViewport")
+
+[sub_resource type="Gradient" id="Gradient_n4j1p"]
+offsets = PackedFloat32Array(0.2, 0.3, 0.7, 0.8)
+colors = PackedColorArray(1, 0.843137, 0, 0, 1, 0.843137, 0, 1, 1, 0.843137, 0, 1, 1, 0.843137, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eijsm"]
+gradient = SubResource("Gradient_n4j1p")
+
+[sub_resource type="SystemFont" id="SystemFont_e5256"]
+font_names = PackedStringArray("PT Serif")
+font_weight = 550
+subpixel_positioning = 0
+
+[sub_resource type="Animation" id="Animation_genpj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Loading Text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Loading Circle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/Loading Circle:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/Loading Text:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(465, 795)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/Loading Text:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_mlgsg"]
+resource_name = "loop"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Loading Circle:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Loading Text:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(465, 795), Vector2(465, 795), Vector2(465, 795)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/Loading Text:visible_ratio")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7667, 1.5, 2.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.777, 0.845, 0.926776, 0.961]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okkcm"]
+_data = {
+&"RESET": SubResource("Animation_genpj"),
+&"loop": SubResource("Animation_mlgsg")
+}
+
+[sub_resource type="Animation" id="Animation_imvhg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../XRViewportDesktop/Control/AssignDesktop:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m07h4"]
+resource_name = "fade_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../XRViewportDesktop/Control/AssignDesktop:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qfneb"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../XRViewportDesktop/Control/AssignDesktop:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ui33j"]
+_data = {
+&"RESET": SubResource("Animation_imvhg"),
+&"fade_in": SubResource("Animation_m07h4"),
+&"fade_out": SubResource("Animation_qfneb")
+}
+
+[sub_resource type="Gradient" id="Gradient_6hbwf"]
+offsets = PackedFloat32Array(0.0867959, 0.460757, 0.626962, 0.912281)
+colors = PackedColorArray(1, 0.843137, 0, 0, 1, 0.843137, 0, 1, 1, 0.843137, 0, 1, 1, 0.843137, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_65x7t"]
+gradient = SubResource("Gradient_6hbwf")
+
+[sub_resource type="SystemFont" id="SystemFont_upq77"]
+font_names = PackedStringArray("PT Serif")
+font_weight = 550
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_de7l5"]
+font_names = PackedStringArray("PT Serif")
+font_weight = 550
+subpixel_positioning = 0
+
+[sub_resource type="Animation" id="Animation_7b4p7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mansion Exterior/SpotLight3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(18.2248, 8.14989, 25.4248)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mansion Exterior/SpotLight3D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.91892, 8.14989, 22.5002)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mansion Exterior/SpotLight3D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(5.01287, 14.215, 16.0247)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mansion Exterior:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-13.5405, -0.26653, -15.1517)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mansion Exterior:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.201655, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainMenu/Viewport/MainMenu/Control:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ljw12"]
+resource_name = "enter_mansion"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mansion Exterior:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-13.5405, -0.26653, -15.1517), Vector3(-11.166, -0.257, -6.322)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mansion Exterior:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.83333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.201655, 0), Vector3(0, 0.0191986, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenu/Viewport/MainMenu/Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_prqr5"]
+resource_name = "light_movement"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mansion Exterior/SpotLight3D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(18.2248, 8.14989, 25.4248), Vector3(18.75, 2.705, 18.35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mansion Exterior/SpotLight3D2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(3.91892, 8.14989, 22.5002), Vector3(-3.096, 8.15, 16.19)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mansion Exterior/SpotLight3D3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(5.01287, 14.215, 16.0247), Vector3(17.408, 26.865, 7.51)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ljw12"]
+_data = {
+&"RESET": SubResource("Animation_7b4p7"),
+&"enter_mansion": SubResource("Animation_ljw12"),
+&"light_movement": SubResource("Animation_prqr5")
+}
+
+[sub_resource type="Animation" id="Animation_11yy6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_uf7yq"]
+resource_name = "fade_music_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-15.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_g5lwp"]
+resource_name = "fade_music_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -15.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3rdr4"]
+_data = {
+&"RESET": SubResource("Animation_11yy6"),
+&"fade_music_in": SubResource("Animation_uf7yq"),
+&"fade_music_out": SubResource("Animation_g5lwp")
+}
+
+[sub_resource type="Animation" id="Animation_s8ip4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu/Viewport/MainMenu/Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Credits/Viewport/Credits/Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Credits:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_f6xxb"]
+resource_name = "after_credits_fade_menu_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu/Viewport/MainMenu/Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Credits/Viewport/Credits/Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Credits:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j2t2d"]
+_data = {
+&"RESET": SubResource("Animation_s8ip4"),
+&"after_credits_fade_menu_in": SubResource("Animation_f6xxb")
+}
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_nlhso")
+
+[node name="XRPlayer" type="Node3D" parent="."]
+process_mode = 3
+
+[node name="XRViewport" type="SubViewport" parent="XRPlayer"]
+use_xr = true
+anisotropic_filtering_level = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+size = Vector2i(0, 0)
+
+[node name="XROrigin3D" type="XROrigin3D" parent="XRPlayer/XRViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.695, 0.4, 1.937)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XRPlayer/XRViewport/XROrigin3D"]
+cull_mask = 1048571
+current = true
+fov = 80.0
+far = 350.0
+
+[node name="XRDesktopViewport" type="SubViewport" parent="XRPlayer/XRViewport/XROrigin3D/XRCamera3D"]
+anisotropic_filtering_level = 1
+size = Vector2i(1600, 900)
+
+[node name="Camera3D" type="Camera3D" parent="XRPlayer/XRViewport/XROrigin3D/XRCamera3D/XRDesktopViewport" node_paths=PackedStringArray("xr_origin", "xr_camera")]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.695, 0.4, 1.937)
+cull_mask = 524287
+fov = 70.0
+far = 350.0
+script = ExtResource("2_wjd0w")
+xr_origin = NodePath("../../..")
+xr_camera = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="XRPlayer/XRViewport/XROrigin3D/XRCamera3D/XRDesktopViewport/Camera3D"]
+light_energy = 0.75
+spot_range = 0.5
+
+[node name="XRController3DLeft" type="XRController3D" parent="XRPlayer/XRViewport/XROrigin3D"]
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft" instance=ExtResource("2_nnhyx")]
+
+[node name="FunctionPickup" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft" instance=ExtResource("3_16cua")]
+grab_distance = 0.05
+
+[node name="FunctionPointer" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft" instance=ExtResource("4_cy3es")]
+collision_mask = 5242884
+collide_with_areas = true
+
+[node name="OISActorComponent" type="Node3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0557499, 0, 0.103856)
+script = ExtResource("5_2466g")
+receiver_group = "hand"
+
+[node name="OISSingleControllerASM" type="Node3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/OISActorComponent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63925, -0.4, -2.04086)
+script = ExtResource("6_amgju")
+metadata/_custom_type_script = "uid://cji1tdhhvihrj"
+
+[node name="OISColliderArea3D" type="Node3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/OISActorComponent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.102, -0.038, 0)
+script = ExtResource("7_swqba")
+metadata/_custom_type_script = "uid://b4ao0gdf7khuq"
+
+[node name="Area3D" type="Area3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/OISActorComponent/OISColliderArea3D"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/OISActorComponent/OISColliderArea3D/Area3D"]
+shape = SubResource("SphereShape3D_m07h4")
+
+[node name="XRController3DRight" type="XRController3D" parent="XRPlayer/XRViewport/XROrigin3D"]
+tracker = &"right_hand"
+
+[node name="RightHand" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight" instance=ExtResource("8_wjd0w")]
+
+[node name="FunctionPickup" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight" instance=ExtResource("3_16cua")]
+grab_distance = 0.05
+
+[node name="FunctionPointer" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight" instance=ExtResource("4_cy3es")]
+collision_mask = 5242884
+collide_with_areas = true
+
+[node name="OISActorComponent" type="Node3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.056, 0, 0.104)
+script = ExtResource("5_2466g")
+receiver_group = "hand"
+
+[node name="OISSingleControllerASM" type="Node3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight/OISActorComponent"]
+script = ExtResource("6_amgju")
+
+[node name="OISColliderArea3D" type="Node3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight/OISActorComponent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101737, -0.0379362, 0)
+script = ExtResource("7_swqba")
+
+[node name="Area3D" type="Area3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight/OISActorComponent/OISColliderArea3D"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPlayer/XRViewport/XROrigin3D/XRController3DRight/OISActorComponent/OISColliderArea3D/Area3D"]
+shape = SubResource("SphereShape3D_c31u1")
+
+[node name="TutorialEvents" type="Node" parent="."]
+
+[node name="TutorialInventory" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_sxg64")
+event_name = "TutorialInventory"
+
+[node name="TutorialJournalQuestLog" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_sxg64")
+event_name = "TutorialJournalQuestLog"
+
+[node name="TutorialFlashlightRadio" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_sxg64")
+event_name = "TutorialFlashlightRadio"
+
+[node name="TutorialTeleport" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_sxg64")
+event_name = "TutorialTeleport"
+
+[node name="TutorialKeyItems" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_sxg64")
+event_name = "TutorialKeyItems"
+metadata/_custom_type_script = "uid://p7vbsnbdp2wx"
+
+[node name="ActionTeleportToSofas" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_ocmcv")
+event_name = "ActionTeleportToSofas"
+
+[node name="ActionTeleportToKitchenEntrance" type="Node" parent="TutorialEvents"]
+script = ExtResource("18_jitvu")
+event_name = "ActionTeleportToKitchenEntrance"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="ActionTeleportToBedroom" type="Node" parent="TutorialEvents"]
+script = ExtResource("13_wjd0w")
+event_name = "ActionTeleportToBedroom"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="ActionTeleportToStudy" type="Node" parent="TutorialEvents"]
+script = ExtResource("14_imvhg")
+event_name = "ActionTeleportToStudy"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="ActionTeleportToStudyDesk" type="Node" parent="TutorialEvents"]
+script = ExtResource("15_m07h4")
+event_name = "ActionTeleportToStudyDesk"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="TutorialAttachAction" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_sxg64")
+event_name = "TutorialAttachAction"
+metadata/_custom_type_script = "uid://p7vbsnbdp2wx"
+
+[node name="ActionTeleportToPlanks" type="Node" parent="TutorialEvents"]
+script = ExtResource("16_ui33j")
+event_name = "ActionTeleportToPlanks"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="ActionTeleportToGate" type="Node" parent="TutorialEvents"]
+script = ExtResource("17_k5x6j")
+event_name = "ActionTeleportToGate"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_og8uf")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="TeleporterManager" type="Node3D" parent="." node_paths=PackedStringArray("current_location", "xr_origin", "xr_camera", "xr_left_function_pointer", "xr_right_function_pointer", "audio_node", "fade_mesh", "spectator_camera")]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+visible = false
+script = ExtResource("18_prqr5")
+current_location = NodePath("Mansion Entrance")
+xr_origin = NodePath("../XRPlayer/XRViewport/XROrigin3D")
+xr_camera = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRCamera3D")
+xr_left_function_pointer = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/FunctionPointer")
+xr_right_function_pointer = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRController3DRight/FunctionPointer")
+audio_node = NodePath("../TeleporterSFX")
+fade_mesh = NodePath("../FadeMesh")
+spectator_camera = NodePath("../DesktopScreen/SubViewport/Camera3D")
+
+[node name="Final Teleporter" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.66768, 0.0577742, 2.35059)
+visible = false
+script = ExtResource("19_prqr5")
+final_teleporter = true
+teleporter_name = "Final Teleporter"
+teleporter_active = false
+teleporter_position = Vector3(4.66768, 0, 2.35059)
+connected_teleporters = [NodePath("../Mansion Entrance")]
+spectator_camera_position = Vector3(2.547, 1.682, 1.761)
+spectator_camera_rotation = Vector3(-0.253073, -0.558505, 0)
+
+[node name="Mansion Entrance" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.61394, 0, 0.619016)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Mansion Entrance"
+teleporter_position = Vector3(3.61394, 0, 0.619016)
+connected_teleporters = [NodePath("../Sofas"), NodePath("../Living Room"), NodePath("../Final Teleporter")]
+spectator_camera_position = Vector3(2.547, 1.682, 1.761)
+spectator_camera_rotation = Vector3(-0.253073, -0.558505, 0)
+
+[node name="Sofas" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.04789, 0, -5.07406)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Sofas"
+teleporter_position = Vector3(7.04789, 0, -5.07406)
+connected_teleporters = [NodePath("../Mansion Entrance"), NodePath("../Living Room 3"), NodePath("../Living Room")]
+spectator_camera_position = Vector3(6.80237, 2.54893, -5.24503)
+spectator_camera_rotation = Vector3(-1.04823, -1.57378, 0.00219696)
+
+[node name="Living Room" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35185, 0, -5.00441)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Living Room"
+teleporter_position = Vector3(-2.35185, 0, -5.00441)
+connected_teleporters = [NodePath("../Living Room Malakas Maganda Painting"), NodePath("../Hallway"), NodePath("../Living Room 3"), NodePath("../Sofas"), NodePath("../Mansion Entrance")]
+spectator_camera_position = Vector3(-3.13622, 2.78827, -3.13981)
+spectator_camera_rotation = Vector3(-0.612611, -0.638791, 0)
+
+[node name="Living Room 3" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19895, 0, -11.207)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Living Room 3"
+teleporter_position = Vector3(2.19895, 0, -11.207)
+connected_teleporters = [NodePath("../Sofas"), NodePath("../Living Room"), NodePath("../Living Room Malakas Maganda Painting"), NodePath("../Living Room Near Painting"), NodePath("../Living Room To Kitchen")]
+spectator_camera_position = Vector3(7.29059, 4.23901, -6.08543)
+spectator_camera_rotation = Vector3(-0.261799, 0.797615, 0)
+
+[node name="Living Room Near Painting" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.357, 0, -19.954)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Living Room Near Painting"
+teleporter_position = Vector3(-1.357, 0, -19.954)
+connected_teleporters = [NodePath("../Living Room To Kitchen"), NodePath("../Living Room Malakas Maganda Painting"), NodePath("../Living Room 3")]
+spectator_camera_position = Vector3(0.351305, 2.336, -16.5375)
+spectator_camera_rotation = Vector3(-0.122173, 0.692896, 0)
+
+[node name="Living Room Malakas Maganda Painting" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76789, 0, -11.3383)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Living Room Malakas Maganda Painting"
+teleporter_position = Vector3(-4.76789, 0, -11.3383)
+connected_teleporters = [NodePath("../Living Room"), NodePath("../Living Room Near Painting"), NodePath("../Living Room 3")]
+spectator_camera_position = Vector3(-0.722, 2.336, -9.025)
+spectator_camera_rotation = Vector3(-0.122173, 1.12225, 0)
+
+[node name="Living Room To Kitchen" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8831, 0, -18.2801)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Living Room To Kitchen"
+teleporter_position = Vector3(4.8831, 0, -18.2801)
+connected_teleporters = [NodePath("../Living Room Near Painting"), NodePath("../Living Room 3"), NodePath("../Near Lampshade")]
+spectator_camera_position = Vector3(2.65716, 2.99723, -16.5525)
+spectator_camera_rotation = Vector3(-0.400628, -0.779202, 0)
+
+[node name="Near Lampshade" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97633, 0, -25.8215)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Near Lampshade"
+teleporter_active = false
+teleporter_position = Vector3(3.97633, 0, -25.8215)
+connected_teleporters = [NodePath("../Dining Room Entrance"), NodePath("../Path To Kitchen"), NodePath("../Living Room To Kitchen")]
+spectator_camera_position = Vector3(2.65716, 2.99723, -16.5525)
+spectator_camera_rotation = Vector3(-0.400628, -0.779202, 0)
+
+[node name="Dining Room Entrance" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.000418826, 0, 1, 0, 1, 0, -1, 0, -0.000418826, 3.4525, 0, -30.1014)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Dining Room Entrance"
+teleporter_position = Vector3(3.4525, 0, -30.1014)
+teleporter_rotation = Vector3(0, 90.024, 0)
+connected_teleporters = [NodePath("../Near Lampshade"), NodePath("../Dining Room Inside"), NodePath("../Path To Kitchen")]
+spectator_camera_position = Vector3(6.66944, 3.56321, -32.0512)
+spectator_camera_rotation = Vector3(-0.522802, 2.05837, 0)
+
+[node name="Dining Room Inside" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.000418826, 0, 1, 0, 1, 0, -1, 0, -0.000418826, -4.37071, 0, -30.5886)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Dining Room Inside"
+teleporter_position = Vector3(-4.37071, 0, -30.5886)
+teleporter_rotation = Vector3(0, 90.024, 0)
+connected_teleporters = [NodePath("../Dining Room Entrance"), NodePath("../Dining Room Inside 5"), NodePath("../Dining Room Inside 2")]
+spectator_camera_position = Vector3(-8.3719, 6.53452, -28)
+spectator_camera_rotation = Vector3(-0.775874, -0.931149, 0)
+
+[node name="Dining Room Inside 2" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.000418826, 0, 1, 0, 1, 0, -1, 0, -0.000418826, -6.35605, 0, -24.0824)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Dining Room Inside 2"
+teleporter_position = Vector3(-6.35605, 0, -24.0824)
+teleporter_rotation = Vector3(0, 90.024, 0)
+connected_teleporters = [NodePath("../Dining Room Inside"), NodePath("../Dining Room Inside 3")]
+spectator_camera_position = Vector3(-2.31627, 0.608058, -23.1135)
+spectator_camera_rotation = Vector3(0.127331, 0.779193, 0)
+
+[node name="Dining Room Inside 3" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7187, 0, -23.8449)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Dining Room Inside 3"
+teleporter_position = Vector3(-13.7187, 0, -23.8449)
+connected_teleporters = [NodePath("../Dining Room Inside 2"), NodePath("../Dining Room Inside 6")]
+spectator_camera_position = Vector3(-13.0211, 1.93071, -27.7897)
+spectator_camera_rotation = Vector3(-0.0472025, 3.12231, 0)
+metadata/_custom_type_script = "uid://ek4xpaefjlux"
+
+[node name="Dining Room Inside 6" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.128, 0, -30.3295)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Dining Room Inside 6"
+teleporter_position = Vector3(-13.128, 0, -30.3295)
+connected_teleporters = [NodePath("../Dining Room Inside 3"), NodePath("../Dining Room Inside 4")]
+spectator_camera_position = Vector3(-13.0211, 1.93071, -27.7897)
+spectator_camera_rotation = Vector3(-0.0472025, 3.12231, 0)
+metadata/_custom_type_script = "uid://ek4xpaefjlux"
+
+[node name="Dining Room Inside 4" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.000418826, 0, 1, 0, 1, 0, -1, 0, -0.000418826, -12.0439, 0, -37.0024)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Dining Room Inside 4"
+teleporter_position = Vector3(-12.0439, 0, -37.0024)
+teleporter_rotation = Vector3(0, 90.024, 0)
+connected_teleporters = [NodePath("../Dining Room Inside 5"), NodePath("../Dining Room Inside 6")]
+spectator_camera_position = Vector3(-13.1579, 5.29333, -31.897)
+spectator_camera_rotation = Vector3(-0.583891, -0.92685, 0)
+
+[node name="Dining Room Inside 5" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.000418826, 0, 1, 0, 1, 0, -1, 0, -0.000418826, -5.98851, 0, -37.0024)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Dining Room Inside 5"
+teleporter_position = Vector3(-5.98851, 0, -37.0024)
+teleporter_rotation = Vector3(0, 90.024, 0)
+connected_teleporters = [NodePath("../Dining Room Inside 4"), NodePath("../Dining Room Inside")]
+spectator_camera_position = Vector3(-13.1579, 5.29333, -31.897)
+spectator_camera_rotation = Vector3(-0.583891, -0.92685, 0)
+
+[node name="Path To Kitchen" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.00708602, 0, -0.999975, 0, 1, 0, 0.999975, 0, 0.00708602, 8.55089, 0, -30.1)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Path To Kitchen"
+teleporter_position = Vector3(8.55089, 0, -30.1)
+teleporter_rotation = Vector3(0, -89.594, 0)
+connected_teleporters = [NodePath("../Kitchen Area Entrance"), NodePath("../Near Lampshade"), NodePath("../Dining Room Entrance")]
+spectator_camera_position = Vector3(2.58578, 2.19324, -26.3979)
+spectator_camera_rotation = Vector3(-0.0995595, -1.03633, 0)
+
+[node name="Kitchen Area Entrance" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.00708602, 0, -0.999975, 0, 1, 0, 0.999975, 0, 0.00708602, 14.5667, 0, -25.9433)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Area Entrance"
+teleporter_position = Vector3(14.5667, 0, -25.9433)
+teleporter_rotation = Vector3(0, -89.594, 0)
+connected_teleporters = [NodePath("../Storage Room Entrance"), NodePath("../Kitchen Further Entrance"), NodePath("../Path To Kitchen")]
+spectator_camera_position = Vector3(12.9243, 3.01605, -28.1598)
+spectator_camera_rotation = Vector3(-0.675518, -2.33295, 0)
+
+[node name="Kitchen Further Entrance" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999996, 0, -0.00282737, 0, 1, 0, 0.00282737, 0, 0.999996, 23.8961, 0, -26.0539)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Further Entrance"
+teleporter_position = Vector3(23.8961, 0, -26.0539)
+teleporter_rotation = Vector3(0, -0.161997, 0)
+connected_teleporters = [NodePath("../Kitchen Part 1"), NodePath("../Kitchen Area Entrance"), NodePath("../Kitchen Cabinets"), NodePath("../Storage Room Entrance")]
+spectator_camera_position = Vector3(24.8917, 5.45984, -36.6586)
+spectator_camera_rotation = Vector3(-0.867506, 2.35319, 0)
+
+[node name="Kitchen Cabinets" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999916, 0, 0.0130024, 0, 1, 0, -0.0130024, 0, 0.999916, 23.5293, 0, -29.5314)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Cabinets"
+teleporter_position = Vector3(23.5293, 0, -29.5314)
+teleporter_rotation = Vector3(0, 0.745003, 0)
+connected_teleporters = [NodePath("../Kitchen Part 1"), NodePath("../Kitchen Further Entrance"), NodePath("../Kitchen Stove"), NodePath("../Kitchen Outside Counter 4")]
+spectator_camera_position = Vector3(24.8917, 5.45984, -36.6586)
+spectator_camera_rotation = Vector3(-0.867506, 2.35319, 0)
+
+[node name="Kitchen Outside Counter" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.00795864, 0, 0.999968, 0, 1, 0, -0.999968, 0, -0.00795864, 23.0908, 0, -37.0794)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Outside Counter"
+teleporter_position = Vector3(23.0908, 0, -37.0794)
+teleporter_rotation = Vector3(0, 90.456, 0)
+connected_teleporters = [NodePath("../Kitchen Stove"), NodePath("../Kitchen Outside Counter 3"), NodePath("../Kitchen Part 1")]
+spectator_camera_position = Vector3(17.9968, 4.02756, -33.3285)
+spectator_camera_rotation = Vector3(-0.592616, -0.675328, 0)
+
+[node name="Kitchen Outside Counter 3" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.00795864, 0, 0.999968, 0, 1, 0, -0.999968, 0, -0.00795864, 18.7679, 0, -35.3267)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Outside Counter 3"
+teleporter_position = Vector3(18.7679, 0, -35.3267)
+teleporter_rotation = Vector3(0, 90.456, 0)
+connected_teleporters = [NodePath("../Kitchen Outside Counter"), NodePath("../Kitchen Outside Counter 4")]
+spectator_camera_position = Vector3(17.9968, 4.02756, -33.3285)
+spectator_camera_rotation = Vector3(-0.592616, -0.675328, 0)
+
+[node name="Kitchen Outside Counter 4" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.00795864, 0, 0.999968, 0, 1, 0, -0.999968, 0, -0.00795864, 19.0557, 0, -30.2581)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Outside Counter 4"
+teleporter_position = Vector3(19.0557, 0, -30.2581)
+teleporter_rotation = Vector3(0, 90.456, 0)
+connected_teleporters = [NodePath("../Kitchen Cabinets"), NodePath("../Kitchen Outside Counter 3")]
+spectator_camera_position = Vector3(24.8917, 5.45984, -36.6586)
+spectator_camera_rotation = Vector3(-0.867506, 2.35319, 0)
+
+[node name="Kitchen Part 1" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.0121297, 0, 0.999926, 0, 1, 0, -0.999926, 0, 0.0121297, 22.8002, 0, -33.1852)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Part 1"
+teleporter_position = Vector3(22.8002, 0, -33.1852)
+teleporter_rotation = Vector3(0, 89.305, 0)
+connected_teleporters = [NodePath("../Kitchen Stove"), NodePath("../Kitchen Further Entrance"), NodePath("../Kitchen Cabinets"), NodePath("../Kitchen Outside Counter")]
+spectator_camera_position = Vector3(21.4982, 2.04227, -33.2895)
+spectator_camera_rotation = Vector3(-0.610068, -2.25108, 0)
+
+[node name="Kitchen Stove" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.019145, 0, -0.999817, 0, 1, 0, 0.999817, 0, -0.019145, 24.4833, 0, -33.835)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Kitchen Stove"
+teleporter_position = Vector3(24.4833, 0, -33.835)
+teleporter_rotation = Vector3(0, -91.097, 0)
+connected_teleporters = [NodePath("../Kitchen Cabinets"), NodePath("../Kitchen Part 1"), NodePath("../Kitchen Outside Counter")]
+spectator_camera_position = Vector3(23.411, 0.640772, -34.9413)
+spectator_camera_rotation = Vector3(-0.0122938, -2.16344, 0)
+
+[node name="Hallway" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.00541045, 0, 0.999985, 0, 1, 0, -0.999985, 0, -0.00541045, -10.9539, 0, -5.07406)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Hallway"
+teleporter_position = Vector3(-10.9539, 0, -5.07406)
+teleporter_rotation = Vector3(0, 90.31, 0)
+connected_teleporters = [NodePath("../Living Room"), NodePath("../Hallway 2"), null]
+spectator_camera_position = Vector3(-17.1224, 3.24358, -5.0664)
+spectator_camera_rotation = Vector3(-0.391903, -1.6013, 0)
+
+[node name="Hallway 2" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.00541045, 0, 0.999985, 0, 1, 0, -0.999985, 0, -0.00541045, -14.838, 0, -5.07406)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Hallway 2"
+teleporter_position = Vector3(-14.838, 0, -5.07406)
+teleporter_rotation = Vector3(0, 90.31, 0)
+connected_teleporters = [NodePath("../Hallway"), NodePath("../Study Room Entrance")]
+spectator_camera_position = Vector3(-17.1224, 3.24358, -5.0664)
+spectator_camera_rotation = Vector3(-0.391903, -1.6013, 0)
+
+[node name="Study Room Planks Area" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0.00012219, 0, 1, 0, -0.00012219, 0, 1, -19.9668, 0, -2.40756)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Study Room Planks Area"
+teleporter_position = Vector3(-19.9668, 0, -2.40756)
+teleporter_rotation = Vector3(0, 0.00700097, 0)
+connected_teleporters = [NodePath("../Study Room Entrance"), NodePath("../Study Room"), NodePath("../Study Room Near Planks"), NodePath("../Bedroom Broken Wall")]
+spectator_camera_position = Vector3(-17.7513, 4.11001, 0.821116)
+spectator_camera_rotation = Vector3(-0.684245, 0.622224, 0)
+
+[node name="Study Room Entrance" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.920279, 0, 0.391261, 0, 1, 0, -0.391261, 0, -0.920279, -14.8223, 0, 0.0215006)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Study Room Entrance"
+teleporter_position = Vector3(-14.8223, 0, 0.0215006)
+teleporter_rotation = Vector3(0, 156.967, 0)
+connected_teleporters = [NodePath("../Hallway 2"), NodePath("../Study Room Planks Area"), NodePath("../Study Room"), NodePath("../Study Room Near Planks")]
+spectator_camera_position = Vector3(-21.28, 4.10695, -2.44116)
+spectator_camera_rotation = Vector3(-0.566436, -2.43648, 0)
+
+[node name="Study Room" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.808144, 0, -0.588984, 0, 1, 0, 0.588984, 0, -0.808144, -10.2599, 0, -0.471787)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Study Room"
+teleporter_position = Vector3(-10.2599, 0, -0.471787)
+teleporter_rotation = Vector3(0, -143.915, 0)
+connected_teleporters = [NodePath("../Study Room Entrance"), NodePath("../Study Room Desk"), NodePath("../Study Room Planks Area"), NodePath("../Study Room Near Planks"), NodePath("../Study Room Near Desk")]
+spectator_camera_position = Vector3(-7.74033, 2.55266, -0.340344)
+spectator_camera_rotation = Vector3(-0.719152, 1.16326, 0)
+
+[node name="Study Room Near Planks" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.808144, 0, -0.588984, 0, 1, 0, 0.588984, 0, -0.808144, -19.5861, 0, 0.00848675)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Study Room Near Planks"
+teleporter_position = Vector3(-19.5861, 0, 0.00848675)
+teleporter_rotation = Vector3(0, -143.915, 0)
+connected_teleporters = [NodePath("../Study Room"), NodePath("../Study Room Printing Press"), NodePath("../Study Room Planks Area"), NodePath("../Study Room Entrance"), NodePath("../Bedroom Broken Wall")]
+spectator_camera_position = Vector3(-21.28, 4.10695, -2.44116)
+spectator_camera_rotation = Vector3(-0.566436, -2.43648, 0)
+
+[node name="Study Room Desk" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.808144, 0, -0.588984, 0, 1, 0, 0.588984, 0, -0.808144, -11.9422, 0, 6.81663)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Study Room Desk"
+teleporter_position = Vector3(-11.9422, 0, 6.81663)
+teleporter_rotation = Vector3(0, -143.915, 0)
+connected_teleporters = [NodePath("../Study Room"), NodePath("../Study Room Near Desk")]
+spectator_camera_position = Vector3(-13.5269, 3.26805, 7.42006)
+spectator_camera_rotation = Vector3(-0.767149, -1.0315, 0)
+
+[node name="Study Room Near Desk" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.808144, 0, -0.588984, 0, 1, 0, 0.588984, 0, -0.808144, -9.06334, 0, 6.81663)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Study Room Near Desk"
+teleporter_position = Vector3(-9.06334, 0, 6.81663)
+teleporter_rotation = Vector3(0, -143.915, 0)
+connected_teleporters = [NodePath("../Study Room"), NodePath("../Study Room Desk")]
+spectator_camera_position = Vector3(-13.5269, 3.26805, 7.42006)
+spectator_camera_rotation = Vector3(-0.767149, -1.0315, 0)
+
+[node name="Study Room Printing Press" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(-0.808144, 0, -0.588984, 0, 1, 0, 0.588984, 0, -0.808144, -19.5861, 0, 3.98851)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Study Room Printing Press"
+teleporter_active = false
+teleporter_position = Vector3(-19.5861, 0, 3.98851)
+teleporter_rotation = Vector3(0, -143.915, 0)
+connected_teleporters = [NodePath("../Study Room Near Planks")]
+spectator_camera_position = Vector3(-19.2101, 4.35878, 3.78347)
+spectator_camera_rotation = Vector3(-1.3562, 2.24974, 0)
+
+[node name="Bedroom Center" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999857, 0, 0.0169114, 0, 1, 0, -0.0169114, 0, 0.999857, -14.3224, 0, -15.1956)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Bedroom Center"
+teleporter_position = Vector3(-14.3224, 0, -15.1956)
+teleporter_rotation = Vector3(0, 0.968998, 0)
+connected_teleporters = [null, NodePath("../Blueprint Wall 1"), NodePath("../Blueprint Wall 2"), NodePath("../Blueprint Wall 3"), NodePath("../Blueprint Wall 4"), NodePath("../Bed Right Picture"), NodePath("../Bed Left Picture"), NodePath("../Window Right Picture"), NodePath("../Bedroom Broken Wall"), NodePath("../Bedroom Safe"), NodePath("../Bedroom Study Table")]
+spectator_camera_position = Vector3(-13.1471, 3.24925, -15.0368)
+spectator_camera_rotation = Vector3(-0.959136, 0.735591, 0)
+
+[node name="Bedroom Broken Wall" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999857, 0, 0.0169114, 0, 1, 0, -0.0169114, 0, 0.999857, -19.8767, 0, -8.47216)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Bedroom Broken Wall"
+teleporter_active = false
+teleporter_position = Vector3(-19.8767, 0, -8.47216)
+teleporter_rotation = Vector3(0, 0.968998, 0)
+connected_teleporters = [NodePath("../Bedroom Center"), NodePath("../Bedroom Safe"), NodePath("../Bedroom Study Table"), NodePath("../Study Room Planks Area"), NodePath("../Study Room Near Planks")]
+spectator_camera_position = Vector3(-19.7683, 1.59931, -11.3264)
+spectator_camera_rotation = Vector3(-0.0384751, 3.07433, 0)
+
+[node name="Bedroom Study Table" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999857, 0, 0.0169114, 0, 1, 0, -0.0169114, 0, 0.999857, -20.3262, 0, -16.2659)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Bedroom Study Table"
+teleporter_position = Vector3(-20.3262, 0, -16.2659)
+teleporter_rotation = Vector3(0, 0.968998, 0)
+connected_teleporters = [NodePath("../Bedroom Center"), NodePath("../Bedroom Safe"), NodePath("../Bedroom Broken Wall"), NodePath("../Bed Left Picture"), NodePath("../Window Right Picture")]
+spectator_camera_position = Vector3(-15.8301, 3.32309, -14.7365)
+spectator_camera_rotation = Vector3(-0.291547, 0.923251, 0)
+
+[node name="Bedroom Safe" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999857, 0, 0.0169114, 0, 1, 0, -0.0169114, 0, 0.999857, -15.1682, 0, -9.60122)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Bedroom Safe"
+teleporter_position = Vector3(-15.1682, 0, -9.60122)
+teleporter_rotation = Vector3(0, 0.968998, 0)
+connected_teleporters = [NodePath("../Bedroom Center"), NodePath("../Bedroom Broken Wall"), NodePath("../Blueprint Wall 1"), NodePath("../Blueprint Wall 2"), NodePath("../Blueprint Wall 3"), NodePath("../Blueprint Wall 4"), NodePath("../Bedroom Study Table")]
+spectator_camera_position = Vector3(-13.4671, 3.05899, -12.1043)
+spectator_camera_rotation = Vector3(-0.387541, 2.70781, 0)
+
+[node name="Blueprint Wall 1" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999428, 0, 0.033818, 0, 1, 0, -0.033818, 0, 0.999428, -7.55287, 0, -10.3907)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Blueprint Wall 1"
+teleporter_position = Vector3(-7.55287, 0, -10.3907)
+teleporter_rotation = Vector3(0, 1.938, 0)
+connected_teleporters = [NodePath("../Blueprint Wall 2"), NodePath("../Bedroom Center"), NodePath("../Bedroom Safe"), NodePath("../Blueprint Wall 3"), NodePath("../Blueprint Wall 4"), NodePath("../Bed Right Picture")]
+spectator_camera_position = Vector3(-11.1814, 3.12455, -10.627)
+spectator_camera_rotation = Vector3(-0.400631, -0.922473, 0)
+
+[node name="Blueprint Wall 2" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999428, 0, 0.033818, 0, 1, 0, -0.033818, 0, 0.999428, -7.55287, 0, -13.3859)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Blueprint Wall 2"
+teleporter_position = Vector3(-7.55287, 0, -13.3859)
+teleporter_rotation = Vector3(0, 1.938, 0)
+connected_teleporters = [NodePath("../Blueprint Wall 1"), NodePath("../Bedroom Center"), NodePath("../Blueprint Wall 3"), NodePath("../Bedroom Safe"), NodePath("../Blueprint Wall 4"), NodePath("../Bed Right Picture")]
+spectator_camera_position = Vector3(-11.1814, 3.12455, -10.627)
+spectator_camera_rotation = Vector3(-0.400631, -0.922473, 0)
+
+[node name="Blueprint Wall 3" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999428, 0, 0.033818, 0, 1, 0, -0.033818, 0, 0.999428, -7.55287, 0, -16.3391)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Blueprint Wall 3"
+teleporter_position = Vector3(-7.55287, 0, -16.3391)
+teleporter_rotation = Vector3(0, 1.938, 0)
+connected_teleporters = [NodePath("../Blueprint Wall 2"), NodePath("../Bedroom Center"), NodePath("../Blueprint Wall 4"), NodePath("../Bedroom Safe"), NodePath("../Blueprint Wall 1"), NodePath("../Bed Right Picture")]
+spectator_camera_position = Vector3(-11.1814, 3.12455, -10.627)
+spectator_camera_rotation = Vector3(-0.400631, -0.922473, 0)
+
+[node name="Blueprint Wall 4" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999428, 0, 0.033818, 0, 1, 0, -0.033818, 0, 0.999428, -7.55287, 0, -19.1567)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Blueprint Wall 4"
+teleporter_position = Vector3(-7.55287, 0, -19.1567)
+teleporter_rotation = Vector3(0, 1.938, 0)
+connected_teleporters = [NodePath("../Blueprint Wall 3"), NodePath("../Bedroom Center"), NodePath("../Bed Right Picture"), NodePath("../Bedroom Safe"), NodePath("../Blueprint Wall 2"), NodePath("../Blueprint Wall 1")]
+spectator_camera_position = Vector3(-11.1814, 3.12455, -10.627)
+spectator_camera_rotation = Vector3(-0.400631, -0.922473, 0)
+
+[node name="Bed Right Picture" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999428, 0, 0.033818, 0, 1, 0, -0.033818, 0, 0.999428, -8.85131, 0, -20.7747)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Bed Right Picture"
+teleporter_position = Vector3(-8.85131, 0, -20.7747)
+teleporter_rotation = Vector3(0, 1.938, 0)
+connected_teleporters = [NodePath("../Blueprint Wall 4"), NodePath("../Bedroom Center"), NodePath("../Blueprint Wall 3"), NodePath("../Blueprint Wall 2"), NodePath("../Blueprint Wall 1")]
+spectator_camera_position = Vector3(-11.1814, 3.12455, -10.627)
+spectator_camera_rotation = Vector3(-0.400631, -0.922473, 0)
+
+[node name="Bed Left Picture" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(0.999428, 0, 0.033818, 0, 1, 0, -0.033818, 0, 0.999428, -20.3495, 0, -20.6335)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Bed Left Picture"
+teleporter_position = Vector3(-20.3495, 0, -20.6335)
+teleporter_rotation = Vector3(0, 1.938, 0)
+connected_teleporters = [NodePath("../Window Right Picture"), NodePath("../Bedroom Center"), NodePath("../Bedroom Study Table")]
+spectator_camera_position = Vector3(-15.8301, 3.32309, -14.7365)
+spectator_camera_rotation = Vector3(-0.291547, 0.923251, 0)
+
+[node name="Window Right Picture" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2386, 0, -18.7457)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Window Right Picture"
+teleporter_position = Vector3(-21.2386, 0, -18.7457)
+connected_teleporters = [NodePath("../Bedroom Center"), NodePath("../Bed Left Picture"), NodePath("../Bedroom Study Table")]
+spectator_camera_position = Vector3(-15.8301, 3.32309, -14.7365)
+spectator_camera_rotation = Vector3(-0.291547, 0.923251, 0)
+
+[node name="Storage Room Inside" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3816, 0, -20.0871)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Storage Room Inside"
+teleporter_position = Vector3(22.3816, 0, -20.0871)
+connected_teleporters = [NodePath("../Storage Room Entrance"), NodePath("../Storage Room Inside2")]
+spectator_camera_position = Vector3(25.9018, 5.22419, -22.2743)
+spectator_camera_rotation = Vector3(-0.784602, 2.09908, 0)
+
+[node name="Storage Room Inside2" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5231, 0, -20.0871)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Storage Room Inside2"
+teleporter_position = Vector3(17.5231, 0, -20.0871)
+connected_teleporters = [NodePath("../Storage Room Entrance"), NodePath("../Storage Room Inside")]
+spectator_camera_position = Vector3(25.9018, 5.22419, -22.2743)
+spectator_camera_rotation = Vector3(-0.784602, 2.09908, 0)
+
+[node name="Storage Room Entrance" type="Node3D" parent="TeleporterManager" node_paths=PackedStringArray("connected_teleporters")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.896, 0, -22.204)
+script = ExtResource("5_5y1lq")
+teleporter_name = "Storage Room Entrance"
+teleporter_position = Vector3(23.896, 0, -22.204)
+connected_teleporters = [NodePath("../Kitchen Area Entrance"), NodePath("../Storage Room Inside"), NodePath("../Storage Room Inside2"), NodePath("../Kitchen Further Entrance")]
+spectator_camera_position = Vector3(25.9018, 5.22419, -22.2743)
+spectator_camera_rotation = Vector3(-0.784602, 2.09908, 0)
+
+[node name="TeleporterSFX" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6947, 0.7, 1.43678)
+stream = SubResource("AudioStreamRandomizer_d7bab")
+
+[node name="InventorySystem" type="Node3D" parent="." node_paths=PackedStringArray("xr_anchor_to_object", "xr_camera_anchor", "inventory_toggler_hand", "audio_node")]
+visible = false
+script = ExtResource("9_vx6pd")
+row_count = 2
+column_count = 3
+follow_player_camera = true
+xr_anchor_to_object = NodePath("../XRPlayer/XRViewport/XROrigin3D")
+xr_camera_anchor = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRCamera3D")
+inventory_toggler_hand = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRController3DLeft")
+inventory_toggler_button = "ax_button"
+audio_node = NodePath("../InventorySFX")
+local_transform_adjustment = Vector3(-0.3, 0, 0)
+slots_distance_to_player = 0.5
+height_adjustment = -0.1
+camera_window_width = 1.0
+inventory_dictionary = {
+0: [[Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":ExtResource("10_vty50"),"update_slot_settings":false,"slot_enabled":true,"snap_zone_radius":0.1,"default_object":null,"group_required":"","funny_effect":false,"ignore_inventory_item_scale":false,"slot_material_override":ExtResource("12_1o0r6"),"snap_zone_mesh":Object(MeshInstance3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"mesh":SubResource("SphereMesh_qfneb"),"skin":null,"skeleton":NodePath(".."),"surface_material_override/0":ExtResource("12_1o0r6"),"script":null)
+,"mesh_shape":SubResource("SphereMesh_qfneb"),"snap_zone_scene":ExtResource("11_gns45"),"snap_zone":Object(Area3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":4,"collision_mask":65540,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"monitoring":true,"monitorable":true,"priority":0,"gravity_space_override":0,"gravity_point":false,"gravity_point_unit_distance":0.0,"gravity_point_center":Vector3(0, -1, 0),"gravity_direction":Vector3(0, -1, 0),"gravity":9.8,"linear_damp_space_override":0,"linear_damp":0.1,"angular_damp_space_override":0,"angular_damp":0.1,"wind_force_magnitude":0.0,"wind_attenuation_factor":0.0,"wind_source_path":NodePath(""),"audio_bus_override":false,"audio_bus_name":&"Master","reverb_bus_enabled":false,"reverb_bus_name":&"Master","reverb_bus_amount":0.0,"reverb_bus_uniformity":0.0,"script":Resource("res://addons/godot-xr-tools/objects/snap_zone.gd"),"enabled":true,"stash_sound":null,"grab_distance":0.1,"snap_mode":0,"snap_require":"","snap_exclude":"","grab_require":"","grab_exclude":"","initial_object":NodePath(""),"closest_object":null,"picked_up_object":null,"picked_up_ranged":true,"_object_in_grab_area":[])
+,"current_object":null,"is_parented":false)
+, null, null], [Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":ExtResource("10_vty50"),"update_slot_settings":false,"slot_enabled":true,"snap_zone_radius":0.1,"default_object":null,"group_required":"","funny_effect":false,"ignore_inventory_item_scale":false,"slot_material_override":ExtResource("12_1o0r6"),"snap_zone_mesh":Object(MeshInstance3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"mesh":SubResource("SphereMesh_imvhg"),"skin":null,"skeleton":NodePath(".."),"surface_material_override/0":ExtResource("12_1o0r6"),"script":null)
+,"mesh_shape":SubResource("SphereMesh_imvhg"),"snap_zone_scene":ExtResource("11_gns45"),"snap_zone":Object(Area3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":4,"collision_mask":65540,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"monitoring":true,"monitorable":true,"priority":0,"gravity_space_override":0,"gravity_point":false,"gravity_point_unit_distance":0.0,"gravity_point_center":Vector3(0, -1, 0),"gravity_direction":Vector3(0, -1, 0),"gravity":9.8,"linear_damp_space_override":0,"linear_damp":0.1,"angular_damp_space_override":0,"angular_damp":0.1,"wind_force_magnitude":0.0,"wind_attenuation_factor":0.0,"wind_source_path":NodePath(""),"audio_bus_override":false,"audio_bus_name":&"Master","reverb_bus_enabled":false,"reverb_bus_name":&"Master","reverb_bus_amount":0.0,"reverb_bus_uniformity":0.0,"script":Resource("res://addons/godot-xr-tools/objects/snap_zone.gd"),"enabled":true,"stash_sound":null,"grab_distance":0.1,"snap_mode":0,"snap_require":"","snap_exclude":"","grab_require":"","grab_exclude":"","initial_object":NodePath(""),"closest_object":null,"picked_up_object":null,"picked_up_ranged":true,"_object_in_grab_area":[])
+,"current_object":null,"is_parented":false)
+, null, null], [Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":ExtResource("10_vty50"),"update_slot_settings":false,"slot_enabled":true,"snap_zone_radius":0.1,"default_object":null,"group_required":"","funny_effect":false,"ignore_inventory_item_scale":false,"slot_material_override":ExtResource("12_1o0r6"),"snap_zone_mesh":Object(MeshInstance3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"mesh":SubResource("SphereMesh_m07h4"),"skin":null,"skeleton":NodePath(".."),"surface_material_override/0":ExtResource("12_1o0r6"),"script":null)
+,"mesh_shape":SubResource("SphereMesh_m07h4"),"snap_zone_scene":ExtResource("11_gns45"),"snap_zone":Object(Area3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":4,"collision_mask":65540,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"monitoring":true,"monitorable":true,"priority":0,"gravity_space_override":0,"gravity_point":false,"gravity_point_unit_distance":0.0,"gravity_point_center":Vector3(0, -1, 0),"gravity_direction":Vector3(0, -1, 0),"gravity":9.8,"linear_damp_space_override":0,"linear_damp":0.1,"angular_damp_space_override":0,"angular_damp":0.1,"wind_force_magnitude":0.0,"wind_attenuation_factor":0.0,"wind_source_path":NodePath(""),"audio_bus_override":false,"audio_bus_name":&"Master","reverb_bus_enabled":false,"reverb_bus_name":&"Master","reverb_bus_amount":0.0,"reverb_bus_uniformity":0.0,"script":Resource("res://addons/godot-xr-tools/objects/snap_zone.gd"),"enabled":true,"stash_sound":null,"grab_distance":0.1,"snap_mode":0,"snap_require":"","snap_exclude":"","grab_require":"","grab_exclude":"","initial_object":NodePath(""),"closest_object":null,"picked_up_object":null,"picked_up_ranged":true,"_object_in_grab_area":[])
+,"current_object":null,"is_parented":false)
+, null, null]],
+1: [[Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":ExtResource("10_vty50"),"update_slot_settings":false,"slot_enabled":true,"snap_zone_radius":0.1,"default_object":null,"group_required":"","funny_effect":false,"ignore_inventory_item_scale":false,"slot_material_override":ExtResource("12_1o0r6"),"snap_zone_mesh":Object(MeshInstance3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"mesh":null,"skin":null,"skeleton":NodePath(".."),"script":null)
+,"mesh_shape":null,"snap_zone_scene":ExtResource("11_gns45"),"snap_zone":Object(Area3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":4,"collision_mask":65540,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"monitoring":true,"monitorable":true,"priority":0,"gravity_space_override":0,"gravity_point":false,"gravity_point_unit_distance":0.0,"gravity_point_center":Vector3(0, -1, 0),"gravity_direction":Vector3(0, -1, 0),"gravity":9.8,"linear_damp_space_override":0,"linear_damp":0.1,"angular_damp_space_override":0,"angular_damp":0.1,"wind_force_magnitude":0.0,"wind_attenuation_factor":0.0,"wind_source_path":NodePath(""),"audio_bus_override":false,"audio_bus_name":&"Master","reverb_bus_enabled":false,"reverb_bus_name":&"Master","reverb_bus_amount":0.0,"reverb_bus_uniformity":0.0,"script":Resource("res://addons/godot-xr-tools/objects/snap_zone.gd"),"enabled":true,"stash_sound":null,"grab_distance":0.1,"snap_mode":0,"snap_require":"","snap_exclude":"","grab_require":"","grab_exclude":"","initial_object":NodePath(""),"closest_object":null,"picked_up_object":null,"picked_up_ranged":true,"_object_in_grab_area":[])
+,"current_object":null,"is_parented":false)
+, null, null], [Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":ExtResource("10_vty50"),"update_slot_settings":false,"slot_enabled":true,"snap_zone_radius":0.1,"default_object":null,"group_required":"","funny_effect":false,"ignore_inventory_item_scale":false,"slot_material_override":ExtResource("12_1o0r6"),"snap_zone_mesh":Object(MeshInstance3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"mesh":SubResource("SphereMesh_k5x6j"),"skin":null,"skeleton":NodePath(".."),"surface_material_override/0":ExtResource("12_1o0r6"),"script":null)
+,"mesh_shape":SubResource("SphereMesh_k5x6j"),"snap_zone_scene":ExtResource("11_gns45"),"snap_zone":Object(Area3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":4,"collision_mask":65540,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"monitoring":true,"monitorable":true,"priority":0,"gravity_space_override":0,"gravity_point":false,"gravity_point_unit_distance":0.0,"gravity_point_center":Vector3(0, -1, 0),"gravity_direction":Vector3(0, -1, 0),"gravity":9.8,"linear_damp_space_override":0,"linear_damp":0.1,"angular_damp_space_override":0,"angular_damp":0.1,"wind_force_magnitude":0.0,"wind_attenuation_factor":0.0,"wind_source_path":NodePath(""),"audio_bus_override":false,"audio_bus_name":&"Master","reverb_bus_enabled":false,"reverb_bus_name":&"Master","reverb_bus_amount":0.0,"reverb_bus_uniformity":0.0,"script":Resource("res://addons/godot-xr-tools/objects/snap_zone.gd"),"enabled":true,"stash_sound":null,"grab_distance":0.1,"snap_mode":0,"snap_require":"","snap_exclude":"","grab_require":"","grab_exclude":"","initial_object":NodePath(""),"closest_object":null,"picked_up_object":null,"picked_up_ranged":true,"_object_in_grab_area":[])
+,"current_object":null,"is_parented":false)
+, null, null], [Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.3, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":ExtResource("10_vty50"),"update_slot_settings":false,"slot_enabled":true,"snap_zone_radius":0.1,"default_object":null,"group_required":"","funny_effect":false,"ignore_inventory_item_scale":false,"slot_material_override":ExtResource("12_1o0r6"),"snap_zone_mesh":Object(MeshInstance3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"mesh":SubResource("SphereMesh_jqey7"),"skin":null,"skeleton":NodePath(".."),"surface_material_override/0":ExtResource("12_1o0r6"),"script":null)
+,"mesh_shape":SubResource("SphereMesh_jqey7"),"snap_zone_scene":ExtResource("11_gns45"),"snap_zone":Object(Area3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":4,"collision_mask":65540,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"monitoring":true,"monitorable":true,"priority":0,"gravity_space_override":0,"gravity_point":false,"gravity_point_unit_distance":0.0,"gravity_point_center":Vector3(0, -1, 0),"gravity_direction":Vector3(0, -1, 0),"gravity":9.8,"linear_damp_space_override":0,"linear_damp":0.1,"angular_damp_space_override":0,"angular_damp":0.1,"wind_force_magnitude":0.0,"wind_attenuation_factor":0.0,"wind_source_path":NodePath(""),"audio_bus_override":false,"audio_bus_name":&"Master","reverb_bus_enabled":false,"reverb_bus_name":&"Master","reverb_bus_amount":0.0,"reverb_bus_uniformity":0.0,"script":Resource("res://addons/godot-xr-tools/objects/snap_zone.gd"),"enabled":true,"stash_sound":null,"grab_distance":0.1,"snap_mode":0,"snap_require":"","snap_exclude":"","grab_require":"","grab_exclude":"","initial_object":NodePath(""),"closest_object":null,"picked_up_object":null,"picked_up_ranged":true,"_object_in_grab_area":[])
+,"current_object":null,"is_parented":false)
+, null, null]]
+}
+metadata/_custom_type_script = "uid://du4lpoac66rw"
+
+[node name="Slot_0_0" type="Node3D" parent="InventorySystem"]
+script = ExtResource("10_vty50")
+snap_zone_radius = 0.1
+
+[node name="SnapZone" parent="InventorySystem/Slot_0_0" instance=ExtResource("11_gns45")]
+grab_distance = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InventorySystem/Slot_0_0"]
+mesh = SubResource("SphereMesh_qfneb")
+surface_material_override/0 = ExtResource("12_1o0r6")
+
+[node name="Slot_0_1" type="Node3D" parent="InventorySystem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+script = ExtResource("10_vty50")
+snap_zone_radius = 0.1
+
+[node name="SnapZone" parent="InventorySystem/Slot_0_1" instance=ExtResource("11_gns45")]
+grab_distance = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InventorySystem/Slot_0_1"]
+mesh = SubResource("SphereMesh_imvhg")
+surface_material_override/0 = ExtResource("12_1o0r6")
+
+[node name="Slot_0_2" type="Node3D" parent="InventorySystem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+script = ExtResource("10_vty50")
+snap_zone_radius = 0.1
+
+[node name="SnapZone" parent="InventorySystem/Slot_0_2" instance=ExtResource("11_gns45")]
+grab_distance = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InventorySystem/Slot_0_2"]
+mesh = SubResource("SphereMesh_m07h4")
+surface_material_override/0 = ExtResource("12_1o0r6")
+
+[node name="Slot_1_0" type="Node3D" parent="InventorySystem" node_paths=PackedStringArray("default_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+script = ExtResource("10_vty50")
+snap_zone_radius = 0.1
+default_object = NodePath("../../OISJournal")
+slot_material_override = SubResource("StandardMaterial3D_qfneb")
+
+[node name="SnapZone" parent="InventorySystem/Slot_1_0" instance=ExtResource("11_gns45")]
+grab_distance = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InventorySystem/Slot_1_0"]
+mesh = SubResource("SphereMesh_ui33j")
+surface_material_override/0 = SubResource("StandardMaterial3D_qfneb")
+
+[node name="Slot_1_1" type="Node3D" parent="InventorySystem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.3, 0)
+script = ExtResource("10_vty50")
+snap_zone_radius = 0.1
+
+[node name="SnapZone" parent="InventorySystem/Slot_1_1" instance=ExtResource("11_gns45")]
+grab_distance = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InventorySystem/Slot_1_1"]
+mesh = SubResource("SphereMesh_k5x6j")
+surface_material_override/0 = ExtResource("12_1o0r6")
+
+[node name="Slot_1_2" type="Node3D" parent="InventorySystem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.3, 0)
+script = ExtResource("10_vty50")
+snap_zone_radius = 0.1
+
+[node name="SnapZone" parent="InventorySystem/Slot_1_2" instance=ExtResource("11_gns45")]
+grab_distance = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InventorySystem/Slot_1_2"]
+mesh = SubResource("SphereMesh_jqey7")
+surface_material_override/0 = ExtResource("12_1o0r6")
+
+[node name="HipSlot" type="Node3D" parent="." node_paths=PackedStringArray("xr_anchor_to_object", "xr_camera_anchor")]
+script = ExtResource("22_8ndpt")
+xr_anchor_to_object = NodePath("../XRPlayer/XRViewport/XROrigin3D")
+xr_camera_anchor = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRCamera3D")
+slots_distance_to_player = 0.35
+height_adjustment = -0.4
+
+[node name="HipSlot" type="Node3D" parent="HipSlot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0)
+script = ExtResource("10_vty50")
+snap_zone_radius = 0.1
+group_required = "flashlight"
+ignore_inventory_item_scale = true
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="HipSlot/HipSlot" instance=ExtResource("11_gns45")]
+grab_distance = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HipSlot/HipSlot"]
+mesh = SubResource("SphereMesh_8ndpt")
+surface_material_override/0 = ExtResource("12_1o0r6")
+
+[node name="InventorySFX" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.695, 0.4, 1.437)
+stream = SubResource("AudioStreamRandomizer_adv81")
+
+[node name="DialogueSystem" type="Node3D" parent="." node_paths=PackedStringArray("xr_anchor_to_object", "xr_camera_anchor", "dialogue_button_hand", "dialogue_toggler_hand", "audio_node", "desktop_node")]
+script = ExtResource("13_k5s8g")
+xr_anchor_to_object = NodePath("../XRPlayer/XRViewport/XROrigin3D")
+xr_camera_anchor = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRCamera3D")
+dialogue_button_hand = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRController3DRight")
+dialogue_button = "ax_button"
+local_transform_adjustment = Vector3(0, -0.2, 0)
+slots_distance_to_player = 1.24
+height_adjustment = -0.1
+dialogue_toggler_hand = NodePath("../XRPlayer/XRViewport/XROrigin3D/XRController3DRight")
+dialogue_toggler_button = "ax_button"
+audio_node = NodePath("../DialogueSFX")
+desktop_node = NodePath("../DesktopScreen/SubViewport/DialogueDesktop")
+
+[node name="Loading Screen" parent="DialogueSystem" instance=ExtResource("14_tapid")]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 4.695, 0.25, 0.697)
+screen_size = Vector2(1600, 900)
+collision_layer = 0
+scene = ExtResource("22_adv81")
+viewport_size = Vector2(1600, 900)
+material = SubResource("StandardMaterial3D_lovvn")
+unshaded = true
+scene_properties_keys = PackedStringArray("loading_screen.gd")
+
+[node name="Viewport" parent="DialogueSystem/Loading Screen" index="0"]
+size = Vector2i(1600, 900)
+
+[node name="Screen" parent="DialogueSystem/Loading Screen" index="1"]
+layers = 2
+mesh = SubResource("QuadMesh_jitvu")
+surface_material_override/0 = SubResource("StandardMaterial3D_lj71n")
+
+[node name="StaticBody3D" parent="DialogueSystem/Loading Screen" index="2"]
+collision_layer = 0
+screen_size = Vector2(1600, 900)
+viewport_size = Vector2(1600, 900)
+
+[node name="CollisionShape3D" parent="DialogueSystem/Loading Screen/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_tovjm")
+
+[node name="Main Viewport" parent="DialogueSystem" instance=ExtResource("14_tapid")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0.25, 0)
+screen_size = Vector2(1600, 900)
+collision_layer = 0
+scene = ExtResource("15_p3sfu")
+viewport_size = Vector2(1600, 900)
+material = ExtResource("16_sbu0l")
+unshaded = true
+scene_properties_keys = PackedStringArray("dialogue_ui.gd", "fade_out_timer_bool", "fade_out_timer", "fade_out_seconds")
+fade_out_timer_bool = false
+fade_out_seconds = 2.0
+
+[node name="Viewport" parent="DialogueSystem/Main Viewport" index="0"]
+size = Vector2i(1600, 900)
+
+[node name="Screen" parent="DialogueSystem/Main Viewport" index="1"]
+layers = 2
+mesh = SubResource("QuadMesh_n36qx")
+surface_material_override/0 = SubResource("StandardMaterial3D_ruk5h")
+
+[node name="StaticBody3D" parent="DialogueSystem/Main Viewport" index="2"]
+collision_layer = 0
+screen_size = Vector2(1600, 900)
+viewport_size = Vector2(1600, 900)
+
+[node name="CollisionShape3D" parent="DialogueSystem/Main Viewport/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_cy3es")
+
+[node name="QuestIndicator" parent="DialogueSystem" instance=ExtResource("14_tapid")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0.135104, 0)
+screen_size = Vector2(1600, 900)
+collision_layer = 0
+viewport_size = Vector2(1600, 900)
+material = ExtResource("16_sbu0l")
+unshaded = true
+
+[node name="Viewport" parent="DialogueSystem/QuestIndicator" index="0"]
+size = Vector2i(1600, 900)
+
+[node name="QuestIndicator" parent="DialogueSystem/QuestIndicator/Viewport" index="0" instance=ExtResource("37_hxm6p")]
+
+[node name="Screen" parent="DialogueSystem/QuestIndicator" index="1"]
+mesh = SubResource("QuadMesh_qbv60")
+surface_material_override/0 = SubResource("StandardMaterial3D_ye406")
+
+[node name="StaticBody3D" parent="DialogueSystem/QuestIndicator" index="2"]
+collision_layer = 0
+screen_size = Vector2(1600, 900)
+viewport_size = Vector2(1600, 900)
+
+[node name="CollisionShape3D" parent="DialogueSystem/QuestIndicator/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_j2t2d")
+
+[node name="DialogueSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("15_43aqp")
+volume_db = 13.0
+
+[node name="OISFlashlightRadio" parent="." instance=ExtResource("6_3bm4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76009, 1.39937, 0.56537)
+visible = false
+collision_mask = 131079
+
+[node name="OISJournal" parent="." groups=["journal"] instance=ExtResource("16_tb146")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.025, 0.91618, 0)
+visible = false
+collision_mask = 131079
+
+[node name="Screen" parent="OISJournal/Viewport2Din3D" index="1"]
+mesh = SubResource("QuadMesh_tb146")
+surface_material_override/0 = SubResource("StandardMaterial3D_lvuux")
+
+[node name="CollisionShape3D" parent="OISJournal/Viewport2Din3D/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_sta5p")
+
+[node name="MainMenu" parent="." instance=ExtResource("14_tapid")]
+process_mode = 2
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 3.614, 1.71451, -0.488928)
+screen_size = Vector2(1600, 900)
+collision_layer = 5242880
+viewport_size = Vector2(1600, 900)
+unshaded = true
+
+[node name="Viewport" parent="MainMenu" index="0"]
+size = Vector2i(1600, 900)
+
+[node name="MainMenu" parent="MainMenu/Viewport" index="0" instance=ExtResource("26_jitvu")]
+
+[node name="Screen" parent="MainMenu" index="1"]
+mesh = SubResource("QuadMesh_sif16")
+surface_material_override/0 = SubResource("StandardMaterial3D_wkk56")
+
+[node name="StaticBody3D" parent="MainMenu" index="2"]
+collision_layer = 5242880
+screen_size = Vector2(1600, 900)
+viewport_size = Vector2(1600, 900)
+
+[node name="CollisionShape3D" parent="MainMenu/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_43aqp")
+
+[node name="FadeMesh" type="MeshInstance3D" parent="."]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+visible = false
+mesh = SubResource("QuadMesh_hxsd3")
+surface_material_override/0 = SubResource("ShaderMaterial_n36qx")
+
+[node name="Credits" type="Node3D" parent="."]
+process_mode = 3
+transform = Transform3D(-0.274899, 0, -0.00744821, 0, 0.275, 0, 0.00744821, 0, -0.274899, 4.58441, 1.51667, 3.71709)
+visible = false
+script = ExtResource("42_q6ill")
+screen_size = Vector2(16, 9)
+collision_layer = 0
+viewport_size = Vector2(1600, 900)
+alpha_scissor_threshold = 0.25
+unshaded = true
+filter = true
+scene_properties_keys = PackedStringArray()
+
+[node name="Viewport" type="SubViewport" parent="Credits"]
+disable_3d = true
+transparent_bg = true
+gui_embed_subwindows = true
+size = Vector2i(1600, 900)
+render_target_update_mode = 1
+
+[node name="Credits" parent="Credits/Viewport" instance=ExtResource("51_7b4p7")]
+
+[node name="Screen" type="MeshInstance3D" parent="Credits"]
+mesh = SubResource("QuadMesh_ljw12")
+surface_material_override/0 = SubResource("StandardMaterial3D_qbv60")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Credits"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("44_mmgx3")
+screen_size = Vector2(16, 9)
+viewport_size = Vector2(1600, 900)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Credits/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.01)
+shape = SubResource("BoxShape3D_hxm6p")
+
+[node name="DesktopScreen" type="SubViewportContainer" parent="."]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="SubViewport" type="SubViewport" parent="DesktopScreen"]
+handle_input_locally = false
+scaling_3d_scale = 0.75
+size = Vector2i(1600, 900)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="DesktopScreen/SubViewport"]
+transform = Transform3D(0.848048, 0.132681, -0.51304, 0, 0.968148, 0.25038, 0.529919, -0.212335, 0.821036, 2.547, 1.682, 1.761)
+cull_mask = 524285
+current = true
+far = 350.0
+
+[node name="DialogueDesktop" parent="DesktopScreen/SubViewport" node_paths=PackedStringArray("dialogue_system") instance=ExtResource("2_16cua")]
+dialogue_system = NodePath("../../../DialogueSystem")
+
+[node name="Control" parent="DesktopScreen/SubViewport/DialogueDesktop" index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="XRViewportDesktop" type="CanvasLayer" parent="DesktopScreen/SubViewport"]
+
+[node name="Control" type="Control" parent="DesktopScreen/SubViewport/XRViewportDesktop"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="AssignDesktop" type="TextureRect" parent="DesktopScreen/SubViewport/XRViewportDesktop/Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+pivot_offset = Vector2(800, 450)
+texture = SubResource("ViewportTexture_qfneb")
+
+[node name="LoadingScreenDesktop" parent="DesktopScreen/SubViewport" node_paths=PackedStringArray("dialogue_system") instance=ExtResource("35_cy3es")]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+script = ExtResource("36_2466g")
+dialogue_system = NodePath("../../../DialogueSystem")
+
+[node name="Bar" parent="DesktopScreen/SubViewport/LoadingScreenDesktop/Control" index="0"]
+texture = SubResource("GradientTexture1D_eijsm")
+
+[node name="Loading Text" parent="DesktopScreen/SubViewport/LoadingScreenDesktop/Control" index="3"]
+theme_override_fonts/normal_font = SubResource("SystemFont_e5256")
+
+[node name="AnimationPlayer" parent="DesktopScreen/SubViewport/LoadingScreenDesktop" index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_okkcm")
+}
+
+[node name="XRViewportControls" type="CanvasLayer" parent="DesktopScreen/SubViewport"]
+script = ExtResource("37_amgju")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DesktopScreen/SubViewport/XRViewportControls"]
+root_node = NodePath("../Control")
+libraries = {
+&"": SubResource("AnimationLibrary_ui33j")
+}
+autoplay = "RESET"
+
+[node name="Control" type="Control" parent="DesktopScreen/SubViewport/XRViewportControls"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="Bar" type="TextureRect" parent="DesktopScreen/SubViewport/XRViewportControls/Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 440.0
+offset_top = -825.0
+offset_right = 2040.0
+offset_bottom = -821.035
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.435, 1)
+texture = SubResource("GradientTexture1D_65x7t")
+
+[node name="TypeOfView" type="RichTextLabel" parent="DesktopScreen/SubViewport/XRViewportControls/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1022.46
+offset_top = 25.735
+offset_right = -22.46
+offset_bottom = 89.76
+grow_horizontal = 0
+theme_override_fonts/normal_font = SubResource("SystemFont_upq77")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=#FFD700]XR View
+"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="DesktopScreen/SubViewport/XRViewportControls/Control"]
+modulate = Color(1, 0.839216, 0, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 92.0
+offset_right = -21.0
+offset_bottom = 142.0
+grow_horizontal = 0
+pivot_offset = Vector2(150, 0)
+theme_override_fonts/font = SubResource("SystemFont_de7l5")
+theme_override_font_sizes/font_size = 20
+text = "Switch View"
+
+[node name="MansionExteriorAnim" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_ljw12")
+}
+autoplay = "light_movement"
+
+[node name="Mansion Exterior" parent="." instance=ExtResource("41_qfneb")]
+process_mode = 3
+transform = Transform3D(0.979736, 0, 0.200291, 0, 1, 0, -0.200291, 0, 0.979736, -13.5405, -0.26653, -15.1517)
+
+[node name="Cube_009" parent="Mansion Exterior/mansion draft5X" index="5"]
+surface_material_override/0 = null
+
+[node name="Plane_001" parent="Mansion Exterior/mansion draft5X" index="17"]
+surface_material_override/0 = null
+
+[node name="Plane_004" parent="Mansion Exterior/mansion draft5X" index="19"]
+surface_material_override/0 = null
+
+[node name="Circle" parent="Mansion Exterior/mansion draft5X" index="20"]
+surface_material_override/0 = null
+
+[node name="Circle_005" parent="Mansion Exterior/mansion draft5X" index="21"]
+surface_material_override/0 = null
+
+[node name="Circle_001" parent="Mansion Exterior/mansion draft5X" index="22"]
+surface_material_override/0 = null
+
+[node name="Plane_005" parent="Mansion Exterior/mansion draft5X" index="24"]
+surface_material_override/0 = null
+
+[node name="Plane_006" parent="Mansion Exterior/mansion draft5X" index="25"]
+surface_material_override/0 = null
+
+[node name="Cube" parent="Mansion Exterior/mansion draft5X" index="27"]
+surface_material_override/0 = null
+
+[node name="Cylinder" parent="Mansion Exterior/mansion draft5X" index="28"]
+surface_material_override/0 = null
+
+[node name="Cylinder_009" parent="Mansion Exterior/mansion draft5X" index="31"]
+surface_material_override/0 = null
+
+[node name="Cylinder_010" parent="Mansion Exterior/mansion draft5X" index="32"]
+surface_material_override/0 = null
+
+[node name="MeshInstance3D" parent="Mansion Exterior" index="16"]
+transform = Transform3D(83.325, 0, 1.90735e-06, 0, 83.325, 0, -1.90735e-06, 0, 83.325, 18.329, 0.268, -0.222)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Mansion Exterior"]
+transform = Transform3D(0.954789, -0.221153, -0.19867, 0.19867, 0.971804, -0.126995, 0.221153, 0.081784, 0.971804, 18.2248, 8.14989, 25.4248)
+light_color = Color(1, 0.756318, 0.56126, 1)
+light_energy = 9.13
+spot_range = 50.0205
+spot_angle = 74.2962
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Mansion Exterior"]
+transform = Transform3D(0.954789, -0.221153, -0.19867, 0.19867, 0.971804, -0.126995, 0.221153, 0.081784, 0.971804, 3.91892, 8.14989, 22.5002)
+light_color = Color(1, 0.756318, 0.56126, 1)
+light_energy = 9.13
+spot_range = 50.0205
+spot_angle = 74.2962
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Mansion Exterior"]
+transform = Transform3D(0.999185, -0.00398731, -0.0401715, 0.0401715, 0.196501, 0.97968, 0.00398745, -0.980496, 0.196501, 5.01287, 14.215, 16.0247)
+light_color = Color(1, 0.756318, 0.56126, 1)
+light_energy = 16.0
+light_indirect_energy = 2.852
+spot_range = 50.0205
+spot_angle = 74.2962
+
+[node name="MusicHandler" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("46_dqleq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicHandler"]
+stream = ExtResource("46_jqey7")
+autoplay = true
+
+[node name="AmbiencePlayer" type="AudioStreamPlayer" parent="MusicHandler"]
+stream = ExtResource("53_lj71n")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
+
+[node name="MusicVolumeHandler" type="AnimationPlayer" parent="MusicHandler"]
+libraries = {
+&"": SubResource("AnimationLibrary_3rdr4")
+}
+
+[node name="TutorialStream" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("48_bu6xm")
+
+[node name="GameStart" type="Node" parent="."]
+script = ExtResource("49_l175r")
+event_name = "GameStart"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="ActionLeaveMansion" type="Node" parent="."]
+script = ExtResource("54_mmgx3")
+event_name = "ActionLeaveMansion"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="FadeMenu" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_j2t2d")
+}
+
+[connection signal="game_started" from="." to="GameStart" method="_on_main_game_started"]
+[connection signal="button_pressed" from="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft" to="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/FunctionPointer" method="_on_left_hand_button_pressed"]
+[connection signal="raycast_grab" from="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/FunctionPointer" to="XRPlayer/XRViewport/XROrigin3D/XRController3DLeft/FunctionPickup" method="_on_function_pointer_raycast_grab"]
+[connection signal="button_pressed" from="XRPlayer/XRViewport/XROrigin3D/XRController3DRight" to="XRPlayer/XRViewport/XROrigin3D/XRController3DRight/FunctionPointer" method="_on_right_hand_button_pressed"]
+[connection signal="raycast_grab" from="XRPlayer/XRViewport/XROrigin3D/XRController3DRight/FunctionPointer" to="XRPlayer/XRViewport/XROrigin3D/XRController3DRight/FunctionPickup" method="_on_function_pointer_raycast_grab"]
+[connection signal="event_ended" from="TutorialEvents/TutorialTeleport" to="." method="_on_tutorial_teleport_event_ended"]
+[connection signal="event_ended" from="TutorialEvents/TutorialKeyItems" to="." method="_on_tutorial_key_items_event_ended"]
+[connection signal="location_changed" from="TeleporterManager" to="TutorialEvents/ActionTeleportToSofas" method="_on_teleporter_manager_location_changed"]
+[connection signal="pressed" from="MainMenu/Viewport/MainMenu/Control/LevelStable" to="." method="_on_level_stable_pressed"]
+[connection signal="toggled" from="MainMenu/Viewport/MainMenu/Control/CheckBox" to="." method="_on_main_menu_anim_check_box_toggled"]
+[connection signal="toggled" from="MainMenu/Viewport/MainMenu/Control/CheckBox2" to="." method="_on_skip_tutorial_toggled"]
+[connection signal="credits_play_finished" from="Credits/Viewport/Credits/Control" to="TeleporterManager" method="_on_control_credits_play_finished"]
+[connection signal="pressed" from="DesktopScreen/SubViewport/XRViewportControls/Control/Button" to="DesktopScreen/SubViewport/XRViewportControls" method="_on_button_pressed"]
+[connection signal="finished" from="MusicHandler/AudioStreamPlayer" to="MusicHandler" method="_on_audio_stream_player_finished"]
+
+[editable path="DialogueSystem/Loading Screen"]
+[editable path="DialogueSystem/Main Viewport"]
+[editable path="DialogueSystem/QuestIndicator"]
+[editable path="DialogueSystem/QuestIndicator/Viewport/QuestIndicator"]
+[editable path="OISJournal"]
+[editable path="OISJournal/quest_log2 (added shapekeys)"]
+[editable path="OISJournal/Viewport2Din3D"]
+[editable path="MainMenu"]
+[editable path="MainMenu/Viewport/MainMenu"]
+[editable path="Credits/Viewport/Credits"]
+[editable path="DesktopScreen/SubViewport/DialogueDesktop"]
+[editable path="DesktopScreen/SubViewport/LoadingScreenDesktop"]
+[editable path="Mansion Exterior"]

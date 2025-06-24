@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:39375cf3dee8a70e408369b6cf0f6239c0484aad944610cd18967e3c91d793f5
-size 797
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bdu0yjxqap2xw"
+path="res://.godot/imported/ring_progress.png-08584e06610f8fd35222ef167ef5ed0a.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/progress-bar/ring_progress.png"
+dest_files=["res://.godot/imported/ring_progress.png-08584e06610f8fd35222ef167ef5ed0a.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

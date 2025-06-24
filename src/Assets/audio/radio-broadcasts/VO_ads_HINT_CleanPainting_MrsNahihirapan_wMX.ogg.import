@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65a6f2ccdb3a98b9eda94bbb7ce16770bd59e4b5ff931c9b55d7111d8dcc2b26
-size 522
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b320sg1lm3daq"
+path="res://.godot/imported/VO_ads_HINT_CleanPainting_MrsNahihirapan_wMX.ogg-e2b4d85f4b38165ad4bd57499a69e001.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_ads_HINT_CleanPainting_MrsNahihirapan_wMX.ogg"
+dest_files=["res://.godot/imported/VO_ads_HINT_CleanPainting_MrsNahihirapan_wMX.ogg-e2b4d85f4b38165ad4bd57499a69e001.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

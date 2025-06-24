@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf6d91093c648b5d70cadcf32d475dc0f9b7692e5f09d114f5f0f9e7c2e8ae15
-size 470
+extends Event
+
+@onready var teleporter_manager: TeleporterManager = $"../../TeleporterManager"
+
+func _on_event_started() -> void:
+	teleporter_manager.location_changed.connect(_on_teleporter_manager_location_changed)
+
+func _on_teleporter_manager_location_changed(location_name: Variant) -> void:
+	if location_name == "Bedroom Broken Wall":
+		QuestControl.add_active_quest("QuestFinishBedroom")
+		QuestControl.update_active_quests()
+		self.queue_free()
+		close_event()
+		

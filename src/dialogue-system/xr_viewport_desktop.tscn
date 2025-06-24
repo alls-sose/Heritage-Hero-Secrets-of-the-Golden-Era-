@@ -1,3 +1,81 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4aa810ed689f60ef41bd7ec78858afbfd3936cfd5282b35d4ef2deb1eaf84eb0
-size 2438
+[gd_scene load_steps=6 format=3 uid="uid://cex157buvf1m7"]
+
+[ext_resource type="Script" uid="uid://8hwneg4o3qhy" path="res://src/dialogue-system/view_split_controller.gd" id="1_8h7np"]
+[ext_resource type="FontFile" uid="uid://cmu4qjs0kd4tx" path="res://src/Assets/fonts/PT_Serif/PTSerif-Bold.ttf" id="2_6hbwf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_slupd"]
+
+[sub_resource type="Gradient" id="Gradient_6hbwf"]
+offsets = PackedFloat32Array(0.0867959, 0.460757, 0.626962, 0.912281)
+colors = PackedColorArray(1, 0.843137, 0, 0, 1, 0.843137, 0, 1, 1, 0.843137, 0, 1, 1, 0.843137, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_65x7t"]
+gradient = SubResource("Gradient_6hbwf")
+
+[node name="XRViewportDesktop" type="CanvasLayer"]
+script = ExtResource("1_8h7np")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="AssignDesktop" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+pivot_offset = Vector2(800, 450)
+texture = SubResource("ViewportTexture_slupd")
+
+[node name="Bar" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 440.0
+offset_top = -825.0
+offset_right = 2040.0
+offset_bottom = -821.035
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.435, 1)
+texture = SubResource("GradientTexture1D_65x7t")
+
+[node name="TypeOfView" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1022.46
+offset_top = 25.735
+offset_right = -22.46
+offset_bottom = 89.76
+grow_horizontal = 0
+theme_override_fonts/normal_font = ExtResource("2_6hbwf")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=#FFD700]XR View
+"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="Control"]
+modulate = Color(1, 0.839216, 0, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 92.0
+offset_right = -21.0
+offset_bottom = 142.0
+grow_horizontal = 0
+pivot_offset = Vector2(150, 0)
+theme_override_fonts/font = ExtResource("2_6hbwf")
+theme_override_font_sizes/font_size = 20
+text = "Switch View"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

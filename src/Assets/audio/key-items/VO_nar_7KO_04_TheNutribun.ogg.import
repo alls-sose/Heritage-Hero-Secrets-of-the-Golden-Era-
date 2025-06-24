@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aa3d0a904724ff37885f05aa609e89e1e12c5cde5ee520ad576cfdd14a1700bb
-size 458
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://br2mmuvlvn0pw"
+path="res://.godot/imported/VO_nar_7KO_04_TheNutribun.ogg-5adefb8053cda32d7586fe419ea497bd.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/key-items/VO_nar_7KO_04_TheNutribun.ogg"
+dest_files=["res://.godot/imported/VO_nar_7KO_04_TheNutribun.ogg-5adefb8053cda32d7586fe419ea497bd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

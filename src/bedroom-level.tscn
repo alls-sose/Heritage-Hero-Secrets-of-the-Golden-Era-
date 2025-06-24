@@ -1,3 +1,519 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45e6b4fc1c436cbd5e6675b2932fb9c1c9cf2bca034d6013b2f617f8e89093df
-size 26595
+[gd_scene load_steps=47 format=3 uid="uid://bfiqs85rpkqmd"]
+
+[ext_resource type="PackedScene" uid="uid://dtykay6lg8ao" path="res://src/Level/house_main.tscn" id="1_1j5h8"]
+[ext_resource type="Texture2D" uid="uid://febxpfbrlrie" path="res://src/Assets/00-general-3d-assets/Flare00.PNG" id="2_1i3xb"]
+[ext_resource type="PackedScene" uid="uid://0ssulj5t3857" path="res://src/Assets/01-pickable-assets/daivoltz-0-a4.tscn" id="3_8f4nt"]
+[ext_resource type="PackedScene" uid="uid://cd0bby50vvdro" path="res://src/ois-objects/general/ois_cassette_player.tscn" id="4_y3etr"]
+[ext_resource type="PackedScene" uid="uid://dswqagqi1ryk3" path="res://src/ois-objects/general/ois_cassette_tape.tscn" id="5_ip7dh"]
+[ext_resource type="PackedScene" uid="uid://1nsu4wnprbuf" path="res://src/Assets/blueprints-and-pictures/bliss_housing_blueprint.tscn" id="6_psr66"]
+[ext_resource type="PackedScene" uid="uid://b6lp07co500bg" path="res://src/Assets/blueprints-and-pictures/coconut_palace_blueprint.tscn" id="7_5o6mt"]
+[ext_resource type="PackedScene" uid="uid://qaolwi5o6bwk" path="res://src/Assets/blueprints-and-pictures/cultural_center_phil_blueprint.tscn" id="8_hquvb"]
+[ext_resource type="PackedScene" uid="uid://dt04u64e45huu" path="res://src/Assets/blueprints-and-pictures/heart_center_blueprint.tscn" id="9_xqawc"]
+[ext_resource type="PackedScene" uid="uid://b0ngoan3csyw7" path="res://src/Assets/blueprints-and-pictures/lrt_blueprint.tscn" id="10_6j4bb"]
+[ext_resource type="PackedScene" uid="uid://c840d02cufrt2" path="res://src/Assets/blueprints-and-pictures/manila_film_center_blueprint.tscn" id="11_17u4g"]
+[ext_resource type="PackedScene" uid="uid://bi1s08uy3m1m2" path="res://src/Assets/blueprints-and-pictures/san_juanico_bridge_blueprint.tscn" id="12_si4xj"]
+[ext_resource type="Script" uid="uid://d2j64x8gnsuue" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_slot.gd" id="13_f23jq"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="13_hquvb"]
+[ext_resource type="PackedScene" uid="uid://bsn2x0hu704te" path="res://src/Assets/bedroom-assets/Screw.glb" id="14_xqawc"]
+[ext_resource type="PackedScene" uid="uid://bl2w7n52vtp7r" path="res://src/Assets/blueprints-and-pictures/bliss_housing_picture.tscn" id="15_4yvhk"]
+[ext_resource type="PackedScene" uid="uid://dckr5og4xlna1" path="res://src/Assets/blueprints-and-pictures/coconut_palace_picture.tscn" id="16_5uhy3"]
+[ext_resource type="PackedScene" uid="uid://c7x5hov7nmvc2" path="res://src/Assets/blueprints-and-pictures/cultural_center_phil_picture.tscn" id="17_f23jq"]
+[ext_resource type="PackedScene" uid="uid://bejaafwtsv3m7" path="res://src/Assets/blueprints-and-pictures/heart_center_picture.tscn" id="18_7bsj4"]
+[ext_resource type="PackedScene" uid="uid://bl3nuy8upn0je" path="res://src/Assets/blueprints-and-pictures/lrt_picture.tscn" id="19_yfy1u"]
+[ext_resource type="PackedScene" uid="uid://buw12ia53nu30" path="res://src/Assets/blueprints-and-pictures/manila_film_center_picture.tscn" id="20_1rwq7"]
+[ext_resource type="PackedScene" uid="uid://cgq5orn0vyvxd" path="res://src/Assets/blueprints-and-pictures/san_juanico_bridge_picture.tscn" id="21_mj6ak"]
+[ext_resource type="PackedScene" uid="uid://3qa2u121s0of" path="res://src/Assets/bedroom-assets/safe_2.tscn" id="23_7bsj4"]
+[ext_resource type="PackedScene" uid="uid://bf4d0vylqxyca" path="res://src/Assets/bedroom-assets/briefcase.tscn" id="24_7bsj4"]
+
+[sub_resource type="Curve" id="Curve_sjfh2"]
+_data = [Vector2(0, 0.0021441), 0.0, 0.0, 0, 0, Vector2(0.5, 0.754717), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7i26j"]
+curve = SubResource("Curve_sjfh2")
+
+[sub_resource type="Gradient" id="Gradient_kvgra"]
+colors = PackedColorArray(0.703607, 0.543447, 0.489575, 1, 0.98539, 0.469295, 1.92523e-07, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wc5yb"]
+gradient = SubResource("Gradient_kvgra")
+
+[sub_resource type="CurveTexture" id="CurveTexture_ssy8p"]
+curve = SubResource("Curve_sjfh2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j0kxd"]
+lifetime_randomness = 1.0
+emission_shape_scale = Vector3(1, 1, 2.5)
+emission_shape = 1
+emission_sphere_radius = 1.5
+angle_min = 45.0
+angle_max = 45.0
+gravity = Vector3(0, -0.1, 0)
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_wc5yb")
+alpha_curve = SubResource("CurveTexture_7i26j")
+emission_curve = SubResource("CurveTexture_ssy8p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmnmg"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_1i3xb")
+uv1_scale = Vector3(1.015, 1.01, 13.465)
+
+[sub_resource type="QuadMesh" id="QuadMesh_vysgm"]
+material = SubResource("StandardMaterial3D_lmnmg")
+size = Vector2(0.53, 2.69)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0w6e0"]
+size = Vector3(2.80688, 1, 2.49567)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_68xyb"]
+size = Vector3(0.786072, 1, 0.78717)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5uhy3"]
+size = Vector3(3.79321, 0.859253, 5.41254)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5uhy3"]
+transparency = 1
+albedo_color = Color(0.0313726, 1, 0.466667, 0)
+emission_enabled = true
+emission = Color(0.661418, 0.82862, 0.593207, 1)
+emission_energy_multiplier = 0.13
+
+[sub_resource type="SphereMesh" id="SphereMesh_7bsj4"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_yfy1u"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_1rwq7"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_mj6ak"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_80u7d"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_6n50t"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_luqqq"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_82yvq"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_x4mi3"]
+radius = 0.7
+height = 1.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_frk5y"]
+radius = 0.7
+height = 1.4
+
+[node name="Level" type="Node3D"]
+
+[node name="House" parent="." instance=ExtResource("1_1j5h8")]
+
+[node name="EnvironmentLight" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(0.886696, -2.93845e-09, 0.462352, -0.462352, -3.33259e-08, 0.886696, 1.28028e-08, -1, -3.09086e-08, 18.271, 3.54941, -2.46197)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 11.535
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(-4.37114e-08, 1, 1.3027e-15, -0.461749, -2.01837e-08, 0.887011, 0.887011, 3.87725e-08, 0.461749, 9.49846, 3.54941, 5.69752)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 5.237
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(-4.37114e-08, 1, 1.3027e-15, -0.461749, -2.01837e-08, 0.887011, 0.887011, 3.87725e-08, 0.461749, -1.6062, 3.54941, 5.69752)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 5.237
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="EnvironmentLight"]
+transform = Transform3D(0.886696, -2.93845e-09, 0.462352, -0.462352, -3.33259e-08, 0.886696, 1.28028e-08, -1, -3.09086e-08, 18.271, 3.54941, -10.6836)
+light_color = Color(1, 0.713726, 0.619608, 1)
+light_energy = 11.535
+spot_range = 19.816
+spot_angle = 44.05
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="EnvironmentLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1332, 3.61528, -32.3083)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 5.898
+omni_range = 14.3015
+
+[node name="Lights" type="Node3D" parent="."]
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35487, 2.89208, -16.1912)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.04612, 2.89208, -1.29979)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.982, 4.1063, -27.7266)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 21.9061
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52375, 8.76515, -0.650649)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52375, 3.25586, -0.650649)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 13.9708
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6027, 2.94091, -4.92511)
+light_color = Color(0.941208, 0.67727, 0.46273, 1)
+light_energy = 0.813
+omni_range = 6.55353
+
+[node name="SFX" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53976, 0, 0)
+
+[node name="WindowGodRay" type="GPUParticles3D" parent="SFX"]
+transform = Transform3D(0.436425, 0.899741, 0, -0.899741, 0.436425, 0, 0, 0, 1, 11.2474, 2.81458, -11.4522)
+amount = 100
+lifetime = 5.0
+preprocess = 1.0
+randomness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_j0kxd")
+draw_pass_1 = SubResource("QuadMesh_vysgm")
+
+[node name="WindowGodRay2" type="GPUParticles3D" parent="SFX"]
+transform = Transform3D(0.436425, 0.899741, 0, -0.899741, 0.436425, 0, 0, 0, 1, 11.2474, 2.53361, -2.20848)
+amount = 100
+lifetime = 5.0
+preprocess = 1.0
+randomness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_j0kxd")
+draw_pass_1 = SubResource("QuadMesh_vysgm")
+
+[node name="Collisions" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69144, 0.430897, -5.47856)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.370728, 0, 0.20639)
+shape = SubResource("BoxShape3D_0w6e0")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.13987, 0.697148, 0.576956)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00332642, 0, -0.00869751)
+shape = SubResource("BoxShape3D_68xyb")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3282, 0.799281, -18.8333)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.339233, -0.101269, -0.729828)
+shape = SubResource("BoxShape3D_5uhy3")
+
+[node name="LivingRoom" type="Node3D" parent="."]
+
+[node name="daivoltz" parent="LivingRoom" instance=ExtResource("3_8f4nt")]
+transform = Transform3D(0.121743, 0.992137, -0.0290224, -0.0196832, 0.0316471, 0.999305, 0.992366, -0.121088, 0.0233814, 8.14801, 1.04113, -5.24195)
+
+[node name="OISCassettePlayer" parent="LivingRoom" instance=ExtResource("4_y3etr")]
+transform = Transform3D(0.943246, 0, 0.332095, 0, 1, 0, -0.332095, 0, 0.943246, 7.9559, 0.975727, -5.60396)
+
+[node name="DaiVoltZTape" parent="LivingRoom" instance=ExtResource("5_ip7dh")]
+transform = Transform3D(0.337013, 0, -0.9415, 0, 1, 0, 0.9415, 0, 0.337013, 7.96768, 1.12418, -4.8409)
+
+[node name="Bedroom" type="Node3D" parent="."]
+
+[node name="Blueprints" type="Node3D" parent="Bedroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.659155, 0)
+
+[node name="BlissHousingBlueprint" parent="Bedroom/Blueprints" instance=ExtResource("6_psr66")]
+transform = Transform3D(-2.18557e-08, -0.25, 1.4381e-08, 0, -1.09278e-08, -0.329, 0.5, -1.09278e-08, 6.28615e-16, -6.48368, 2.96889, -14.3785)
+
+[node name="CoconutPalaceBlueprint" parent="Bedroom/Blueprints" instance=ExtResource("7_5o6mt")]
+transform = Transform3D(-2.18557e-08, -0.25, 1.4381e-08, 0, -1.09278e-08, -0.329, 0.5, -1.09278e-08, 6.28615e-16, -6.48368, 2.96889, -12.8188)
+
+[node name="CulturalCenterPhilBlueprint" parent="Bedroom/Blueprints" instance=ExtResource("8_hquvb")]
+transform = Transform3D(-2.18557e-08, -0.25, 1.4381e-08, 0, -1.09278e-08, -0.329, 0.5, -1.09278e-08, 6.28615e-16, -6.48368, 2.96889, -11.2481)
+
+[node name="HeartCenterBlueprint" parent="Bedroom/Blueprints" instance=ExtResource("9_xqawc")]
+transform = Transform3D(-2.18557e-08, -0.25, 1.4381e-08, 0, -1.09278e-08, -0.329, 0.5, -1.09278e-08, 6.28615e-16, -6.48368, 2.96889, -9.6324)
+
+[node name="LRTBlueprint" parent="Bedroom/Blueprints" instance=ExtResource("10_6j4bb")]
+transform = Transform3D(-2.18557e-08, -0.25, 1.4381e-08, 0, -1.09278e-08, -0.329, 0.5, -1.09278e-08, 6.28615e-16, -6.48368, 2.96889, -16.5603)
+
+[node name="ManilaFilmCenterBlueprint" parent="Bedroom/Blueprints" instance=ExtResource("11_17u4g")]
+transform = Transform3D(-2.18557e-08, -0.25, 1.4381e-08, 0, -1.09278e-08, -0.329, 0.5, -1.09278e-08, 6.28615e-16, -6.48368, 2.96889, -18.0998)
+
+[node name="SanJuanicoBridgeBlueprint" parent="Bedroom/Blueprints" instance=ExtResource("12_si4xj")]
+transform = Transform3D(-2.18557e-08, -0.25, 1.4381e-08, 0, -1.09278e-08, -0.329, 0.5, -1.09278e-08, 6.28615e-16, -6.48368, 2.96889, -19.6596)
+
+[node name="PictureSnapZones" type="Node3D" parent="Bedroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.659155, 0)
+
+[node name="InventorySlot" type="Node3D" parent="Bedroom/PictureSnapZones" node_paths=PackedStringArray("default_object")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.484, 2, -19.66)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+default_object = NodePath("../../Pictures/BlissHousingPicture")
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("SphereMesh_7bsj4")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot2" type="Node3D" parent="Bedroom/PictureSnapZones"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.484, 2, -18.1)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot2" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot2"]
+mesh = SubResource("SphereMesh_yfy1u")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot3" type="Node3D" parent="Bedroom/PictureSnapZones" node_paths=PackedStringArray("default_object")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.484, 2, -16.56)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+default_object = NodePath("../../Pictures/LRTPicture")
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot3" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot3"]
+mesh = SubResource("SphereMesh_1rwq7")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot4" type="Node3D" parent="Bedroom/PictureSnapZones" node_paths=PackedStringArray("default_object")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.484, 2, -14.378)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+default_object = NodePath("../../Pictures/ManilaFilmCenterPicture")
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot4" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot4"]
+mesh = SubResource("SphereMesh_mj6ak")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot5" type="Node3D" parent="Bedroom/PictureSnapZones"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.484, 2, -12.819)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot5" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot5"]
+mesh = SubResource("SphereMesh_80u7d")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot6" type="Node3D" parent="Bedroom/PictureSnapZones"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.484, 2, -11.248)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot6" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot6"]
+mesh = SubResource("SphereMesh_6n50t")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot7" type="Node3D" parent="Bedroom/PictureSnapZones"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.484, 2, -9.632)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot7" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot7"]
+mesh = SubResource("SphereMesh_luqqq")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot8" type="Node3D" parent="Bedroom/PictureSnapZones" node_paths=PackedStringArray("default_object")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -9.49816, 2.43458, -21.8138)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+default_object = NodePath("../../Pictures/CoconutPalacePicture")
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot8" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot8"]
+mesh = SubResource("SphereMesh_82yvq")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot9" type="Node3D" parent="Bedroom/PictureSnapZones" node_paths=PackedStringArray("default_object")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -19.7553, 2.43458, -21.8138)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+default_object = NodePath("../../Pictures/SanJuanicoBridgePicture")
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot9" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot9"]
+mesh = SubResource("SphereMesh_x4mi3")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="InventorySlot10" type="Node3D" parent="Bedroom/PictureSnapZones" node_paths=PackedStringArray("default_object")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -22.2923, 2, -18.7888)
+script = ExtResource("13_f23jq")
+snap_zone_radius = 0.7
+default_object = NodePath("../../Pictures/CulturalCenterPhilPicture")
+group_required = "picture"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_5uhy3")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Bedroom/PictureSnapZones/InventorySlot10" instance=ExtResource("13_hquvb")]
+grab_distance = 0.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bedroom/PictureSnapZones/InventorySlot10"]
+mesh = SubResource("SphereMesh_frk5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_5uhy3")
+
+[node name="WallScrews" type="Node3D" parent="Bedroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.2, 0)
+
+[node name="Screw" parent="Bedroom/WallScrews" instance=ExtResource("14_xqawc")]
+transform = Transform3D(-0.00137181, -0.199995, 0, 0.199995, -0.00137181, 0, 0, 0, 0.2, -6.501, 2.29, -19.66)
+
+[node name="Screw2" parent="Bedroom/WallScrews" instance=ExtResource("14_xqawc")]
+transform = Transform3D(-0.00137181, -0.199995, 0, 0.199995, -0.00137181, 0, 0, 0, 0.2, -6.501, 2.29, -18.1)
+
+[node name="Screw3" parent="Bedroom/WallScrews" instance=ExtResource("14_xqawc")]
+transform = Transform3D(-0.00137181, -0.199995, 0, 0.199995, -0.00137181, 0, 0, 0, 0.2, -6.501, 2.29, -16.56)
+
+[node name="Screw4" parent="Bedroom/WallScrews" instance=ExtResource("14_xqawc")]
+transform = Transform3D(-0.00137181, -0.199995, 0, 0.199995, -0.00137181, 0, 0, 0, 0.2, -6.501, 2.29, -14.378)
+
+[node name="Screw5" parent="Bedroom/WallScrews" instance=ExtResource("14_xqawc")]
+transform = Transform3D(-0.00137181, -0.199995, 0, 0.199995, -0.00137181, 0, 0, 0, 0.2, -6.501, 2.29, -12.819)
+
+[node name="Screw6" parent="Bedroom/WallScrews" instance=ExtResource("14_xqawc")]
+transform = Transform3D(-0.00137181, -0.199995, 0, 0.199995, -0.00137181, 0, 0, 0, 0.2, -6.501, 2.29, -11.248)
+
+[node name="Screw7" parent="Bedroom/WallScrews" instance=ExtResource("14_xqawc")]
+transform = Transform3D(-0.00137181, -0.199995, 0, 0.199995, -0.00137181, 0, 0, 0, 0.2, -6.501, 2.29, -9.632)
+
+[node name="Pictures" type="Node3D" parent="Bedroom"]
+
+[node name="BlissHousingPicture" parent="Bedroom/Pictures" groups=["picture"] instance=ExtResource("15_4yvhk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.03168, 1.08531, -17.8203)
+
+[node name="CoconutPalacePicture" parent="Bedroom/Pictures" groups=["picture"] instance=ExtResource("16_5uhy3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.03168, 1.08531, -14.8974)
+
+[node name="CulturalCenterPhilPicture" parent="Bedroom/Pictures" groups=["picture"] instance=ExtResource("17_f23jq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.03168, 1.08531, -13.5809)
+
+[node name="HeartCenterPicture" parent="Bedroom/Pictures" groups=["picture"] instance=ExtResource("18_7bsj4")]
+transform = Transform3D(0.999589, 0.0201181, -0.0204288, 0.0103433, 0.411507, 0.911348, 0.0267412, -0.911185, 0.41113, -16.0321, 1.71098, -17.3049)
+
+[node name="LRTPicture" parent="Bedroom/Pictures" groups=["picture"] instance=ExtResource("19_yfy1u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.03168, 1.08531, -12.2168)
+
+[node name="ManilaFilmCenterPicture" parent="Bedroom/Pictures" groups=["picture"] instance=ExtResource("20_1rwq7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.03168, 1.08531, -10.3867)
+
+[node name="SanJuanicoBridgePicture" parent="Bedroom/Pictures" groups=["picture"] instance=ExtResource("21_mj6ak")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.03168, 1.08531, -16.2656)
+
+[node name="Safe2" parent="Bedroom" instance=ExtResource("23_7bsj4")]
+transform = Transform3D(-1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, -14.9771, 1.68127, -8.20334)
+
+[node name="briefcase" parent="Bedroom" instance=ExtResource("24_7bsj4")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.5173, 1.15548, -17.4178)
+
+[editable path="House"]
+[editable path="House/Offset Node/Main Mansion/House Architecture Nodes/Table Lamps/TableLamp4"]
+[editable path="House/Offset Node/Main Mansion/House Architecture Nodes/Chandeliers/chandelier4"]
+[editable path="House/Offset Node/Main Mansion/Study Room/Printing Press"]
+[editable path="House/Offset Node/Main Mansion/Kitchen/Kitchen Island4"]
+[editable path="House/Offset Node/Main Mansion/Kitchen/Kitchen Island5"]
+[editable path="House/Offset Node/Main Mansion/Bedroom/TableLamp"]
+[editable path="House/Offset Node/Main Mansion/Bedroom/TableLamp2"]
+[editable path="House/Offset Node/Main Mansion/Bedroom/TableLamp3"]

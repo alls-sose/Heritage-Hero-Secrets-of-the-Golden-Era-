@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dd92c97456be0adc98874b39749566c0f3fcab0509e6e7fe0d98d3173a974ddd
-size 357
+[gd_scene load_steps=2 format=3 uid="uid://bddj5m7ull6g0"]
+
+[ext_resource type="Script" uid="uid://dapqww183rosv" path="res://addons/godot-xr-tools/interactables/interactable_handle.gd" id="1"]
+
+[node name="InteractableHandle" type="RigidBody3D"]
+collision_layer = 262144
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1")
+picked_up_layer = 0

@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f5fc469f90d3604459ce7a6319e255cbf3e5870e7e0bddfadf6f277e952261a0
-size 845
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c0jjd6hubyf5u"
+path.s3tc="res://.godot/imported/CDCPDocument.png-041801ecbe804c768400eb058d049db1.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/contract-images/CDCPDocument.png"
+dest_files=["res://.godot/imported/CDCPDocument.png-041801ecbe804c768400eb058d049db1.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

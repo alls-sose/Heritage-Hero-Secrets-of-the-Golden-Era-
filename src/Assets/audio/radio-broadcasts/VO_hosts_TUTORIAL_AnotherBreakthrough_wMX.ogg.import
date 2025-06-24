@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ec7992de2a8549503aa00ee12dddf4c4d3e83691f7d9a9887f35d5220b37a440
-size 513
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://de3nqodrwvdyd"
+path="res://.godot/imported/VO_hosts_TUTORIAL_AnotherBreakthrough_wMX.ogg-ce5bd53334a3c99de1bdf3ee90bea958.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_hosts_TUTORIAL_AnotherBreakthrough_wMX.ogg"
+dest_files=["res://.godot/imported/VO_hosts_TUTORIAL_AnotherBreakthrough_wMX.ogg-ce5bd53334a3c99de1bdf3ee90bea958.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

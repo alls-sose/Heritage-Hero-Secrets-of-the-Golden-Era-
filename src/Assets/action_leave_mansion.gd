@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c1379f176710aa4cc2539445e7ec6a0dc7232f3f3deefed57897ee92f74c79f
-size 149
+extends Event
+
+
+func _on_teleporter_manager_leave_mansion() -> void:
+	emit_signal("event_ended")
+	close_event()
+	QuestControl.update_active_quests()

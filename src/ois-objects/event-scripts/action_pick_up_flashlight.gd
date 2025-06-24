@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:034b22ffa9958c982d414267e68bbe7ef8185219520f9fa7ff0d175842619cbe
-size 498
+extends Event
+
+@onready var flashlight := get_parent()
+
+func _on_event_started() -> void:
+	flashlight.grabbed.connect(_on_ois_flashlight_radio_grabbed)
+
+
+func _on_ois_flashlight_radio_grabbed(pickable: Variant, by: Variant) -> void:
+	if by is XRToolsFunctionPickup:
+		emit_signal("event_ended")
+	
+		print("-----------------------------------------")
+		print("EVENT ENDED: " + event_name)
+		print("-----------------------------------------")
+		
+		QuestControl.update_active_quests()
+		close_event()

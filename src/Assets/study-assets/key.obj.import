@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be07aaadc3522c403e256a986d030b8e5bb44957e0760b2f975edaa02afb1a2b
-size 697
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xc4xxk48646w"
+path="res://.godot/imported/key.obj-1097c5fa11bd78e518b7c1aca3f446bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/key.obj-1097c5fa11bd78e518b7c1aca3f446bc.mesh"]
+
+source_file="res://src/Assets/study-assets/key.obj"
+dest_files=["res://.godot/imported/key.obj-1097c5fa11bd78e518b7c1aca3f446bc.mesh", "res://.godot/imported/key.obj-1097c5fa11bd78e518b7c1aca3f446bc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

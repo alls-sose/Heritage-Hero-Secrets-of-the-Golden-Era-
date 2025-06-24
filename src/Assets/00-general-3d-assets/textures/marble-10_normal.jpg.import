@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:df06a872103f1dd13c6e1812d8af4e54fc427835ecc1744d683a86eddc67c42b
-size 823
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cg55flmph6sfn"
+path="res://.godot/imported/marble-10_normal.jpg-fb5dd311596d83c34051e5d042a646ea.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/textures/marble-10_normal.jpg"
+dest_files=["res://.godot/imported/marble-10_normal.jpg-fb5dd311596d83c34051e5d042a646ea.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

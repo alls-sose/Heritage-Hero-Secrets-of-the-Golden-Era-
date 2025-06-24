@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:61ed3faed71886fd241efceb4602df9e8c42c7c7bf4c1e1785a4f6cbd4c3a0f8
-size 990
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bs0i0o4j0w2ho"
+path.s3tc="res://.godot/imported/mansion draft2x_CandleHolder_baseColor.jpg-f331fa4ed050685aea41330a1806c520.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "af2f489ffa56d11a23c7f50a23796bf9"
+}
+
+[deps]
+
+source_file="res://src/Assets/0x-house-assets/mansion draft2x_CandleHolder_baseColor.jpg"
+dest_files=["res://.godot/imported/mansion draft2x_CandleHolder_baseColor.jpg-f331fa4ed050685aea41330a1806c520.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

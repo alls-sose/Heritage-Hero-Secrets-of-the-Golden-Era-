@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8764b242fb4d672c02ca7b8fe47f2e85ae5c0588d0200dbac08764f29a626741
-size 287
+[gd_scene load_steps=2 format=3 uid="uid://c4d13r420hnx2"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_turn.gd" id="1_qv43c"]
+
+[node name="MovementDesktopTurn" type="Node" groups=["movement_providers"]]
+script = ExtResource("1_qv43c")

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a4e0141095db07377c25409cdf2080c9ee61063f21a0f2dc59b7794ea632be46
-size 360
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cesiqdvdfojle"]
+
+[ext_resource type="Shader" path="res://addons/godot-xr-tools/effects/vignette.gdshader" id="1_x02h0"]
+
+[resource]
+render_priority = 99
+shader = ExtResource("1_x02h0")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/radius = 0.282843
+shader_parameter/fade = 0.05

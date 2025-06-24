@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f9b0de6af54788369c7a0571d0220a1053f52b5b73a2fbd4d2a817f586783520
-size 350
+[gd_scene load_steps=2 format=3 uid="uid://yrg5yt0yvc1q"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/hands/collision_hand.gd" id="1_vdcct"]
+
+[node name="XRToolsCollisionHand" type="AnimatableBody3D"]
+collision_layer = 131072
+collision_mask = 262175
+sync_to_physics = false
+script = ExtResource("1_vdcct")
+max_pickup_force = 400.0

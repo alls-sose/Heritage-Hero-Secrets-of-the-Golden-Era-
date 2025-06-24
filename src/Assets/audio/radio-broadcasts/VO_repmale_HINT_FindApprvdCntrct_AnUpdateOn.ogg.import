@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f4dcaa49b60cfde4d1b0f277f9326d389a3bb0e576c26ba7b8535cf043f361f
-size 518
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xwjtihncm3gs"
+path="res://.godot/imported/VO_repmale_HINT_FindApprvdCntrct_AnUpdateOn.ogg-d17d42200f4d2d0885ee0247e934b66c.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_repmale_HINT_FindApprvdCntrct_AnUpdateOn.ogg"
+dest_files=["res://.godot/imported/VO_repmale_HINT_FindApprvdCntrct_AnUpdateOn.ogg-d17d42200f4d2d0885ee0247e934b66c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

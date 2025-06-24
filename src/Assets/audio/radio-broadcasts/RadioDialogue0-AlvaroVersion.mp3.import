@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5baf4fd5596ac487b89888ed0ed48d43c1bab0ae6e5b71ebc36159306163e900
-size 447
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctasi3hcqjdcj"
+path="res://.godot/imported/RadioDialogue0-AlvaroVersion.mp3-9f51754dcfa5d7c10cc944eca1930820.mp3str"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/RadioDialogue0-AlvaroVersion.mp3"
+dest_files=["res://.godot/imported/RadioDialogue0-AlvaroVersion.mp3-9f51754dcfa5d7c10cc944eca1930820.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

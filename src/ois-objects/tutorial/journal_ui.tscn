@@ -1,3 +1,341 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5fb09c2419f81e93bfe6f18f07baa0994905da8441ca906143a334a7950f2155
-size 17886
+[gd_scene load_steps=13 format=3 uid="uid://4b0dmchbkdcq"]
+
+[ext_resource type="Script" uid="uid://ba3ixefdmhe06" path="res://src/ois-objects/tutorial/journal_ui.gd" id="1_jshtk"]
+[ext_resource type="FontFile" uid="uid://cmu4qjs0kd4tx" path="res://src/Assets/fonts/PT_Serif/PTSerif-Bold.ttf" id="2_3vxc5"]
+[ext_resource type="Script" uid="uid://b8xarccj4vxch" path="res://src/ois-objects/tutorial/quest_ui.gd" id="2_eqcug"]
+[ext_resource type="Script" uid="uid://d4npsqpwhqktp" path="res://src/ois-objects/tutorial/key_items_container.gd" id="3_fv278"]
+[ext_resource type="Texture2D" uid="uid://c180i6tmpvytr" path="res://src/Assets/artwork-assets/newspaper-clippings/DAIVOLTZ.png" id="3_pe7vu"]
+[ext_resource type="FontFile" uid="uid://26spynvrf8dc" path="res://src/Assets/fonts/Montserrat/static/Montserrat-Regular.ttf" id="4_aqjms"]
+[ext_resource type="Texture2D" uid="uid://bcj0q0eu5pgqf" path="res://src/Assets/artwork-assets/newspaper-clippings/MALAKAS MAGANDA.png" id="4_vjks4"]
+[ext_resource type="Texture2D" uid="uid://broe0068bkjqq" path="res://src/Assets/artwork-assets/newspaper-clippings/NUTRIBUN.png" id="5_x5ubi"]
+[ext_resource type="Texture2D" uid="uid://dvhplbdtth086" path="res://src/Assets/artwork-assets/newspaper-clippings/MANILA FILM CENTER.png" id="6_fv278"]
+[ext_resource type="Texture2D" uid="uid://bvet1gso1sg1g" path="res://src/Assets/artwork-assets/newspaper-clippings/GIRAFFE.png" id="7_067fj"]
+[ext_resource type="Texture2D" uid="uid://dvwufdtt4dqir" path="res://src/Assets/artwork-assets/newspaper-clippings/BUTBUT CLOTH.png" id="8_3h0tj"]
+[ext_resource type="Texture2D" uid="uid://dilbdur8niqlq" path="res://src/Assets/artwork-assets/newspaper-clippings/ROLEX WATCHES.png" id="10_067fj"]
+
+[node name="JournalUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jshtk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3vxc5")
+theme_override_font_sizes/font_size = 42
+text = "Task Log"
+
+[node name="QuestUI" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_eqcug")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/QuestUI"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="Page1" type="RichTextLabel" parent="VBoxContainer/QuestUI/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "Several popular Japanese animated series became unexpected symbols of resistance when the government banned their airing in 1979. Officially censored due to their violence and alleged harmful effects on children, these anime portrayed heroic individuals or groups fighting against powerful, tyrannical enemies. The Marcos regime used and regulated media, including television, to shape public opinion. It tightly controlled freedom of speech, using censorship to stifle critical voices and suppress dissent."
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/QuestUI"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="Page2" type="RichTextLabel" parent="VBoxContainer/QuestUI/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 34
+theme_override_font_sizes/bold_font_size = 34
+bbcode_enabled = true
+text = "[bgcolor=#FF0]Hello World this is                   [/bgcolor]the journal\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+Hello World this is the journal\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e"
+
+[node name="KeyItemsContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_fv278")
+
+[node name="KeyItemsPage1" type="HBoxContainer" parent="KeyItemsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage1"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="KeyItemsContainer/KeyItemsPage1/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_pe7vu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage1"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyItemsContainer/KeyItemsPage1/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+text = "Several popular Japanese animated series became unexpected symbols of resistance when the government banned their airing in 1979. Officially censored due to their violence and alleged harmful effects on children, these anime portrayed heroic individuals or groups fighting against powerful, tyrannical enemies. The Marcos regime used and regulated media, including television, to shape public opinion. It tightly controlled freedom of speech, using censorship to stifle critical voices and suppress dissent."
+
+[node name="KeyItemsPage2" type="HBoxContainer" parent="KeyItemsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage2"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="KeyItemsContainer/KeyItemsPage2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_vjks4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage2"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyItemsContainer/KeyItemsPage2/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+text = "Appropriating Filipino mythical figures such as Malakas at Maganda, the Marcoses projected an image of harmony, prosperity, and order, remaking Filipino beliefs and values towards a New Society. Through propaganda, they portrayed themselves as the ultimate embodiment of strength and beauty. Manipulating cultural heritage became a key feature of the dictatorship, using art, media, and public imagery to maintain power and legitimacy."
+
+[node name="KeyItemsPage3" type="HBoxContainer" parent="KeyItemsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage3"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="KeyItemsContainer/KeyItemsPage3/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_x5ubi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage3"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyItemsContainer/KeyItemsPage3/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+text = "The Nutribun, funded by USAID, was touted by the Marcos regime as a solution to malnutrition to address hunger and food security. It became a propaganda tool, with the Marcoses claiming credit for its success. However, it lacked the nutritional value needed for the growing Filipino children. The Nutribun masked the government’s failures and used foreign aid to project an image of competence while ignoring deeper issues of hunger and inequality."
+
+[node name="KeyItemsPage4" type="HBoxContainer" parent="KeyItemsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage4"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="KeyItemsContainer/KeyItemsPage4/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_fv278")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage4"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyItemsContainer/KeyItemsPage4/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+text = "The Manila Film Center, completed in 1982 during the Marcos dictatorship, symbolized the regime's \"edifice complex\" — an obsession with grandiose, high-cost projects meant to showcase power and legitimacy. Its rushed completion to meet its deadline for the inauguration of the Manila International Film Festival involved the tragic deaths of construction workers who were reportedly trapped and buried under quick-drying wet cement. While the country faced economic decline, this pursuit of opulence epitomized the regime's incompetence and disregard for human rights."
+
+[node name="KeyItemsPage5" type="HBoxContainer" parent="KeyItemsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage5"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="KeyItemsContainer/KeyItemsPage5/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_067fj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage5"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyItemsContainer/KeyItemsPage5/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+text = "The Calauit Safari Park, established in 1976 and funded by state resources, housed exotic animals imported from Africa. After forcibly evicting and displacing residents such as Tagbanwa families, the regime transformed the island into a sanctuary for African animals, once called by media as ‘Bongbong’s Safari Park’ - a reference to the presidential son's trips to this island. With only a few animals left on the island, this neglected reserve remains a symbol of misplaced priorities by those in power."
+
+[node name="KeyItemsPage6" type="HBoxContainer" parent="KeyItemsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage6"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="KeyItemsContainer/KeyItemsPage6/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("8_3h0tj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage6"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyItemsContainer/KeyItemsPage6/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+text = "Macli-ing Dulag, a leader of the Butbut tribe in the Cordilleras, became a symbol of resistance against the Marcos regime. He fought against the construction of the Chico River Dam – a project that threatened to displace indigenous communities from their ancestral land. His activism and assassination highlighted the Marcos regime’s disregard for indigenous peoples’ rights as the government prioritized development projects for profit over the protection of minority groups."
+
+[node name="KeyItemsPage7" type="HBoxContainer" parent="KeyItemsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage7"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="KeyItemsContainer/KeyItemsPage7/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("10_067fj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="KeyItemsContainer/KeyItemsPage7"]
+custom_minimum_size = Vector2(798, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyItemsContainer/KeyItemsPage7/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_aqjms")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+text = "The Rolex watch symbolized the regime's corruption and cronyism. This luxury watch became a token to twelve high-ranking military officials and civilian advisers who planned and implemented Martial Law. It highlighted how Marcos rewarded loyal allies with luxury while using power to control dissent by committing various atrocities such as torture, killings, seizures of property, displacement from homes, warrantless arrests, forced disappearances, and detention without due process.
+"

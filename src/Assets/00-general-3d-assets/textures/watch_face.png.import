@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:374f1b6ebee66b53c3068c1d2a4f84aa8c48b8780b7e354e2b7949432187bde1
-size 853
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bl1u15dndb8n0"
+path.s3tc="res://.godot/imported/watch_face.png-49da2f7f2ecb3a3bf9cdc4507d4349b3.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/textures/watch_face.png"
+dest_files=["res://.godot/imported/watch_face.png-49da2f7f2ecb3a3bf9cdc4507d4349b3.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

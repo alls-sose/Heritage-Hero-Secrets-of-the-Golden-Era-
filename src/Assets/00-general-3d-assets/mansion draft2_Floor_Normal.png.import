@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f29a3ac94fee68057d037f482e829be421d16ccdadc56ea1e5de89b666410d08
-size 1028
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ccuje3aqv0y3b"
+path.s3tc="res://.godot/imported/mansion draft2_Floor_Normal.png-a683889062e804c6570643fbeb828ae4.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d3f7f08d53b44446c02b2919f8441542"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_Floor_Normal.png"
+dest_files=["res://.godot/imported/mansion draft2_Floor_Normal.png-a683889062e804c6570643fbeb828ae4.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/00General3DAssets/mansion draft2_Floor_Normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

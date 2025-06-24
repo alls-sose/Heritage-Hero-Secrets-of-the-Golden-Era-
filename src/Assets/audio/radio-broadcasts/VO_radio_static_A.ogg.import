@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a85d26b92c24b0d1f95cda93f6830a869449bcbc85fe1cb549e82fbd738244c
-size 441
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bvabd4osuav5s"
+path="res://.godot/imported/VO_radio_static_A.ogg-ec74d674853fb789395fce453bc37a7d.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_radio_static_A.ogg"
+dest_files=["res://.godot/imported/VO_radio_static_A.ogg-ec74d674853fb789395fce453bc37a7d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

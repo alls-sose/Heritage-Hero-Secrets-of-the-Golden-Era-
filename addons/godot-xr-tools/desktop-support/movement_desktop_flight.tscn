@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6bf5a0888e5c75c79501ac00cf38ce6bbf21e5e8e4a240408d3378b377ee2bd8
-size 291
+[gd_scene load_steps=2 format=3 uid="uid://cfa5gsol863rv"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_flight.gd" id="1_exmlf"]
+
+[node name="MovementDesktopFlight" type="Node" groups=["movement_providers"]]
+script = ExtResource("1_exmlf")

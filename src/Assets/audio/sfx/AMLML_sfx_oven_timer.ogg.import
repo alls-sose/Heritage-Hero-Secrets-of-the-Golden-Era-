@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f47c7041102177b300e4aebe92d4017c8ab31af682099007eb9d9bacd18c8dc8
-size 436
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ypr75mqlbpae"
+path="res://.godot/imported/AMLML_sfx_oven_timer.ogg-bbb30fbca17b77da3cec69cdee65dd26.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_oven_timer.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_oven_timer.ogg-bbb30fbca17b77da3cec69cdee65dd26.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

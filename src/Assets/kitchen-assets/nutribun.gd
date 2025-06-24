@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:028a1284b64748cdf397ade0f38d16273ed5a55bfbb9306e0e03734d2a035533
-size 507
+extends XRToolsPickable
+
+@onready var plastic_cover: MeshInstance3D = $PlasticCover
+@onready var ois_plastic_receiver: OISWipeReceiver = $OISPlasticReceiver
+
+func _ready() -> void:
+	super()
+	plastic_cover.visible = false
+	
+func _set_plastic_visible() -> void:
+	plastic_cover.visible = true
+	add_to_group("nutribun_sealed")
+
+func _on_ois_plastic_receiver_action_completed(requirement: Variant, total_progress: Variant) -> void:
+	_set_plastic_visible()
+	ois_plastic_receiver.interacting_object.queue_free()
+	

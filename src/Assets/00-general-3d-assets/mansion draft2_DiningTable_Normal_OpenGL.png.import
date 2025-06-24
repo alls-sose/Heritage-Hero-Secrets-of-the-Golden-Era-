@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45721080876e04936d35529d38c92291372c997e4bb4128e4cda1d03792317cc
-size 1080
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dpcbrq0e1dlkx"
+path.s3tc="res://.godot/imported/mansion draft2_DiningTable_Normal_OpenGL.png-731640c4c339c095ce35fbe054c18feb.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "da594b70cc6ac46bc2cba8f64610333a"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_DiningTable_Normal_OpenGL.png"
+dest_files=["res://.godot/imported/mansion draft2_DiningTable_Normal_OpenGL.png-731640c4c339c095ce35fbe054c18feb.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/00General3DAssets/mansion draft2_DiningTable_Normal_OpenGL.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

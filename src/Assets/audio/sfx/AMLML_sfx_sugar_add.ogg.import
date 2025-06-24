@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b33115ca49064519a1e87a67f4a3e1079877c37e933bd588643fe295ecb0cc7
-size 433
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://3dpvmrffmlxr"
+path="res://.godot/imported/AMLML_sfx_sugar_add.ogg-655c35643cc976bc16a88283c9addc14.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_sugar_add.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_sugar_add.ogg-655c35643cc976bc16a88283c9addc14.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

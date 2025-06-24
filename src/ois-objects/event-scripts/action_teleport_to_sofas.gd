@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c84596ed209524ddd8c7fffe6b8d6df45e5493470c81b5f7cd76522c5f62fdc2
-size 342
+extends Event
+
+@onready var teleporter_manager: TeleporterManager = $"../../TeleporterManager"
+
+
+func _on_event_started() -> void:
+	teleporter_manager.location_changed.connect(_on_teleporter_manager_location_changed)
+
+func _on_teleporter_manager_location_changed(location_name: Variant) -> void:
+	if location_name == "Sofas":
+		close_event()

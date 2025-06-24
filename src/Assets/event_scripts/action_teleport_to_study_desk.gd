@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e2b859b247bd4c3f01552f96afa2ed03f5ccdfd15c89f3cba986c4792ceffa3c
-size 452
+extends Event
+
+@onready var teleporter_manager: TeleporterManager = $"../../TeleporterManager"
+
+func _on_event_started() -> void:
+	teleporter_manager.location_changed.connect(_on_teleporter_manager_location_changed)
+
+func _on_teleporter_manager_location_changed(location_name: Variant) -> void:
+	if location_name == "Study Room Desk":
+		QuestControl.add_active_quest("QuestFindTheCodeToTheDesk")
+	
+		QuestControl.update_active_quests()
+		close_event()

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3a17370f901a4d91aa10e6b095683689ef40d0f9c7785bb34687d36413e13ddc
-size 334
+extends CanvasLayer
+
+
+func _on_level_stable_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_study_test_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_kitchen_test_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_bedroom_test_pressed() -> void:
+	pass # Replace with function body.

@@ -1,3 +1,109 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25a8b61f479fab2650ae0926a314c5a2b2bd9fdb8773efb3275af937baf77cce
-size 3241
+[gd_scene load_steps=4 format=3 uid="uid://bulvimx6dcl6l"]
+
+[ext_resource type="Script" uid="uid://i0sapyo2gl2w" path="res://src/dialogue-system/main_menu.gd" id="1_paj0r"]
+[ext_resource type="Texture2D" uid="uid://dijgjmyv2dsj" path="res://src/Assets/tutorial-assets/Heritage Hero Secrets of the Golden Era Logo V4.png" id="2_paj0r"]
+[ext_resource type="FontFile" uid="uid://cmu4qjs0kd4tx" path="res://src/Assets/fonts/PT_Serif/PTSerif-Bold.ttf" id="2_u5d5e"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_paj0r")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="LevelStable" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -579.0
+offset_top = 96.205
+offset_right = 579.0
+offset_bottom = 197.205
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.788634, 0.884437, 0.518513, 1)
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("2_u5d5e")
+theme_override_font_sizes/font_size = 40
+text = "Start Game"
+
+[node name="Loading Circle" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1368.5
+offset_top = -985.7
+offset_right = 1368.5
+offset_bottom = 644.3
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.22, 0.22)
+pivot_offset = Vector2(1368.5, 815)
+texture = ExtResource("2_paj0r")
+
+[node name="Loading Text" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -430.145
+offset_right = 500.0
+offset_bottom = -366.12
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_u5d5e")
+theme_override_font_sizes/normal_font_size = 45
+bbcode_enabled = true
+text = "[center][color=#FFD700]Alpha Testing"
+
+[node name="Loading Text2" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -226.595
+offset_right = 500.0
+offset_bottom = -162.57
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_u5d5e")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center][color=#FFD700]Options"
+
+[node name="CheckBox" type="CheckBox" parent="Control"]
+modulate = Color(1, 0.843137, 0, 1)
+layout_mode = 0
+offset_left = 582.0
+offset_top = 710.0
+offset_right = 1021.0
+offset_bottom = 740.0
+theme_override_fonts/font = ExtResource("2_u5d5e")
+text = "Disable Mansion Movement Animation at Start Game"
+
+[node name="CheckBox2" type="CheckBox" parent="Control"]
+modulate = Color(1, 0.843137, 0, 1)
+layout_mode = 0
+offset_left = 582.0
+offset_top = 734.115
+offset_right = 1021.0
+offset_bottom = 764.115
+theme_override_fonts/font = ExtResource("2_u5d5e")
+text = "Skip Tutorials"
+
+[connection signal="pressed" from="Control/LevelStable" to="." method="_on_level_stable_pressed"]

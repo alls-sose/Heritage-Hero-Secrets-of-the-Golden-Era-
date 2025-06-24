@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:825b0be0461da5217719aaeefaba92eb7c33dce6338f29093095c9694edb9fca
-size 1076
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bdh57scn413ai"
+path.s3tc="res://.godot/imported/mansion draft2_Peeled white paint wall texture seamless Roughness.png-6cc8a524179253f246026100c68485dc.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "668f20555c0b3b9bf6224873d3e53f41"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_Peeled white paint wall texture seamless Roughness.png"
+dest_files=["res://.godot/imported/mansion draft2_Peeled white paint wall texture seamless Roughness.png-6cc8a524179253f246026100c68485dc.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

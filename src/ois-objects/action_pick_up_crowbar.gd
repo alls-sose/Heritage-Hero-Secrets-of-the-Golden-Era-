@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:44a7869d2c5d209cad555e6807acc8aa25266ee182d2dafb17056db0d18589d1
-size 198
+extends Event
+
+
+func _on_crowbar_grabbed(pickable: Variant, by: Variant) -> void:
+	if by is XRToolsFunctionPickup:
+		emit_signal("event_ended")
+		QuestControl.update_active_quests()
+		close_event()

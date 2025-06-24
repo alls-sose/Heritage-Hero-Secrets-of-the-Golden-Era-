@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:edd26c3589f57a16c8b237baafda63ac967003ab342c8f8bd12b6d130b9f7213
-size 488
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dowld38g1a2pe"
+path="res://.godot/imported/VO_nar_7KO_07_RolexWatch_CasetteVer.ogg-be8a3e66c25bca727c01768589783206.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/key-items/VO_nar_7KO_07_RolexWatch_CasetteVer.ogg"
+dest_files=["res://.godot/imported/VO_nar_7KO_07_RolexWatch_CasetteVer.ogg-be8a3e66c25bca727c01768589783206.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:05951cb63107752726fa7d4437c8e7a30a92f245f8e2456020c8c21d6101e4a0
-size 884
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b11mrpyh1lppg"
+path.s3tc="res://.godot/imported/Cooking_Vat Color.002.png-3cf7b90f79bf2b72c66a9f7384b63f4b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/glb/textures/Cooking_Vat Color.002.png"
+dest_files=["res://.godot/imported/Cooking_Vat Color.002.png-3cf7b90f79bf2b72c66a9f7384b63f4b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

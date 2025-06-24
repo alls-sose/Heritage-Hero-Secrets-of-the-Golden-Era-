@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:20cfa3268c77f63230fde7acb98a559ed27ba754af7c744fafa592b8d352025a
-size 516
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0sqpm4q6c5du"
+path="res://.godot/imported/VO_repweather_HINT_LockStudy_AndNowFor_wMX.ogg-b25a28a6666aad9f7d56760b5ca19fcd.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_repweather_HINT_LockStudy_AndNowFor_wMX.ogg"
+dest_files=["res://.godot/imported/VO_repweather_HINT_LockStudy_AndNowFor_wMX.ogg-b25a28a6666aad9f7d56760b5ca19fcd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,86 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a2ba4f0e980d189b7db0453ac988df16a9c17e2fc9745fb5dca7c35cf58bde37
-size 4779
+[gd_scene load_steps=13 format=3 uid="uid://clf0me6fdqu7"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_2t8lm"]
+[ext_resource type="PackedScene" uid="uid://clpmqqwbjpf0d" path="res://src/Assets/00-general-3d-assets/crowbar.glb" id="2_pj2sd"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_msj1x"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="4_50mgt"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="5_8iiid"]
+[ext_resource type="Script" uid="uid://fmvxmwggv8ji" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_two_hand_tool_asm.gd" id="6_rlweb"]
+[ext_resource type="Script" uid="uid://b4ao0gdf7khuq" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_area3d.gd" id="7_yprdc"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="8_rlweb"]
+[ext_resource type="Script" uid="uid://qkostsr3u7ha" path="res://src/ois-objects/action_pick_up_crowbar.gd" id="9_yprdc"]
+[ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="10_xfydy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_msj1x"]
+size = Vector3(0.05, 0.859619, 0.133008)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xfydy"]
+radius = 0.15
+
+[node name="Crowbar" instance=ExtResource("1_2t8lm")]
+second_hand_grab = 2
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.229349, -0.0465797)
+shape = SubResource("BoxShape3D_msj1x")
+
+[node name="crowbar" parent="." index="1" instance=ExtResource("2_pj2sd")]
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 1, 0, -0.7, 0, -3.0598e-08, 0, -0.197472, 0)
+
+[node name="GrabPointHandRight" parent="." index="2" instance=ExtResource("3_msj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0393278, -0.0910733)
+visible = true
+
+[node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("4_50mgt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0393278, -0.0910733)
+visible = true
+
+[node name="GrabPointHandRight2" parent="." index="4" instance=ExtResource("3_msj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.153548, -0.0910733)
+visible = true
+
+[node name="GrabPointHandLeft2" parent="." index="5" instance=ExtResource("4_50mgt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.153548, -0.0910733)
+visible = true
+
+[node name="OISActorComponent" type="Node3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.203664, -0.0492562)
+script = ExtResource("5_8iiid")
+receiver_group = "crowbar"
+metadata/_custom_type_script = "uid://cg1lorgur84yy"
+
+[node name="OISTwoHandToolASM" type="Node3D" parent="OISActorComponent" index="0"]
+script = ExtResource("6_rlweb")
+metadata/_custom_type_script = "uid://fmvxmwggv8ji"
+
+[node name="OISColliderArea3D" type="Node3D" parent="OISActorComponent" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.360249, -0.134779)
+script = ExtResource("7_yprdc")
+metadata/_custom_type_script = "uid://b4ao0gdf7khuq"
+
+[node name="Area3D" type="Area3D" parent="OISActorComponent/OISColliderArea3D" index="0"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OISActorComponent/OISColliderArea3D/Area3D" index="0"]
+shape = SubResource("SphereShape3D_xfydy")
+
+[node name="InventoryItem" type="Node3D" parent="." index="7" node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("8_rlweb")
+unique = true
+defined_mesh = NodePath("../crowbar")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 0.25
+object_rotation_adjustment = Vector3(0, 90, 0)
+metadata/_custom_type_script = "uid://dq86gvhe6d20d"
+
+[node name="ActionPickUpCrowbar" type="Node" parent="." index="8"]
+script = ExtResource("9_yprdc")
+event_name = "ActionPickUpCrowbar"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="GrabParticle" parent="." index="9" instance=ExtResource("10_xfydy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0393278, 0)
+
+[connection signal="grabbed" from="." to="ActionPickUpCrowbar" method="_on_crowbar_grabbed"]
+[connection signal="grabbed" from="." to="GrabParticle" method="_on_first_grab"]

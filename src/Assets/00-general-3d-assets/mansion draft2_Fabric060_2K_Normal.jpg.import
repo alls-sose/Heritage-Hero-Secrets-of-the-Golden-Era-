@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9c1db7134ccbaef366abda5a7cc4868248db9e03f9ff8a449560cfd7f4f6d8c6
-size 1055
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://3nitvpcpjxxr"
+path.s3tc="res://.godot/imported/mansion draft2_Fabric060_2K_Normal.jpg-bf05dd3c86d0cc0262726dcc6bf4497b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "731fc045ca1d82f51e272f3a8236fb34"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_Fabric060_2K_Normal.jpg"
+dest_files=["res://.godot/imported/mansion draft2_Fabric060_2K_Normal.jpg-bf05dd3c86d0cc0262726dcc6bf4497b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/00General3DAssets/mansion draft2_Fabric060_2K_Normal.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

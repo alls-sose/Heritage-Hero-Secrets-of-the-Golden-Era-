@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bdd8817ae35b2e79cf26bf642ff392db8a137bf034b29cadae7733e1147ddf47
-size 1044
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dm0y0f2abufnj"
+path.s3tc="res://.godot/imported/mansion draft2_marble-10_normal.jpg-6716e252865ac9c7f9910a5af8f8694d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "c4622b69e9f3541c28216fee1dd077e1"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_marble-10_normal.jpg"
+dest_files=["res://.godot/imported/mansion draft2_marble-10_normal.jpg-6716e252865ac9c7f9910a5af8f8694d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/00General3DAssets/mansion draft2_marble-10_normal.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

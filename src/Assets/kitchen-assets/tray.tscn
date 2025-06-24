@@ -1,3 +1,178 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:482dc82ab55ca39d9bc3bb32a95349d20327b8c14893660024c7b1fb52119900
-size 8290
+[gd_scene load_steps=15 format=4 uid="uid://b4esd7hugwevc"]
+
+[ext_resource type="Script" uid="uid://2es6o76ghh3e" path="res://src/Assets/kitchen-assets/tray.gd" id="1_h0uok"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="2_p0ea8"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_h0uok"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="4_d8asa"]
+[ext_resource type="Script" uid="uid://d2j64x8gnsuue" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_slot.gd" id="4_h0uok"]
+[ext_resource type="Material" uid="uid://dy43ogh4jhnpk" path="res://addons/ateneo-virtual-reality-escape/inventory-system/misc-resources/inventory_slot_shader_a.tres" id="6_d8asa"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m2a2e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eu8vn"]
+cull_mode = 2
+albedo_color = Color(0.362829, 0.362829, 0.362829, 1)
+metallic = 1.0
+metallic_specular = 0.4
+roughness = 0.15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nqjyb"]
+resource_name = "Grill"
+cull_mode = 2
+roughness = 0.915408
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h0uok"]
+_surfaces = [{
+"aabb": AABB(-1, -0.4723, -0.69414, 2, 0.0609005, 1.69414),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
+"name": "Grill",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAA////////AAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g06n6"]
+resource_name = "oven1_Cube_005"
+_surfaces = [{
+"aabb": AABB(-1, -0.4723, -0.69414, 2, 0.0609005, 1.69414),
+"attribute_data": PackedByteArray("AAD//3N5nnBzef//AACecHN5nnDm8v//c3n//+bynnD+////ofuLhv7/i4ah+///Q/f//+bynnBD955w5vL/////i4ah+xgN/v8YDaH7i4ah+///Q/eecKH7nnBD9///"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_nqjyb"),
+"name": "Grill",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNX//wAAAABU1QAAAAAAAFTV//8AAP//VNUAAP////9U1f////8AAFTV////////VNUAAP//AABU1f//AAD//1TV/////wAAVNX//wAAAABU1f///////1TVAAAAAP///7//////////v///AAD///+/AAD//////78AAAAAAABU1QAA/////1TVAAAAAP//VNUAAP//AABU1f//AAAAAP//AAD//wAA//8AAAAAAAD///////8AAP//VFVUVVRVVFVUVVRVVFVUVVTVqipU1aoqVNWqKlTVqiqqqlRVqqpUVaqqVFWqqlRV/3//f/9//3//f/9//3//f1RVqqpUVaqqVFWqqlRVqqr/v/8//z//v/8//7//v/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_h0uok")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibqqb"]
+cull_mode = 2
+albedo_color = Color(0.362829, 0.362829, 0.362829, 1)
+metallic = 1.0
+metallic_specular = 0.4
+roughness = 0.15
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig1xd"]
+size = Vector3(0.507446, 0.00990295, 0.333847)
+
+[sub_resource type="SphereMesh" id="SphereMesh_2lltt"]
+radius = 0.075
+height = 0.15
+
+[node name="Tray" type="RigidBody3D" groups=["tray"]]
+script = ExtResource("1_h0uok")
+picked_by_require = "hand"
+metadata/_custom_type_script = "uid://ckj2r4ysot3b5"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.498765, 0, 0, 0, 0.0159664, 0, 0, 0, 0.00787203, 0, 0.0112847, -0.134337)
+mesh = SubResource("BoxMesh_m2a2e")
+skeleton = NodePath("../Grill")
+surface_material_override/0 = SubResource("StandardMaterial3D_eu8vn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.498765, 0, 0, 0, 0.0159664, 0, 0, 0, 0.00787203, 0, 0.0112847, 0.188152)
+mesh = SubResource("BoxMesh_m2a2e")
+skeleton = NodePath("../Grill")
+surface_material_override/0 = SubResource("StandardMaterial3D_eu8vn")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.43373e-08, 0, 0.008, 0, 0.016, 0, -0.328, 0, -3.49691e-10, 0.249636, 0.0112847, 0.0268469)
+mesh = SubResource("BoxMesh_m2a2e")
+skeleton = NodePath("../Grill")
+surface_material_override/0 = SubResource("StandardMaterial3D_eu8vn")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.43373e-08, 0, 0.008, 0, 0.016, 0, -0.328, 0, -3.49691e-10, -0.249214, 0.0112847, 0.0268469)
+mesh = SubResource("BoxMesh_m2a2e")
+skeleton = NodePath("../Grill")
+surface_material_override/0 = SubResource("StandardMaterial3D_eu8vn")
+
+[node name="Grill" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.251, 0, 0, 0, 0.091, 0, 0, 0, 0.191, 0, 0.0463791, -0.00259272)
+mesh = SubResource("ArrayMesh_g06n6")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_ibqqb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00323486, 0.00580597, 0.0265884)
+shape = SubResource("BoxShape3D_ig1xd")
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("2_p0ea8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.241914, 0.0446584, -0.0728343)
+visible = true
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("3_h0uok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.245782, 0.0446584, -0.0728343)
+visible = true
+
+[node name="Slots" type="Node3D" parent="."]
+
+[node name="DoughSlot" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114663, 0.0249884, -0.0495191)
+script = ExtResource("4_h0uok")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot" instance=ExtResource("4_d8asa")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot"]
+mesh = SubResource("SphereMesh_2lltt")
+surface_material_override/0 = ExtResource("6_d8asa")
+
+[node name="DoughSlot2" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109053, 0.0249884, -0.0495191)
+script = ExtResource("4_h0uok")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot2" instance=ExtResource("4_d8asa")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot2"]
+mesh = SubResource("SphereMesh_2lltt")
+surface_material_override/0 = ExtResource("6_d8asa")
+
+[node name="DoughSlot3" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109053, 0.0249884, 0.112698)
+script = ExtResource("4_h0uok")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot3" instance=ExtResource("4_d8asa")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot3"]
+mesh = SubResource("SphereMesh_2lltt")
+surface_material_override/0 = ExtResource("6_d8asa")
+
+[node name="DoughSlot4" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11767, 0.0249884, 0.112698)
+script = ExtResource("4_h0uok")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot4" instance=ExtResource("4_d8asa")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot4"]
+mesh = SubResource("SphereMesh_2lltt")
+surface_material_override/0 = ExtResource("6_d8asa")
+
+[connection signal="slot_picked_up" from="Slots/DoughSlot" to="." method="_on_dough_slot_slot_picked_up"]
+[connection signal="slot_picked_up" from="Slots/DoughSlot2" to="." method="_on_dough_slot_2_slot_picked_up"]
+[connection signal="slot_picked_up" from="Slots/DoughSlot3" to="." method="_on_dough_slot_3_slot_picked_up"]
+[connection signal="slot_picked_up" from="Slots/DoughSlot4" to="." method="_on_dough_slot_4_slot_picked_up"]

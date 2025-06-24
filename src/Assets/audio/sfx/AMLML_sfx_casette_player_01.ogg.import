@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a7483fad7cb459f1f3fdaf6d4cb78c923f7d3162ea183f1a8dc7462b36e5b72d
-size 458
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://baut4bwgwj3t2"
+path="res://.godot/imported/AMLML_sfx_casette_player_01.ogg-8a686804206829fe137865806af4aef9.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_casette_player_01.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_casette_player_01.ogg-8a686804206829fe137865806af4aef9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

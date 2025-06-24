@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d8a7c5164ce4daa56e66f14df3ed8c4d95f57b7b3cb8fff9f36e408d442e704
-size 971
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b1rgiavobajsf"
+path.s3tc="res://.godot/imported/wooden_giraffe_giraffe_texture.png-019b4d2093b3df992a81e8a5d569c1b0.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "28763c4f872dfc200fc6c8faddc5ccdc"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/wooden_giraffe_giraffe_texture.png"
+dest_files=["res://.godot/imported/wooden_giraffe_giraffe_texture.png-019b4d2093b3df992a81e8a5d569c1b0.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

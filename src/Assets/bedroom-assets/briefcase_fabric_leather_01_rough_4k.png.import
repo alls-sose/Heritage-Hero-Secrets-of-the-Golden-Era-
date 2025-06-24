@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9aed20e23dd071f0f1a27cd5421054619db9cb57b3cd8200e6baef5f774634b9
-size 982
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ohb0xukocw0q"
+path.s3tc="res://.godot/imported/briefcase_fabric_leather_01_rough_4k.png-401c88f8270bdef5a6835b689a403b4b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "8da7f82e39f579e82ea90b46db2b2250"
+}
+
+[deps]
+
+source_file="res://src/Assets/bedroom-assets/briefcase_fabric_leather_01_rough_4k.png"
+dest_files=["res://.godot/imported/briefcase_fabric_leather_01_rough_4k.png-401c88f8270bdef5a6835b689a403b4b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

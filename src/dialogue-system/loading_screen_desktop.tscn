@@ -1,3 +1,212 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1fcd9c8113651dcc09c3a71b31958ba96d711af9263ec5495aee3c59d31a8e0e
-size 5854
+[gd_scene load_steps=10 format=3 uid="uid://dnytkr7jkm34f"]
+
+[ext_resource type="Script" uid="uid://da0vpyw0smx07" path="res://src/dialogue-system/loading_screen.gd" id="1_dg0xg"]
+[ext_resource type="Texture2D" uid="uid://bdu0yjxqap2xw" path="res://src/Assets/progress-bar/ring_progress.png" id="2_2liw1"]
+[ext_resource type="Texture2D" uid="uid://3l7neqv7cy04" path="res://src/Assets/progress-bar/ring_over.png" id="3_4lssv"]
+[ext_resource type="FontFile" uid="uid://cmu4qjs0kd4tx" path="res://src/Assets/fonts/PT_Serif/PTSerif-Bold.ttf" id="4_2liw1"]
+
+[sub_resource type="Gradient" id="Gradient_n4j1p"]
+offsets = PackedFloat32Array(0.2, 0.3, 0.7, 0.8)
+colors = PackedColorArray(1, 0.843137, 0, 0, 1, 0.843137, 0, 1, 1, 0.843137, 0, 1, 1, 0.843137, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eijsm"]
+gradient = SubResource("Gradient_n4j1p")
+
+[sub_resource type="Animation" id="Animation_genpj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Loading Text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Loading Circle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/Loading Circle:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/Loading Text:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(465, 795)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/Loading Text:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_mlgsg"]
+resource_name = "loop"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Loading Circle:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Loading Text:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(465, 795), Vector2(465, 795), Vector2(465, 795)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/Loading Text:visible_ratio")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7667, 1.5, 2.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.777, 0.845, 0.926776, 0.961]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okkcm"]
+_data = {
+&"RESET": SubResource("Animation_genpj"),
+&"loop": SubResource("Animation_mlgsg")
+}
+
+[node name="LoadingScreenDesktop" type="CanvasLayer"]
+script = ExtResource("1_dg0xg")
+
+[node name="Control" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="Bar" type="TextureRect" parent="Control"]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = 23.0
+offset_right = 500.0
+offset_bottom = 28.66
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_eijsm")
+
+[node name="Loading Circle" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 473.25
+offset_top = 122.25
+offset_right = 973.25
+offset_bottom = 622.25
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.185, 0.185)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("2_2liw1")
+
+[node name="Ring Overlay" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 473.25
+offset_top = 122.25
+offset_right = 973.25
+offset_bottom = 622.25
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.185, 0.185)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("3_4lssv")
+
+[node name="Loading Text" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1135.0
+offset_top = -105.0
+offset_right = -135.0
+offset_bottom = -40.975
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("4_2liw1")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=#FFD700]Now loading...
+"
+horizontal_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_okkcm")
+}
+autoplay = "loop"

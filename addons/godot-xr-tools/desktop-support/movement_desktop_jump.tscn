@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:354e8bc0efbc8194d021769df44a4b03791ce65226a3dd1642ea8cafc44c057e
-size 287
+[gd_scene load_steps=2 format=3 uid="uid://dluln6777mmh3"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_jump.gd" id="1_tccpc"]
+
+[node name="MovementDesktopJump" type="Node" groups=["movement_providers"]]
+script = ExtResource("1_tccpc")

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f8d603e0706a011be235d9a70fd120017d391644f8a5f09b57b3672318e2037
-size 448
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://35klkic24my0"
+path="res://.godot/imported/AMLML_sfx_spatula_mix_01.ogg-c7b891e4c68d5a74d1af8cbdb61c5cce.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_spatula_mix_01.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_spatula_mix_01.ogg-c7b891e4c68d5a74d1af8cbdb61c5cce.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:295e6e52aaf1c7dd5c0a3434782341f833d2411c4c46c5d11fc375673b998166
-size 529
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://di7im6fee1sal"
+path="res://.godot/imported/01 - Title Theme.wav-232660f098b23f150eb22d6bede0c758.sample"
+
+[deps]
+
+source_file="res://src/Assets/audio/music/01 - Title Theme.wav"
+dest_files=["res://.godot/imported/01 - Title Theme.wav-232660f098b23f150eb22d6bede0c758.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

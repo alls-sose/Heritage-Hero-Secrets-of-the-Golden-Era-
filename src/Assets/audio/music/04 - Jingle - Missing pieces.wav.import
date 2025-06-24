@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:508e01cb682a8374ee72e0e749a9f389efa5a0a331c20c99a874850d9df2d817
-size 564
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3ri6do6dfd52"
+path="res://.godot/imported/04 - Jingle - Missing pieces.wav-ab64f1c355751e8fc9f71ec7d8ed6b08.sample"
+
+[deps]
+
+source_file="res://src/Assets/audio/music/04 - Jingle - Missing pieces.wav"
+dest_files=["res://.godot/imported/04 - Jingle - Missing pieces.wav-ab64f1c355751e8fc9f71ec7d8ed6b08.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

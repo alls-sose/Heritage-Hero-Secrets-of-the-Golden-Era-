@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:52993a81f3e955d4e590cbd75c6d19c4cf51d86ef1cf7a5166f59e1c32feb167
-size 484
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2c28gipj3ow7"
+path="res://.godot/imported/AMLML_sfx_kitchen_modified_flour_add.ogg-08d5b86c45be90225cc50ec9b6733389.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_kitchen_modified_flour_add.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_kitchen_modified_flour_add.ogg-08d5b86c45be90225cc50ec9b6733389.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

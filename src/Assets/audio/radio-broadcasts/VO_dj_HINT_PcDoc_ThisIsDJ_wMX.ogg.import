@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ad2dd69af6118b7fc77ea0e4464c07524da9329ac08e2769893bd5bd69252619
-size 481
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dyvqs1x0k2u0g"
+path="res://.godot/imported/VO_dj_HINT_PcDoc_ThisIsDJ_wMX.ogg-96b4783c3130fa487b24106076d8234c.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_dj_HINT_PcDoc_ThisIsDJ_wMX.ogg"
+dest_files=["res://.godot/imported/VO_dj_HINT_PcDoc_ThisIsDJ_wMX.ogg-96b4783c3130fa487b24106076d8234c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

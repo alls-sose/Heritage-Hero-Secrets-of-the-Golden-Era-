@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b3d5ec4d1d3fe5c5e5019bf0ee6314c36e351ffea7cfb152e208bb1de827a340
-size 1007
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bsnamw5x3p460"
+path.s3tc="res://.godot/imported/crowbar_crowbarNormal.png-a5e57bd77e249acdbed395d80cc7a5e5.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "5409d30bff2ecf37c6df21123958e237"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/crowbar_crowbarNormal.png"
+dest_files=["res://.godot/imported/crowbar_crowbarNormal.png-a5e57bd77e249acdbed395d80cc7a5e5.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/00-general-3d-assets/crowbar_crowbarNormal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

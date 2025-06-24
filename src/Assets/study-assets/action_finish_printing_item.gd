@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f166ec9d29de9d3728991cd6b2d6bc64004cdd31572383a4ee3ddda7f137cfa5
-size 485
+extends Event
+
+@onready var final_teleporter = get_tree().get_root().get_node("Main/TeleporterManager/Final Teleporter")
+
+func _on_printing_press_printer_printed() -> void:
+	final_teleporter.visible = true
+	final_teleporter.teleporter_active = true
+	final_teleporter.teleporter_enabled = true
+	final_teleporter.get_parent()._set_teleporter_states() 
+	close_event()
+	emit_signal("event_ended")
+	QuestControl.add_active_quest("QuestLeaveTheMansion")
+	QuestControl.update_active_quests()

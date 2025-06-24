@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7deeea3eca1054aa6e4450abed01c0644676171a27b997f735dc867b696b3b61
-size 484
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://q5xqc6y36x1l"
+path="res://.godot/imported/VO_nar_7KO_02_AppropFil_CasetteVer.ogg-94b86f5f1ac2ab94b4fb840f701a4076.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/key-items/VO_nar_7KO_02_AppropFil_CasetteVer.ogg"
+dest_files=["res://.godot/imported/VO_nar_7KO_02_AppropFil_CasetteVer.ogg-94b86f5f1ac2ab94b4fb840f701a4076.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

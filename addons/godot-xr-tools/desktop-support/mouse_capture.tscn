@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8568aab1e0a1e0b42f7cee881c60f43e70692f7f063615379d53508bf4d75fc
-size 272
+[gd_scene load_steps=2 format=3 uid="uid://bkse5rxsx5tb3"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/mouse_capture.gd" id="1_po4v8"]
+
+[node name="MouseCapture" type="Node" groups=["movement_providers"]]
+script = ExtResource("1_po4v8")

@@ -1,3 +1,111 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2dc841f76a7ff3e9e2b8f29feacadb6880a5106c1f990f892a6d90e733f6a5f3
-size 5970
+[gd_scene load_steps=21 format=3 uid="uid://uru0e7lcxqnu"]
+
+[ext_resource type="PackedScene" uid="uid://bphwl5p0yeuu3" path="res://src/Assets/kitchen-assets/glb/yeast.glb" id="2_i0xqh"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_mkxpe"]
+[ext_resource type="Animation" uid="uid://db62hs5s4n2b3" path="res://addons/godot-xr-tools/hands/animations/left/Grip 4.res" id="4_vj802"]
+[ext_resource type="Script" uid="uid://bmclcwctwu3gd" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_k61g7"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="6_vdjkh"]
+[ext_resource type="Animation" uid="uid://d1xnpyc08njjx" path="res://addons/godot-xr-tools/hands/animations/right/Grip 4.res" id="7_trqb8"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="8_ps36w"]
+[ext_resource type="Material" uid="uid://bx8iyvi7nesqs" path="res://src/Assets/kitchen-assets/glb/yeast_effect.tres" id="9_deyjl"]
+[ext_resource type="Texture2D" uid="uid://febxpfbrlrie" path="res://src/Assets/00-general-3d-assets/Flare00.PNG" id="10_ywkcf"]
+[ext_resource type="Script" uid="uid://0xm4gpjugx80" path="res://src/Assets/kitchen-assets/yeast.gd" id="11_2vp4q"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="11_wg4co"]
+[ext_resource type="Script" uid="uid://cgettxdui2mmi" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_one_hand_tool_asm.gd" id="12_megc8"]
+[ext_resource type="Script" uid="uid://b4ao0gdf7khuq" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_area3d.gd" id="13_d40nf"]
+[ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="14_wg4co"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vp4q"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("10_ywkcf")
+uv1_scale = Vector3(1.015, 1.01, 13.465)
+
+[sub_resource type="QuadMesh" id="QuadMesh_wg4co"]
+material = SubResource("StandardMaterial3D_2vp4q")
+size = Vector2(1.44, 1.31)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ta4ix"]
+size = Vector3(0.138877, 0.137139, 0.02)
+
+[sub_resource type="Resource" id="Resource_mv4es"]
+script = ExtResource("5_k61g7")
+open_pose = ExtResource("4_vj802")
+closed_pose = ExtResource("4_vj802")
+
+[sub_resource type="Resource" id="Resource_qnege"]
+script = ExtResource("5_k61g7")
+open_pose = ExtResource("7_trqb8")
+closed_pose = ExtResource("7_trqb8")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tmd41"]
+radius = 0.0696629
+
+[node name="Yeast" type="RigidBody3D"]
+transform = Transform3D(0.999599, 0.026605, 0.009706, -0.0265433, 0.999627, -0.00642898, -0.00987342, 0.00616877, 0.999932, 0, 0, 0)
+collision_layer = 4
+collision_mask = 196615
+freeze_mode = 1
+script = ExtResource("11_2vp4q")
+
+[node name="YeastParticle" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, -2.12094e-09, -1.86265e-09, -2.58296e-10, 1, -4.65661e-10, 0, 4.65661e-10, 1, 0.007662, 0.0705523, -0.000594659)
+emitting = false
+amount = 200
+preprocess = 1.0
+process_material = ExtResource("9_deyjl")
+draw_pass_1 = SubResource("QuadMesh_wg4co")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00513984, -0.00253311, -0.000387282)
+shape = SubResource("BoxShape3D_ta4ix")
+
+[node name="yeastmesh" parent="." instance=ExtResource("2_i0xqh")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0.0250284, 0, 0)
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("3_mkxpe")]
+transform = Transform3D(1, 0, 0, 0, 0.788011, -0.615662, 0, 0.615662, 0.788011, -0.0462619, 0.0363569, -0.0368551)
+hand_pose = SubResource("Resource_mv4es")
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("6_vdjkh")]
+transform = Transform3D(1, 0, 0, 0, 0.788011, -0.615662, 0, 0.615662, 0.788011, 0.0578485, 0.0356365, -0.0363829)
+hand_pose = SubResource("Resource_qnege")
+
+[node name="InventoryItem" type="Node3D" parent="." node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("8_ps36w")
+unique = true
+defined_mesh = NodePath("../yeastmesh")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 0.7
+object_transform_adjustment = Vector3(0.01, 0, 0)
+
+[node name="OISActorComponent" type="Node3D" parent="."]
+script = ExtResource("11_wg4co")
+receiver_group = "yeast"
+actor_rate = 0.5
+metadata/_custom_type_script = "uid://cg1lorgur84yy"
+
+[node name="OISOneHandToolASM" type="Node3D" parent="OISActorComponent"]
+script = ExtResource("12_megc8")
+metadata/_custom_type_script = "uid://cgettxdui2mmi"
+
+[node name="OISColliderArea3D" type="Node3D" parent="OISActorComponent"]
+script = ExtResource("13_d40nf")
+metadata/_custom_type_script = "uid://b4ao0gdf7khuq"
+
+[node name="Area3D" type="Area3D" parent="OISActorComponent/OISColliderArea3D"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OISActorComponent/OISColliderArea3D/Area3D"]
+transform = Transform3D(1, -1.33223e-08, -1.39698e-08, -2.58296e-10, 1, -2.79397e-09, 0, 2.32831e-09, 1, 0.00104035, 0.10243, -0.000621642)
+shape = SubResource("SphereShape3D_tmd41")
+
+[node name="GrabParticle" parent="." instance=ExtResource("14_wg4co")]
+
+[connection signal="grabbed" from="." to="." method="_on_grabbed"]
+[connection signal="grabbed" from="." to="GrabParticle" method="_on_first_grab"]
+[connection signal="released" from="." to="." method="_on_released"]

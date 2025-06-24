@@ -1,3 +1,73 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4f4cbe91369ccdf9e0eb845e93360bbaa0e1b924a5eb0dac5fe0bb45d565679
-size 1948
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Heritage Hero: The Secrets of the \"Golden Era\""
+config/version="1.0"
+run/main_scene="res://src/main.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+run/max_fps=120
+boot_splash/image="uid://dijgjmyv2dsj"
+config/icon="uid://c1hd6d6pnpk5d"
+config/windows_native_icon="res://src/Assets/tutorial-assets/HHLOGOfavicon.ico"
+
+[autoload]
+
+XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+EventManager="*res://addons/ateneo-virtual-reality-escape/event-management-system/event_manager.gd"
+QuestControl="*res://src/quest_control.gd"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ateneo-virtual-reality-escape/plugin.cfg", "res://addons/godot-xr-tools/plugin.cfg")
+
+[global_group]
+
+KeyItemTape=""
+journal=""
+hand=""
+picture=""
+flashlight=""
+
+[layer_names]
+
+3d_render/layer_1="Both HMD and Desktop"
+3d_render/layer_2="UI - HMD only"
+3d_render/layer_3="UI - Desktop only"
+
+[physics]
+
+3d/run_on_separate_thread=true
+common/physics_ticks_per_second=90
+common/physics_jitter_fix=0.0
+3d/physics_engine="Jolt Physics"
+jolt_physics_3d/simulation/areas_detect_static_bodies=true
+jolt_physics_3d/joints/world_node=1
+jolt_physics_3d/limits/max_linear_velocity=10.0
+jolt_physics_3d/limits/max_angular_velocity=6.28319
+
+[rendering]
+
+rendering_device/vsync/swapchain_image_count=2
+global_illumination/gi/use_half_resolution=true
+occlusion_culling/occlusion_rays_per_thread=256
+occlusion_culling/use_occlusion_culling=true
+
+[xr]
+
+openxr/enabled=true
+shaders/enabled=true

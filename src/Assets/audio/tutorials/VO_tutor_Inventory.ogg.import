@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:50d506104c2c39e0a314a35b55af3e9d63ba69cce684df2930544f120ca9608b
-size 437
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvt344b6ocvng"
+path="res://.godot/imported/VO_tutor_Inventory.ogg-377c14cdb9aec14cb9a1e3c713890928.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/tutorials/VO_tutor_Inventory.ogg"
+dest_files=["res://.godot/imported/VO_tutor_Inventory.ogg-377c14cdb9aec14cb9a1e3c713890928.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

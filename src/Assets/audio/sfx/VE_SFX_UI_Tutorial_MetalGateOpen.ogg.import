@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a9f4c311e3b560e5eccee5cfa77aa7718f9d35003598896e85b5f3dc1428b22
-size 472
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://s00tudbrq507"
+path="res://.godot/imported/VE_SFX_UI_Tutorial_MetalGateOpen.ogg-505463d0ae5c384eb1dca1285fccb3e9.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/VE_SFX_UI_Tutorial_MetalGateOpen.ogg"
+dest_files=["res://.godot/imported/VE_SFX_UI_Tutorial_MetalGateOpen.ogg-505463d0ae5c384eb1dca1285fccb3e9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

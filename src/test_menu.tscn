@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cd53d5498c36adbc8e22d020d8b410c37a58af9292e4f33d28349d4cd33aa517
-size 1154
+[gd_scene load_steps=2 format=3 uid="uid://s2xutkdtfuq"]
+
+[ext_resource type="Script" uid="uid://b0br51wlg6ilv" path="res://src/test_menu.gd" id="1_i103q"]
+
+[node name="TestMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i103q")
+
+[node name="StudyTest" type="Button" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 356.0
+offset_right = 509.0
+offset_bottom = 613.0
+theme_override_font_sizes/font_size = 50
+text = "STUDY TEST
+"
+
+[node name="LevelStable" type="Button" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 87.0
+offset_right = 926.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 50
+text = "LEVEL STABLE
+"
+
+[node name="KitchenTest" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1004.0
+offset_top = 354.0
+offset_right = 1398.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 50
+text = "KITCHEN TEST"
+
+[node name="BedroomTest" type="Button" parent="."]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 584.0
+offset_right = 965.0
+offset_bottom = 824.0
+theme_override_font_sizes/font_size = 50
+text = "BEDROOM TEST"

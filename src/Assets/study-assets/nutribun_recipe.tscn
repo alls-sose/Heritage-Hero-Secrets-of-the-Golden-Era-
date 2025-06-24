@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aa978db80cfb972d852ece43b391569427e065db8a47780726d184bc747bfbd5
-size 2400
+[gd_scene load_steps=9 format=3 uid="uid://8lsjn2rfpwlk"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_2fvkp"]
+[ext_resource type="Texture2D" uid="uid://b70j7cr16t7e0" path="res://src/Assets/kitchen-assets/NUTRIBUN document recipe V2.png" id="2_s5g4l"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_uv30x"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_rdlup"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="5_5r87d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2yo4"]
+albedo_texture = ExtResource("2_s5g4l")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c5r2v"]
+material = SubResource("StandardMaterial3D_l2yo4")
+size = Vector2(0.7, 0.99)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mvad8"]
+flip_faces = true
+size = Vector2(0.7, 0.99)
+
+[node name="NutribunRecipe" instance=ExtResource("1_2fvkp")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_c5r2v")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_mvad8")
+
+[node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("3_uv30x")]
+transform = Transform3D(1, 0, 0, 0, 0.694382, 0.719606, 0, -0.719606, 0.694382, -0.183435, -0.042226, 0)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("4_rdlup")]
+transform = Transform3D(1, 0, 0, 0, 0.694382, 0.719606, 0, -0.719606, 0.694382, 0.183, -0.0420471, 0)
+visible = true
+
+[node name="InventoryItem" type="Node3D" parent="." index="5" node_paths=PackedStringArray("defined_mesh", "defined_collision_shape", "additional_mesh")]
+script = ExtResource("5_5r87d")
+defined_mesh = NodePath("../MeshInstance3D")
+defined_collision_shape = NodePath("../CollisionShape3D")
+object_rotation_adjustment = Vector3(90, 0, 0)
+additional_mesh = NodePath("../MeshInstance3D2")
+metadata/_custom_type_script = "uid://dq86gvhe6d20d"

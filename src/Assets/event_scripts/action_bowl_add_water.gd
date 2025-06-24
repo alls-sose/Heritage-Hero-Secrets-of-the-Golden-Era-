@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e56adecf3beaa58217f0bd014a577395acb56e5319d615feae857baa67a6b33a
-size 292
+extends Event
+@onready var add_oil_player: AudioStreamPlayer3D = $"../../AddOilPlayer"
+
+func _on_ois_water_receiver_action_completed(requirement: Variant, total_progress: Variant) -> void:
+	close_event()
+	add_oil_player.play()
+	emit_signal("event_ended")
+	QuestControl.update_active_quests()

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bda4360c362c221a2e51874e72212af0f62f7da07ba1d113347c2013fb87c446
-size 506
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cw1v53dk6aj3a"
+path="res://.godot/imported/VO_nar_7KO_06_ManilaFilmCenter_CasetteVer.ogg-8704cdcbb69b8a9b50a8679de93f5e4a.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/key-items/VO_nar_7KO_06_ManilaFilmCenter_CasetteVer.ogg"
+dest_files=["res://.godot/imported/VO_nar_7KO_06_ManilaFilmCenter_CasetteVer.ogg-8704cdcbb69b8a9b50a8679de93f5e4a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

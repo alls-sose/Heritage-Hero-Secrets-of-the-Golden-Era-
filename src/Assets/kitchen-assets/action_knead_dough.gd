@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d78e5abd5d1b405ec05270828c231cb9d7523e7ecd56cff16e5fa66a62159a46
-size 192
+extends Event
+
+func _on_knead_receiver_action_completed(requirement: Variant, total_progress: Variant) -> void:
+	close_event()
+	emit_signal("event_ended")
+	QuestControl.update_active_quests()

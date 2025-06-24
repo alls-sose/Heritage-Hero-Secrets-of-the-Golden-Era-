@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e1db591259acc0cfbac48c564de8a9d6027f941cce0bea85a7a92781089d61e
-size 620
+extends Node
+
+@onready var static_effect: AudioStreamPlayer3D = $"../StaticEffect"
+@onready var static_particle: GPUParticles3D = $"../StaticParticle"
+@onready var static_effect_fade_out: AnimationPlayer = $"../StaticEffectFadeOut"
+
+var prioritized_event : String
+var priority_changed : bool
+
+signal prio_changed
+
+
+func _play_static():
+	static_effect_fade_out.play("fade_in")
+
+func _change_prio_event(event: Event) -> void:
+	prioritized_event = event.name
+	print("Changed event to: "+prioritized_event)
+	static_effect_fade_out.play("fade_in")
+	prio_changed.emit()
+
+func _on_child_exiting_tree(node: Node) -> void:
+	pass

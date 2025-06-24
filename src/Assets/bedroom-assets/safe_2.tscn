@@ -1,3 +1,286 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b138176c5921cd4fc2cbd7f5f24aab2fd38b2280184e9c2fe26c948a7113929b
-size 10303
+[gd_scene load_steps=15 format=3 uid="uid://3qa2u121s0of"]
+
+[ext_resource type="PackedScene" uid="uid://cjifo6jt0wfiq" path="res://src/Assets/bedroom-assets/Safe.glb" id="1_u0rvt"]
+[ext_resource type="Script" uid="uid://c2rj7vjaa8uv2" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="2_gws81"]
+[ext_resource type="Script" uid="uid://b0xs8sgc6ppcr" path="res://src/Assets/bedroom-assets/safe_2.gd" id="2_pilaj"]
+[ext_resource type="PackedScene" uid="uid://cg1esxx64ssev" path="res://src/Assets/bedroom-assets/safe_keypad.tscn" id="4_b3ah4"]
+[ext_resource type="AudioStream" uid="uid://siwtxhbmlm0r" path="res://src/Assets/audio/sfx/AMLML_sfx_safe_open_01.ogg" id="5_wk8x8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0rvt"]
+size = Vector3(3, 0.292676, 4.70264)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gws81"]
+size = Vector3(3, 2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pilaj"]
+size = Vector3(0.2, 2, 4.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3ah4"]
+size = Vector3(0.4, 2, 4.5)
+
+[sub_resource type="Animation" id="Animation_pilaj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.00330829)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Collisions/StaticBody3D6:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.45831, 0.0478411, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Collisions/StaticBody3D6:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Screen:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.99308, 0.0879175, 0.326108)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Screen:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_gws81"]
+resource_name = "open_safe"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13, 0.25, 0.38, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.00330829), Vector3(0.869607, 0, 0.404081), Vector3(1.67232, 0, 0.580664), Vector3(2.49915, 0, 0.188642), Vector3(3.34464, 0, -0.339692)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13, 0.25, 0.38, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.408407, 0), Vector3(0, 0.785398, 0), Vector3(0, 1.19381, 0), Vector3(0, 1.5708, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Collisions/StaticBody3D6:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.45831, 0.0478411, 0), Vector3(3.21007, 0.0478411, -1.8211)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Collisions/StaticBody3D6:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Screen:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.14, 0.25, 0.380126, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.99308, 0.0879175, 0.326108), Vector3(2.84529, 0.0879175, -0.150574), Vector3(3.26052, 0.0879175, -0.650127), Vector3(3.51287, 0.0879175, -1.5402), Vector3(3.6589, 0.0879175, -2.31795)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Screen:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.14, 0.25, 0.380126, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.439823, 0), Vector3(0, 0.785398, 0), Vector3(0, 1.1942, 0), Vector3(0, 1.5708, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3ah4"]
+_data = {
+&"RESET": SubResource("Animation_pilaj"),
+&"open_safe": SubResource("Animation_gws81")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6vahf"]
+size = Vector3(1, 1, 1.7)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nosb4"]
+streams_count = 1
+stream_0/stream = ExtResource("5_wk8x8")
+
+[node name="Safe2" node_paths=PackedStringArray("interface") instance=ExtResource("1_u0rvt")]
+script = ExtResource("2_pilaj")
+interface = NodePath("SafeKeypad")
+object_distance = 1.5
+
+[node name="Door" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00330829)
+
+[node name="Screen" parent="." index="2"]
+transform = Transform3D(0.0214289, 0, 0, 0, 0.0890536, 0, 0, 0, 0.242724, 1.99308, 0.0879175, 0.326108)
+
+[node name="Collisions" type="Node3D" parent="." index="3"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collisions" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.984867, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0645996, 0)
+shape = SubResource("BoxShape3D_u0rvt")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Collisions" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.959418, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D2" index="0"]
+shape = SubResource("BoxShape3D_u0rvt")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Collisions" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0569091, 2.1406)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D4" index="0"]
+shape = SubResource("BoxShape3D_gws81")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Collisions" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0569091, -2.14797)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D5" index="0"]
+shape = SubResource("BoxShape3D_gws81")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Collisions" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40149, 0.0478411, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D3" index="0"]
+shape = SubResource("BoxShape3D_pilaj")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="Collisions" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45831, 0.0478411, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D6" index="0"]
+shape = SubResource("BoxShape3D_b3ah4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+libraries = {
+&"": SubResource("AnimationLibrary_b3ah4")
+}
+
+[node name="XRToolsInteractableArea" type="Area3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53543, 0, 0)
+collision_layer = 5242881
+script = ExtResource("2_gws81")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRToolsInteractableArea" index="0"]
+shape = SubResource("BoxShape3D_6vahf")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14259, 1.04573, 0)
+aabb = AABB(-0.0439954, -2.41893, -2.29649, 3.47666, 2.40646, 4.59298)
+
+[node name="SafeKeypad" parent="." index="7" instance=ExtResource("4_b3ah4")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="8"]
+stream = SubResource("AudioStreamRandomizer_nosb4")
+
+[connection signal="pointer_event" from="XRToolsInteractableArea" to="." method="_on_xr_tools_interactable_area_pointer_event"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
+[connection signal="lock_solved" from="SafeKeypad" to="." method="_on_safe_keypad_lock_solved"]

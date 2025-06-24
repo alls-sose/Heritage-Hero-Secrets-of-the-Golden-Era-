@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4270a5aab7059e2e519821fde6c92dceec242d1cd863b791ad5e1589df4cf583
-size 980
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://r053bveorvpi"
+path.s3tc="res://.godot/imported/mansion draft2x_c_diffuse_baseColor.jpg-a69037f17892c3ba09923a44f003a8e8.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "a9e74c1d5c18ca404bf925f663721826"
+}
+
+[deps]
+
+source_file="res://src/Assets/0x-house-assets/mansion draft2x_c_diffuse_baseColor.jpg"
+dest_files=["res://.godot/imported/mansion draft2x_c_diffuse_baseColor.jpg-a69037f17892c3ba09923a44f003a8e8.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

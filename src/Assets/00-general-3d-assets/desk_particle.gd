@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:184f290faf609128dc8d5b764e67b00e3e7c89b0a01471efa868746b059e3df7
-size 430
+extends Node3D
+@onready var particle: GPUParticles3D = $Particle
+
+func _ready() -> void:
+	particle.emitting = true
+	self.visible = true
+
+
+func _start_reemitting():
+	# if we want to re-enable the grab particle effect whenever.
+	particle.emitting = true
+
+
+func _on_xr_tools_interactable_area_pointer_event(event: Variant) -> void:
+	if event.event_type == XRToolsPointerEvent.Type.PRESSED:
+		particle.emitting = false
+		queue_free()

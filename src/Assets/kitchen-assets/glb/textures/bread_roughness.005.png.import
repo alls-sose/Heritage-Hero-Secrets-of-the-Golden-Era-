@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22ab91c204ce9a2ddb7d51c0e0016aadcfc5af611af57a57f6a73ae8103c454b
-size 830
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bjtma243q317k"
+path="res://.godot/imported/bread_roughness.005.png-6a5f593c19cb5e0ee88d9e4413455f0d.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/glb/textures/bread_roughness.005.png"
+dest_files=["res://.godot/imported/bread_roughness.005.png-6a5f593c19cb5e0ee88d9e4413455f0d.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ac06a3acba1269c72208b5275f8947ee49c15b74770dafc1a4dd98a5fdcc2b9
-size 440
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bxucgnr6np14j"
+path="res://.godot/imported/AMLML_sfx_dough_knead.ogg-041dedd6d704fccf9671e8d8aac804d4.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_dough_knead.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_dough_knead.ogg-041dedd6d704fccf9671e8d8aac804d4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

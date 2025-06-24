@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5115e2c1a0d97c25d15f64120d0f72d749f49b56cf71b928977f2f923d15712f
-size 995
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bi6c6ymtf3bof"
+path.s3tc="res://.godot/imported/mansion draft2_FabricDenim003_GLOSS_3K.png-ec621e4911b55f58dc9072568361c5ee.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "5faee09f332d6f1abec4ddf5ee6b5a3d"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_FabricDenim003_GLOSS_3K.png"
+dest_files=["res://.godot/imported/mansion draft2_FabricDenim003_GLOSS_3K.png-ec621e4911b55f58dc9072568361c5ee.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

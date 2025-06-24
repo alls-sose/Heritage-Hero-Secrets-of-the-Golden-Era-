@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:67526c5a6bebbebe3b65cad2e282aeaa0999219f66450d489d09af41537fa18e
-size 518
+extends Event
+
+@onready var abscbn_contract_pickable: XRToolsPickable = $"../ABSCBNContractPickable"
+@onready var cdcp_contract_pickable: XRToolsPickable = $"../CDCPContractPickable"
+@onready var tadeco_contract_pickable: XRToolsPickable = $"../TADECOContractPickable"
+
+
+
+
+func _on_safe_keypad_lock_solved() -> void:
+	abscbn_contract_pickable.enabled = true
+	cdcp_contract_pickable.enabled = true
+	tadeco_contract_pickable.enabled = true
+	emit_signal("event_ended")
+	close_event()
+	QuestControl.update_active_quests()

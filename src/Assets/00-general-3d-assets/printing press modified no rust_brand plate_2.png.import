@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:24b5854844912564f2ee366405f772a6c7ae77104ab59e5c701fc299ff9f4628
-size 1016
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cm8jamhhn0kil"
+path.s3tc="res://.godot/imported/printing press modified no rust_brand plate_2.png-a07acaeaed4d030a44385f7e5d0342b4.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "041f1a7bcaeef037cde734b763b9034c"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/printing press modified no rust_brand plate_2.png"
+dest_files=["res://.godot/imported/printing press modified no rust_brand plate_2.png-a07acaeaed4d030a44385f7e5d0342b4.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

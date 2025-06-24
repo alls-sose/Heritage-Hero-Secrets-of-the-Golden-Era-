@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f46db1e2a302ffd7d4d1eb47ba4bf15f60b746e3056de9e8500a9dbc4254bb55
-size 1073
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://brai0wwtj03is"
+path.s3tc="res://.godot/imported/chair_vecteezy_seamless-decorative-velvet-fabric-pattern_3196559.jpg-1e5e21a658aadbfe847201d8f5c357d2.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "ab2a878d4fbd3b6534e0da1560631715"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/chair_vecteezy_seamless-decorative-velvet-fabric-pattern_3196559.jpg"
+dest_files=["res://.godot/imported/chair_vecteezy_seamless-decorative-velvet-fabric-pattern_3196559.jpg-1e5e21a658aadbfe847201d8f5c357d2.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

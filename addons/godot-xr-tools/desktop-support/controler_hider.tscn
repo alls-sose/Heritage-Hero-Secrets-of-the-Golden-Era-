@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:40939c0db1c7f96d105e29cd29d2c59e5c83774a84a46017f2499d79a28507af
-size 246
+[gd_scene load_steps=2 format=3 uid="uid://chb848dtavews"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/controler_hider.gd" id="1_6xusf"]
+
+[node name="ControlerHider" type="Node"]
+script = ExtResource("1_6xusf")

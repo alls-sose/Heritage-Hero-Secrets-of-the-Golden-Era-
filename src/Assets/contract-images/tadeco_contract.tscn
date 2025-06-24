@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc0cc8422741a7cc47a43f46a64a1f96d105cfdf3bd1b99c65a812f2fa0bf64c
-size 876
+[gd_scene load_steps=6 format=3 uid="uid://oi05xn5uo7ur"]
+
+[ext_resource type="Texture2D" uid="uid://c3ppcknw12ugx" path="res://src/assets/contract-images/TADECODocument.png" id="1_x3j7k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h83xr"]
+albedo_texture = ExtResource("1_x3j7k")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uvhys"]
+material = SubResource("StandardMaterial3D_h83xr")
+size = Vector2(0.85, 1.1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3j7k"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h83xr"]
+material = SubResource("StandardMaterial3D_x3j7k")
+flip_faces = true
+size = Vector2(0.85, 1.1)
+orientation = 2
+
+[node name="TADECOContract" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_uvhys")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_h83xr")

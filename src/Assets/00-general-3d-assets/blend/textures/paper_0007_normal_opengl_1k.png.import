@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5b9ddb94ee491a8a92022df5c92f0675a76bec454870064e2d0cd4588d948583
-size 990
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://8o7i55jflq0m"
+path.s3tc="res://.godot/imported/paper_0007_normal_opengl_1k.png-0fe5c429449f31772f981e771e6d73f2.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/blend/textures/paper_0007_normal_opengl_1k.png"
+dest_files=["res://.godot/imported/paper_0007_normal_opengl_1k.png-0fe5c429449f31772f981e771e6d73f2.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/assets/00General3DAssets/blend/textures/paper_0007_normal_opengl_1k.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

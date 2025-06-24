@@ -1,3 +1,220 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9dd0986b1b217ca78c1b2130006fa687bf8ff5881488210439a70c99e6480802
-size 10327
+[gd_scene load_steps=27 format=3 uid="uid://cg1esxx64ssev"]
+
+[ext_resource type="Script" uid="uid://6bhlxtigsor1" path="res://src/Assets/bedroom-assets/safe_keypad.gd" id="1_bxkn5"]
+[ext_resource type="PackedScene" uid="uid://dxwrjkkqqn64l" path="res://src/Assets/bedroom-assets/Keypad.glb" id="1_xp6ii"]
+[ext_resource type="Script" uid="uid://c2rj7vjaa8uv2" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="2_bxkn5"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_2vb5k"]
+[ext_resource type="PackedScene" uid="uid://11lgg4tneriv" path="res://src/Assets/bedroom-assets/keypad_ui.tscn" id="4_hdadu"]
+[ext_resource type="AudioStream" uid="uid://dc1pyaexqnb3o" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_01.ogg" id="6_y3r6r"]
+[ext_resource type="AudioStream" uid="uid://ctydy1nac2ca3" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_02.ogg" id="7_5tlld"]
+[ext_resource type="AudioStream" uid="uid://deacdqsrt3do6" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_03.ogg" id="8_shrc5"]
+[ext_resource type="AudioStream" uid="uid://2qmokuc4yvrq" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_04.ogg" id="9_ggncw"]
+[ext_resource type="AudioStream" uid="uid://btyhwxclov812" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_05.ogg" id="10_xw13a"]
+[ext_resource type="AudioStream" uid="uid://p2m3ygrtbcj5" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_06.ogg" id="11_p4kop"]
+[ext_resource type="AudioStream" uid="uid://ckes6ftthlixw" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_07.ogg" id="12_j22u6"]
+[ext_resource type="AudioStream" uid="uid://6cpiyaf6ua50" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_input_08.ogg" id="13_tqscg"]
+[ext_resource type="AudioStream" uid="uid://cw7u7m0tlo1xa" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_right_01.ogg" id="14_8tt8c"]
+[ext_resource type="AudioStream" uid="uid://bndb3io5vwjp4" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_right_02.ogg" id="15_71j0n"]
+[ext_resource type="AudioStream" uid="uid://jbbp5fexbaf3" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_wrong_01.ogg" id="16_jb7m5"]
+[ext_resource type="AudioStream" uid="uid://bbqwgwsrewtr1" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_wrong_02.ogg" id="17_x3mvi"]
+[ext_resource type="AudioStream" uid="uid://cbimkf61odcdi" path="res://src/Assets/audio/sfx/AMLML_sfx_safecode_wrong_03.ogg" id="18_kodev"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2h4d7"]
+size = Vector3(0.4, 0.4, 0.2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_xqsh1"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2rpcy"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smkgh"]
+transparency = 1
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_2rpcy")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dg0gc"]
+resource_local_to_scene = true
+size = Vector3(3, 2, 0.02)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_84fi8"]
+streams_count = 8
+stream_0/stream = ExtResource("6_y3r6r")
+stream_1/stream = ExtResource("7_5tlld")
+stream_2/stream = ExtResource("8_shrc5")
+stream_3/stream = ExtResource("9_ggncw")
+stream_4/stream = ExtResource("10_xw13a")
+stream_5/stream = ExtResource("11_p4kop")
+stream_6/stream = ExtResource("12_j22u6")
+stream_7/stream = ExtResource("13_tqscg")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_sfief"]
+streams_count = 2
+stream_0/stream = ExtResource("14_8tt8c")
+stream_1/stream = ExtResource("15_71j0n")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0dnih"]
+streams_count = 3
+stream_0/stream = ExtResource("16_jb7m5")
+stream_1/stream = ExtResource("17_x3mvi")
+stream_2/stream = ExtResource("18_kodev")
+
+[node name="SafeKeypad" type="Node3D"]
+script = ExtResource("1_bxkn5")
+code = "2251986"
+
+[node name="Keypad2" parent="." instance=ExtResource("1_xp6ii")]
+
+[node name="Key1" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500055, 0.500362, 0.122688)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key1"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key2"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key3"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key4" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key4"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key5" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key5"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key6" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key6"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key7" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.5, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key7"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key8" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key8"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key9" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.5, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key9"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Keyc" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -1, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keyc"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Key0" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key0"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Keye" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -1, 0.123)
+collision_layer = 5242881
+script = ExtResource("2_bxkn5")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keye"]
+shape = SubResource("BoxShape3D_2h4d7")
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("3_2vb5k")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1.13538, 0.185195)
+viewport_size = Vector2(1600, 900)
+
+[node name="Viewport" parent="Viewport2Din3D" index="0"]
+size = Vector2i(1600, 900)
+
+[node name="KeypadUI" parent="Viewport2Din3D/Viewport" index="0" instance=ExtResource("4_hdadu")]
+
+[node name="Screen" parent="Viewport2Din3D" index="1"]
+mesh = SubResource("QuadMesh_xqsh1")
+surface_material_override/0 = SubResource("StandardMaterial3D_smkgh")
+
+[node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
+viewport_size = Vector2(1600, 900)
+
+[node name="CollisionShape3D" parent="Viewport2Din3D/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_dg0gc")
+
+[node name="Beep" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_84fi8")
+
+[node name="Correct" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_sfief")
+
+[node name="Wrong" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_0dnih")
+
+[connection signal="pointer_event" from="Key1" to="." method="_on_key_1_pointer_event"]
+[connection signal="pointer_event" from="Key2" to="." method="_on_key_2_pointer_event"]
+[connection signal="pointer_event" from="Key3" to="." method="_on_key_3_pointer_event"]
+[connection signal="pointer_event" from="Key4" to="." method="_on_key_4_pointer_event"]
+[connection signal="pointer_event" from="Key5" to="." method="_on_key_5_pointer_event"]
+[connection signal="pointer_event" from="Key6" to="." method="_on_key_6_pointer_event"]
+[connection signal="pointer_event" from="Key7" to="." method="_on_key_7_pointer_event"]
+[connection signal="pointer_event" from="Key8" to="." method="_on_key_8_pointer_event"]
+[connection signal="pointer_event" from="Key9" to="." method="_on_key_9_pointer_event"]
+[connection signal="pointer_event" from="Keyc" to="." method="_on_keyc_keye_pointer_event"]
+[connection signal="pointer_event" from="Key0" to="." method="_on_key_0_pointer_event"]
+[connection signal="pointer_event" from="Keye" to="." method="_on_keyc_keye_pointer_event"]
+
+[editable path="Viewport2Din3D"]
+[editable path="Viewport2Din3D/Viewport/KeypadUI"]

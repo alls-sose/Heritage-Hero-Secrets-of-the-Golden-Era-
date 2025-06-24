@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ddf088e2d471148d3598a098d843361ac02c7981efb94a43f37efb340c6de842
-size 850
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bqa61dpx5p4j7"
+path.s3tc="res://.godot/imported/cobwebs.jpg-f18535eb51ca7098b4c92d57e529ef3d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/blend/textures/cobwebs.jpg"
+dest_files=["res://.godot/imported/cobwebs.jpg-f18535eb51ca7098b4c92d57e529ef3d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

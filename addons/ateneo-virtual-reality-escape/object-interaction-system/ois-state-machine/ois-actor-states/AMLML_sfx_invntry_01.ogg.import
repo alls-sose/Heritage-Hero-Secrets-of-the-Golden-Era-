@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6719791023057739f3ed576c8c8fa3fb970a88c8e0897ae4609a7708532ebbeb
-size 514
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgcudd408irtf"
+path="res://.godot/imported/AMLML_sfx_invntry_01.ogg-b92f4e1021bf674737279e1f79a60eaf.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois-actor-states/AMLML_sfx_invntry_01.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_invntry_01.ogg-b92f4e1021bf674737279e1f79a60eaf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

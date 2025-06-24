@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ee69b01c666af7ac3857c99a0cfd3689127c48f32cf9cb4ce2275f32bbb3498
-size 970
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d1vgp4gco2imi"
+path.s3tc="res://.godot/imported/plastic-texture-normal-1.jpg-9b11e27202f32c4d1649e42fdb0cf81b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/textures/plastic-texture-normal-1.jpg"
+dest_files=["res://.godot/imported/plastic-texture-normal-1.jpg-9b11e27202f32c4d1649e42fdb0cf81b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/assets/00-general-3d-assets/textures/plastic-texture-normal-1.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7edfa2b37d8b998c417e77d49b79b3628ee90fed46de4f2c17b715751218d69c
-size 640
+extends Event
+
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+@onready var printing_press_teleporter = get_tree().get_root().get_node("Main/TeleporterManager/Study Room Printing Press")
+
+func _on_ois_twist_receiver_action_completed(requirement: Variant, total_progress: Variant) -> void:
+	printing_press_teleporter.teleporter_active = true
+	printing_press_teleporter.get_parent()._set_teleporter_states() 
+	emit_signal("event_ended")
+	print("Gate Has Been Opened")
+	animation_player.play("open_gate")
+	close_event()
+	QuestControl.add_active_quest("QuestCompletePrintingMachine")
+	QuestControl.update_active_quests()

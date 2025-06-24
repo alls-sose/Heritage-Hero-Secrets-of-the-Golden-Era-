@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aff3419dfe6cd004bb71c06b404c1f9a6a3dd4600e5f142104690e4a5646ea22
-size 493
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d5122yqb0juv"
+path="res://.godot/imported/VO_nar_7KO_01_v2_SevPopJap_CasetteVer.ogg-cfeec7120e5e4b1ebc7fc6cca204b63b.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/key-items/VO_nar_7KO_01_v2_SevPopJap_CasetteVer.ogg"
+dest_files=["res://.godot/imported/VO_nar_7KO_01_v2_SevPopJap_CasetteVer.ogg-cfeec7120e5e4b1ebc7fc6cca204b63b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83d5c73edc53d276791b3e69ce06a32a1eb9b7a0f5647ae5bf6f74aeb7417504
-size 877
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dne4ph65q7uqd"
+path.s3tc="res://.godot/imported/chandelier_diffuse.png-06ed9bf97e8b980fad8de8819e6d8cb1.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/textures/chandelier_diffuse.png"
+dest_files=["res://.godot/imported/chandelier_diffuse.png-06ed9bf97e8b980fad8de8819e6d8cb1.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

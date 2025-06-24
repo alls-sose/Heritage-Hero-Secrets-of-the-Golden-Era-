@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25133028b63ae5f7997b83476ae6e4b89cc84e962e9817da18b3d39d5245d867
-size 804
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://broe0068bkjqq"
+path="res://.godot/imported/NUTRIBUN.png-2b56d20b31de45493d3fd8f5bba90263.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/artwork-assets/newspaper-clippings/NUTRIBUN.png"
+dest_files=["res://.godot/imported/NUTRIBUN.png-2b56d20b31de45493d3fd8f5bba90263.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

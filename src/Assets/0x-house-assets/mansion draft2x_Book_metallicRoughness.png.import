@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b9caa4298367462a07703cf185ee2454f580fc583e0829a02e0f5166e39b5912
-size 1038
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dhl0jtsfmeral"
+path.s3tc="res://.godot/imported/mansion draft2x_Book_metallicRoughness.png-1096329d21db0a63b18f73fe8ae9e9c8.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "26f9ea0136098895b291db0d09909639"
+}
+
+[deps]
+
+source_file="res://src/Assets/0x-house-assets/mansion draft2x_Book_metallicRoughness.png"
+dest_files=["res://.godot/imported/mansion draft2x_Book_metallicRoughness.png-1096329d21db0a63b18f73fe8ae9e9c8.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://src/Assets/mansion draft2x_Book_normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:57e0461582896955a9ee458f078811f668d01eac63d04825b03b40801f1989cb
-size 437
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1wnr03qxsyon"
+path="res://.godot/imported/AMLML_sfx_crowbar_03.ogg-6401d7df10d59584751b7b1111236e08.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_crowbar_03.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_crowbar_03.ogg-6401d7df10d59584751b7b1111236e08.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

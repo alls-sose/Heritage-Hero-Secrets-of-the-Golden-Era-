@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1bf50a9a3b0f5a93827c30631392103ac01f6f893b69a636eb4936964537e46c
-size 853
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c8vcht7hak4xd"
+path="res://.godot/imported/peppermint_powerplant_4k.exr-8f04edc865a6b90f26e7c4bd5c7897f1.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/blend/textures/peppermint_powerplant_4k.exr"
+dest_files=["res://.godot/imported/peppermint_powerplant_4k.exr-8f04edc865a6b90f26e7c4bd5c7897f1.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

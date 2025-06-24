@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f652b181f74415280e0f7e89117e94baed80d6cd59e76f54485856dc4306c760
-size 798
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bm62glchgwnh4"
+path="res://.godot/imported/Montserrat-BlackItalic.ttf-458631c11f7b13ac787d40af7a0123dd.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/Montserrat/static/Montserrat-BlackItalic.ttf"
+dest_files=["res://.godot/imported/Montserrat-BlackItalic.ttf-458631c11f7b13ac787d40af7a0123dd.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

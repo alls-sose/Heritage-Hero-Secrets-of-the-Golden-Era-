@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a409a8f25816531b3b4c3d004a5609dc05d34091a843c7f1ce2f1bc6d4c688fe
-size 850
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://2lws0qlc42v7"
+path.s3tc="res://.godot/imported/ABSCBNDocument.png-3ed782e95f17614eaea6b7f5d542f61a.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/contract-images/ABSCBNDocument.png"
+dest_files=["res://.godot/imported/ABSCBNDocument.png-3ed782e95f17614eaea6b7f5d542f61a.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

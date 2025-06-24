@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a47c3a345c81d30cdc283bdda6562d14839d7b3519660451912c5336338d23a6
-size 777
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://b0q2ejjfweoe8"
+path="res://.godot/imported/Montserrat-Bold.ttf-cf42470d27a5962bf125296109c80aec.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/Montserrat/static/Montserrat-Bold.ttf"
+dest_files=["res://.godot/imported/Montserrat-Bold.ttf-cf42470d27a5962bf125296109c80aec.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

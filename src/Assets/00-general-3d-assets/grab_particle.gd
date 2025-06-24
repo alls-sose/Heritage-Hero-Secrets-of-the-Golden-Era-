@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ffc8c579d41538fcbddb22a021af0dd8a94011d3a84d3f83ee35937f11ff4e90
-size 552
+extends Node3D
+@onready var particle: GPUParticles3D = $Particle
+
+func _ready() -> void:
+	particle.emitting = true
+	self.visible = true
+
+# only if grabbed by FunctionPickup
+func _on_first_grab(pickable: Variant, by: Variant):
+	if by is XRToolsFunctionPickup:
+		particle.emitting = false
+		
+	# uncomment this line of code if we want to remove grabparticle after first grab
+	# await get_tree().create_timer(2).timeout
+	# self.queue_free()
+
+func _start_reemitting():
+	# if we want to re-enable the grab particle effect whenever.
+	particle.emitting = true

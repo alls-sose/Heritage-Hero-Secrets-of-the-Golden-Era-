@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a72732f5a4809df6d6a7b5f1186f22c7286da1c42315e4a2a5b1ee450ab3b3e4
-size 947
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d2hvprvnyi55t"
+path.s3tc="res://.godot/imported/nutribun_bread_roughness.png-996ddc5340d2007776c84fe5362d2bf3.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "84ddddafab79bed369be5b63feebf497"
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/nutribun_bread_roughness.png"
+dest_files=["res://.godot/imported/nutribun_bread_roughness.png-996ddc5340d2007776c84fe5362d2bf3.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

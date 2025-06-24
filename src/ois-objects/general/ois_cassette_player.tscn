@@ -1,3 +1,117 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ce9a40b8ac32e5593ab3af72f43e1e0763d5f8421b50e53151c09641ffe97ab
-size 5777
+[gd_scene load_steps=18 format=3 uid="uid://cd0bby50vvdro"]
+
+[ext_resource type="Script" uid="uid://cdjjavxusiysh" path="res://src/ois-objects/general/ois_cassette_player.gd" id="1_dd5o6"]
+[ext_resource type="PackedScene" uid="uid://b2tusoab0xyo7" path="res://src/Assets/00-general-3d-assets/cassette_player.tscn" id="1_g6eu3"]
+[ext_resource type="Script" uid="uid://d2j64x8gnsuue" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_slot.gd" id="2_dd5o6"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="3_lxufa"]
+[ext_resource type="Script" uid="uid://cv3r8cyhbqqui" path="res://src/ois-objects/event-scripts/cassette_event.gd" id="5_lxufa"]
+[ext_resource type="AudioStream" uid="uid://dabfdlib8addc" path="res://src/Assets/audio/sfx/AMLML_sfx_casette_move_01.ogg" id="7_6k6ml"]
+[ext_resource type="Script" uid="uid://c2rj7vjaa8uv2" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="7_t8rdm"]
+[ext_resource type="AudioStream" uid="uid://g1dj4qc4w21c" path="res://src/Assets/audio/sfx/AMLML_sfx_casette_move_02.ogg" id="8_66j3w"]
+[ext_resource type="AudioStream" uid="uid://bfj5kowrboax3" path="res://src/Assets/audio/sfx/AMLML_sfx_casette_move_03.ogg" id="9_8pvpu"]
+[ext_resource type="AudioStream" uid="uid://baut4bwgwj3t2" path="res://src/Assets/audio/sfx/AMLML_sfx_casette_player_01.ogg" id="10_urwwi"]
+[ext_resource type="AudioStream" uid="uid://b4dutak5lcayo" path="res://src/Assets/audio/sfx/AMLML_sfx_casette_player_02.ogg" id="11_irqn0"]
+[ext_resource type="AudioStream" uid="uid://b65buewoubh7f" path="res://src/Assets/audio/sfx/AMLML_sfx_casette_player_03.ogg" id="12_y0cvk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dd5o6"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+emission = Color(0.661418, 0.82862, 0.593207, 1)
+emission_energy_multiplier = 0.13
+
+[sub_resource type="SphereMesh" id="SphereMesh_a28bw"]
+radius = 0.2
+height = 0.4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t8rdm"]
+size = Vector3(0.175, 0.1, 0.2)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cqbpe"]
+streams_count = 3
+stream_0/stream = ExtResource("7_6k6ml")
+stream_1/stream = ExtResource("8_66j3w")
+stream_2/stream = ExtResource("9_8pvpu")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qu4mt"]
+streams_count = 3
+stream_0/stream = ExtResource("10_urwwi")
+stream_1/stream = ExtResource("11_irqn0")
+stream_2/stream = ExtResource("12_y0cvk")
+
+[node name="OISCassettePlayer" type="Node3D"]
+script = ExtResource("1_dd5o6")
+
+[node name="cassette player" parent="." instance=ExtResource("1_g6eu3")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="InventorySlot" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0.0790427, 0.0469836, 0)
+script = ExtResource("2_dd5o6")
+group_required = "KeyItemTape"
+ignore_inventory_item_scale = true
+slot_material_override = SubResource("StandardMaterial3D_dd5o6")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="InventorySlot" instance=ExtResource("3_lxufa")]
+grab_distance = 0.2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InventorySlot"]
+mesh = SubResource("SphereMesh_a28bw")
+surface_material_override/0 = SubResource("StandardMaterial3D_dd5o6")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037136, 0.0920201, 0)
+volume_db = 16.522
+
+[node name="XRToolsInteractableArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128543, 0.0549353, 0)
+collision_layer = 5242881
+script = ExtResource("7_t8rdm")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRToolsInteractableArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0375, 0, 0)
+shape = SubResource("BoxShape3D_t8rdm")
+
+[node name="CassetteEvents" type="Node" parent="."]
+
+[node name="KeyItemDaiVoltZ" type="Node" parent="CassetteEvents"]
+script = ExtResource("5_lxufa")
+event_name = "KeyItemDaiVoltZ"
+
+[node name="KeyItemMalakasMaganda" type="Node" parent="CassetteEvents"]
+script = ExtResource("5_lxufa")
+event_name = "KeyItemMalakasMaganda"
+
+[node name="KeyItemNutribun" type="Node" parent="CassetteEvents"]
+script = ExtResource("5_lxufa")
+event_name = "KeyItemNutribun"
+
+[node name="KeyItemManilaFilmCenter" type="Node" parent="CassetteEvents"]
+script = ExtResource("5_lxufa")
+event_name = "KeyItemManilaFilmCenter"
+
+[node name="KeyItemGiraffe" type="Node" parent="CassetteEvents"]
+script = ExtResource("5_lxufa")
+event_name = "KeyItemGiraffe"
+
+[node name="KeyItemButbutCloth" type="Node" parent="CassetteEvents"]
+script = ExtResource("5_lxufa")
+event_name = "KeyItemButbutCloth"
+
+[node name="KeyItemRolexWatch" type="Node" parent="CassetteEvents"]
+script = ExtResource("5_lxufa")
+event_name = "KeyItemRolexWatch"
+
+[node name="CassetteAddRemoveSFX" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_cqbpe")
+
+[node name="CassettePlaySFX" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_qu4mt")
+
+[connection signal="current_object_in_slot" from="InventorySlot" to="." method="_on_inventory_slot_current_object_in_slot"]
+[connection signal="slot_dropped" from="InventorySlot" to="." method="_on_inventory_slot_slot_dropped"]
+[connection signal="slot_picked_up" from="InventorySlot" to="." method="_on_inventory_slot_slot_picked_up"]
+[connection signal="pointer_event" from="XRToolsInteractableArea" to="." method="_on_xr_tools_interactable_area_pointer_event"]
+
+[editable path="cassette player"]

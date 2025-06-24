@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d12d276ccd7213ef8a1848e57467fe576f50bd43f968084e578c5c4d7630294c
-size 974
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dsnt7ukd7dab5"
+path.s3tc="res://.godot/imported/mansion draft2_Mansion Door_ORM.jpg-c175f70c7e93ed432c772f9924d78930.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "467f23d7df447834267b7203ad30146f"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_Mansion Door_ORM.jpg"
+dest_files=["res://.godot/imported/mansion draft2_Mansion Door_ORM.jpg-c175f70c7e93ed432c772f9924d78930.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

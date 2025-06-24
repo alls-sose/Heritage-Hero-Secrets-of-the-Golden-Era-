@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a0bcd2b0b7f2e9971247910c0be78b5d73419df4bb7f20827e32ca77e839bc2b
-size 591
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://07tai88iqanf"
+path="res://.godot/imported/03 - Jingle - News Radio (March song).wav-ce15dc52b26478baad695a9d96d4b6ea.sample"
+
+[deps]
+
+source_file="res://src/Assets/audio/music/03 - Jingle - News Radio (March song).wav"
+dest_files=["res://.godot/imported/03 - Jingle - News Radio (March song).wav-ce15dc52b26478baad695a9d96d4b6ea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

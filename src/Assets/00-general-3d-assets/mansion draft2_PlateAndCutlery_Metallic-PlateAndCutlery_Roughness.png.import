@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7db9d601162461ee713f3052801f97007624995b429c2a07ea2b6a153ccc2ba0
-size 1075
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://2gt8ejf5q3px"
+path.s3tc="res://.godot/imported/mansion draft2_PlateAndCutlery_Metallic-PlateAndCutlery_Roughness.png-2899839a168596de3294df1f37f6309b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "e2e55b03686052c262d75ff840028a63"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_PlateAndCutlery_Metallic-PlateAndCutlery_Roughness.png"
+dest_files=["res://.godot/imported/mansion draft2_PlateAndCutlery_Metallic-PlateAndCutlery_Roughness.png-2899839a168596de3294df1f37f6309b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

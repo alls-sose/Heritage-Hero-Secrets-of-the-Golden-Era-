@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c62e17806444ca22c2515288cc611cd36f53de286dbfa84d3e1b93844e49bdaf
-size 247
+extends XRToolsPickable
+
+@onready var printed_items_control: Control = $Document/Viewport2Din3D/Viewport/PrintedThings/Control
+
+func _on_visibility_changed() -> void:
+	# check items when item is set to visible
+	printed_items_control.check_items()

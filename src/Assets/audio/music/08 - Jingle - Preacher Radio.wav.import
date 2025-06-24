@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6e43d3115569fc37ce8ea873ea5b2167cc2a4ced373e74538eebd90e853d8eb
-size 565
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpb0gtlibwdqr"
+path="res://.godot/imported/08 - Jingle - Preacher Radio.wav-7905f59d022ba6597e3d2aff8f271b7e.sample"
+
+[deps]
+
+source_file="res://src/Assets/audio/music/08 - Jingle - Preacher Radio.wav"
+dest_files=["res://.godot/imported/08 - Jingle - Preacher Radio.wav-7905f59d022ba6597e3d2aff8f271b7e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

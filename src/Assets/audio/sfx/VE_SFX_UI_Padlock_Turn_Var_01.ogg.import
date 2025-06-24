@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a9d83a7428016e99c1007a37a8efa95005e3c4f11b4852e167aea0702782f8f
-size 464
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch7lcr3jn6u10"
+path="res://.godot/imported/VE_SFX_UI_Padlock_Turn_Var_01.ogg-a90c47c2fc9540ea5556b8d5030d82a2.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/VE_SFX_UI_Padlock_Turn_Var_01.ogg"
+dest_files=["res://.godot/imported/VE_SFX_UI_Padlock_Turn_Var_01.ogg-a90c47c2fc9540ea5556b8d5030d82a2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

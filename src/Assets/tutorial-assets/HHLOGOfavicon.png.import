@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9841f98561e6725ff1812536420922689de9fd39ba7d993ce692addc363d59d0
-size 800
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c1hd6d6pnpk5d"
+path="res://.godot/imported/HHLOGOfavicon.png-0e9ec4d587d0fa5f7f668c66dfd7c925.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/tutorial-assets/HHLOGOfavicon.png"
+dest_files=["res://.godot/imported/HHLOGOfavicon.png-0e9ec4d587d0fa5f7f668c66dfd7c925.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

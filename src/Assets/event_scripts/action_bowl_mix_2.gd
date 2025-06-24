@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5dddb8540eb068e713c160bbb6ffc9f88cb824a382f966397d5ed11ff95e9c17
-size 157
+extends Event
+
+func _on_bowl_main_mix_2_done() -> void:
+	print("MIX 2 DONE")
+	close_event()
+	emit_signal("event_ended")
+	QuestControl.update_active_quests()

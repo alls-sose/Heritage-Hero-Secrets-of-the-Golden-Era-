@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0167c600f1b438a046402021cb70bbdc70ddc5c5ad2b1ef426d7e22b51fb17f9
-size 674
+extends Node3D
+signal spray_done
+signal wipe_done
+
+@onready var wet_painting: MeshInstance3D = $WetPainting
+@onready var progress_view: Node3D = $"Progress View"
+@onready var painting_7: MeshInstance3D = $Painting7
+
+
+func _on_wipe_rag_receiver_action_in_progress(requirement: Variant, total_progress: Variant) -> void:
+	var percentage = total_progress / requirement
+	progress_view.visible = true
+	progress_view.change_progress_value(percentage*100)
+	wet_painting.get_surface_override_material(0).albedo_color = Color(1,1,1,1-percentage)
+
+
+func _on_wipe_rag_receiver_action_started(requirement: Variant, total_progress: Variant) -> void:
+	progress_view.progress_idle_state()

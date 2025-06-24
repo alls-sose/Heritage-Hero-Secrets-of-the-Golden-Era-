@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1feb499215896f3f12b2d3bf19388cdf183dfd9ba7003f9db7ad948dfe3a6f29
-size 789
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cjvrxbothrbqe"
+path="res://.godot/imported/Untitled-1.png-2b63a0b07797d4e3d52505c008492b31.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/Untitled-1.png"
+dest_files=["res://.godot/imported/Untitled-1.png-2b63a0b07797d4e3d52505c008492b31.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

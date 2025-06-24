@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:98eb3e1be0b0564cbc5371cfd327708ee30baf3fcd9ad090c1bb9349b65f02ba
-size 717
+[gd_scene load_steps=3 format=3 uid="uid://wyvjfklym3sy"]
+
+[ext_resource type="PackedScene" uid="uid://foj5gyql358f" path="res://src/Assets/00-general-3d-assets/mansion draft2.glb" id="1_pvxyd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71gnk"]
+size = Vector3(38.6707, 1, 38.542)
+
+[node name="House" type="Node3D"]
+
+[node name="HouseFloor" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HouseFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78308, -0.469959, -13.0488)
+shape = SubResource("BoxShape3D_71gnk")
+
+[node name="mansion draft2" parent="." instance=ExtResource("1_pvxyd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0833, 0, -3.97725)

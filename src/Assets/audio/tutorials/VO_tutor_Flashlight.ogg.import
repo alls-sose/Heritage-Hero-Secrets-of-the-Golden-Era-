@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cd08accffc15db5114b89cb5e038908d29c119c071359eef90f8d03cbff9953a
-size 439
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wvwjuxrqo3gf"
+path="res://.godot/imported/VO_tutor_Flashlight.ogg-69f915961c572d0d8858e7d4adf456d7.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/tutorials/VO_tutor_Flashlight.ogg"
+dest_files=["res://.godot/imported/VO_tutor_Flashlight.ogg-69f915961c572d0d8858e7d4adf456d7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

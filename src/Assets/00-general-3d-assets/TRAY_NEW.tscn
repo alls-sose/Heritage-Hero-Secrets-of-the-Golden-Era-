@@ -1,3 +1,187 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:32f93a49234a736ecd560cadbc0af5446a725eefd8e564157bb2c443cb06ef44
-size 8439
+[gd_scene load_steps=18 format=3 uid="uid://cmtgbjolbfhbu"]
+
+[ext_resource type="Script" uid="uid://3krq80iamrls" path="res://src/Assets/00-general-3d-assets/tray_new.gd" id="1_ntukg"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_5lepq"]
+[ext_resource type="Script" uid="uid://d2j64x8gnsuue" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_slot.gd" id="4_6m50o"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="5_pmkic"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="6_bovul"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="6_ntukg"]
+[ext_resource type="Script" uid="uid://c8sxucu6rj1v6" path="res://src/Assets/kitchen-assets/action_oven_nutribun.gd" id="7_pmkic"]
+[ext_resource type="Script" uid="uid://cchsdc143uftn" path="res://src/Assets/kitchen-assets/action_place_dough_on_tray.gd" id="8_fjp6l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w41wk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w41wk"]
+cull_mode = 2
+albedo_color = Color(0.362829, 0.362829, 0.362829, 1)
+metallic = 1.0
+metallic_specular = 0.4
+roughness = 0.15
+
+[sub_resource type="BoxMesh" id="BoxMesh_6m50o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uwlx7"]
+size = Vector3(0.490845, 0.0236816, 0.311768)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bocq"]
+transparency = 1
+albedo_color = Color(0.913, 0.648, 0.665, 0.06)
+emission_enabled = true
+emission = Color(0.661418, 0.82862, 0.593207, 1)
+emission_energy_multiplier = 0.13
+
+[sub_resource type="SphereMesh" id="SphereMesh_6m50o"]
+radius = 0.075
+height = 0.15
+
+[sub_resource type="SphereMesh" id="SphereMesh_ntukg"]
+radius = 0.075
+height = 0.15
+
+[sub_resource type="SphereMesh" id="SphereMesh_5lepq"]
+radius = 0.075
+height = 0.15
+
+[sub_resource type="SphereMesh" id="SphereMesh_bovul"]
+radius = 0.075
+height = 0.15
+
+[node name="Tray" type="RigidBody3D" groups=["tray"]]
+collision_layer = 4
+collision_mask = 131079
+freeze_mode = 1
+script = ExtResource("1_ntukg")
+second_hand_grab = 2
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.491, 0, 0, 0, 0.011, 0, 0, 0, 0.311, 0, -8.44784e-05, 0.0312578)
+mesh = SubResource("BoxMesh_w41wk")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_w41wk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.491, 0, 0, 0, 0.011, 0, 0, 0, 0.006, 0, 0.0104481, -0.120978)
+mesh = SubResource("BoxMesh_6m50o")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_w41wk")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.491, 0, 0, 0, 0.011, 0, 0, 0, 0.006, 0, 0.0104481, 0.183838)
+mesh = SubResource("BoxMesh_6m50o")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_w41wk")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-1.31571e-08, 0, 0.009, 0, 0.012, 0, -0.301, 0, -3.93402e-10, 0.241264, 0.0104481, 0.0319936)
+mesh = SubResource("BoxMesh_6m50o")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_w41wk")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-1.31571e-08, 0, 0.009, 0, 0.012, 0, -0.301, 0, -3.93402e-10, -0.241066, 0.0107573, 0.029446)
+mesh = SubResource("BoxMesh_6m50o")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_w41wk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00330518, 0.00656347, 0.0313955)
+shape = SubResource("BoxShape3D_uwlx7")
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("6_bovul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.241914, 0.0446584, -0.0728343)
+visible = true
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("3_5lepq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.245782, 0.0446584, -0.0728343)
+visible = true
+
+[node name="Slots" type="Node3D" parent="."]
+
+[node name="DoughSlot" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0879157, 0.0249884, -0.0495191)
+script = ExtResource("4_6m50o")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+slot_material_override = SubResource("StandardMaterial3D_0bocq")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot" instance=ExtResource("5_pmkic")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot"]
+mesh = SubResource("SphereMesh_6m50o")
+surface_material_override/0 = SubResource("StandardMaterial3D_0bocq")
+
+[node name="DoughSlot2" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0861787, 0.0249884, -0.0495191)
+script = ExtResource("4_6m50o")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+slot_material_override = SubResource("StandardMaterial3D_0bocq")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot2" instance=ExtResource("5_pmkic")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot2"]
+mesh = SubResource("SphereMesh_ntukg")
+surface_material_override/0 = SubResource("StandardMaterial3D_0bocq")
+
+[node name="DoughSlot3" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0861787, 0.0249884, 0.104676)
+script = ExtResource("4_6m50o")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+slot_material_override = SubResource("StandardMaterial3D_0bocq")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot3" instance=ExtResource("5_pmkic")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot3"]
+mesh = SubResource("SphereMesh_5lepq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0bocq")
+
+[node name="DoughSlot4" type="Node3D" parent="Slots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0909231, 0.0249884, 0.104676)
+script = ExtResource("4_6m50o")
+snap_zone_radius = 0.075
+group_required = "DoughFinal"
+slot_material_override = SubResource("StandardMaterial3D_0bocq")
+metadata/_custom_type_script = "uid://d2j64x8gnsuue"
+
+[node name="SnapZone" parent="Slots/DoughSlot4" instance=ExtResource("5_pmkic")]
+grab_distance = 0.075
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slots/DoughSlot4"]
+mesh = SubResource("SphereMesh_bovul")
+surface_material_override/0 = SubResource("StandardMaterial3D_0bocq")
+
+[node name="InventoryItem" type="Node3D" parent="." node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+script = ExtResource("6_ntukg")
+unique = true
+defined_mesh = NodePath("../Node3D")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 1.0
+metadata/_custom_type_script = "uid://dq86gvhe6d20d"
+
+[node name="Events" type="Node" parent="."]
+
+[node name="ActionOvenNutribun" type="Node" parent="Events"]
+script = ExtResource("7_pmkic")
+event_name = "ActionOvenNutribun"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[node name="ActionPlaceDoughOnTray" type="Node" parent="Events"]
+script = ExtResource("8_fjp6l")
+event_name = "ActionPlaceDoughOnTray"
+metadata/_custom_type_script = "uid://bg8ikbbyucdg6"
+
+[connection signal="all_dough_ready" from="." to="Events/ActionPlaceDoughOnTray" method="_on_tray_all_dough_ready"]
+[connection signal="nutribun_ready" from="." to="Events/ActionOvenNutribun" method="_on_tray_nutribun_ready"]
+[connection signal="slot_picked_up" from="Slots/DoughSlot" to="." method="_on_dough_slot_slot_picked_up"]
+[connection signal="slot_picked_up" from="Slots/DoughSlot2" to="." method="_on_dough_slot_2_slot_picked_up"]
+[connection signal="slot_picked_up" from="Slots/DoughSlot3" to="." method="_on_dough_slot_3_slot_picked_up"]
+[connection signal="slot_picked_up" from="Slots/DoughSlot4" to="." method="_on_dough_slot_4_slot_picked_up"]

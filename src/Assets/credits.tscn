@@ -1,3 +1,1411 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:db49e86b594fb6c10977c9636681a0c79bbcdbf51e6769276aec77c35b9ffa91
-size 40614
+[gd_scene load_steps=30 format=3 uid="uid://gnxomqil88lu"]
+
+[ext_resource type="Script" uid="uid://kewdq3d6kqn5" path="res://src/Assets/credits_control.gd" id="1_56um8"]
+[ext_resource type="FontFile" uid="uid://dckupwqw6m83s" path="res://src/Assets/fonts/Montserrat/static/Montserrat-Medium.ttf" id="1_pqalq"]
+[ext_resource type="FontFile" uid="uid://cmu4qjs0kd4tx" path="res://src/Assets/fonts/PT_Serif/PTSerif-Bold.ttf" id="2_0fd3q"]
+[ext_resource type="Texture2D" uid="uid://c2cyi8g3orfcq" path="res://src/dialogue-system/panel.png" id="2_81hdk"]
+[ext_resource type="FontFile" uid="uid://b0q2ejjfweoe8" path="res://src/Assets/fonts/Montserrat/static/Montserrat-Bold.ttf" id="3_qky7c"]
+[ext_resource type="Texture2D" uid="uid://bvet1gso1sg1g" path="res://src/Assets/artwork-assets/newspaper-clippings/GIRAFFE.png" id="5_81hdk"]
+[ext_resource type="FontFile" uid="uid://b14nr7nbhhmnj" path="res://src/Assets/fonts/AbrilFatface-Regular.ttf" id="6_s8ptp"]
+[ext_resource type="Texture2D" uid="uid://dvhplbdtth086" path="res://src/Assets/artwork-assets/newspaper-clippings/MANILA FILM CENTER.png" id="7_krasj"]
+[ext_resource type="Texture2D" uid="uid://dilbdur8niqlq" path="res://src/Assets/artwork-assets/newspaper-clippings/ROLEX WATCHES.png" id="8_w3su8"]
+[ext_resource type="Texture2D" uid="uid://dvwufdtt4dqir" path="res://src/Assets/artwork-assets/newspaper-clippings/BUTBUT CLOTH.png" id="9_gsl5y"]
+[ext_resource type="Texture2D" uid="uid://broe0068bkjqq" path="res://src/Assets/artwork-assets/newspaper-clippings/NUTRIBUN.png" id="10_db53c"]
+[ext_resource type="Texture2D" uid="uid://bcj0q0eu5pgqf" path="res://src/Assets/artwork-assets/newspaper-clippings/MALAKAS MAGANDA.png" id="11_g1jqa"]
+[ext_resource type="Texture2D" uid="uid://c180i6tmpvytr" path="res://src/Assets/artwork-assets/newspaper-clippings/DAIVOLTZ.png" id="12_ugw18"]
+
+[sub_resource type="Gradient" id="Gradient_q1s3a"]
+offsets = PackedFloat32Array(0, 0.2, 0.5, 0.8, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_32vi1"]
+gradient = SubResource("Gradient_q1s3a")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_dx3dg"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_auv8n"]
+gradient = SubResource("Gradient_dx3dg")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_b8c2i"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_klscj"]
+gradient = SubResource("Gradient_b8c2i")
+
+[sub_resource type="Animation" id="Animation_ecsos"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/Congratulations:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/Congratulations:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 400)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/Credits:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 980)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/Zoo:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/MIFF:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/RolexWatches:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/Cordillera:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GradientRect/Nutribun:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GradientRect/MalakasMaganda:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GradientRect/JPAnime:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_w46ba"]
+resource_name = "play_anime"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/JPAnime:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/JPAnime:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.707108),
+"update": 0,
+"values": [Vector2(6.89, 7.695), Vector2(2.261, 2.525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/JPAnime:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.361283, 0.0296706]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/JPAnime/Correction:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.56667, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.395, 8.395), Vector2(2.555, 2.555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/JPAnime/Correction:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.57, 1.86667, 3.96667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/JPAnime/Correction:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.53333, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.240855]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/JPAnime:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_glhor"]
+resource_name = "play_credits"
+length = 35.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/Congratulations:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/Congratulations:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 400), Vector2(400, -202.995)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/Credits:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.36667, 31),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 850), Vector2(400, -2219.32)]
+}
+
+[sub_resource type="Animation" id="Animation_o6jlr"]
+resource_name = "play_dam"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/Cordillera:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/Cordillera:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.707108),
+"update": 0,
+"values": [Vector2(6.89, 7.695), Vector2(2.261, 2.525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/Cordillera:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.361283, 0.0296706]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/Cordillera/Correction:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.56667, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.395, 8.395), Vector2(2.555, 2.555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/Cordillera/Correction:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.57, 1.86667, 3.96667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/Cordillera/Correction:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.53333, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.240855]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/Cordillera:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_vhaen"]
+resource_name = "play_filmcenter"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/MIFF:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/MIFF:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.707108),
+"update": 0,
+"values": [Vector2(6.89, 7.695), Vector2(2.261, 2.525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/MIFF:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.361283, 0.0296706]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/MIFF/Correction:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.56667, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.395, 8.395), Vector2(2.555, 2.555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/MIFF/Correction:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.57, 1.86667, 3.96667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/MIFF/Correction:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.53333, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.240855]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/MIFF:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_i520j"]
+resource_name = "play_malakas"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/MalakasMaganda:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/MalakasMaganda:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.707108),
+"update": 0,
+"values": [Vector2(6.89, 7.695), Vector2(2.261, 2.525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/MalakasMaganda:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.361283, 0.0296706]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/MalakasMaganda/Correction:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.56667, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.395, 8.395), Vector2(2.555, 2.555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/MalakasMaganda/Correction:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.57, 1.86667, 3.96667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/MalakasMaganda/Correction:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.53333, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.240855]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/MalakasMaganda:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_s5oei"]
+resource_name = "play_nutribun"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/Nutribun:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/Nutribun:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.707108),
+"update": 0,
+"values": [Vector2(6.89, 7.695), Vector2(2.261, 2.525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/Nutribun:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.361283, 0.0296706]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/Nutribun/Correction:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.56667, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.395, 8.395), Vector2(2.555, 2.555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/Nutribun/Correction:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.57, 1.86667, 3.96667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/Nutribun/Correction:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.53333, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.240855]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/Nutribun:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_c2nq0"]
+resource_name = "play_rolex"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/RolexWatches:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/RolexWatches:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.707108),
+"update": 0,
+"values": [Vector2(6.89, 7.695), Vector2(2.261, 2.525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/RolexWatches:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.361283, 0.0296706]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/RolexWatches/Correction:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.56667, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.395, 8.395), Vector2(2.555, 2.555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/RolexWatches/Correction:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.57, 1.86667, 3.96667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/RolexWatches/Correction:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.53333, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.240855]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/RolexWatches:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_c2fb1"]
+resource_name = "play_zoo"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GradientRect/Zoo:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GradientRect/Zoo:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.707108),
+"update": 0,
+"values": [Vector2(6.89, 7.695), Vector2(2.261, 2.525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GradientRect/Zoo:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.361283, 0.0296706]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GradientRect/Zoo/Correction:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.56667, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.395, 8.395), Vector2(2.555, 2.555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GradientRect/Zoo/Correction:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.57, 1.86667, 3.96667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GradientRect/Zoo/Correction:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.53333, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.240855]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GradientRect/Zoo:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_56um8"]
+_data = {
+&"RESET": SubResource("Animation_ecsos"),
+&"play_anime": SubResource("Animation_w46ba"),
+&"play_credits": SubResource("Animation_glhor"),
+&"play_dam": SubResource("Animation_o6jlr"),
+&"play_filmcenter": SubResource("Animation_vhaen"),
+&"play_malakas": SubResource("Animation_i520j"),
+&"play_nutribun": SubResource("Animation_s5oei"),
+&"play_rolex": SubResource("Animation_c2nq0"),
+&"play_zoo": SubResource("Animation_c2fb1")
+}
+
+[node name="Credits" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -450.0
+offset_right = 800.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_56um8")
+
+[node name="BGRect" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+texture = SubResource("GradientTexture2D_32vi1")
+
+[node name="Shadow2" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -408.0
+offset_right = 800.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+scale = Vector2(1, 1.235)
+pivot_offset = Vector2(800, 408)
+texture = ExtResource("2_81hdk")
+
+[node name="GradientRect" type="TextureRect" parent="Control"]
+clip_children = 1
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+texture = SubResource("GradientTexture2D_auv8n")
+
+[node name="Congratulations" type="RichTextLabel" parent="Control/GradientRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 400.0
+offset_right = 400.0
+offset_bottom = 600.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_pqalq")
+theme_override_fonts/italics_font = ExtResource("2_0fd3q")
+theme_override_fonts/bold_font = ExtResource("3_qky7c")
+theme_override_font_sizes/italics_font_size = 41
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 19
+bbcode_enabled = true
+text = "[i]Congratulations on finishing the game![/i]
+Thanks for playing!"
+horizontal_alignment = 1
+
+[node name="Credits" type="RichTextLabel" parent="Control/GradientRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 980.0
+offset_right = 400.0
+offset_bottom = 3980.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_pqalq")
+theme_override_fonts/italics_font = ExtResource("2_0fd3q")
+theme_override_fonts/bold_font = ExtResource("3_qky7c")
+theme_override_font_sizes/italics_font_size = 31
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 19
+bbcode_enabled = true
+text = "
+[img width=500]res://src/Assets/tutorial-assets/Heritage Hero Secrets of the Golden Era Logo V4.png[/img]
+
+[color=#FFD700][i]Heritage Hero: The Secrets of the “Golden Era”[/i][/color]
+
+A production of the Ateneo Virtual, Augmented and Mixed Reality (VAMR) Laboratory and the Ateneo Laboratory for the Learning Sciences
+
+[b]Project Lead[/b]
+Maria Mercedes T. Rodrigo
+
+[b]Technical Lead[/b]
+Eric Cesar E. Vidal, Jr.
+
+[b]Engine, Game Design, and Programming[/b]
+Jesus Alvaro C. Pato
+Kenneth King L. Ko
+
+[b]Content Consultants from Ateneo Martial Law Museum and Library[/b]
+Alvin D. Cabalquinto
+Galvin Radley L. Ngo
+Joi Marie Angelica M. Indias
+Oliver John C. Quintana
+
+[b]Asset Development[/b]
+Jaim-Kia Tan
+Johnver Christian Laviña
+Marie Frances Therese M. Libatique
+Shamika Anne E. Sawalha
+Szel Leeven Yu Embay
+
+[b]Voice Directing[/b]
+Rosario Leonor M. Cello
+
+[b]Voice Acting[/b]
+Apollo Demetillo Abraham 
+Charina N. Ramento
+Dominique Marie Antoinette B. Manahan
+Eric Francis L. Galang 
+Johnoel V. Capucion
+Joseph Mark Muñoz
+Rosario Leonor M. Cello 
+Ryllah Epifania B. Paruñgao
+
+[b]Sound Design[/b]
+Francesco U. Amante
+
+[b]Music Composition[/b]
+Habble (https://soundcloud.com/habster)
+
+[b]Development Consultants[/b]
+Nicko R. Caluya
+CyberCraft Philippines Association
+
+[b]Support Staff[/b]
+Dominique Marie Antoinette B. Manahan
+Frances Kyle D. Delos Lado
+Hannah Lei G. Baniqued
+Jessie L. Dela Cruz
+Johanna Marion R. Torres
+Jose Carlo S. Sanchez
+Ma. Rosario M. Madjos
+Mikaela Paderna
+
+[b]Special Thanks to[/b]
+Gerick Jeremiah Niño Go
+Jed Laszlo O. Jocson
+Joan Dominique L. Lee
+Walfrido David A. Diy
+DOST-PCIEERD staff
+Our many testers
+Faculty, Technical and Secretarial Staff of DISCS
+Administrative, Technical and Secretarial Staff of Ateneo de Manila University
+
+Some sound effects used in this game were from https://getsoundly.com/
+
+This game was developed using the Godot game engine.
+© 2007-2025 Juan Linietsky, Ariel Manzur and contributors.
+
+This work was made possible through the generosity of:
+
+[b]Department of Science and Technology - Philippine Council for Industry, Energy and Emerging Technology Research and Development (DOST-PCIEERD)[/b]
+
+and
+
+[b]Ateneo de Manila University[/b]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Game copyright © 2025, Ateneo de Manila University.
+All rights reserved.
+"
+horizontal_alignment = 1
+
+[node name="Zoo" type="TextureRect" parent="Control/GradientRect"]
+visible = false
+modulate = Color(1, 1, 1, 0.832046)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 662.0
+offset_top = -138.0
+offset_right = 962.0
+offset_bottom = 62.0
+grow_vertical = 2
+rotation = 0.0296706
+scale = Vector2(2.261, 2.525)
+pivot_offset = Vector2(150, 100)
+texture = ExtResource("5_81hdk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/GradientRect/Zoo"]
+modulate = Color(1, 1, 1, 0.812182)
+top_level = true
+layout_mode = 0
+offset_left = 659.0
+offset_top = 356.0
+offset_right = 971.0
+offset_bottom = 400.0
+rotation = -0.240855
+scale = Vector2(2.555, 2.555)
+pivot_offset = Vector2(156, 22)
+texture = SubResource("GradientTexture1D_klscj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GradientRect/Zoo/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("6_s8ptp")
+text = "CALAUIT SAFARI PARK MARRED BY FORCED EVICTIONS AND NEGLECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MIFF" type="TextureRect" parent="Control/GradientRect"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -117.0
+offset_right = 160.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0296706
+scale = Vector2(2.261, 2.525)
+pivot_offset = Vector2(150, 100)
+texture = ExtResource("7_krasj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/GradientRect/MIFF"]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 0
+offset_left = 638.0
+offset_top = 358.0
+offset_right = 950.0
+offset_bottom = 402.0
+rotation = -0.240855
+scale = Vector2(2.555, 2.555)
+pivot_offset = Vector2(156, 22)
+texture = SubResource("GradientTexture1D_klscj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GradientRect/MIFF/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("6_s8ptp")
+text = "CORRUPTION BEHIND FILM CENTER DISASTER AND DELAYED RESPONSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RolexWatches" type="TextureRect" parent="Control/GradientRect"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 651.0
+offset_top = -96.0
+offset_right = 951.0
+offset_bottom = 104.0
+grow_vertical = 2
+rotation = 0.0296706
+scale = Vector2(2.261, 2.525)
+pivot_offset = Vector2(150, 100)
+texture = ExtResource("8_w3su8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/GradientRect/RolexWatches"]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 0
+offset_left = 622.0
+offset_top = 385.0
+offset_right = 934.0
+offset_bottom = 429.0
+rotation = -0.240855
+scale = Vector2(2.555, 2.555)
+pivot_offset = Vector2(156, 22)
+texture = SubResource("GradientTexture1D_klscj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GradientRect/RolexWatches/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("6_s8ptp")
+text = "OFFICIALS RECEIVED LUXURY BRIBES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cordillera" type="TextureRect" parent="Control/GradientRect"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 669.0
+offset_top = -110.0
+offset_right = 969.0
+offset_bottom = 90.0
+grow_vertical = 2
+rotation = 0.0296706
+scale = Vector2(2.261, 2.525)
+pivot_offset = Vector2(150, 100)
+texture = ExtResource("9_gsl5y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/GradientRect/Cordillera"]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 0
+offset_left = 675.0
+offset_top = 392.0
+offset_right = 987.0
+offset_bottom = 436.0
+rotation = -0.240855
+scale = Vector2(2.555, 2.555)
+pivot_offset = Vector2(156, 22)
+texture = SubResource("GradientTexture1D_klscj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GradientRect/Cordillera/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("6_s8ptp")
+text = "DULAG ASSASSINATION INCITED BY CORDILLERA DAM DISPUTE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Nutribun" type="TextureRect" parent="Control/GradientRect"]
+visible = false
+modulate = Color(1, 1, 1, 1.44174)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 688.0
+offset_top = -62.9999
+offset_right = 988.0
+offset_bottom = 137.0
+grow_vertical = 2
+rotation = 0.0296706
+scale = Vector2(2.261, 2.525)
+pivot_offset = Vector2(150, 100)
+texture = ExtResource("10_db53c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/GradientRect/Nutribun"]
+modulate = Color(1, 1, 1, 1.62124)
+top_level = true
+layout_mode = 0
+offset_left = 692.0
+offset_top = 394.0
+offset_right = 1004.0
+offset_bottom = 438.0
+rotation = -0.240855
+scale = Vector2(2.555, 2.555)
+pivot_offset = Vector2(156, 22)
+texture = SubResource("GradientTexture1D_klscj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GradientRect/Nutribun/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("6_s8ptp")
+text = "IMELDA CLAIMS CREDIT FOR USAID-FUNDED NUTRIBUN PROJECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MalakasMaganda" type="TextureRect" parent="Control/GradientRect"]
+visible = false
+modulate = Color(1, 1, 1, 0.993805)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 658.0
+offset_top = -87.0
+offset_right = 958.0
+offset_bottom = 113.0
+grow_vertical = 2
+rotation = 0.0296706
+scale = Vector2(2.261, 2.525)
+pivot_offset = Vector2(150, 100)
+texture = ExtResource("11_g1jqa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/GradientRect/MalakasMaganda"]
+modulate = Color(1, 1, 1, 0.970616)
+top_level = true
+layout_mode = 0
+offset_left = 674.0
+offset_top = 402.0
+offset_right = 986.0
+offset_bottom = 446.0
+rotation = -0.240855
+scale = Vector2(2.555, 2.555)
+pivot_offset = Vector2(156, 22)
+texture = SubResource("GradientTexture1D_klscj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GradientRect/MalakasMaganda/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("6_s8ptp")
+text = "“MALAKAS AT MAGANDA” MYTH BLANDISHED AS MARCOS PROPAGANDA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JPAnime" type="TextureRect" parent="Control/GradientRect"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 458.0
+offset_top = -238.0
+offset_right = 758.0
+offset_bottom = -38.0
+grow_vertical = 2
+rotation = 0.0296706
+scale = Vector2(2.261, 2.525)
+texture = ExtResource("12_ugw18")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/GradientRect/JPAnime"]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -22.0
+offset_right = 156.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.240855
+scale = Vector2(2.555, 2.555)
+pivot_offset = Vector2(156, 22)
+texture = SubResource("GradientTexture1D_klscj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GradientRect/JPAnime/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("6_s8ptp")
+text = "MEDIA BAN STIFLES CRITICISM AND DISSENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Animation" type="AnimationPlayer" parent="Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_56um8")
+}

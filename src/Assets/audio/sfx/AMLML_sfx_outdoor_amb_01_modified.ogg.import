@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a79f870d0ae793fa0eec883998a1ef3c36bf48885c59f36981c42fe23576948
-size 476
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0qahwv2y1ewi"
+path="res://.godot/imported/AMLML_sfx_outdoor_amb_01_modified.ogg-b1f1c9174930a5793639b53ea0cc430d.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_outdoor_amb_01_modified.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_outdoor_amb_01_modified.ogg-b1f1c9174930a5793639b53ea0cc430d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

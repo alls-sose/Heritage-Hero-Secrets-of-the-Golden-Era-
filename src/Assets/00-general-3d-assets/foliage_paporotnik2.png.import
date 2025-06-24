@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:df642b7d197a23aff85716df5de194ada2e34b461dce15ee962408b61aff1f89
-size 938
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bxbqn68uaol21"
+path.s3tc="res://.godot/imported/foliage_paporotnik2.png-71d30d2e361d1f5f0cafc89192f0946c.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "41c4f1499a240dd5535e7ca1a9d85ea3"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/foliage_paporotnik2.png"
+dest_files=["res://.godot/imported/foliage_paporotnik2.png-71d30d2e361d1f5f0cafc89192f0946c.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

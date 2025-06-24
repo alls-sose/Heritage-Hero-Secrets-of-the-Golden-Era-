@@ -1,3 +1,69 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b73b8ce3e96c81ed95dfda21f49e21d2c9b64fdf00b7e6b17fb13478df3115a
-size 3813
+[gd_scene load_steps=12 format=3 uid="uid://bgcmy7j4u8d47"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_4iiec"]
+[ext_resource type="ArrayMesh" uid="uid://xc4xxk48646w" path="res://src/Assets/study-assets/key.obj" id="2_gvkq0"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_xlj03"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_rytlq"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="5_u8na7"]
+[ext_resource type="Script" uid="uid://cgettxdui2mmi" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_one_hand_tool_asm.gd" id="6_ojgk7"]
+[ext_resource type="Script" uid="uid://eavrntks32yb" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_raycast3d.gd" id="7_eukpa"]
+[ext_resource type="BoxMesh" uid="uid://dho0uqpnmuhn6" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/misc-resources/collider_raycast_mesh.tres" id="8_4vhrr"]
+[ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="9_85ff5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u8na7"]
+size = Vector3(0.025, 0.06, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xlj03"]
+albedo_color = Color(0.71213, 0.712129, 0.712129, 1)
+metallic = 0.8
+metallic_specular = 0.0
+roughness = 0.5
+
+[node name="GateKey" instance=ExtResource("1_4iiec")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_u8na7")
+
+[node name="Key" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(-4.37114e-09, -0.1, 4.37114e-09, 0, -4.37114e-09, -0.1, 0.1, -4.37114e-09, 1.91069e-16, 0, 0, 0)
+mesh = ExtResource("2_gvkq0")
+surface_material_override/0 = SubResource("StandardMaterial3D_xlj03")
+
+[node name="GrabPointHandLeft2" parent="." index="2" instance=ExtResource("3_xlj03")]
+transform = Transform3D(1, 0, 0, 0, 0.855256, 0.518206, 0, -0.518206, 0.855256, 0, -0.0287507, -0.0368251)
+visible = true
+
+[node name="GrabPointHandRight2" parent="." index="3" instance=ExtResource("4_rytlq")]
+transform = Transform3D(1, 0, 0, 0, 0.855256, 0.518206, 0, -0.518206, 0.855256, 0, -0.0287507, -0.0368251)
+visible = true
+
+[node name="OISActorComponent" type="Node3D" parent="." index="4"]
+script = ExtResource("5_u8na7")
+receiver_group = "gate_key"
+trigger_action = true
+metadata/_custom_type_script = "uid://cg1lorgur84yy"
+
+[node name="OISOneHandToolASM" type="Node3D" parent="OISActorComponent" index="0"]
+script = ExtResource("6_ojgk7")
+metadata/_custom_type_script = "uid://cgettxdui2mmi"
+
+[node name="OISColliderRaycast3D" type="Node3D" parent="OISActorComponent" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0113005)
+script = ExtResource("7_eukpa")
+raycast_length = 2.0
+metadata/_custom_type_script = "uid://eavrntks32yb"
+
+[node name="Raycast3D" type="RayCast3D" parent="OISActorComponent/OISColliderRaycast3D" index="0"]
+visible = false
+target_position = Vector3(0, 0, -2)
+collision_mask = 536870912
+collide_with_areas = true
+
+[node name="Laser" type="MeshInstance3D" parent="OISActorComponent/OISColliderRaycast3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+visible = false
+mesh = ExtResource("8_4vhrr")
+
+[node name="GrabParticle" parent="." index="5" instance=ExtResource("9_85ff5")]
+
+[connection signal="grabbed" from="." to="GrabParticle" method="_on_first_grab"]

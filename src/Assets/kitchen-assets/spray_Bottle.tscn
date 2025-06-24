@@ -1,3 +1,204 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a43d8b11fdadd79aaf0352c6e68b0f5dc9bdcb78f97db4302e61126cf76c960e
-size 9436
+[gd_scene load_steps=36 format=3 uid="uid://btxjrsq8odot1"]
+
+[ext_resource type="Script" uid="uid://b3mwat1biumwy" path="res://src/Assets/kitchen-assets/spray_bottle.gd" id="1_uuwcw"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="2_ki1vr"]
+[ext_resource type="Animation" uid="uid://dgfeikrugfewi" path="res://addons/godot-xr-tools/hands/animations/left/Cup.res" id="3_2u3o0"]
+[ext_resource type="Script" uid="uid://eavrntks32yb" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_raycast3d.gd" id="3_uwec6"]
+[ext_resource type="BoxMesh" uid="uid://dho0uqpnmuhn6" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/misc-resources/collider_raycast_mesh.tres" id="4_6o58q"]
+[ext_resource type="Script" uid="uid://bmclcwctwu3gd" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_vr5a4"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_gs57e"]
+[ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="6_x67y6"]
+[ext_resource type="PackedScene" uid="uid://d36qhx0rgfcgl" path="res://src/Assets/00-general-3d-assets/Spray_GlassCleaner.glb" id="8_uuwcw"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="9_dek1y"]
+[ext_resource type="Texture2D" uid="uid://febxpfbrlrie" path="res://src/Assets/00-general-3d-assets/Flare00.PNG" id="11_i8c8s"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="12_kvw0c"]
+[ext_resource type="Script" uid="uid://cgettxdui2mmi" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_one_hand_tool_asm.gd" id="13_skywi"]
+[ext_resource type="AudioStream" uid="uid://h5rxsu1u4t1a" path="res://src/Assets/audio/sfx/AMLML_sfx_spray_only_1.ogg" id="14_ki1vr"]
+[ext_resource type="AudioStream" uid="uid://i7ipf1ma3vrd" path="res://src/Assets/audio/sfx/AMLML_sfx_spray_only_2.ogg" id="15_2u3o0"]
+[ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="16_2u3o0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uuwcw"]
+size = Vector3(1, 2.18518, 0.718933)
+
+[sub_resource type="Resource" id="Resource_mv4es"]
+script = ExtResource("4_vr5a4")
+open_pose = ExtResource("3_2u3o0")
+closed_pose = ExtResource("3_2u3o0")
+
+[sub_resource type="Resource" id="Resource_qnege"]
+script = ExtResource("4_vr5a4")
+open_pose = ExtResource("6_x67y6")
+closed_pose = ExtResource("6_x67y6")
+
+[sub_resource type="Curve" id="Curve_vm6bv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.562282, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_scb4f"]
+curve = SubResource("Curve_vm6bv")
+
+[sub_resource type="Curve" id="Curve_uxxqw"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, 360), 0.0, 0.0, 0, 0, Vector2(1, -360), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_xgs2e"]
+curve = SubResource("Curve_uxxqw")
+
+[sub_resource type="Gradient" id="Gradient_eqc7q"]
+colors = PackedColorArray(0.956863, 0.988235, 0.996078, 1, 0.999999, 0.988373, 0.986389, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ev6b2"]
+gradient = SubResource("Gradient_eqc7q")
+
+[sub_resource type="Curve" id="Curve_38850"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.486726, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_x8khj"]
+curve = SubResource("Curve_38850")
+
+[sub_resource type="Curve" id="Curve_sl68e"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jaj7c"]
+curve = SubResource("Curve_sl68e")
+
+[sub_resource type="Curve" id="Curve_w81y4"]
+_limits = [-2.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yk0pt"]
+curve = SubResource("Curve_w81y4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_scb4f"]
+emission_shape_offset = Vector3(0, 0, -0.05)
+emission_shape_scale = Vector3(0.03, 0.015, 0.015)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 43.78
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 8.06
+emission_ring_cone_angle = 30.24
+inherit_velocity_ratio = 0.05
+direction = Vector3(0, 0, 0)
+spread = 0.0
+angular_velocity_curve = SubResource("CurveTexture_xgs2e")
+orbit_velocity_curve = SubResource("CurveTexture_yk0pt")
+gravity = Vector3(0, 0, -0.3)
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = -2.23517e-06
+scale_min = 0.06
+scale_max = 0.5
+color = Color(0.735, 0.854, 0.887, 0.574)
+color_ramp = SubResource("GradientTexture1D_ev6b2")
+alpha_curve = SubResource("CurveTexture_scb4f")
+emission_curve = SubResource("CurveTexture_x8khj")
+hue_variation_curve = SubResource("CurveTexture_jaj7c")
+turbulence_noise_strength = 5.18
+turbulence_noise_speed_random = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_126vt"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("11_i8c8s")
+uv1_scale = Vector3(1.015, 1.01, 13.465)
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_jaj7c"]
+material = SubResource("StandardMaterial3D_126vt")
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vr5a4"]
+streams_count = 2
+stream_0/stream = ExtResource("14_ki1vr")
+stream_1/stream = ExtResource("15_2u3o0")
+
+[node name="SprayBottle" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 131079
+freeze_mode = 1
+script = ExtResource("1_uuwcw")
+
+[node name="OISActorComponent" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0685259, 0)
+script = ExtResource("12_kvw0c")
+receiver_group = "spray"
+actor_rate = 5.0
+trigger_action = true
+metadata/_custom_type_script = "uid://cg1lorgur84yy"
+
+[node name="OISColliderRaycast3D" type="Node3D" parent="OISActorComponent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.148513, 0)
+script = ExtResource("3_uwec6")
+raycast_length = 0.5
+metadata/_custom_type_script = "uid://eavrntks32yb"
+
+[node name="Raycast3D" type="RayCast3D" parent="OISActorComponent/OISColliderRaycast3D"]
+target_position = Vector3(0, 0, -0.5)
+collision_mask = 536870912
+collide_with_areas = true
+
+[node name="Laser" type="MeshInstance3D" parent="OISActorComponent/OISColliderRaycast3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+visible = false
+mesh = ExtResource("4_6o58q")
+
+[node name="OISOneHandToolASM" type="Node3D" parent="OISActorComponent"]
+script = ExtResource("13_skywi")
+metadata/_custom_type_script = "uid://cgettxdui2mmi"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.31174e-09, 0, 0.11, 0, 0.11, 0, -0.11, 0, 1.31174e-09, -0.00222742, -0.0283425, 0.0170247)
+shape = SubResource("BoxShape3D_uuwcw")
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("2_ki1vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0251323, -0.032169, -0.0630695)
+visible = true
+hand_pose = SubResource("Resource_mv4es")
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("5_gs57e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0191619, -0.0328894, -0.0644259)
+visible = true
+hand_pose = SubResource("Resource_qnege")
+
+[node name="InventoryItem" type="Node3D" parent="." node_paths=PackedStringArray("defined_mesh", "defined_collision_shape")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0685259, 0)
+script = ExtResource("9_dek1y")
+unique = true
+defined_mesh = NodePath("../Spray_GlassCleaner")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 0.4
+object_transform_adjustment = Vector3(0, -0.01, 0)
+
+[node name="Spray_GlassCleaner" parent="." instance=ExtResource("8_uuwcw")]
+transform = Transform3D(1.31174e-09, 0, 0.11, 0, 0.11, 0, -0.11, 0, 1.31174e-09, -0.00198908, -0.152166, 0.0170247)
+
+[node name="SprayParticle" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000259502, 0.0819171, -0.268453)
+emitting = false
+amount = 500
+one_shot = true
+preprocess = 1.0
+visibility_aabb = AABB(-0.5, -0.5, -0.5, 1, 1, 1)
+process_material = SubResource("ParticleProcessMaterial_scb4f")
+draw_pass_1 = SubResource("QuadMesh_jaj7c")
+
+[node name="SprayAudio" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0685259, 0)
+stream = SubResource("AudioStreamRandomizer_vr5a4")
+
+[node name="GrabParticle" parent="." instance=ExtResource("16_2u3o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0685259, 0)
+
+[connection signal="action_pressed" from="." to="." method="_on_action_pressed"]
+[connection signal="grabbed" from="." to="GrabParticle" method="_on_first_grab"]
+
+[editable path="Spray_GlassCleaner"]

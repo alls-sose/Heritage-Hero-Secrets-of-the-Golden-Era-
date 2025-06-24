@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d59e1c8a3e364905a284b09323d013361ae9ec24b6ed1f3d3969469e416ea870
-size 819
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://byvgmqgsxo4lp"
+path="res://.godot/imported/RobotoMono-Italic-VariableFont_wght.ttf-fe5c0a88792f2f043802bf5ad6e05ae4.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/RobotoMono-Italic-VariableFont_wght.ttf-fe5c0a88792f2f043802bf5ad6e05ae4.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

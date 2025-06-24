@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc28f0862557b713bf7cebf3e8d45189807666b4bbd17306b6fc0f8f6517dec3
-size 556
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmay0id8lyjat"
+path="res://.godot/imported/02 - In-Game Theme Loop 2.wav-e92b8bc605ce7eee900be0e18bd99282.sample"
+
+[deps]
+
+source_file="res://src/Assets/audio/music/02 - In-Game Theme Loop 2.wav"
+dest_files=["res://.godot/imported/02 - In-Game Theme Loop 2.wav-e92b8bc605ce7eee900be0e18bd99282.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:527b867d87a791ce43e4659ffbd4209c53e2112e044c1545b96d82ba2d4e1d0b
-size 300
+extends Event
+@onready var powder_add_player: AudioStreamPlayer3D = $"../../PowderAddPlayer"
+func _on_ois_sugar_receiver_action_completed(requirement: Variant, total_progress: Variant) -> void:
+	close_event()
+	powder_add_player.play()
+	emit_signal("event_ended")
+	QuestControl.update_active_quests()

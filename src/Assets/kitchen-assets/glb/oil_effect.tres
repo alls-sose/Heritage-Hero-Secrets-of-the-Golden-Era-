@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2e6843be52136bc8bb2bb3b6665eabb99048c9620aaad7e1e1a79a0ef2c2bdd
-size 2321
+[gd_resource type="ParticleProcessMaterial" load_steps=13 format=3 uid="uid://d4j3a0ixvfnk6"]
+
+[sub_resource type="Curve" id="Curve_vm6bv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.77951, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_h4fn2"]
+curve = SubResource("Curve_vm6bv")
+
+[sub_resource type="Curve" id="Curve_uxxqw"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, 360), 0.0, 0.0, 0, 0, Vector2(1, -360), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_xgs2e"]
+curve = SubResource("Curve_uxxqw")
+
+[sub_resource type="Gradient" id="Gradient_eqc7q"]
+colors = PackedColorArray(0.956863, 0.988235, 0.996078, 1, 0.999999, 0.988373, 0.986389, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ev6b2"]
+gradient = SubResource("Gradient_eqc7q")
+
+[sub_resource type="Curve" id="Curve_38850"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.486726, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_x8khj"]
+curve = SubResource("Curve_38850")
+
+[sub_resource type="Curve" id="Curve_sl68e"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_hbsbo"]
+curve = SubResource("Curve_sl68e")
+
+[sub_resource type="Curve" id="Curve_w81y4"]
+_limits = [-2.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yk0pt"]
+curve = SubResource("Curve_w81y4")
+
+[resource]
+emission_shape_scale = Vector3(1, 0.15, 1)
+emission_shape = 1
+emission_sphere_radius = 0.01
+inherit_velocity_ratio = 0.05
+direction = Vector3(0, 0, 0)
+spread = 0.0
+angular_velocity_curve = SubResource("CurveTexture_xgs2e")
+orbit_velocity_curve = SubResource("CurveTexture_yk0pt")
+gravity = Vector3(0, -0.5, 0)
+scale_min = 0.06
+scale_max = 0.06
+color = Color(0.988235, 0.803922, 0.341176, 0.447059)
+color_ramp = SubResource("GradientTexture1D_ev6b2")
+alpha_curve = SubResource("CurveTexture_h4fn2")
+emission_curve = SubResource("CurveTexture_x8khj")
+hue_variation_curve = SubResource("CurveTexture_hbsbo")

@@ -1,3 +1,124 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4a94705a24c44b7415253559c8991a278870282b23f8435d50ffa5ce7a2a75e
-size 7716
+[gd_scene load_steps=16 format=4 uid="uid://bejaafwtsv3m7"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_opanp"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="2_55vkk"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_e5xms"]
+[ext_resource type="Texture2D" uid="uid://bxfdnxgnj2ptc" path="res://src/Assets/artwork-assets/blueprints/philippine heart center picture.png" id="4_opanp"]
+[ext_resource type="Script" uid="uid://dq86gvhe6d20d" path="res://addons/ateneo-virtual-reality-escape/inventory-system/inventory_item.gd" id="5_av54b"]
+[ext_resource type="AudioStream" uid="uid://c1vh6jikidedi" path="res://src/Assets/audio/sfx/AMLML_sfx_painting_move_01.ogg" id="6_w3rn3"]
+[ext_resource type="AudioStream" uid="uid://bwnbnem2w7v77" path="res://src/Assets/audio/sfx/AMLML_sfx_painting_move_02.ogg" id="7_yoyq6"]
+[ext_resource type="AudioStream" uid="uid://icrwlq4p82kf" path="res://src/Assets/audio/sfx/AMLML_sfx_painting_move_03.ogg" id="8_tkd6a"]
+[ext_resource type="Script" uid="uid://b1x8jbgvpda1e" path="res://src/Assets/blueprints-and-pictures/audio_stream_player_3d.gd" id="9_gdlng"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8r3a3"]
+size = Vector3(1, 0.7, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_55vkk"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("4_opanp")
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxxxw"]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_color = Color(0.457372, 0.26007, 0.137072, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ksny6"]
+_surfaces = [{
+"aabb": AABB(-0.899888, 0.0451757, -0.899888, 1.79978, 1e-05, 1.79978),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-1, 0, -1, 2, 0.0972288, 2),
+"format": 34359742465,
+"index_count": 78,
+"index_data": PackedByteArray("AAADAAIAAAABAAMABQAPAAcABQANAA8AAwAIAAIAAwALAAgAAAAKAAEAAAAJAAoAAQALAAMAAQAKAAsAAgAJAAAAAgAIAAkABAAIAAYABAAJAAgABQAJAAQABQAKAAkABwAKAAUABwALAAoABgALAAcABgAIAAsABgAMAAQABgAOAAwABwAOAAYABwAPAA4ABAANAAUABAAMAA0A"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC/AACAPwAAAAAAAIC/F19mv+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mv+Efxz0XX2a/F19mP+Efxz0XX2a/AACAv+Efxz0AAIC/AACAv+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIC/F19mvxsKOT0XX2Y/F19mPxsKOT0XX2Y/F19mvxsKOT0XX2a/F19mPxsKOT0XX2a/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e5kkf"]
+resource_name = "mansion draft2x_Plane_017"
+_surfaces = [{
+"aabb": AABB(-0.899888, 0.0451757, -0.899888, 1.79978, 1e-05, 1.79978),
+"attribute_data": PackedByteArray("0Awu8y7zLvPQDNAMLvPQDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"material": SubResource("StandardMaterial3D_55vkk"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///7///wAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-1, 0, -1, 2, 0.0972288, 2),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAARwdNPYwvcz9HB009jC9zP0cHTT2ML3M/iy9zP4wvcz+LL3M/jC9zP4svcz+ML3M/RwdNPVAHTT1HB009UAdNPUcHTT1QB009jS9zPzAHTT2NL3M/MAdNPY0vcz8wB009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAAAARwdNPYwvcz9HB009jC9zP4svcz+ML3M/iy9zP4wvcz9HB009UAdNPUcHTT1QB009jS9zPzAHTT2NL3M/MAdNPQ=="),
+"format": 34359742487,
+"index_count": 78,
+"index_data": PackedByteArray("AQAKAAcAAQAEAAoAEQArABcAEQAnACsACQAYAAYACQAhABgAAAAeAAMAAAAbAB4ABQAjAAsABQAgACMACAAdAAIACAAaAB0ADQAZABMADQAcABkAEAAcAA0AEAAfABwAFgAfABAAFgAiAB8AEwAiABYAEwAZACIAFAAlAA4AFAApACUAFQAoABIAFQAqACgADAAmAA8ADAAkACYA"),
+"material": SubResource("StandardMaterial3D_bxxxw"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAvwAAAAAAAIA/AACAvwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC/AACAvwAAAAAAAIC/AACAvwAAAAAAAIC/AACAPwAAAAAAAIC/AACAPwAAAAAAAIC/AACAPwAAAAAAAIC/F19mv+Efxz0XX2Y/F19mv+Efxz0XX2Y/F19mv+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mP+Efxz0XX2Y/F19mv+Efxz0XX2a/F19mv+Efxz0XX2a/F19mv+Efxz0XX2a/F19mP+Efxz0XX2a/F19mP+Efxz0XX2a/F19mP+Efxz0XX2a/AACAv+Efxz0AAIC/AACAv+Efxz0AAIC/AACAv+Efxz0AAIC/AACAv+Efxz0AAIA/AACAv+Efxz0AAIA/AACAv+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIA/AACAP+Efxz0AAIC/AACAP+Efxz0AAIC/AACAP+Efxz0AAIC/F19mvxsKOT0XX2Y/F19mvxsKOT0XX2Y/F19mPxsKOT0XX2Y/F19mPxsKOT0XX2Y/F19mvxsKOT0XX2a/F19mvxsKOT0XX2a/F19mPxsKOT0XX2a/F19mPxsKOT0XX2a//3//f////z//fwAA////PwAA/3////+//3//f////z//fwAA////P////3////+//////////7//fwAA////PwAA/3////+//////////7//fwAA////P////3////+//////////7//f///////v////3////+//////////7//f////v//vwAA/3////+//3//f////z//f///////v////3////+//3//f////z//f///////vwAA/3////+//////////7//f///////vwAA/3////+//3//f////z//f///////vwAA/3////+//3//f////z//f////v//v////3////+//////////7//f///////v////3////+//////////7////9/////v/////////+/AAD/f////7//f/9/////P////3////+//3//f////z8AAP9/////vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ksny6")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_055dw"]
+streams_count = 3
+stream_0/stream = ExtResource("6_w3rn3")
+stream_1/stream = ExtResource("7_yoyq6")
+stream_2/stream = ExtResource("8_tkd6a")
+
+[node name="HeartCenterPicture" instance=ExtResource("1_opanp")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_8r3a3")
+
+[node name="GrabPointHandLeft" parent="." index="1" instance=ExtResource("2_55vkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.082)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="2" instance=ExtResource("3_e5xms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.082)
+visible = true
+
+[node name="Painting" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(0.5, 0, 0, 0, -1.09278e-08, -0.329, 0, 0.25, -1.4381e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_e5kkf")
+skeleton = NodePath("")
+
+[node name="InventoryItem" type="Node3D" parent="." index="4" node_paths=PackedStringArray("defined_mesh", "defined_collision_shape", "grab_point_right", "grab_point_left")]
+script = ExtResource("5_av54b")
+unique = true
+defined_mesh = NodePath("../Painting")
+defined_collision_shape = NodePath("../CollisionShape3D")
+preferred_scale = 0.25
+object_rotation_adjustment = Vector3(90, 0, 0)
+exclude_additional_mesh_transform = true
+has_custom_shrink_position = true
+grab_point_right = NodePath("../GrabPointHandRight")
+grab_point_left = NodePath("../GrabPointHandLeft")
+metadata/_custom_type_script = "uid://dq86gvhe6d20d"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5"]
+stream = SubResource("AudioStreamRandomizer_055dw")
+script = ExtResource("9_gdlng")
+
+[connection signal="grabbed" from="." to="AudioStreamPlayer3D" method="_on_picture_grabbed"]
+[connection signal="released" from="." to="AudioStreamPlayer3D" method="_on_picture_grabbed"]

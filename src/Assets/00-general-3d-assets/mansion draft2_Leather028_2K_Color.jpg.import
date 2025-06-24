@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:caf7dd9c268490a95d370aeb5b840e7b3376cd77251fed5fef468f0f8a92ca05
-size 982
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ini0810gyxpc"
+path.s3tc="res://.godot/imported/mansion draft2_Leather028_2K_Color.jpg-a88049264bb9fad65cf1c4676736c70d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "c292a70144c8aafcdd351b3bfeaf3a64"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_Leather028_2K_Color.jpg"
+dest_files=["res://.godot/imported/mansion draft2_Leather028_2K_Color.jpg-a88049264bb9fad65cf1c4676736c70d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

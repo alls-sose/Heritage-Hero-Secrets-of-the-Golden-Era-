@@ -1,3 +1,247 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6222bda62174d7336cb30854a7d102434cb7783452e5bdcdfa4913b227f1a30a
-size 10717
+[gd_scene load_steps=20 format=3 uid="uid://bka6j02dgj35j"]
+
+[ext_resource type="PackedScene" uid="uid://dswce7j2he7lx" path="res://src/Assets/00-general-3d-assets/antique_desk_body.glb" id="1_120st"]
+[ext_resource type="Script" uid="uid://d0esniob7y2vp" path="res://src/Assets/study-assets/study_room_desk.gd" id="1_bdrjw"]
+[ext_resource type="PackedScene" uid="uid://dvoepb6n1mkiu" path="res://src/Assets/00-general-3d-assets/antique_desk_drawer.glb" id="2_1r0vu"]
+[ext_resource type="PackedScene" uid="uid://cvnu00ywefkve" path="res://src/Assets/bedroom-assets/briefcase_lock.tscn" id="3_ldara"]
+[ext_resource type="Script" uid="uid://c2rj7vjaa8uv2" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="5_1gpuj"]
+[ext_resource type="AudioStream" uid="uid://cfsvvliajujfg" path="res://src/Assets/audio/sfx/VE_SFX_UI_DrawerOpen_Var_02.ogg" id="6_dmem3"]
+[ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="7_lkujt"]
+[ext_resource type="Script" uid="uid://dfdgmr8j5vxua" path="res://src/Assets/00-general-3d-assets/desk_particle.gd" id="8_xrhhs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f4mro"]
+size = Vector3(0.456787, 0.04, 0.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bdrjw"]
+size = Vector3(0.0305786, 0.135234, 0.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1gpuj"]
+size = Vector3(0.4646, 0.136699, 0.0395752)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ldara"]
+size = Vector3(4, 3, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4mro"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4kln6"]
+size = Vector3(0.488818, 0.0911963, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ldara"]
+size = Vector3(0.488818, 0.760273, 0.449786)
+
+[sub_resource type="Animation" id="Animation_ldara"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("antique_desk_drawer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.252768, 0.327909, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4kln6"]
+resource_name = "open_drawer"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("antique_desk_drawer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.266667, 1.23333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.252768, 0.327909, 0), Vector3(0.961151, 0.327909, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4mro"]
+_data = {
+&"RESET": SubResource("Animation_ldara"),
+&"open_drawer": SubResource("Animation_4kln6")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wiw77"]
+size = Vector3(0.146, 0.132, 0.3)
+
+[node name="StudyRoomDesk" type="Node3D" node_paths=PackedStringArray("interface")]
+script = ExtResource("1_bdrjw")
+interface = NodePath("DeskLock")
+object_distance = 1.5
+
+[node name="antique_desk_body" parent="." instance=ExtResource("1_120st")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="antique_desk_drawer" parent="." instance=ExtResource("2_1r0vu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.252768, 0.327909, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="antique_desk_drawer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.016032, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="antique_desk_drawer/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.207397, -0.0632935, 0)
+shape = SubResource("BoxShape3D_f4mro")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="antique_desk_drawer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="antique_desk_drawer/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, -0.0156763, 0)
+shape = SubResource("BoxShape3D_bdrjw")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="antique_desk_drawer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.427463, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="antique_desk_drawer/StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, -0.0156763, 0)
+shape = SubResource("BoxShape3D_bdrjw")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="antique_desk_drawer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="antique_desk_drawer/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211304, -0.0149438, 0.330212)
+shape = SubResource("BoxShape3D_1gpuj")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="antique_desk_drawer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0325051, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="antique_desk_drawer/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.239502, -0.0149438, -0.32839)
+shape = SubResource("BoxShape3D_1gpuj")
+
+[node name="BriefcaseLock" parent="antique_desk_drawer" instance=ExtResource("3_ldara")]
+transform = Transform3D(-8.74228e-10, 0, 0.02, 0, 0.02, 0, -0.02, 0, -8.74228e-10, -0.00997132, 0.00429007, 0)
+
+[node name="1st wheel" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel" index="0"]
+transform = Transform3D(-5.23679e-06, 0.289309, 0, 5.23679e-06, 3.7912e-12, -1.44663, -1.44663, -1.0473e-06, -5.23679e-06, 0, 0, 0)
+
+[node name="MoveUp" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel" index="2"]
+monitoring = false
+monitorable = false
+
+[node name="MoveDown" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel" index="3"]
+monitoring = false
+monitorable = false
+
+[node name="1st wheel" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel2" index="0"]
+transform = Transform3D(-5.23679e-06, 0.289309, 0, 5.23679e-06, 3.7912e-12, -1.44663, -1.44663, -1.0473e-06, -5.23679e-06, 0, 0, 0)
+
+[node name="MoveUp" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel2" index="2"]
+monitoring = false
+monitorable = false
+
+[node name="MoveDown" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel2" index="3"]
+monitoring = false
+monitorable = false
+
+[node name="1st wheel" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel3" index="0"]
+transform = Transform3D(-5.23679e-06, 0.289309, 0, 5.23679e-06, 3.7912e-12, -1.44663, -1.44663, -1.0473e-06, -5.23679e-06, 0, 0, 0)
+
+[node name="MoveUp" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel3" index="2"]
+monitoring = false
+monitorable = false
+
+[node name="MoveDown" parent="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel3" index="3"]
+monitoring = false
+monitorable = false
+
+[node name="MeshInstance3D" parent="antique_desk_drawer/BriefcaseLock" index="3"]
+mesh = SubResource("BoxMesh_ldara")
+surface_material_override/0 = SubResource("StandardMaterial3D_f4mro")
+
+[node name="XRToolsInteractableArea" parent="antique_desk_drawer/BriefcaseLock" index="5"]
+monitoring = false
+monitorable = false
+
+[node name="Collisions" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collisions"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104712, 0.227097, 9.15527e-05)
+shape = SubResource("BoxShape3D_4kln6")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Collisions"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104712, -0.113638, 0.575198)
+shape = SubResource("BoxShape3D_ldara")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.14817)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104712, -0.113638, 0.575198)
+shape = SubResource("BoxShape3D_ldara")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_f4mro")
+}
+
+[node name="XRToolsInteractableArea" type="Area3D" parent="."]
+collision_layer = 5242881
+script = ExtResource("5_1gpuj")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRToolsInteractableArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.309662, 0.339516, 0.00445557)
+shape = SubResource("BoxShape3D_wiw77")
+
+[node name="DeskLock" parent="." instance=ExtResource("3_ldara")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0, 0, 0)
+visible = false
+code = "472"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_dmem3")
+
+[node name="GrabParticle" parent="." instance=ExtResource("7_lkujt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32333, 0.344019, 0.0197811)
+script = ExtResource("8_xrhhs")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+aabb = AABB(-0.210995, 0.435482, -0.0671033, 0.0577321, 0.14344, 0.134207)
+
+[connection signal="pointer_event" from="XRToolsInteractableArea" to="." method="_on_xr_tools_interactable_area_pointer_event"]
+[connection signal="pointer_event" from="XRToolsInteractableArea" to="GrabParticle" method="_on_xr_tools_interactable_area_pointer_event"]
+[connection signal="lock_solved" from="DeskLock" to="." method="_on_desk_lock_lock_solved"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
+
+[editable path="antique_desk_drawer/BriefcaseLock"]
+[editable path="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel"]
+[editable path="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel2"]
+[editable path="antique_desk_drawer/BriefcaseLock/CombinationLock Wheel3"]
+[editable path="DeskLock"]

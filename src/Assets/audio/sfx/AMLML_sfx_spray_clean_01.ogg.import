@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b6df77807dddfaf45c2994c16f91f2230d7eceb6d6b4207421866f5017c5bf33
-size 449
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqdrl12peojpt"
+path="res://.godot/imported/AMLML_sfx_spray_clean_01.ogg-8bcc23f47309c587be826660c8d8a619.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/sfx/AMLML_sfx_spray_clean_01.ogg"
+dest_files=["res://.godot/imported/AMLML_sfx_spray_clean_01.ogg-8bcc23f47309c587be826660c8d8a619.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8047d599030ca30234f3bd242700d23c5dead0bfec4a7b9647db9ec58e0d85c5
-size 795
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://d2x58xbgdmhwi"
+path="res://.godot/imported/Montserrat-ThinItalic.ttf-76e53ee445e46ce1e03fc6cb66f933ae.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/Montserrat/static/Montserrat-ThinItalic.ttf"
+dest_files=["res://.godot/imported/Montserrat-ThinItalic.ttf-76e53ee445e46ce1e03fc6cb66f933ae.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

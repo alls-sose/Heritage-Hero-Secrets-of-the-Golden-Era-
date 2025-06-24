@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:66f59244f1c3675f840b10cfe9a467e172633ec1d016c74af87db0a01416e636
-size 260
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dy43ogh4jhnpk"]
+
+[resource]
+transparency = 1
+albedo_color = Color(0.608, 0.887, 0.976, 0.138)
+emission_enabled = true
+emission = Color(0.661418, 0.82862, 0.593207, 1)
+emission_energy_multiplier = 0.13

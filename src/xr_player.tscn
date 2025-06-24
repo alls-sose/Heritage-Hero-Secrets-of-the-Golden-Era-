@@ -1,3 +1,71 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d29dde3da998c4ff0ddfd18a66e6cdacd357a30c880dd8e430257f1df1a55ed7
-size 3856
+[gd_scene load_steps=9 format=3 uid="uid://d1awap5dxo6hs"]
+
+[ext_resource type="PackedScene" uid="uid://njx823gyk04n" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_hand.tscn" id="1_33xje"]
+[ext_resource type="PackedScene" uid="uid://raeeicvvindd" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_hand.tscn" id="2_gt3o5"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="2_xxku6"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="3_hpa5j"]
+[ext_resource type="Script" uid="uid://cg1lorgur84yy" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-actor/ois_actor_component.gd" id="4_d0g3q"]
+[ext_resource type="Script" uid="uid://cji1tdhhvihrj" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-state-machine/ois_single_controller_asm.gd" id="5_y6sng"]
+[ext_resource type="Script" uid="uid://b4ao0gdf7khuq" path="res://addons/ateneo-virtual-reality-escape/object-interaction-system/ois-colliders/ois_collider_area3d.gd" id="6_yvegf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c31u1"]
+radius = 0.1
+
+[node name="XRPlayer" type="Node3D"]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+current = true
+
+[node name="XRController3DLeft" type="XRController3D" parent="XROrigin3D"]
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="XROrigin3D/XRController3DLeft" instance=ExtResource("1_33xje")]
+
+[node name="FunctionPickup" parent="XROrigin3D/XRController3DLeft" instance=ExtResource("2_xxku6")]
+
+[node name="FunctionPointer" parent="XROrigin3D/XRController3DLeft" instance=ExtResource("3_hpa5j")]
+
+[node name="OISActorComponent" type="Node3D" parent="XROrigin3D/XRController3DLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0557499, 0, 0.103856)
+script = ExtResource("4_d0g3q")
+
+[node name="OISSingleControllerASM" type="Node3D" parent="XROrigin3D/XRController3DLeft/OISActorComponent"]
+script = ExtResource("5_y6sng")
+
+[node name="OISColliderArea3D" type="Node3D" parent="XROrigin3D/XRController3DLeft/OISActorComponent"]
+script = ExtResource("6_yvegf")
+
+[node name="Area3D" type="Area3D" parent="XROrigin3D/XRController3DLeft/OISActorComponent/OISColliderArea3D"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/XRController3DLeft/OISActorComponent/OISColliderArea3D/Area3D"]
+shape = SubResource("SphereShape3D_c31u1")
+
+[node name="XRController3DRight" type="XRController3D" parent="XROrigin3D"]
+tracker = &"right_hand"
+
+[node name="RightHand" parent="XROrigin3D/XRController3DRight" instance=ExtResource("2_gt3o5")]
+
+[node name="FunctionPickup" parent="XROrigin3D/XRController3DRight" instance=ExtResource("2_xxku6")]
+
+[node name="FunctionPointer" parent="XROrigin3D/XRController3DRight" instance=ExtResource("3_hpa5j")]
+
+[node name="OISActorComponent" type="Node3D" parent="XROrigin3D/XRController3DRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.056, 0, 0.104)
+script = ExtResource("4_d0g3q")
+
+[node name="OISSingleControllerASM" type="Node3D" parent="XROrigin3D/XRController3DRight/OISActorComponent"]
+script = ExtResource("5_y6sng")
+
+[node name="OISColliderArea3D" type="Node3D" parent="XROrigin3D/XRController3DRight/OISActorComponent"]
+script = ExtResource("6_yvegf")
+
+[node name="Area3D" type="Area3D" parent="XROrigin3D/XRController3DRight/OISActorComponent/OISColliderArea3D"]
+collision_layer = 536870912
+collision_mask = 536870912
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/XRController3DRight/OISActorComponent/OISColliderArea3D/Area3D"]
+shape = SubResource("SphereShape3D_c31u1")

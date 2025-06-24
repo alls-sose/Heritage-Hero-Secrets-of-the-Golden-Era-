@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31e73dda0a82d755e2cdc9ab3b49e0229a4dcf7cb16191208cf4c0b30c73f3fa
-size 241
+[gd_scene load_steps=2 format=3 uid="uid://bnvxqb33lltmj"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/interactables/interactable_hinge.gd" id="1"]
+
+[node name="InteractableHinge" type="Spatial"]
+script = ExtResource("1")

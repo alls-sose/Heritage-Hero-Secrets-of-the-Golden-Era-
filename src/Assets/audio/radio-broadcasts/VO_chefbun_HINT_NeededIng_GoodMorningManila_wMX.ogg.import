@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:520f127abf40851a938f197e887fd87c2e3fa01aaafac41c3c53d691ea1724a9
-size 531
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bc3vdn1x71oam"
+path="res://.godot/imported/VO_chefbun_HINT_NeededIng_GoodMorningManila_wMX.ogg-b1a2d551366fd725627317e751397077.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_chefbun_HINT_NeededIng_GoodMorningManila_wMX.ogg"
+dest_files=["res://.godot/imported/VO_chefbun_HINT_NeededIng_GoodMorningManila_wMX.ogg-b1a2d551366fd725627317e751397077.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

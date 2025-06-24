@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ebf2944db69e52ef9c8b1acd1000fa2d46fa526164f45b9968f8f2291cdf1861
-size 889
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b70j7cr16t7e0"
+path.s3tc="res://.godot/imported/NUTRIBUN document recipe V2.png-ef5b911cd2678b7d240af16139746638.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/NUTRIBUN document recipe V2.png"
+dest_files=["res://.godot/imported/NUTRIBUN document recipe V2.png-ef5b911cd2678b7d240af16139746638.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

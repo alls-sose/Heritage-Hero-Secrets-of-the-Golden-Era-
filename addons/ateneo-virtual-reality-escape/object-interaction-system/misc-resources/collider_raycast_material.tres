@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d12b474677d138ef0ee64d68b4e4fd80d9ddbc2a30ce919a1b78c295bc4462bd
-size 158
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://be0o818winf1k"]
+
+[resource]
+shading_mode = 0
+albedo_color = Color(0.137255, 1, 0.235294, 0.470588)

@@ -1,3 +1,55 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0306a5c5243eec0e39bee722c76a3ff4e779fbb89b73c94789896f3756137712
-size 2469
+[gd_scene load_steps=9 format=3 uid="uid://cvnu00ywefkve"]
+
+[ext_resource type="PackedScene" uid="uid://di3dyh85gmqir" path="res://src/Assets/bedroom-assets/CombinationLockWheel.tscn" id="1_u2qwc"]
+[ext_resource type="Script" uid="uid://ideapkiixw72" path="res://src/Assets/bedroom-assets/briefcase_lock.gd" id="1_wlt6q"]
+[ext_resource type="Script" uid="uid://c2rj7vjaa8uv2" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="2_tdqcp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wlt6q"]
+size = Vector3(4, 3, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xaq7d"]
+albedo_color = Color(0.856299, 0.856299, 0.856299, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_4d3bd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v37od"]
+albedo_color = Color(0.62316, 0.62316, 0.62316, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0y2r3"]
+
+[node name="BriefcaseLock" type="Node3D"]
+script = ExtResource("1_wlt6q")
+
+[node name="CombinationLock Wheel" parent="." instance=ExtResource("1_u2qwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18186, 0, 0)
+
+[node name="CombinationLock Wheel2" parent="." instance=ExtResource("1_u2qwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.531861, 0, 0)
+
+[node name="CombinationLock Wheel3" parent="." instance=ExtResource("1_u2qwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118139, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0264102, 0, 0)
+mesh = SubResource("BoxMesh_wlt6q")
+surface_material_override/0 = SubResource("StandardMaterial3D_xaq7d")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14065, 0, 0.536653)
+mesh = SubResource("BoxMesh_4d3bd")
+surface_material_override/0 = SubResource("StandardMaterial3D_v37od")
+
+[node name="XRToolsInteractableArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14066, 0, 0.552206)
+collision_layer = 5242881
+script = ExtResource("2_tdqcp")
+metadata/_custom_type_script = "uid://c2rj7vjaa8uv2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRToolsInteractableArea"]
+shape = SubResource("BoxShape3D_0y2r3")
+
+[connection signal="pointer_event" from="XRToolsInteractableArea" to="." method="_on_xr_tools_interactable_area_pointer_event"]

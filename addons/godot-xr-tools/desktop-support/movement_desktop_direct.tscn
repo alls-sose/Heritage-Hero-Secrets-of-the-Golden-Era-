@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:601ce9ef088266e31d4018a09a8e1cc21194be77b9dff704ca848e76581d7ee6
-size 304
+[gd_scene load_steps=2 format=3 uid="uid://6uusxts6n6gm"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_direct.gd" id="1_e8v0q"]
+
+[node name="MovementDesktopDirect" type="Node" groups=["movement_providers"]]
+script = ExtResource("1_e8v0q")
+strafe = true

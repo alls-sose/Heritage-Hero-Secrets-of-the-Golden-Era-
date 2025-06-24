@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:667e18b8a57314dfc0247957b7d2fff3c6ea908188b13ea1ceaf7e406877aa60
-size 247
+[gd_scene load_steps=2 format=3 uid="uid://du32t1mb2kd7x"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/interactables/interactable_joystick.gd" id="1"]
+
+[node name="InteractableJoystick" type="Spatial"]
+script = ExtResource("1")

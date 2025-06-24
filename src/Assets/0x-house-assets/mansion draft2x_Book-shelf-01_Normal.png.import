@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9becdcf379b7dbb465269701747555e248958f7d31d51e51f0fa6a544de0d1a7
-size 1041
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dcoivnh4218cx"
+path.s3tc="res://.godot/imported/mansion draft2x_Book-shelf-01_Normal.png-5afa89abc1a002e46de7874cf4700eeb.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "779fc437dd9f31116ee9527c187910ab"
+}
+
+[deps]
+
+source_file="res://src/Assets/0x-house-assets/mansion draft2x_Book-shelf-01_Normal.png"
+dest_files=["res://.godot/imported/mansion draft2x_Book-shelf-01_Normal.png-5afa89abc1a002e46de7874cf4700eeb.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/mansion draft2x_Book-shelf-01_Normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

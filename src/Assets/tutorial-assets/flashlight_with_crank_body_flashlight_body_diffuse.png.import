@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f9514690ded9a31a42f0636d6f98584247b33bbeb220f0521ea1aec7807832f7
-size 1026
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cvndut7a3jryj"
+path.s3tc="res://.godot/imported/flashlight_with_crank_body_flashlight_body_diffuse.png-a2ea4ad4801bf4d122b6427a474e71bc.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "cc167bcf11e9e621dd5e6d97728826b3"
+}
+
+[deps]
+
+source_file="res://src/Assets/tutorial-assets/flashlight_with_crank_body_flashlight_body_diffuse.png"
+dest_files=["res://.godot/imported/flashlight_with_crank_body_flashlight_body_diffuse.png-a2ea4ad4801bf4d122b6427a474e71bc.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

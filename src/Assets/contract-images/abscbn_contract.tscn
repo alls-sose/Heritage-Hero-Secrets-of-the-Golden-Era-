@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:327e03b32484529378ca21904ce89ab98d3925157213ec8f663ea80abbb9c1fe
-size 892
+[gd_scene load_steps=6 format=3 uid="uid://2oqtbpb10h02"]
+
+[ext_resource type="Texture2D" uid="uid://2lws0qlc42v7" path="res://src/Assets/contract-images/ABSCBNDocument.png" id="1_psbq5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1toex"]
+albedo_texture = ExtResource("1_psbq5")
+
+[sub_resource type="QuadMesh" id="QuadMesh_fg6yw"]
+lightmap_size_hint = Vector2i(6, 7)
+material = SubResource("StandardMaterial3D_1toex")
+size = Vector2(0.85, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ev0j1"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1prwj"]
+material = SubResource("StandardMaterial3D_ev0j1")
+flip_faces = true
+size = Vector2(0.85, 1.1)
+orientation = 2
+
+[node name="ABSCBNContract" type="MeshInstance3D"]
+mesh = SubResource("QuadMesh_fg6yw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_1prwj")

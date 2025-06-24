@@ -1,3 +1,96 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4568cbaa92b31ed01d9260151e9a263aeb4b952936a0e34e737e571adf411a39
-size 3409
+[gd_scene load_steps=17 format=3 uid="uid://c1pv5eyb3pnow"]
+
+[ext_resource type="Script" uid="uid://d7bbogkibewk" path="res://src/Assets/00-general-3d-assets/grab_particle.gd" id="1_2ada4"]
+[ext_resource type="Texture2D" uid="uid://febxpfbrlrie" path="res://src/Assets/00-general-3d-assets/Flare00.PNG" id="1_vr6vd"]
+[ext_resource type="Texture2D" uid="uid://cwydu1gqawdlv" path="res://src/Assets/00-general-3d-assets/Clean.png" id="2_2ada4"]
+
+[sub_resource type="Curve" id="Curve_vm6bv"]
+_data = [Vector2(0.0327225, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 0.99695), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ja5ob"]
+curve = SubResource("Curve_vm6bv")
+
+[sub_resource type="Gradient" id="Gradient_eqc7q"]
+colors = PackedColorArray(0.956927, 0.990137, 0.995663, 1, 0.999999, 0.988373, 0.986389, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lnlxa"]
+gradient = SubResource("Gradient_eqc7q")
+
+[sub_resource type="Curve" id="Curve_38850"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.486726, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_x8khj"]
+curve = SubResource("Curve_38850")
+
+[sub_resource type="Curve" id="Curve_sl68e"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_hbsbo"]
+curve = SubResource("Curve_sl68e")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4hq0q"]
+emission_shape_scale = Vector3(4, 4, 4)
+emission_shape = 1
+emission_sphere_radius = 0.04
+inherit_velocity_ratio = 0.05
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0.05, 0)
+scale_min = 0.01
+scale_max = 0.03
+color_ramp = SubResource("GradientTexture1D_lnlxa")
+alpha_curve = SubResource("CurveTexture_ja5ob")
+emission_curve = SubResource("CurveTexture_x8khj")
+hue_variation_min = 0.15
+hue_variation_max = 0.33
+hue_variation_curve = SubResource("CurveTexture_hbsbo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4hnc"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_vr6vd")
+uv1_scale = Vector3(1.015, 1.01, 13.465)
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_ak3hb"]
+material = SubResource("StandardMaterial3D_n4hnc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0igua"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_2ada4")
+uv1_scale = Vector3(1.015, 1.01, 13.465)
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_p7met"]
+material = SubResource("StandardMaterial3D_0igua")
+
+[node name="GrabParticle" type="Node3D"]
+script = ExtResource("1_2ada4")
+
+[node name="Particle" type="GPUParticles3D" parent="."]
+amount = 25
+preprocess = 1.0
+visibility_aabb = AABB(-0.5, -0.5, -0.5, 1, 1, 1)
+process_material = SubResource("ParticleProcessMaterial_4hq0q")
+draw_passes = 2
+draw_pass_1 = SubResource("QuadMesh_ak3hb")
+draw_pass_2 = SubResource("QuadMesh_p7met")

@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f00431f134c3202f4b9a49a2061cf9f8dc9e5773ac628ec5d14412716ded6957
-size 934
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://w4ayj1qj38vj"
+path="res://.godot/imported/LockedGate.glb-818e932bba71db81a44ace00b237a4fa.scn"
+
+[deps]
+
+source_file="res://src/Assets/study-assets/LockedGate.glb"
+dest_files=["res://.godot/imported/LockedGate.glb-818e932bba71db81a44ace00b237a4fa.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

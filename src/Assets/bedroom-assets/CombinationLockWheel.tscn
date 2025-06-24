@@ -1,3 +1,284 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:85a96cc4e8a9cec16469d025ec7fa474c2469f577fd14e8e0494075ba332b898
-size 11253
+[gd_scene load_steps=21 format=4 uid="uid://di3dyh85gmqir"]
+
+[ext_resource type="PackedScene" uid="uid://bj3lgsvis4jfk" path="res://src/Assets/bedroom-assets/CombinationLock Wheel.glb" id="1_hg08l"]
+[ext_resource type="Script" uid="uid://dviisdp7mfnlf" path="res://src/Assets/bedroom-assets/CombinationLockWheel.gd" id="2_ohcus"]
+[ext_resource type="Script" uid="uid://c2rj7vjaa8uv2" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="3_bcldx"]
+[ext_resource type="Texture2D" uid="uid://liuqguob2uwd" path="res://src/Assets/bedroom-assets/CombinationLock Wheel_CombinationLock Wheel Diffuse.png" id="3_sjw8x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7y6as"]
+resource_name = "Wheel With Numbers"
+cull_mode = 2
+albedo_texture = ExtResource("3_sjw8x")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.7
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7s1lx"]
+_surfaces = [{
+"aabb": AABB(-0.951057, -1, -1, 1.90211, 2, 2),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("CgALAAwACgANAAsAAQAMAAsADQABAAsABQAKAAwABQANAAoABQAMAAIADgAFAAIADAAGAAIADgACAAYAAQAGAAwADwAFAA4ADwAOAAYABQAEAA0ABAAFAA8ADQAAAAEADQAEAAAAAAADAAEAAAAEAAMAEAABAAMABgABABAABAAQAAMADwAGAAcABAARABAACAAPAAcABAAPABIAEgAPAAgABAASABEAEQAJABAAEQASAAkABgAQABMABgATAAcAEwAQAAkACAAHABMAEgATAAkAEgAIABMA"),
+"lods": [0.507425, PackedByteArray("AAABAAIAAQAGAAIAAAADAAEABgABAAMABQAAAAIABQACAAYABQAGAAcABQAEAAAAAAAEAAMACAAFAAcABAAFAAgABgAJAAcABgADAAkACAAHAAkABAAJAAMABAAIAAkA"), 0.973231, PackedByteArray("AAABAAIAAgABAAMAAAADAAEABAACAAMAAAAEAAMABAAFAAIABQAAAAIABQAEAAAA")],
+"name": "Wheel With Numbers",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("//8AAHFYAAD/////cVgAAOQw//9yGAAA/////42nAAD//wAAjacAAOQwAAByGAAAAAD//3FYAAAAAP//jacAAOQwAACM5wAA/3//////AAD/fwAAAAAAABrP//9yGAAA/3///wAAAAAazwAAchgAAAAAAABxWAAAAAAAAI2nAAAaz///jOcAABrPAACM5wAA/38AAP//AADkMP//jOcAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pc56d"]
+resource_name = "CombinationLock Wheel_Cylinder_016"
+_surfaces = [{
+"aabb": AABB(-0.951057, -1, -1, 1.90211, 2, 2),
+"attribute_data": PackedByteArray("qaqFlqmqQsv/f0LL/3+Flk/kQsub9P//T+T//5v0QsupqoWW//9Cy6mqQsv//4WW/3/G7ROZQsuTqEvQu7tL0DvL//+7u/X6JchCy1TVhZaD4kLLz/JCy5OJ9fonssbtE5n//0/ket0ujYWWep1Cyy6NQst6nYWWep2FlnqdQsvZt0LL2beFltm3hZbZt0LLJciFliXIhZZU1ULLJchCy1TVhZZU1ULLg+KFloPihZbP8kLLg+JCy8/yhZb/f3rdk4lL0Ceyet2TqPX6z/KFli6NQssujYWWJ7LG7Seyet272kvQO8tCy0/kxu272vX6"),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("GgAbABwAGgAdABsAHgABAB8AHgAAAAEABAAFAAYABAAHAAUACAAgAAoACAAhACAAIgASACMAIgAkABIAJQAmACcAJQATACYAKAAUACkAKAAqABQAKwAsAC0AKwAuACwADQAvADAADQAWAC8ALwAWAAwAFgANADEAMQANAA4AFgAxADIAMgAxABcAFgAyABgAMwAJABUAMwALAAkAAwA0AAIAAwA1ADQADwA2ADcADwAQADYANgAQABEAEAAPADgAOAAPADkAEAA4ADoAOgA4ABkAEAA6ADsA"),
+"lods": [0.507425, PackedByteArray("AAABAAIAAwAAAAIABAAFAAYABAAHAAUACAASAAoACAATABIAEwAUABIAEwALABQACwAVABQACwAJABUAFgAXABgAFgAOABcAFgANAA4ADQAWAAwADwAQABEAEAAPABkA"), 0.973231, PackedByteArray("AAABAAIAAwAAAAIABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADwAQABEA")],
+"material": SubResource("StandardMaterial3D_7y6as"),
+"name": "Wheel With Numbers",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("//8AAHFY////////cVj//+Qw//9yGP//5DAAAHIY/////wAAcVj///////+Np////////3FY/////wAAjaf/////AACNp///5DD//3IY////////jaf//+QwAAByGP//5DD//3IYXs7/////cVhezv////+Np17O5DAAAHIYEd3//wAAjacR3f//AABxWBHd/3/////////kMAAAjOf//wAA//+Np///AAD//3FY//8AAP//cVhezv9//////17OAAD//42nXs7kMAAAjOcR3f9/AAAAAP//Gs///3IY////f///AAD//xrPAAByGP//Gs8AAHIY//8az///chj//xrP//+M5///Gs8AAIzn//8azwAAjOf//xrP//+M5////38AAP//////fwAA/////+Qw//+M5////3/////////kMAAAjOf//+Qw//+M5///AAAAAI2n//8AAAAAjaf//wAA//9xWP//AAD//42n//8AAAAAcVj///9///8AAF7OGs///3IYXs4az///jOdezuQw//+M517OAAAAAHFY////f///AAD///9/AAAAAP//Gs8AAHIYEd3/fwAAAAAR3QAAAACNpxHdAAAAAHFYEd3/fwAA//8R3RrPAACM5xHdytT/f8rU/3///3+R//9/kf+//3//v/9//7//f/+//38zq/9///8zqzOr/3///zOrLbTopS206KUttOil8S7j3fEu493xLuPdf5H/f39u/3/LVP9///8zqy206KUttOilLbTopfEu491/7v9/f+7/f3/u/39/7v9/ytT/f8rU/38zq/9/M6v/f3+R/39/kf9/f5H/f39u/39/bv9/f27/f8tU/3/LVP9/y1T/f/8//3//P/9//z//f/8//38ttOilLbTopS206KUttOil//8zq///f5H//3+R8S7j3fEu493xLuPd8S7j3fEu493xLuPd")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7s1lx")
+
+[sub_resource type="Animation" id="Animation_ry8oh"]
+resource_name = "0_to_1"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.5708, 0, -1.5708), Vector3(0.942478, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_3gvg7"]
+resource_name = "1_to_2"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.942478, 0, -1.5708), Vector3(0.314159, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_cxbak"]
+resource_name = "2_to_3"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.314159, 0, -1.5708), Vector3(-0.314159, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_7o8ej"]
+resource_name = "3_to_4"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.314159, 0, -1.5708), Vector3(-0.942478, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_opmqn"]
+resource_name = "4_to_5"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.942478, 0, -1.5708), Vector3(-1.5708, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_2ms3b"]
+resource_name = "5_to_6"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, -1.5708), Vector3(-2.19911, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_evfh1"]
+resource_name = "6_to_7"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.19911, 0, -1.5708), Vector3(-2.82743, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_j7i4g"]
+resource_name = "7_to_8"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.82743, 0, -1.5708), Vector3(-3.45575, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_057bh"]
+resource_name = "8_to_9"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-3.45575, 0, -1.5708), Vector3(-4.08407, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_pt5s8"]
+resource_name = "9_to_0"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-4.08407, 0, -1.5708), Vector3(-4.71239, 0, -1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_uflt3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1st wheel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5708, 0, -1.5708)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7k3gg"]
+_data = {
+&"0_to_1": SubResource("Animation_ry8oh"),
+&"1_to_2": SubResource("Animation_3gvg7"),
+&"2_to_3": SubResource("Animation_cxbak"),
+&"3_to_4": SubResource("Animation_7o8ej"),
+&"4_to_5": SubResource("Animation_opmqn"),
+&"5_to_6": SubResource("Animation_2ms3b"),
+&"6_to_7": SubResource("Animation_evfh1"),
+&"7_to_8": SubResource("Animation_j7i4g"),
+&"8_to_9": SubResource("Animation_057bh"),
+&"9_to_0": SubResource("Animation_pt5s8"),
+&"RESET": SubResource("Animation_uflt3")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xym0y"]
+size = Vector3(0.6, 1.5, 3)
+
+[node name="CombinationLock Wheel" instance=ExtResource("1_hg08l")]
+script = ExtResource("2_ohcus")
+
+[node name="1st wheel" parent="." index="0"]
+transform = Transform3D(-5.23679e-06, 0.289309, 0, 5.23679e-06, 3.7912e-12, -1.44663, -1.44663, -1.0473e-06, -5.23679e-06, 0, 0, 0)
+mesh = SubResource("ArrayMesh_pc56d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_7k3gg")
+}
+
+[node name="MoveUp" type="Area3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0)
+collision_layer = 5242881
+script = ExtResource("3_bcldx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MoveUp" index="0"]
+shape = SubResource("BoxShape3D_xym0y")
+
+[node name="MoveDown" type="Area3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+collision_layer = 5242881
+script = ExtResource("3_bcldx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MoveDown" index="0"]
+shape = SubResource("BoxShape3D_xym0y")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]
+
+[connection signal="pointer_event" from="MoveUp" to="." method="_on_move_up_pointer_event"]
+[connection signal="pointer_event" from="MoveDown" to="." method="_on_move_down_pointer_event"]

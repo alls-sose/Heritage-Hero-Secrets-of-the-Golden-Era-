@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f18b90f331701951a8e02cd68801e5aca87d5af3ce4b06300d20f63445df2b89
-size 945
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bl8ybkvky8few"
+path.s3tc="res://.godot/imported/bookshelf with books_10.jpg-2fbdb9e528afa11b012c2c7c2bc7d77c.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "8e22f7c5a2e65890cea5940659d40e2a"
+}
+
+[deps]
+
+source_file="res://src/Assets/0x-house-assets/bookshelf with books_10.jpg"
+dest_files=["res://.godot/imported/bookshelf with books_10.jpg-2fbdb9e528afa11b012c2c7c2bc7d77c.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,3 +1,169 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25eda2d49c5968d62434be3b51a13c9dfeaf2fadd2fae4a8f96f156f9116c3d4
-size 5016
+[gd_scene load_steps=8 format=3 uid="uid://bpvb7ckslsj3l"]
+
+[ext_resource type="Texture2D" uid="uid://c2cyi8g3orfcq" path="res://src/dialogue-system/panel.png" id="1_ockrn"]
+[ext_resource type="Script" uid="uid://b0vd76w4exakw" path="res://src/dialogue-system/dialogue_ui.gd" id="1_ongl7"]
+[ext_resource type="FontFile" uid="uid://cmu4qjs0kd4tx" path="res://src/Assets/fonts/PT_Serif/PTSerif-Bold.ttf" id="3_yaaro"]
+[ext_resource type="FontFile" uid="uid://dckupwqw6m83s" path="res://src/Assets/fonts/Montserrat/static/Montserrat-Medium.ttf" id="4_gj4vv"]
+[ext_resource type="FontFile" uid="uid://i7klko7f4yjg" path="res://src/Assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf" id="5_u0o8i"]
+
+[sub_resource type="Gradient" id="Gradient_n4j1p"]
+offsets = PackedFloat32Array(0.2, 0.3, 0.7, 0.8)
+colors = PackedColorArray(1, 0.843137, 0, 0, 1, 0.843137, 0, 1, 1, 0.843137, 0, 1, 1, 0.843137, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eijsm"]
+gradient = SubResource("Gradient_n4j1p")
+
+[node name="DialogueUI" type="CanvasLayer"]
+script = ExtResource("1_ongl7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="Shadow2" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+offset_left = 1600.0
+offset_top = 900.0
+offset_right = 3200.0
+offset_bottom = 1308.0
+rotation = 3.14159
+scale = Vector2(1, 0.5)
+texture = ExtResource("1_ockrn")
+
+[node name="QuestShadow" type="TextureRect" parent="Control"]
+visible = false
+clip_contents = true
+layout_mode = 1
+offset_left = 1587.0
+offset_top = 283.0
+offset_right = 3187.0
+offset_bottom = 1105.94
+rotation = 3.14159
+scale = Vector2(1, 0.165)
+texture = ExtResource("1_ockrn")
+
+[node name="Bar" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -242.0
+offset_right = 800.0
+offset_bottom = -238.035
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture1D_eijsm")
+
+[node name="Quest_Name" type="RichTextLabel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -700.0
+offset_right = 500.0
+offset_bottom = -635.975
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("3_yaaro")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center][color=#FFD700]Quest Name Here
+"
+
+[node name="Quest_AcceptedText" type="RichTextLabel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -731.0
+offset_right = 500.0
+offset_bottom = -666.975
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("3_yaaro")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center][color=#FFD700]New Quest:
+"
+
+[node name="NPC_Name" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -297.0
+offset_right = 500.0
+offset_bottom = -232.975
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("3_yaaro")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "[center][color=#FFD700]NPC Name 
+"
+
+[node name="NPC_Dialogue" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -221.355
+offset_right = 300.0
+offset_bottom = -21.355
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("4_gj4vv")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis sapien fringilla, sollicitudin odio pulvinar, porttitor augue. Mauris sed consectetur risus, quis imperdiet libero. Duis aliquam, dui et accumsan vestibulum, leo urna semper risus, ut pulvin
+"
+fit_content = true
+scroll_active = false
+scroll_following = true
+
+[node name="Button Prompt" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.458
+offset_top = -75.01
+offset_right = 152.457
+offset_bottom = -23.01
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button Press" type="RichTextLabel" parent="Control/Button Prompt"]
+modulate = Color(1, 0.835294, 0, 1)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_u0o8i")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Press 'A' to continue ▼
+"
+fit_content = true
+scroll_active = false
+scroll_following = true

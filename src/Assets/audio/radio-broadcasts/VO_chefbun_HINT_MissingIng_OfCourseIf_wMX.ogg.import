@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae87376fe6e5aed0aa3921abe022bd3bae5d889b759bdede7480fb214f4efa82
-size 512
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://juq7qv2iuurr"
+path="res://.godot/imported/VO_chefbun_HINT_MissingIng_OfCourseIf_wMX.ogg-5346dc68e9e0c9b862b4b71490cee6ae.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Assets/audio/radio-broadcasts/VO_chefbun_HINT_MissingIng_OfCourseIf_wMX.ogg"
+dest_files=["res://.godot/imported/VO_chefbun_HINT_MissingIng_OfCourseIf_wMX.ogg-5346dc68e9e0c9b862b4b71490cee6ae.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

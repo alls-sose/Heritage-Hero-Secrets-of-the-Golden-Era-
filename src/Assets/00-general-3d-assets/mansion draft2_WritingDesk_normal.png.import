@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95908552570d8ab6bcccc48a38c03067dda0d9a25dcf7d726b118ee44c4ea95a
-size 1051
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://8n23d8ihfwd4"
+path.s3tc="res://.godot/imported/mansion draft2_WritingDesk_normal.png-22e96a62191042e7d8f05056080c3659.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "50863c1b5bc457d0b07133cb58e1ca54"
+}
+
+[deps]
+
+source_file="res://src/Assets/00-general-3d-assets/mansion draft2_WritingDesk_normal.png"
+dest_files=["res://.godot/imported/mansion draft2_WritingDesk_normal.png-22e96a62191042e7d8f05056080c3659.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/00General3DAssets/mansion draft2_WritingDesk_normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

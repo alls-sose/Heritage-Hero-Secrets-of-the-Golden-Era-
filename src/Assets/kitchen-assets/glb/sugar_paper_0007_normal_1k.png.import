@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1ade74d19a4029671049dd67e8262559eeaac7c338175906722f813bc3b2d7a2
-size 1023
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c5wtg14y4krb5"
+path.s3tc="res://.godot/imported/sugar_paper_0007_normal_1k.png-e88dbe93c99be9c4a5dcb6cadcbcc163.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "ba0855f5d44a469ef019eeed87e6d02d"
+}
+
+[deps]
+
+source_file="res://src/Assets/kitchen-assets/glb/sugar_paper_0007_normal_1k.png"
+dest_files=["res://.godot/imported/sugar_paper_0007_normal_1k.png-e88dbe93c99be9c4a5dcb6cadcbcc163.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://src/Assets/kitchen-assets/glb/sugar_paper_0007_normal_1k.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

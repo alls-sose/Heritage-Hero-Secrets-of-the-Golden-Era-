@@ -1,3 +1,352 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:23aa68a7bea114f11635fbbcd29c1e0f0ed087fd465d21266cdeb6a108257e94
-size 10983
+[gd_scene load_steps=15 format=3 uid="uid://h0ir7ocxt75a"]
+
+[ext_resource type="Texture2D" uid="uid://c180i6tmpvytr" path="res://src/Assets/artwork-assets/newspaper-clippings/DAIVOLTZ.png" id="1_04y73"]
+[ext_resource type="Script" uid="uid://nvpx2myviev0" path="res://src/Assets/study-assets/printed_items_control.gd" id="1_b8c2i"]
+[ext_resource type="Texture2D" uid="uid://bcj0q0eu5pgqf" path="res://src/Assets/artwork-assets/newspaper-clippings/MALAKAS MAGANDA.png" id="2_fbah1"]
+[ext_resource type="Texture2D" uid="uid://broe0068bkjqq" path="res://src/Assets/artwork-assets/newspaper-clippings/NUTRIBUN.png" id="3_78jf6"]
+[ext_resource type="Texture2D" uid="uid://dvhplbdtth086" path="res://src/Assets/artwork-assets/newspaper-clippings/MANILA FILM CENTER.png" id="4_b8c2i"]
+[ext_resource type="Texture2D" uid="uid://bvet1gso1sg1g" path="res://src/Assets/artwork-assets/newspaper-clippings/GIRAFFE.png" id="5_ytoan"]
+[ext_resource type="Texture2D" uid="uid://dvwufdtt4dqir" path="res://src/Assets/artwork-assets/newspaper-clippings/BUTBUT CLOTH.png" id="6_fhagt"]
+[ext_resource type="Texture2D" uid="uid://dilbdur8niqlq" path="res://src/Assets/artwork-assets/newspaper-clippings/ROLEX WATCHES.png" id="7_kd7a0"]
+[ext_resource type="FontFile" uid="uid://b14nr7nbhhmnj" path="res://src/Assets/fonts/AbrilFatface-Regular.ttf" id="8_78jf6"]
+[ext_resource type="FontFile" uid="uid://26spynvrf8dc" path="res://src/Assets/fonts/Montserrat/static/Montserrat-Regular.ttf" id="9_b8c2i"]
+
+[sub_resource type="Gradient" id="Gradient_b8c2i"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ytoan"]
+gradient = SubResource("Gradient_b8c2i")
+
+[sub_resource type="Gradient" id="Gradient_78jf6"]
+colors = PackedColorArray(0.266667, 0.219608, 0.184314, 1, 0.266667, 0.219608, 0.184314, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_b8c2i"]
+gradient = SubResource("Gradient_78jf6")
+
+[node name="PrintedThings" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+script = ExtResource("1_b8c2i")
+
+[node name="Zoo" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 75.0
+offset_right = 994.0
+offset_bottom = 275.0
+rotation = -0.119447
+scale = Vector2(1.38775, 1.5502)
+texture = ExtResource("5_ytoan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/Zoo"]
+layout_mode = 0
+offset_left = -17.7157
+offset_top = 45.5253
+offset_right = 294.284
+offset_bottom = 89.5253
+texture = SubResource("GradientTexture1D_ytoan")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Zoo/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+text = "CALAUIT SAFARI PARK MARRED BY FORCED EVICTIONS AND NEGLECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MIFF" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 249.0
+offset_right = 902.0
+offset_bottom = 449.0
+rotation = -0.124152
+scale = Vector2(1.41496, 1.5806)
+texture = ExtResource("4_b8c2i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/MIFF"]
+layout_mode = 0
+offset_left = -4.45825
+offset_top = 47.1126
+offset_right = 307.542
+offset_bottom = 91.1126
+texture = SubResource("GradientTexture1D_ytoan")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MIFF/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+text = "CORRUPTION BEHIND FILM CENTER DISASTER AND DELAYED RESPONSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RolexWatches" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1124.0
+offset_top = 20.0
+offset_right = 1424.0
+offset_bottom = 220.0
+rotation = 0.123685
+scale = Vector2(1.40407, 1.56844)
+texture = ExtResource("7_kd7a0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/RolexWatches"]
+layout_mode = 0
+offset_left = -2.43017
+offset_top = 60.0215
+offset_right = 309.57
+offset_bottom = 104.022
+texture = SubResource("GradientTexture1D_ytoan")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/RolexWatches/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+text = "OFFICIALS RECEIVED LUXURY BRIBES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cordillera" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1136.0
+offset_top = 189.0
+offset_right = 1436.0
+offset_bottom = 389.0
+rotation = 0.190597
+scale = Vector2(1.42584, 1.59276)
+texture = ExtResource("6_fhagt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/Cordillera"]
+layout_mode = 0
+offset_left = -1.31906
+offset_top = 46.9055
+offset_right = 310.681
+offset_bottom = 90.9055
+texture = SubResource("GradientTexture1D_ytoan")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Cordillera/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+text = "DULAG ASSASSINATION INCITED BY CORDILLERA DAM DISPUTE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Nutribun" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1110.0
+offset_top = 554.0
+offset_right = 1410.0
+offset_bottom = 754.0
+rotation = -0.0362962
+scale = Vector2(1.40952, 1.57452)
+texture = ExtResource("3_78jf6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/Nutribun"]
+layout_mode = 0
+offset_left = 7.89322
+offset_top = 59.3611
+offset_right = 319.893
+offset_bottom = 103.361
+texture = SubResource("GradientTexture1D_ytoan")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Nutribun/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+text = "IMELDA CLAIMS CREDIT FOR USAID-FUNDED NUTRIBUN PROJECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MalakasMaganda" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 591.0
+offset_right = 952.0
+offset_bottom = 791.0
+rotation = -0.16196
+scale = Vector2(1.36054, 1.51981)
+texture = ExtResource("2_fbah1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/MalakasMaganda"]
+layout_mode = 0
+offset_left = -20.2582
+offset_top = 45.7061
+offset_right = 291.742
+offset_bottom = 89.7061
+texture = SubResource("GradientTexture1D_ytoan")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MalakasMaganda/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+text = "“MALAKAS AT MAGANDA” MYTH BLANDISHED AS MARCOS PROPAGANDA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JPAnime" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 342.0
+offset_right = 1165.0
+offset_bottom = 542.0
+rotation = -0.0362962
+scale = Vector2(1.28979, 1.44078)
+texture = ExtResource("1_04y73")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Correction" type="TextureRect" parent="Control/JPAnime"]
+layout_mode = 0
+offset_left = -14.4508
+offset_top = 50.2306
+offset_right = 297.549
+offset_bottom = 94.2306
+texture = SubResource("GradientTexture1D_ytoan")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/JPAnime/Correction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -20.0
+offset_right = 154.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+text = "MEDIA BAN STIFLES CRITICISM AND DISSENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 37.0
+offset_right = 567.0
+offset_bottom = 537.0
+theme_override_colors/default_color = Color(0.266667, 0.219608, 0.184314, 1)
+theme_override_constants/line_separation = -35
+theme_override_fonts/normal_font = ExtResource("8_78jf6")
+theme_override_font_sizes/normal_font_size = 96
+text = "The
+truth
+behind 
+the
+headlines."
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 565.0
+offset_right = 323.0
+offset_bottom = 605.0
+scale = Vector2(2.2, 0.120005)
+texture = SubResource("GradientTexture1D_b8c2i")
+
+[node name="Title2" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 605.0
+offset_right = 596.0
+offset_bottom = 875.0
+theme_override_colors/default_color = Color(0.266667, 0.219608, 0.184314, 1)
+theme_override_fonts/normal_font = ExtResource("9_b8c2i")
+theme_override_font_sizes/normal_font_size = 25
+text = "Further investigation sheds light on facts hidden from the people during the Marcos administration."
+scroll_active = false
+horizontal_alignment = 3

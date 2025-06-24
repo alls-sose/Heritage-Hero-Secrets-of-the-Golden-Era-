@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:154143c208eb7929efed6bdb624f2329714c866000cd60bd64a2126aa865e22b
-size 1023
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bv4s7c2y8l8ar"
+path.s3tc="res://.godot/imported/quest_log2 (added shapekeys)_Book_Cover_Roughness.png-ba2359d0d548d41b5ae108ab8e7193bb.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "97be18d49d2c0a6e6e2c9a324dd46a57"
+}
+
+[deps]
+
+source_file="res://src/Assets/tutorial-assets/quest_log2 (added shapekeys)_Book_Cover_Roughness.png"
+dest_files=["res://.godot/imported/quest_log2 (added shapekeys)_Book_Cover_Roughness.png-ba2359d0d548d41b5ae108ab8e7193bb.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

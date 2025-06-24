@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:41552ae0bfa3ed8cfa155c5e5c8123b707d47debc3a0288a7adbc94874248948
-size 780
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://ccjvhsp4bdde3"
+path="res://.godot/imported/Montserrat-Light.ttf-eac1770d75591a1e212edefff65316e5.fontdata"
+
+[deps]
+
+source_file="res://src/Assets/fonts/Montserrat/static/Montserrat-Light.ttf"
+dest_files=["res://.godot/imported/Montserrat-Light.ttf-eac1770d75591a1e212edefff65316e5.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
