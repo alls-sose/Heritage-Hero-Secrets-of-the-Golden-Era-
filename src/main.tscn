@@ -23,11 +23,11 @@
 [ext_resource type="AudioStream" uid="uid://clhg0ok3oryuk" path="res://src/Assets/audio/sfx/AMLML_sfx_tlprt_01.ogg" id="13_43aqp"]
 [ext_resource type="Script" uid="uid://us0ag23goci7" path="res://src/dialogue-system/dialogue_system.gd" id="13_k5s8g"]
 [ext_resource type="Script" uid="uid://c7stwc7ey8w81" path="res://src/Assets/bedroom-assets/events/temp_action_teleport_to_bedroom.gd" id="13_wjd0w"]
-[ext_resource type="Script" path="res://src/Assets/event_scripts/action_teleport_to_study.gd" id="14_imvhg"]
+[ext_resource type="Script" uid="uid://cji2nh6dxeiel" path="res://src/Assets/event_scripts/action_teleport_to_study.gd" id="14_imvhg"]
 [ext_resource type="AudioStream" uid="uid://crhnomjdxoo4c" path="res://src/Assets/audio/sfx/AMLML_sfx_tlprt_02.ogg" id="14_ocmcv"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="14_tapid"]
 [ext_resource type="AudioStream" uid="uid://bvpr6ng0eb47c" path="res://src/Assets/audio/sfx/AMLML_sfx_ui_pstv_01.ogg" id="15_43aqp"]
-[ext_resource type="Script" path="res://src/Assets/event_scripts/action_teleport_to_study_desk.gd" id="15_m07h4"]
+[ext_resource type="Script" uid="uid://bhsyj0tmwm574" path="res://src/Assets/event_scripts/action_teleport_to_study_desk.gd" id="15_m07h4"]
 [ext_resource type="PackedScene" uid="uid://bpvb7ckslsj3l" path="res://src/dialogue-system/dialogue_ui.tscn" id="15_p3sfu"]
 [ext_resource type="Material" uid="uid://ca8mu8kt7e14f" path="res://src/dialogue-system/draw_on_top_material.tres" id="16_sbu0l"]
 [ext_resource type="PackedScene" uid="uid://43js2irdvt88" path="res://src/ois-objects/tutorial/ois_journal_new.tscn" id="16_tb146"]
@@ -1695,6 +1695,7 @@ volume_db = 13.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76009, 1.39937, 0.56537)
 visible = false
 collision_mask = 131079
+enabled = false
 
 [node name="OISJournal" parent="." groups=["journal"] instance=ExtResource("16_tb146")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.025, 0.91618, 0)

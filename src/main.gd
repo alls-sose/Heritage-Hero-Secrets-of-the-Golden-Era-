@@ -193,4 +193,5 @@ func _skip_tutorial() -> void:
 	tutorial_attach_action.close_event()
 	dialogue_system._print_dialogue("", "", 0, null, false, false)
 	QuestControl.update_active_quests()
+	ois_flashlight_radio.enabled = true
 	

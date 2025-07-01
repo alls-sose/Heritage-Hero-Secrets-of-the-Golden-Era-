@@ -10,6 +10,7 @@ var audio_file
 @onready var audio_stream_player = $"../../TutorialStream"
 
 @onready var dialogue_system := get_tree().get_root().get_node("Main/DialogueSystem")
+@onready var ois_flashlight_radio: XRToolsPickable = $"../../OISFlashlightRadio"
 
 func _on_event_started() -> void:
 	audio_file = load(custom_parameters["AudioSourceFile"])
@@ -27,6 +28,7 @@ func _on_event_started() -> void:
 	
 		emit_signal("event_ended")
 		close_event()
+		ois_flashlight_radio.enabled = true
 		QuestControl.update_active_quests()
 
 # Maybe connect a signal from the dialogue system to end the event

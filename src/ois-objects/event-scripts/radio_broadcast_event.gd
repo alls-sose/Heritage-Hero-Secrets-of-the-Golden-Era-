@@ -24,11 +24,12 @@ func _on_event_started() -> void:
 	crank_reciever.action_completed.connect(_on_ois_crank_receiver_action_completed)
 	radio_broadcasts.prio_changed.connect(_on_prio_changed)
 	EventManager.start_events.connect(_on_any_event_ended)
+	QuestControl.quests_updated.connect(_on_any_event_ended)
 	audio_file = load(custom_parameters["AudioSourceFile"])
 	
 func _on_ois_crank_receiver_action_completed(requirement: Variant, total_progress: Variant) -> void:
 	print("Play crank hint: "+self.name)
-	if teleporter_manager.current_location.name in custom_parameters["EventLocations"] or custom_parameters["EventLocations"].size() == 0:
+	if (teleporter_manager.current_location.name in custom_parameters["EventLocations"] or custom_parameters["EventLocations"].size() == 0) and get_parent().prioritized_event == self.name:
 		
 		if !audio_stream_player.playing:
 			music_audio_stream_player.play("fade_music_out")
@@ -69,7 +70,7 @@ func _on_any_event_ended() -> void:
 		if flag in EventManager.completed_events:
 			if get_parent().prioritized_event != self.name:
 				close_event()
-				#print(self.name+" "+"[radio] event end: "+self.name)
+				print(self.name+" "+"[radio] event end: "+self.name)
 				queue_free()
 				prio_change = false
 

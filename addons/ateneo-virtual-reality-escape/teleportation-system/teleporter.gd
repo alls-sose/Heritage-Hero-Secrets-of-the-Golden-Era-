@@ -14,7 +14,6 @@ extends Node3D
 @export var teleporter_rotation : Vector3
 @export var connected_teleporters : Array[Teleporter]
 
-
 # Not relative to the teleporter's position! This is global!
 @export var spectator_camera_position : Vector3
 @export var spectator_camera_rotation : Vector3

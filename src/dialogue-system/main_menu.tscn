@@ -50,24 +50,6 @@ scale = Vector2(0.22, 0.22)
 pivot_offset = Vector2(1368.5, 815)
 texture = ExtResource("2_paj0r")
 
-[node name="Loading Text" type="RichTextLabel" parent="Control"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -500.0
-offset_top = -430.145
-offset_right = 500.0
-offset_bottom = -366.12
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_u5d5e")
-theme_override_font_sizes/normal_font_size = 45
-bbcode_enabled = true
-text = "[center][color=#FFD700]Alpha Testing"
-
 [node name="Loading Text2" type="RichTextLabel" parent="Control"]
 layout_mode = 1
 anchors_preset = 7

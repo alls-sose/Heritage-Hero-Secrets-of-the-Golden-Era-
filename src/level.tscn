@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dtmkqjv78vvy3" path="res://src/Assets/study-assets/malakas-at-maganda-doc/malakas_at_maganda_doc_pickable.tscn" id="9_h77ku"]
 [ext_resource type="Script" uid="uid://c2rj7vjaa8uv2" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="9_n711g"]
 [ext_resource type="PackedScene" uid="uid://d08y20uc3cu6" path="res://src/Assets/kitchen-assets/oven.tscn" id="9_sjus0"]
-[ext_resource type="Script" path="res://src/Assets/study-assets/malakas-at-maganda-doc/action_assemble_document.gd" id="10_2ifg6"]
+[ext_resource type="Script" uid="uid://87yx2t7v1yd2" path="res://src/Assets/study-assets/malakas-at-maganda-doc/action_assemble_document.gd" id="10_2ifg6"]
 [ext_resource type="PackedScene" uid="uid://cu7eesycn0q3r" path="res://src/Assets/kitchen-assets/bowl-main.tscn" id="10_m1kwo"]
 [ext_resource type="PackedScene" uid="uid://c1pv5eyb3pnow" path="res://src/Assets/00-general-3d-assets/grab_particle.tscn" id="10_ma005"]
 [ext_resource type="Script" uid="uid://cxyujjp6chll5" path="res://src/Assets/00-general-3d-assets/point_particle.gd" id="11_d0vbp"]
@@ -294,7 +294,7 @@ size = Vector2(3, 2)
 [sub_resource type="ViewportTexture" id="ViewportTexture_kg6tk"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg6tk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5rtl"]
 transparency = 1
 cull_mode = 2
 albedo_texture = SubResource("ViewportTexture_kg6tk")
@@ -377,7 +377,7 @@ size = Vector2(3, 2)
 [sub_resource type="ViewportTexture" id="ViewportTexture_c2oo3"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5rtl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn8ix"]
 transparency = 1
 cull_mode = 2
 albedo_texture = SubResource("ViewportTexture_c2oo3")
@@ -394,7 +394,7 @@ size = Vector2(3, 2)
 [sub_resource type="ViewportTexture" id="ViewportTexture_a3u8j"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i6qt8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43711"]
 transparency = 1
 cull_mode = 2
 albedo_texture = SubResource("ViewportTexture_a3u8j")
@@ -467,7 +467,7 @@ size = Vector2(3, 2)
 [sub_resource type="ViewportTexture" id="ViewportTexture_hhrj4"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2oo3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ji6k"]
 transparency = 1
 cull_mode = 2
 albedo_texture = SubResource("ViewportTexture_hhrj4")
@@ -484,7 +484,7 @@ size = Vector2(3, 2)
 [sub_resource type="ViewportTexture" id="ViewportTexture_w6o0x"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn8ix"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vm4yn"]
 transparency = 1
 cull_mode = 2
 albedo_texture = SubResource("ViewportTexture_w6o0x")
@@ -768,6 +768,27 @@ active_pieces = {
 }
 }
 
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable/MalakasAtMagandaDoc/Plane_001" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable/MalakasAtMagandaDoc/Plane_002" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable/MalakasAtMagandaDoc/Plane_003" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable/MalakasAtMagandaDoc/Plane_004" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable/MalakasAtMagandaDoc/Plane_005" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable/MalakasAtMagandaDoc/Plane_006" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable/MalakasAtMagandaDoc/Plane_007" index="0"]
+surface_material_override/0 = null
+
 [node name="OISActorComponent" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0611272, 0, -0.114325)
 
@@ -818,6 +839,27 @@ active_pieces = {
 "Neighbors": ["Piece4", "Piece6"]
 }
 }
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2/MalakasAtMagandaDoc/Plane_001" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2/MalakasAtMagandaDoc/Plane_002" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2/MalakasAtMagandaDoc/Plane_003" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2/MalakasAtMagandaDoc/Plane_004" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2/MalakasAtMagandaDoc/Plane_005" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2/MalakasAtMagandaDoc/Plane_006" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2/MalakasAtMagandaDoc/Plane_007" index="0"]
+surface_material_override/0 = null
 
 [node name="OISActorComponent" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable2" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.043016, 0, -0.0947639)
@@ -870,6 +912,27 @@ active_pieces = {
 }
 }
 
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3/MalakasAtMagandaDoc/Plane_001" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3/MalakasAtMagandaDoc/Plane_002" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3/MalakasAtMagandaDoc/Plane_003" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3/MalakasAtMagandaDoc/Plane_004" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3/MalakasAtMagandaDoc/Plane_005" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3/MalakasAtMagandaDoc/Plane_006" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3/MalakasAtMagandaDoc/Plane_007" index="0"]
+surface_material_override/0 = null
+
 [node name="OISActorComponent" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable3" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0560544, 0, -0.0240667)
 
@@ -920,6 +983,27 @@ active_pieces = {
 "Neighbors": ["Piece4", "Piece6"]
 }
 }
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4/MalakasAtMagandaDoc/Plane_001" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4/MalakasAtMagandaDoc/Plane_002" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4/MalakasAtMagandaDoc/Plane_003" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4/MalakasAtMagandaDoc/Plane_004" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4/MalakasAtMagandaDoc/Plane_005" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4/MalakasAtMagandaDoc/Plane_006" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4/MalakasAtMagandaDoc/Plane_007" index="0"]
+surface_material_override/0 = null
 
 [node name="OISActorComponent" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable4" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0392442, 0, -0.0338166)
@@ -972,6 +1056,27 @@ active_pieces = {
 }
 }
 
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5/MalakasAtMagandaDoc/Plane_001" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5/MalakasAtMagandaDoc/Plane_002" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5/MalakasAtMagandaDoc/Plane_003" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5/MalakasAtMagandaDoc/Plane_004" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5/MalakasAtMagandaDoc/Plane_005" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5/MalakasAtMagandaDoc/Plane_006" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5/MalakasAtMagandaDoc/Plane_007" index="0"]
+surface_material_override/0 = null
+
 [node name="OISActorComponent" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable5" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0482721, 0, 0.0804914)
 
@@ -1019,6 +1124,27 @@ active_pieces = {
 "Neighbors": ["Piece4", "Piece6"]
 }
 }
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6/MalakasAtMagandaDoc/Plane_001" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6/MalakasAtMagandaDoc/Plane_002" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6/MalakasAtMagandaDoc/Plane_003" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6/MalakasAtMagandaDoc/Plane_004" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6/MalakasAtMagandaDoc/Plane_005" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6/MalakasAtMagandaDoc/Plane_006" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6/MalakasAtMagandaDoc/Plane_007" index="0"]
+surface_material_override/0 = null
 
 [node name="OISActorComponent" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable6" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010807, 0, 0.0627329)
@@ -1070,6 +1196,27 @@ active_pieces = {
 "Neighbors": ["Piece4", "Piece6"]
 }
 }
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7/MalakasAtMagandaDoc/Plane_001" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7/MalakasAtMagandaDoc/Plane_002" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7/MalakasAtMagandaDoc/Plane_003" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7/MalakasAtMagandaDoc/Plane_004" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7/MalakasAtMagandaDoc/Plane_005" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7/MalakasAtMagandaDoc/Plane_006" index="0"]
+surface_material_override/0 = null
+
+[node name="Plane_008" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7/MalakasAtMagandaDoc/Plane_007" index="0"]
+surface_material_override/0 = null
 
 [node name="OISActorComponent" parent="Study/MalakasAtMagandaPieces/MalakasAtMagandaDocPickable7" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0529947, 0, 0.0435031)
@@ -1172,7 +1319,7 @@ text = "CALAUIT SAFARI PARK"
 
 [node name="Screen" parent="Study/GiraffeTape/Tape/Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_nbidf")
-surface_material_override/0 = SubResource("StandardMaterial3D_kg6tk")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5rtl")
 
 [node name="CollisionShape3D" parent="Study/GiraffeTape/Tape/Viewport2Din3D/StaticBody3D" index="0"]
 shape = SubResource("BoxShape3D_i6qt8")
@@ -1309,7 +1456,7 @@ text = "NUTRIBUN"
 
 [node name="Screen" parent="Kitchen/NutribonBox/NutribunTape/Tape/Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_43711")
-surface_material_override/0 = SubResource("StandardMaterial3D_i5rtl")
+surface_material_override/0 = SubResource("StandardMaterial3D_wn8ix")
 
 [node name="CollisionShape3D" parent="Kitchen/NutribonBox/NutribunTape/Tape/Viewport2Din3D/StaticBody3D" index="0"]
 shape = SubResource("BoxShape3D_w6o0x")
@@ -1323,7 +1470,7 @@ text = "BUTBUT CLOTH"
 
 [node name="Screen" parent="Kitchen/ButbutClothTape/Tape/Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_vm4yn")
-surface_material_override/0 = SubResource("StandardMaterial3D_i6qt8")
+surface_material_override/0 = SubResource("StandardMaterial3D_43711")
 
 [node name="CollisionShape3D" parent="Kitchen/ButbutClothTape/Tape/Viewport2Din3D/StaticBody3D" index="0"]
 shape = SubResource("BoxShape3D_83hit")
@@ -1661,7 +1808,7 @@ text = "ROLEX WATCH"
 
 [node name="Screen" parent="Bedroom/RolexWatchTape/Tape/Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_47351")
-surface_material_override/0 = SubResource("StandardMaterial3D_c2oo3")
+surface_material_override/0 = SubResource("StandardMaterial3D_3ji6k")
 
 [node name="CollisionShape3D" parent="Bedroom/RolexWatchTape/Tape/Viewport2Din3D/StaticBody3D" index="0"]
 shape = SubResource("BoxShape3D_vmxlx")
@@ -1675,7 +1822,7 @@ text = "MANILA FILM CENTER"
 
 [node name="Screen" parent="Bedroom/ManilaFilmCenterTape/Tape/Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_xygwj")
-surface_material_override/0 = SubResource("StandardMaterial3D_wn8ix")
+surface_material_override/0 = SubResource("StandardMaterial3D_vm4yn")
 
 [node name="CollisionShape3D" parent="Bedroom/ManilaFilmCenterTape/Tape/Viewport2Din3D/StaticBody3D" index="0"]
 shape = SubResource("BoxShape3D_kprmx")

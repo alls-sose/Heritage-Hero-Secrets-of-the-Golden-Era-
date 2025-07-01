@@ -2,3 +2,9 @@
 .godot/
 /android/
 repo2pdf.ignore
+
+/src/Assets/00-general-3d-assets/mansion draft2.glb
+/src/Assets/00-general-3d-assets/chandelier.tscn
+/src/Assets/00-general-3d-assets/chandelier_new.tscn
+/src/Assets/0x-house-assets/mansion draft2x.glb
+/src/Assets/bedroom-assets/briefcase.glb
